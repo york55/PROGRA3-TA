@@ -15,6 +15,7 @@ public class Cliente extends Usuario{
     public String email;
     public String tipoCliente;
     public ArrayList<Credito> creditos;
+    public Integer numeroRandom,
     
     @Override
     public void registrar(){
