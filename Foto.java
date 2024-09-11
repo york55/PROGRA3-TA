@@ -9,9 +9,14 @@
  */
 public class Foto {
 
-    public int tipoFoto;
-    public buffer foto;
+    private int tipoFoto;
+    private ArrayList<char> foto;
     
+    public Foto(int tipoFoto){
+        this.tipoFoto = tipoFoto;
+        foto = new ArrayList<char>();
+    }
+
     public void registraFoto(){
         
     }
@@ -19,4 +24,17 @@ public class Foto {
     public void recuperafoto(){
         
     }
+
+    public void agregarFoto(Char nuevo){
+        foto.add(nuevo);
+    }
+
+    public int getTipoFoto() {
+        return tipoFoto;
+    }
+
+    public void setTipoFoto(int tipoFoto) {
+        this.tipoFoto = tipoFoto;
+    }
+
 }

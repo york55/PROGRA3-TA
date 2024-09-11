@@ -10,15 +10,30 @@ import java.util.Date;
  */
 public abstract class Usuario {
 
-    public Date fecha;
-    public String nombre;
-    public String apPaterno;
-    public String apMaterno;
-    public String contraseña;
-    public Date fechaVencimiento;
-    public boolean activo; // define si el usuario esta activo en el sistema o no
-    public Date ultimoLogueo;
+    private Date fecha;
+    private String nombre;
+    private String apPaterno;
+    private String apMaterno;
+    private String contrasenha;
+    private Date fechaVencimiento;
+    private boolean activo; // define si el usuario esta activo en el sistema o no
+    private Date ultimoLogueo;
     
+    public Usuario(Date fecha, String nombre, String apPaterno, 
+            String apMaterno, String contrasenha, Date fechaVencimiento,
+            boolean activo){
+                this.fecha = fecha;
+                this.nombre = nombre;
+                this.apPaterno = apPaterno;
+                this.apMaterno = apMaterno;
+                this.contrasenha = contrasenha;
+                this.fechaVencimiento = fechaVencimiento;
+                //el activo podrÃ­a ser inicializado por su setter
+                this.activo = activo;
+    }
+
+    
+
     public void registrar(){
         
     }
@@ -31,7 +46,78 @@ public abstract class Usuario {
         
     }
     
-    //listar clientes no se como ponerlo
+    public void listarClientes(){
+
+
+    }
     
-    //busca cliente
+    public Cliente buscarCliente(){
+
+
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApPaterno() {
+        return apPaterno;
+    }
+
+    public void setApPaterno(String apPaterno) {
+        this.apPaterno = apPaterno;
+    }
+
+    public String getApMaterno() {
+        return apMaterno;
+    }
+
+    public void setApMaterno(String apMaterno) {
+        this.apMaterno = apMaterno;
+    }
+
+    public String getContrasenha() {
+        return contrasenha;
+    }
+
+    public void setContrasenha(String contrasenha) {
+        this.contrasenha = contrasenha;
+    }
+
+    public Date getFechaVencimiento() {
+        return fechaVencimiento;
+    }
+
+    public void setFechaVencimiento(Date fechaVencimiento) {
+        this.fechaVencimiento = fechaVencimiento;
+    }
+
+    public boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    public Date getUltimoLogueo() {
+        return ultimoLogueo;
+    }
+
+    public void setUltimoLogueo(Date ultimoLogueo) {
+        this.ultimoLogueo = ultimoLogueo;
+    }
+
 }
