@@ -25,7 +25,7 @@ public class Foto {
         
     }
 
-    public void agregarFoto(Char nuevo){
+    public void agregarFoto(char nuevo){
         foto.add(nuevo);
     }
 
