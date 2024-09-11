@@ -19,9 +19,8 @@ public class Cliente extends Usuario{
 
     public Cliente(Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, String codigoCliente, String direccion,
-            String direccion, String telefono, String email,
-            String tipoCliente){
+            boolean activo, String codigoCliente, String direccion, 
+            String telefono, String email, String tipoCliente){
                 super(fecha,nombre,apPaterno,apMaterno,contrasenha,
                       fechaVencimiento,activo);
                 this.codigoCliente = codigoCliente;
@@ -37,11 +36,13 @@ public class Cliente extends Usuario{
     public void registrar(){
         
     }
-    
+
+    @Override
     public void desactivar(){
         
     }
     
+    @Override
     public void actualizar(){
         
     }

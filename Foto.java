@@ -10,11 +10,11 @@
 public class Foto {
 
     private int tipoFoto;
-    private ArrayList<char> foto;
+    private ArrayList<Character> foto;
     
     public Foto(int tipoFoto){
         this.tipoFoto = tipoFoto;
-        foto = new ArrayList<char>();
+        foto = new ArrayList<Character>();
     }
 
     public void registraFoto(){

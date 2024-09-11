@@ -24,14 +24,17 @@ public class Supervisor extends Usuario{
                 this.agenciaAsignacion = agenciaAsignacion;
     }
 
+    @Override
     public void registrar(){
         
     }
     
+    @Override
     public void desactivar(){
         
     }
     
+    @Override
     public void actualizar(){
         
     }

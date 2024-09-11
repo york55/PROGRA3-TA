@@ -18,7 +18,7 @@ public class Transaccion {
     private int numOperacion;
     
     public Transaccion(Date fecha, String concepto, double monto, 
-            boolean anulado, Usuario usuarioRegistrado, String agencia
+            boolean anulado, Usuario usuarioRegistrado, String agencia,
             int numOperacion){
                 this.fecha = fecha;
                 this.concepto = concepto;

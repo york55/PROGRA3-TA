@@ -20,7 +20,7 @@ public class Credito {
     private ArrayList<Transaccion> transacciones;
     
     public Credito(String numCredito, double monto, double tasaInteres,
-            Date fechaOtorgamiento, Usuario Cliente, String estado,
+            Date fechaOtorgamiento, Usuario cliente, String estado,
             int numCuotas){
                 this.numCredito = numCredito;
                 this.monto = monto;
