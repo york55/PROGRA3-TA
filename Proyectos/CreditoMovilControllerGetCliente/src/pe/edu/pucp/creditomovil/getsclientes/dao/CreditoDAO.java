@@ -1,0 +1,19 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+ */
+package pe.edu.pucp.creditomovil.getsclientes.dao;
+
+import pe.edu.pucp.creditomovil.getsclientes.model.Credito;
+
+/**
+ *
+ * @author diego
+ */
+public interface CreditoDAO {
+    void insertar(Credito credito);
+    void modificar(Credito credito);
+    void eliminar(String numCredito);
+    //Credito obtenerPorId(String numCredito);
+    //public List<Credito> listarTodos() 
+}
