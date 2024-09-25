@@ -9,15 +9,15 @@ public class Evaluacion {
     private String direccionNegocio;
     private String telefonoNegocio;
     private Usuario evaluador;
-	private Usuario clienteAsignado;
+    private Usuario clienteAsignado;
     private double ventasDiarias;
     private double inventario; //monto de lo que poseen (electrodomesticos etc)
     private double costoVentas;
     private double margenGanancia;
     private int numeroEvaluacion;
     private boolean activo;
-	public double puntaje;
-	public String observaciones;
+    private double puntaje;
+    private String observaciones;
 
 
     public Evaluacion(Date fechaRegistro, String nombreNegocio,
