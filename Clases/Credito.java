@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
+package pe.edu.pucp.creditomovil.getscliente.model;
+
 import java.util.Date;
 import java.util.ArrayList;
-/**
- *
- * @author Bleak
- */
+import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
+import pe.edu.pucp.creditomovil.getscredito.model.Transaccion;
+
 public class Credito {
 
     private String numCredito;

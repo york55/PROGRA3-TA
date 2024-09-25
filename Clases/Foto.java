@@ -1,20 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
+package pe.edu.pucp.creditomovil.getscredito.model;
 
-/**
- *
- * @author Bleak
- */
+import java.util.ArrayList;
+
 public class Foto {
+
 
     private int tipoFoto;
     private ArrayList<Character> foto;
+	private Transaccion transaccion;
     
-    public Foto(int tipoFoto){
+    public Foto(int tipoFoto, Transaccion transaccion){
         this.tipoFoto = tipoFoto;
         foto = new ArrayList<Character>();
+		this.transaccion = transaccion;
     }
 
     public void registraFoto(){
@@ -36,5 +34,13 @@ public class Foto {
     public void setTipoFoto(int tipoFoto) {
         this.tipoFoto = tipoFoto;
     }
+	
+	public Transaccion getTransaccion() {
+		return transaccion;
+	}
+	
+	public void setTransaccion(Transaccion transaccion) {
+		this.transaccion = transaccion;
+	}
 
 }
