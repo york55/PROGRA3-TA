@@ -12,7 +12,6 @@ public class Cliente extends Usuario{
     private String email;
     private String tipoCliente;
     private ArrayList<Credito> creditos;
-    
 
     public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
@@ -25,7 +24,7 @@ public class Cliente extends Usuario{
                 this.telefono = telefono;
                 this.email = email;
                 this.tipoCliente = tipoCliente;
-                
+        
                 creditos = new ArrayList<Credito>();
     }
 

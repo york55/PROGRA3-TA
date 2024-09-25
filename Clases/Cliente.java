@@ -1,12 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
+package pe.edu.pucp.creditomovil.getsclientes.model;
+import java.util.Date;
 import java.util.ArrayList;
-/**
- *
- * @author Bleak
- */
+import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
+import pe.edu.pucp.creditomovil.getscliente.model.Credito;
+
 public class Cliente extends Usuario{
 
     private String codigoCliente;
@@ -15,20 +12,19 @@ public class Cliente extends Usuario{
     private String email;
     private String tipoCliente;
     private ArrayList<Credito> creditos;
-    
 
-    public Cliente(Date fecha, String nombre, String apPaterno, 
+    public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo, String codigoCliente, String direccion, 
             String telefono, String email, String tipoCliente){
-                super(fecha,nombre,apPaterno,apMaterno,contrasenha,
+                super(idUsuario,fecha,nombre,apPaterno,apMaterno,contrasenha,
                       fechaVencimiento,activo);
                 this.codigoCliente = codigoCliente;
                 this.direccion = direccion;
                 this.telefono = telefono;
                 this.email = email;
                 this.tipoCliente = tipoCliente;
-                
+        
                 creditos = new ArrayList<Credito>();
     }
 
@@ -36,12 +32,10 @@ public class Cliente extends Usuario{
     public void registrar(){
         
     }
-
     @Override
     public void desactivar(){
         
     }
-    
     @Override
     public void actualizar(){
         
@@ -94,5 +88,5 @@ public class Cliente extends Usuario{
     public void setTipoCliente(String tipoCliente) {
         this.tipoCliente = tipoCliente;
     }
-
+    
 }
