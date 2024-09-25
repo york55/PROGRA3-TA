@@ -1,4 +1,4 @@
-package pe.edu.pucp.creditomovil.getsclientes.model;
+package pe.edu.pucp.creditomovil.getscliente.model;
 import java.util.Date;
 import java.util.ArrayList;
 import pe.edu.pucp.creditomovil.rrhh.model.Usuario;

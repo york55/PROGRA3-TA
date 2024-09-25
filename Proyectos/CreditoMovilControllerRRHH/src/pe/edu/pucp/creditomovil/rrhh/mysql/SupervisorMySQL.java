@@ -42,7 +42,7 @@ public class SupervisorMySQL implements SupervisorDAO{
     }
 
     @Override
-    public void modificar(Supervisor supervisor) {
+    public void modificar(int id,Supervisor supervisor) {
         CallableStatement cs;
         String query = "{CALL ModificarSupervisor(?,?,?,?)}";
         int resultado = 0;
@@ -50,7 +50,7 @@ public class SupervisorMySQL implements SupervisorDAO{
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setInt(1,supervisor.getIdUsuario());
+            cs.setInt(1,id);
             cs.setString(2,supervisor.getCodigoEv());
             cs.setInt(3,supervisor.getCodigoCargo());
             cs.setString(4, supervisor.getAgenciaAsignacion());

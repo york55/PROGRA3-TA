@@ -1094,6 +1094,33 @@ is divided into following sections:
         </propertyfile>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.CreditoMovilControllerGetCliente}" name="call.subproject"/>
+            <param location="${project.CreditoMovilControllerGetCliente}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.CreditoMovilControllerGetCredito}" name="call.subproject"/>
+            <param location="${project.CreditoMovilControllerGetCredito}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.CreditoMovilControllerRRHH}" name="call.subproject"/>
+            <param location="${project.CreditoMovilControllerRRHH}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
             <param location="${project.CreditoMovilDBManager}" name="call.subproject"/>
             <param location="${project.CreditoMovilDBManager}/build.xml" name="call.script"/>
             <param name="call.target" value="jar"/>
@@ -1775,6 +1802,33 @@ is divided into following sections:
         <propertyfile file="${built-clean.properties}">
             <entry key="${basedir}" value=""/>
         </propertyfile>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.CreditoMovilControllerGetCliente}" name="call.subproject"/>
+            <param location="${project.CreditoMovilControllerGetCliente}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.CreditoMovilControllerGetCredito}" name="call.subproject"/>
+            <param location="${project.CreditoMovilControllerGetCredito}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.CreditoMovilControllerRRHH}" name="call.subproject"/>
+            <param location="${project.CreditoMovilControllerRRHH}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-clean.properties}"/>
             <param location="${project.CreditoMovilDBManager}" name="call.subproject"/>

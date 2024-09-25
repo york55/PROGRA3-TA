@@ -13,7 +13,7 @@ import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
  */
 public interface UsuarioDAO {
     void insertar(Usuario usuario);
-    void modificar(Usuario usuario);
+    void modificar(int id,Usuario usuario);
     void eliminar(int id);
     Usuario obtenerPorId(int id);
     List<Usuario> listarTodos();

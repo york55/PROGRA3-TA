@@ -31,42 +31,43 @@ public class UsuarioMySQL implements UsuarioDAO{
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setDate(1, (Date) usuario.getFecha());
+            cs.setDate(1, new Date(usuario.getFecha().getTime()));
             cs.setString(2, usuario.getNombre());
             cs.setString(3,usuario.getApPaterno());
             cs.setString(4,usuario.getApMaterno());
             cs.setString(5, usuario.getContrasenha());
-            cs.setDate(6, (Date) usuario.getFechaVencimiento());
+            cs.setDate(6, new Date(usuario.getFechaVencimiento().getTime()));
             if(usuario.getActivo()) cs.setString(7,"S");
             else cs.setString(7,"N");
-            cs.setDate(8, (Date) usuario.getUltimoLogueo());
-//            cs.setString(9,usuario.getClase???)
+            cs.setDate(8, usuario.getUltimoLogueo() != null ? new Date(usuario.getUltimoLogueo().getTime()) : new Date(System.currentTimeMillis()));
+            cs.setBoolean(9,false);
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
+   
     @Override
-    public void modificar(Usuario usuario) {
+    public void modificar(int id,Usuario usuario) {
         CallableStatement cs;
-        String query = "{CALL ModificarUsuario(?,?,?,?,?,?,?,?,?)}";
+        String query = "{CALL ModificarUsuario(?,?,?,?,?,?,?,?,?,?)}";
         int resultado = 0;
         
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setDate(1, (Date) usuario.getFecha());
-            cs.setString(2, usuario.getNombre());
-            cs.setString(3,usuario.getApPaterno());
-            cs.setString(4,usuario.getApMaterno());
-            cs.setString(5, usuario.getContrasenha());
-            cs.setDate(6, (Date) usuario.getFechaVencimiento());
-            if(usuario.getActivo()) cs.setString(7,"S");
-            else cs.setString(7,"N");
-            cs.setDate(8, (Date) usuario.getUltimoLogueo());
-//            cs.setString(9,usuario.getClase???)
+            cs.setInt(1, id);
+            cs.setDate(2, new Date(usuario.getFecha().getTime()));
+            cs.setString(3, usuario.getNombre());
+            cs.setString(4,usuario.getApPaterno());
+            cs.setString(5,usuario.getApMaterno());
+            cs.setString(6, usuario.getContrasenha());
+            cs.setDate(7, new Date(usuario.getFechaVencimiento().getTime()));
+            if(usuario.getActivo()) cs.setString(8,"S");
+            else cs.setString(8,"N");
+            cs.setDate(9, usuario.getUltimoLogueo() != null ? new Date(usuario.getUltimoLogueo().getTime()) : new Date(System.currentTimeMillis()));
+            cs.setBoolean(10,false);
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {

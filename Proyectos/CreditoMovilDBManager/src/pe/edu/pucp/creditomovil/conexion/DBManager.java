@@ -14,7 +14,7 @@ import java.sql.DriverManager;
 public class DBManager {
     private Connection con;
     private static DBManager dbManager;
-    private String url = "jdbc:mysql//db-credito-movil-20242.cb8koixgmiui.us-east-1.rds.amazonaws.com:3306/dbcreditomovil";
+    private String url = "jdbc:mysql://db-credito-movil-20242.cb8koixgmiui.us-east-1.rds.amazonaws.com:3306/dbcreditomovil";
     private String username = "admin";
     private String password = "creditomovil20242";
     

@@ -12,7 +12,7 @@ import pe.edu.pucp.creditomovil.rrhh.model.Administrador;
  */
 public interface AdministradorDAO {
     void insertar(Administrador administrador);
-    void modificar(Administrador administrador);
+    void modificar(int id, Administrador administrador);
     void eliminar(String id);
     Administrador obtenerPorId(String id);
     List<Administrador> listarTodos();

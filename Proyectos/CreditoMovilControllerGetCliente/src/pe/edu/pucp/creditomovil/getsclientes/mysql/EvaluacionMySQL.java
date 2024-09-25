@@ -12,10 +12,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
+import pe.edu.pucp.creditomovil.getscliente.model.Evaluacion;
 import pe.edu.pucp.creditomovil.getsclientes.dao.EvaluacionDAO;
-import pe.edu.pucp.creditomovil.getsclientes.model.Evaluacion;
-import pe.edu.pucp.creditomovil.getsclientes.model.Cliente;
-import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
 /**
  *
  * @author diego

@@ -6,8 +6,6 @@ package pe.edu.pucp.creditomovil.getsclientes.mysql;
 
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.getsclientes.dao.CreditoDAO;
-import pe.edu.pucp.creditomovil.getsclientes.model.Credito;
-import pe.edu.pucp.creditomovil.getsclientes.model.Cliente;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.CallableStatement;
@@ -15,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import pe.edu.pucp.creditomovil.getscliente.model.Credito;
 
 /**
  *
