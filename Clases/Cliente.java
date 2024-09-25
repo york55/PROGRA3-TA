@@ -12,12 +12,11 @@ public class Cliente extends Usuario{
     private String email;
     private String tipoCliente;
     private ArrayList<Credito> creditos;
-    private double score;
 
     public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo, String codigoCliente, String direccion, 
-            String telefono, String email, String tipoCliente, double score){
+            String telefono, String email, String tipoCliente){
                 super(idUsuario,fecha,nombre,apPaterno,apMaterno,contrasenha,
                       fechaVencimiento,activo);
                 this.codigoCliente = codigoCliente;
@@ -25,7 +24,6 @@ public class Cliente extends Usuario{
                 this.telefono = telefono;
                 this.email = email;
                 this.tipoCliente = tipoCliente;
-                this.score = score;
         
                 creditos = new ArrayList<Credito>();
     }
@@ -89,14 +87,6 @@ public class Cliente extends Usuario{
 
     public void setTipoCliente(String tipoCliente) {
         this.tipoCliente = tipoCliente;
-    }
-
-    public double getScore() {
-        return score;
-    }
-
-    public void setScore(double score) {
-        this.score = score;
     }
     
 }
