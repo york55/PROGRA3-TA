@@ -12,7 +12,7 @@ public class Cliente extends Usuario{
     private String email;
     private String tipoCliente;
     private ArrayList<Credito> creditos;
-    
+    private Double score;
 
     public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
