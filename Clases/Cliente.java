@@ -17,7 +17,7 @@ public class Cliente extends Usuario{
     public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo, String codigoCliente, String direccion, 
-            String telefono, String email, String tipoCliente){
+            String telefono, String email, String tipoCliente, double score){
                 super(idUsuario,fecha,nombre,apPaterno,apMaterno,contrasenha,
                       fechaVencimiento,activo);
                 this.codigoCliente = codigoCliente;
@@ -25,7 +25,8 @@ public class Cliente extends Usuario{
                 this.telefono = telefono;
                 this.email = email;
                 this.tipoCliente = tipoCliente;
-                
+                this.score = score;
+        
                 creditos = new ArrayList<Credito>();
     }
 
