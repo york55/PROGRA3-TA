@@ -4,10 +4,14 @@
  */
 package pe.edu.pucp.creditomovil.getscredito.mysql;
 
+import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.getscredito.dao.FotoDAO;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.CallableStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import pe.edu.pucp.creditomovil.getscredito.model.Foto;
 /**
  *
@@ -15,21 +19,22 @@ import pe.edu.pucp.creditomovil.getscredito.model.Foto;
  */
 public class FotoMySQL implements FotoDAO{
     private Connection conexion;
-
-//    public FotoMySQL(ConexionBD conexionBD) {
-//        try {
-//            this.conexion = conexionBD.obtenerConexion();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    private ResultSet rs;
 
     @Override
     public void insertar(Foto foto) {
-        String sql = "INSERT INTO fotos (tipoFoto) VALUES (?)";
-        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-            ps.setInt(1, foto.getTipoFoto());
-            ps.executeUpdate();
+        CallableStatement cs;
+        String query = "{CALL InsertarFoto(?,?,?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1,foto.getTipoFoto());
+//            cs.setString(2, foto.recuperafoto()); no se como
+//            cs.setInt(3, foto.getTransaccion().getnumOperacion());
+            
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -37,11 +42,18 @@ public class FotoMySQL implements FotoDAO{
 
     @Override
     public void modificar(Foto foto) {
-        String sql = "UPDATE fotos SET tipoFoto = ? WHERE tipoFoto = ?";
-        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-            ps.setInt(1, foto.getTipoFoto());
-            ps.setInt(2, foto.getTipoFoto());
-            ps.executeUpdate();
+        CallableStatement cs;
+        String query = "{CALL ModificarFoto(?,?,?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1,foto.getTipoFoto());
+//            cs.setString(2, foto.recuperafoto()); no se como
+//            cs.setInt(3, foto.getTransaccion().getnumOperacion());
+            
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -49,42 +61,55 @@ public class FotoMySQL implements FotoDAO{
 
     @Override
     public void eliminar(int tipoFoto) {
-        String sql = "DELETE FROM fotos WHERE tipoFoto = ?";
-        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-            ps.setInt(1, tipoFoto);
-            ps.executeUpdate();
+        CallableStatement cs;
+        String query = "{CALL EliminarFoto(?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1, tipoFoto);
+            
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-//    @Override
-//    public Foto obtenerPorId(int tipoFoto) {
-//        String sql = "SELECT * FROM fotos WHERE tipoFoto = ?";
-//        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-//            ps.setInt(1, tipoFoto);
-//            ResultSet rs = ps.executeQuery();
-//            if (rs.next()) {
-//                return new Foto(rs.getInt("tipoFoto"));
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
+    @Override
+    public Foto obtenerPorId(int tipoFoto) {
+        CallableStatement cs;
+        String query = "{CALL ObtenerFoto(?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1, tipoFoto);
+            
+            resultado = cs.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null; //por ahora es null, necesito ver qué añadirle
+    }
 
-//    @Override
-//    public List<Foto> listarTodos() {
-//        List<Foto> fotos = new ArrayList<>();
-//        String sql = "SELECT * FROM fotos";
-//        try (PreparedStatement ps = conexion.prepareStatement(sql);
-//             ResultSet rs = ps.executeQuery()) {
-//            while (rs.next()) {
-//                fotos.add(new Foto(rs.getInt("tipoFoto")));
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return fotos;
-//    } 
+    @Override
+    public List<Foto> listarTodos() {
+        List<Foto> fotos = new ArrayList<>();
+        CallableStatement cs;
+        String query = "{CALL ListarFotos()}";
+        int resultado = 0;
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);            
+            resultado = cs.executeUpdate();
+            while (rs.next()) {
+//                fotos.add(new Foto());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return fotos;
+    } 
 }

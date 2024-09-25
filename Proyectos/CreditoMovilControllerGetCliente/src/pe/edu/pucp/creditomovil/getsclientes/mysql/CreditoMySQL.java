@@ -4,11 +4,17 @@
  */
 package pe.edu.pucp.creditomovil.getsclientes.mysql;
 
+import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.getsclientes.dao.CreditoDAO;
 import pe.edu.pucp.creditomovil.getsclientes.model.Credito;
+import pe.edu.pucp.creditomovil.getsclientes.model.Cliente;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.Date;
+import java.sql.CallableStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -16,23 +22,28 @@ import java.sql.SQLException;
  */
 public class CreditoMySQL implements CreditoDAO{
     private Connection conexion;
-
-//    public CreditoMySQL(ConexionBD conexionBD) {
-//        try {
-//            this.conexion = conexionBD.obtenerConexion();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    private ResultSet rs;
 
     @Override
     public void insertar(Credito credito) {
-        String sql = "INSERT INTO creditos (numCredito, monto, tasaInteres) VALUES (?, ?, ?)";
-        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-            ps.setString(1, credito.getNumCredito());
-            ps.setDouble(2, credito.getMonto());
-            ps.setDouble(3, credito.getTasaInteres());
-            ps.executeUpdate();
+        CallableStatement cs;
+        String query = "{CALL InsertarCredito(?,?,?,?,?,?,?,?,?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setString(1,credito.getNumCredito());
+            cs.setDouble(2, credito.getMonto());
+            cs.setDouble(3, credito.getTasaInteres());
+            cs.setDate(4, (Date) credito.getFechaOtorgamiento());
+//            cs.setString(5, credito.getCliente().getCodigoCliente()); //creo que es asi
+            cs.setString(6,credito.getEstado());
+            cs.setInt(7, credito.getNumCuotas());
+//            cs.setString(8, nose); no se como meter las transacciones xd
+//            cs.setString(9, credito.getCliente().getCodigoCliente()); // creo que es asi tmb
+            
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -40,12 +51,24 @@ public class CreditoMySQL implements CreditoDAO{
 
     @Override
     public void modificar(Credito credito) {
-        String sql = "UPDATE creditos SET monto = ?, tasaInteres = ? WHERE numCredito = ?";
-        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-            ps.setDouble(1, credito.getMonto());
-            ps.setDouble(2, credito.getTasaInteres());
-            ps.setString(3, credito.getNumCredito());
-            ps.executeUpdate();
+        CallableStatement cs;
+        String query = "{CALL ModificarCredito(?,?,?,?,?,?,?,?,?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setString(1,credito.getNumCredito());
+            cs.setDouble(2, credito.getMonto());
+            cs.setDouble(3, credito.getTasaInteres());
+            cs.setDate(4, (Date) credito.getFechaOtorgamiento());
+//            cs.setString(5, credito.getCliente().getCodigoCliente()); //creo que es asi
+            cs.setString(6,credito.getEstado());
+            cs.setInt(7, credito.getNumCuotas());
+//            cs.setString(8, nose); no se como meter las transacciones xd
+//            cs.setString(9, credito.getCliente().getCodigoCliente()); // creo que es asi tmb
+            
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -53,41 +76,54 @@ public class CreditoMySQL implements CreditoDAO{
 
     @Override
     public void eliminar(String numCredito) {
-        String sql = "DELETE FROM creditos WHERE numCredito = ?";
-        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-            ps.setString(1, numCredito);
-            ps.executeUpdate();
+        CallableStatement cs;
+        String query = "{CALL EliminarCredito(?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setString(1, numCredito);
+            
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-//    @Override
-//    public Credito obtenerPorId(String numCredito) {
-//        String sql = "SELECT * FROM creditos WHERE numCredito = ?";
-//        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-//            ps.setString(1, numCredito);
-//            ResultSet rs = ps.executeQuery();
-//            if (rs.next()) {
-//                return new Credito(rs.getString("numCredito"), rs.getDouble("monto"), rs.getDouble("tasaInteres"));
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
+    @Override
+    public Credito obtenerPorId(String numCredito) {
+        CallableStatement cs;
+        String query = "{CALL ObtenerCredito(?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setString(1, numCredito);
+            
+            resultado = cs.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null; //por ahora es null, necesito ver qué añadirle
+    }
     
-//    public List<Credito> listarTodos() {
-//        List<Credito> creditos = new ArrayList<>();
-//        String sql = "SELECT * FROM creditos";
-//        try (PreparedStatement ps = conexion.prepareStatement(sql);
-//             ResultSet rs = ps.executeQuery()) {
-//            while (rs.next()) {
-//                creditos.add(new Credito(rs.getString("numCredito"), rs.getDouble("monto"), rs.getDouble("tasaInteres")));
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return creditos;
-//    }
+    public List<Credito> listarTodos() {
+        List<Credito> creditos = new ArrayList<>();
+        CallableStatement cs;
+        String query = "{CALL ListarCreditos()}";
+        int resultado = 0;
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);            
+            resultado = cs.executeUpdate();
+            while (rs.next()) {
+//                credutos.add(new Credito());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return creditos;
+    }
 }

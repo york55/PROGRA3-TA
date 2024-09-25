@@ -1,23 +1,29 @@
 package pe.edu.pucp.creditomovil.rrhh.model;
 
 import java.util.Date;
+import java.util.ArrayList;
+
+import pe.edu.pucp.creditomovil.getscliente.model.Evaluacion;
 
 public class Supervisor extends Usuario{
 
-    private String codigoSup;
-    private int codigoCargo;
+    private String codigoEv;
     private String agenciaAsignacion;
+	private int codigoCargo;
+	private ArrayList<Evaluacion> evaluaciones;
     
-    public Supervisor(Date fecha, String nombre, String apPaterno, 
+    public Supervisor(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, String codigoSup, int codigoCargo,
+            boolean activo, String codigoEv, int codigoCargo,
             String agenciaAsignacion){
-                super(fecha,nombre,apPaterno,apMaterno,contrasenha,
+                super(idUsuario,fecha,nombre,apPaterno,apMaterno,contrasenha,
                       fechaVencimiento,activo);
-                this.codigoSup = codigoSup;
-                this.codigoCargo = codigoCargo;
+                this.codigoEv = codigoEv;
+				this.codigoCargo = codigoCargo;
                 this.agenciaAsignacion = agenciaAsignacion;
+				this.evaluaciones = new ArrayList<Evaluacion>();
     }
+	
     @Override
     public void registrar(){
         
@@ -31,21 +37,21 @@ public class Supervisor extends Usuario{
         
     }
 
-    public String getCodigoSup() {
-        return codigoSup;
+    public String getCodigoEv() {
+        return codigoEv;
     }
 
-    public void setCodigoSup(String codigoSup) {
-        this.codigoSup = codigoSup;
+    public void setCodigoEv(String codigoEv) {
+        this.codigoEv = codigoEv;
     }
-
-    public int getCodigoCargo() {
-        return codigoCargo;
-    }
-
-    public void setCodigoCargo(int codigoCargo) {
-        this.codigoCargo = codigoCargo;
-    }
+	
+	public int getCodigoCargo() {
+		return codigoCargo;
+	}
+	
+	public void setCodigoCargo() {
+		this.codigoCargo = codigoCargo;
+	}
 
     public String getAgenciaAsignacion() {
         return agenciaAsignacion;
@@ -54,5 +60,9 @@ public class Supervisor extends Usuario{
     public void setAgenciaAsignacion(String agenciaAsignacion) {
         this.agenciaAsignacion = agenciaAsignacion;
     }
+	
+	public void agregarEvaluacion(Evaluacion eval){
+		evaluaciones.add(eval);
+	}
 }
 

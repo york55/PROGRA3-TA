@@ -4,6 +4,7 @@
  */
 package pe.edu.pucp.creditomovil.getscredito.dao;
 
+import java.util.List;
 import pe.edu.pucp.creditomovil.getscredito.model.Foto;
 
 /**
@@ -14,6 +15,6 @@ public interface FotoDAO {
     void insertar(Foto foto);
     void modificar(Foto foto);
     void eliminar(int tipoFoto);
-    //Foto obtenerPorId(int tipoFoto);
-    //List<Foto> listarTodos();
+    Foto obtenerPorId(int tipoFoto);
+    List<Foto> listarTodos();
 }

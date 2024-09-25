@@ -4,6 +4,7 @@
  */
 package pe.edu.pucp.creditomovil.getsclientes.dao;
 
+import java.util.List;
 import pe.edu.pucp.creditomovil.getsclientes.model.Credito;
 
 /**
@@ -14,6 +15,6 @@ public interface CreditoDAO {
     void insertar(Credito credito);
     void modificar(Credito credito);
     void eliminar(String numCredito);
-    //Credito obtenerPorId(String numCredito);
-    //public List<Credito> listarTodos() 
+    Credito obtenerPorId(String numCredito);
+    public List<Credito> listarTodos(); 
 }

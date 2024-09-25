@@ -6,41 +6,34 @@ package pe.edu.pucp.creditomovil.rrhh.mysql;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.Date;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
-import pe.edu.pucp.creditomovil.rrhh.dao.UsuarioDAO;
-import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
+import pe.edu.pucp.creditomovil.rrhh.dao.AdministradorDAO;
+import pe.edu.pucp.creditomovil.rrhh.model.Administrador;
 /**
  *
- * @author diego
+ * @author Bleak
  */
-public class UsuarioMySQL implements UsuarioDAO{
-   private Connection conexion;
-   private ResultSet rs;
+public class AdministradorMySQL implements AdministradorDAO{
+    private Connection conexion;
+    private ResultSet rs;
 
     @Override
-    public void insertar(Usuario usuario) {
+    public void insertar(Administrador administrador) {
         CallableStatement cs;
-        String query = "{CALL InsertarUsuario(?,?,?,?,?,?,?,?,?)}";
+        String query = "{CALL InsertarAdmin(?,?,?)}";
         int resultado = 0;
         
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setDate(1, (Date) usuario.getFecha());
-            cs.setString(2, usuario.getNombre());
-            cs.setString(3,usuario.getApPaterno());
-            cs.setString(4,usuario.getApMaterno());
-            cs.setString(5, usuario.getContrasenha());
-            cs.setDate(6, (Date) usuario.getFechaVencimiento());
-            if(usuario.getActivo()) cs.setString(7,"S");
-            else cs.setString(7,"N");
-            cs.setDate(8, (Date) usuario.getUltimoLogueo());
-//            cs.setString(9,usuario.getClase???)
+            cs.setInt(1, administrador.getIdUsuario());
+            cs.setString(2, administrador.getCodigoAdm());
+            cs.setInt(3, administrador.getCodigoCargo());
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -49,24 +42,17 @@ public class UsuarioMySQL implements UsuarioDAO{
     }
 
     @Override
-    public void modificar(Usuario usuario) {
+    public void modificar(Administrador administrador) {
         CallableStatement cs;
-        String query = "{CALL ModificarUsuario(?,?,?,?,?,?,?,?,?)}";
+        String query = "{CALL ModificarAdmin(?,?,?)}";
         int resultado = 0;
         
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setDate(1, (Date) usuario.getFecha());
-            cs.setString(2, usuario.getNombre());
-            cs.setString(3,usuario.getApPaterno());
-            cs.setString(4,usuario.getApMaterno());
-            cs.setString(5, usuario.getContrasenha());
-            cs.setDate(6, (Date) usuario.getFechaVencimiento());
-            if(usuario.getActivo()) cs.setString(7,"S");
-            else cs.setString(7,"N");
-            cs.setDate(8, (Date) usuario.getUltimoLogueo());
-//            cs.setString(9,usuario.getClase???)
+            cs.setInt(1, administrador.getIdUsuario());
+            cs.setString(2, administrador.getCodigoAdm());
+            cs.setInt(3, administrador.getCodigoCargo());
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -75,15 +61,15 @@ public class UsuarioMySQL implements UsuarioDAO{
     }
 
     @Override
-    public void eliminar(int id) {
+    public void eliminar(String codigoAdmin) {
         CallableStatement cs;
-        String query = "{CALL EliminarUsuario(?)}";
+        String query = "{CALL EliminarAdmin(?)}";
         int resultado = 0;
         
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setInt(1, id);
+            cs.setString(1, codigoAdmin);
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -92,15 +78,15 @@ public class UsuarioMySQL implements UsuarioDAO{
     }
 
     @Override
-    public Usuario obtenerPorId(int id) {
+    public Administrador obtenerPorId(String codigoAdmin) {
         CallableStatement cs;
-        String query = "{CALL ObtenerUsuario(?)}";
+        String query = "{CALL ObtenerAdmin(?)}";
         int resultado = 0;
         
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setInt(1, id);
+            cs.setString(1, codigoAdmin);
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -110,21 +96,22 @@ public class UsuarioMySQL implements UsuarioDAO{
     }
 
     @Override
-    public List<Usuario> listarTodos() {
-        List<Usuario> usuarios = new ArrayList<>();
+    public List<Administrador> listarTodos() {
+        List<Administrador> administradores = new ArrayList<>();
         CallableStatement cs;
-        String query = "{CALL ListarUsuarios()}";
+        String query = "{CALL ListarAdmin()}";
         int resultado = 0;
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);            
             resultado = cs.executeUpdate();
             while (rs.next()) {
-//                usuarios.add(new Usuario());
+//                administradores.add(new Administrador());
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return usuarios;
-    }    
+        return administradores;
+    }
+    
 }

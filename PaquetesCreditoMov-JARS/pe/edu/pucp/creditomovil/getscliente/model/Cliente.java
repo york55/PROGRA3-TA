@@ -2,6 +2,7 @@ package pe.edu.pucp.creditomovil.getsclientes.model;
 import java.util.Date;
 import java.util.ArrayList;
 import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
+import pe.edu.pucp.creditomovil.getscliente.model.Credito;
 
 public class Cliente extends Usuario{
 
@@ -13,11 +14,11 @@ public class Cliente extends Usuario{
     private ArrayList<Credito> creditos;
     
 
-    public Cliente(Date fecha, String nombre, String apPaterno, 
+    public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo, String codigoCliente, String direccion, 
             String telefono, String email, String tipoCliente){
-                super(fecha,nombre,apPaterno,apMaterno,contrasenha,
+                super(idUsuario,fecha,nombre,apPaterno,apMaterno,contrasenha,
                       fechaVencimiento,activo);
                 this.codigoCliente = codigoCliente;
                 this.direccion = direccion;

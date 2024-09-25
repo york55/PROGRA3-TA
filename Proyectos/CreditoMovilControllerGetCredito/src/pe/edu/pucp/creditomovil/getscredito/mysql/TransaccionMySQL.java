@@ -4,10 +4,15 @@
  */
 package pe.edu.pucp.creditomovil.getscredito.mysql;
 
+import java.sql.CallableStatement;
 import pe.edu.pucp.creditomovil.getscredito.dao.TransaccionDAO;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.getscredito.model.Transaccion;
 /**
  *
@@ -15,26 +20,29 @@ import pe.edu.pucp.creditomovil.getscredito.model.Transaccion;
  */
 public class TransaccionMySQL implements TransaccionDAO{
     private Connection conexion;
-
-//    public TransaccionMySQL(ConexionBD conexionBD) {
-//        try {
-//            this.conexion = conexionBD.obtenerConexion();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    private ResultSet rs;
 
     @Override
     public void insertar(Transaccion transaccion) {
-        String sql = "INSERT INTO transacciones (fecha, concepto, monto, anulado, usuarioRegistrado, agencia) VALUES (?, ?, ?, ?, ?, ?)";
-        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-            ps.setDate(1, new java.sql.Date(transaccion.getFecha().getTime()));
-            ps.setString(2, transaccion.getConcepto());
-            ps.setDouble(3, transaccion.getMonto());
-            ps.setBoolean(4, transaccion.isAnulado());
-            //ps.setString(5, transaccion.getUsuarioRegistrado().getNombre());
-            ps.setString(6, transaccion.getAgencia());
-            ps.executeUpdate();
+        CallableStatement cs;
+        String query = "{CALL InsertarTransaccion(?,?,?,?,?,?,?,?,?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setDate(1, (Date) transaccion.getFecha());
+            cs.setString(2, transaccion.getConcepto());
+            cs.setDouble(3, transaccion.getMonto());
+            if(transaccion.isAnulado()) cs.setString(4, "S");
+            else cs.setString(4,"N");
+//            cs.setString(5, transaccion.getUsuarioRegistrado().getClienteCodigo());
+            cs.setString(6, transaccion.getAgencia());
+//            cs.setString(7, transaccion.getCredito().getNumCredito());
+//            cs.setString(8, transaccion.getUsuarioRegistrado().getClienteCodigo());
+            cs.setInt(9,transaccion.getNumOperacion());
+            
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -42,13 +50,24 @@ public class TransaccionMySQL implements TransaccionDAO{
 
     @Override
     public void modificar(Transaccion transaccion) {
-        String sql = "UPDATE transacciones SET concepto = ?, monto = ?, anulado = ? WHERE numOperacion = ?";
-        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-            ps.setString(1, transaccion.getConcepto());
-            ps.setDouble(2, transaccion.getMonto());
-            ps.setBoolean(3, transaccion.isAnulado());
-            ps.setInt(4, transaccion.getNumOperacion());
-            ps.executeUpdate();
+        CallableStatement cs;
+        String query = "{CALL ModificarTransaccion(?,?,?,?,?,?,?,?,?)}";
+        int resultado = 0;
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1,transaccion.getNumOperacion());
+            cs.setDate(2, (Date) transaccion.getFecha());
+            cs.setString(3, transaccion.getConcepto());
+            cs.setDouble(4, transaccion.getMonto());
+            if(transaccion.isAnulado()) cs.setString(5, "S");
+            else cs.setString(5,"N");
+//            cs.setString(6, transaccion.getUsuarioRegistrado().getClienteCodigo());
+            cs.setString(7, transaccion.getAgencia());
+//            cs.setString(8, transaccion.getCredito().getNumCredito());
+//            cs.setString(9, transaccion.getUsuarioRegistrado().getClienteCodigo());
+            
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -56,44 +75,55 @@ public class TransaccionMySQL implements TransaccionDAO{
 
     @Override
     public void eliminar(int numOperacion) {
-        String sql = "DELETE FROM transacciones WHERE numOperacion = ?";
-        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-            ps.setInt(1, numOperacion);
-            ps.executeUpdate();
+        CallableStatement cs;
+        String query = "{CALL EliminarTransaccion(?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1, numOperacion);
+            
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-//    @Override
-//    public Transaccion obtenerPorId(int numOperacion) {
-//        String sql = "SELECT * FROM transacciones WHERE numOperacion = ?";
-//        try (PreparedStatement ps = conexion.prepareStatement(sql)) {
-//            ps.setInt(1, numOperacion);
-//            ResultSet rs = ps.executeQuery();
-//            if (rs.next()) {
-//                return new Transaccion(rs.getDate("fecha"), rs.getString("concepto"), rs.getDouble("monto"),
-//                        rs.getBoolean("anulado"), new Usuario(rs.getString("usuarioRegistrado")), rs.getString("agencia"), numOperacion);
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
+    @Override
+    public Transaccion obtenerPorId(int numOperacion) {
+        CallableStatement cs;
+        String query = "{CALL ObtenerTransaccion(?)}";
+        int resultado = 0;
+        
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1, numOperacion);
+            
+            resultado = cs.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null; //por ahora es null, necesito ver qué añadirle
+    }
 
-//    @Override
-//    public List<Transaccion> listarTodos() {
-//        List<Transaccion> transacciones = new ArrayList<>();
-//        String sql = "SELECT * FROM transacciones";
-//        try (PreparedStatement ps = conexion.prepareStatement(sql);
-//             ResultSet rs = ps.executeQuery()) {
-//            while (rs.next()) {
-//                transacciones.add(new Transaccion(rs.getDate("fecha"), rs.getString("concepto"), rs.getDouble("monto"),
-//                        rs.getBoolean("anulado"), new Usuario(rs.getString("usuarioRegistrado")), rs.getString("agencia"), rs.getInt("numOperacion")));
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return transacciones;
-//    }
+    @Override
+    public List<Transaccion> listarTodos() {
+        List<Transaccion> transacciones = new ArrayList<>();
+        CallableStatement cs;
+        String query = "{CALL ListarTransacciones()}";
+        int resultado = 0;
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);            
+            resultado = cs.executeUpdate();
+            while (rs.next()) {
+//                transacciones.add(new Foto());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return transacciones;
+    }
 }

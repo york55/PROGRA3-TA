@@ -4,7 +4,7 @@ import java.util.Date;
 
 public abstract class Usuario {
 
-
+	private int idUsuario;
     private Date fecha;
     private String nombre;
     private String apPaterno;
@@ -14,9 +14,10 @@ public abstract class Usuario {
     private boolean activo; // define si el usuario esta activo en el sistema o no
     private Date ultimoLogueo;
     
-    public Usuario(Date fecha, String nombre, String apPaterno, 
+    public Usuario(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo){
+				this.idUsuario = idUsuario;
                 this.fecha = fecha;
                 this.nombre = nombre;
                 this.apPaterno = apPaterno;
@@ -50,6 +51,14 @@ public abstract class Usuario {
 //
 //        return ;
 //    }
+
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+	
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
 
     public Date getFecha() {
         return fecha;

@@ -1,5 +1,6 @@
 package pe.edu.pucp.creditomovil.getscredito.model;
 import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
+import pe.edu.pucp.creditomovil.getscliente.model.Credito;
 
 import java.util.Date;
 
@@ -11,11 +12,12 @@ public class Transaccion {
     private boolean anulado;
     private Usuario usuarioRegistrado;
     private String agencia;
+	private Credito credito;
     private int numOperacion;
     
     public Transaccion(Date fecha, String concepto, double monto, 
             boolean anulado, Usuario usuarioRegistrado, String agencia,
-            int numOperacion){
+            int numOperacion, Credito credito){
                 this.fecha = fecha;
                 this.concepto = concepto;
                 this.monto = monto;
@@ -23,6 +25,7 @@ public class Transaccion {
                 this.usuarioRegistrado = usuarioRegistrado;
                 this.agencia = agencia;
                 this.numOperacion = numOperacion;
+				this.credito = credito;
     }
 
     public void registrarTransaccion(){
@@ -96,6 +99,14 @@ public class Transaccion {
     public void setNumOperacion(int numOperacion) {
         this.numOperacion = numOperacion;
     }
+	
+	public Credito getCredito() {
+		return credito;
+	}
+	
+	public void setCredito(Credito credito) {
+		this.credito = credito;
+	}
 
 }
 

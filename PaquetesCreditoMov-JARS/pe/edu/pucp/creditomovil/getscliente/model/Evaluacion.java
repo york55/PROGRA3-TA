@@ -1,4 +1,4 @@
-package pe.edu.pucp.creditomovil.getsclientes.model;
+package pe.edu.pucp.creditomovil.getscliente.model;
 import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
 import java.util.Date;
 
@@ -8,34 +8,38 @@ public class Evaluacion {
     private String nombreNegocio;
     private String direccionNegocio;
     private String telefonoNegocio;
-    private Usuario usuarioRegistrador;
+    private Usuario evaluador;
+	private Usuario clienteAsignado;
     private double ventasDiarias;
     private double inventario; //monto de lo que poseen (electrodomesticos etc)
     private double costoVentas;
     private double margenGanancia;
     private int numeroEvaluacion;
     private boolean activo;
-
-
+	public double puntaje;
+	public String observaciones;
 
 
     public Evaluacion(Date fechaRegistro, String nombreNegocio,
             String direccionNegocio, String telefonoNegocio,
-            Usuario usuarioRegistrador, double ventasDiarias, 
+            Usuario evaluador, Usuario clienteAsignado, double ventasDiarias, 
             double inventario, double costoVentas, double margenGanancia,
             double latitud, double longitud, int numeroEvaluacion, 
-            boolean activo){
+            boolean activo, double puntaje, String observaciones){
                 this.fechaRegistro = fechaRegistro;
                 this.nombreNegocio = nombreNegocio;
                 this.direccionNegocio = direccionNegocio;
                 this.telefonoNegocio = telefonoNegocio;
-                this.usuarioRegistrador = usuarioRegistrador;
+                this.evaluador = evaluador;
+				this.clienteAsignado = clienteAsignado;
                 this.ventasDiarias = ventasDiarias;
                 this.inventario = inventario;
                 this.costoVentas = costoVentas;
                 this.margenGanancia = margenGanancia;
                 this.numeroEvaluacion = numeroEvaluacion;
                 this.activo = activo;
+				this.puntaje = puntaje;
+				this.observaciones = observaciones;
     }
 
 
@@ -96,14 +100,22 @@ public class Evaluacion {
     }
 
 
-    public Usuario getUsuarioRegistrador() {
-        return usuarioRegistrador;
+    public Usuario getevaluador() {
+        return evaluador;
     }
 
 
-    public void setUsuarioRegistrador(Usuario usuarioRegistrador) {
-        this.usuarioRegistrador = usuarioRegistrador;
+    public void setevaluador(Usuario evaluador) {
+        this.evaluador = evaluador;
     }
+	
+	public Usuario getClienteAsignado() {
+		return clienteAsignado;
+	}
+	
+	public void setClienteAsignado(Usuario clienteAsignado) {
+		this.clienteAsignado = clienteAsignado;
+	}
 
 
     public double getVentasDiarias() {
@@ -163,5 +175,21 @@ public class Evaluacion {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
+	
+	public double getPuntaje() {
+		return puntaje;
+	}
+	
+	public void setPuntaje(double puntaje) {
+		this.puntaje = puntaje;
+	}
+	
+	public String getObservaciones() {
+		return observaciones;
+	}
+	
+	public void setObservaciones(String observaciones) {
+		this.observaciones = observaciones;
+	}
 }
 
