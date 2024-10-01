@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.SupervisorDAO;
@@ -98,18 +99,34 @@ public class SupervisorMySQL implements SupervisorDAO{
     @Override
     public List<Supervisor> listarTodos() {
         List<Supervisor> supervisores = new ArrayList<>();
-        CallableStatement cs;
+        CallableStatement cs = null;
         String query = "{CALL ListarSupervisores()}";
-        int resultado = 0;
+        ResultSet rs = null;
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);            
-            resultado = cs.executeUpdate();
+            rs = cs.executeQuery();
             while (rs.next()) {
-//                supervisores.add(new Supervisor());
+                //
+                Supervisor supervisor = new Supervisor(
+                    rs.getInt("usuario_usuario_id"), 
+                    new Date(), "Diego", "Pérez", "Gonzalez", "miContrasena", new Date(), true,
+                    rs.getString("codigo_sup"),
+                    rs.getInt("codigo_cargo"),
+                    rs.getString("agencia_asignacion")
+                );
+                supervisores.add(supervisor);
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally{
+            try{
+                if(rs != null) rs.close();
+                if(cs != null) cs.close();
+                if(conexion!=null) conexion.close();
+            } catch(SQLException e){
+                e.printStackTrace();
+            }
         }
         return supervisores;
     }

@@ -98,18 +98,33 @@ public class AdministradorMySQL implements AdministradorDAO{
     @Override
     public List<Administrador> listarTodos() {
         List<Administrador> administradores = new ArrayList<>();
-        CallableStatement cs;
-        String query = "{CALL ListarAdmin()}";
-        int resultado = 0;
+        CallableStatement cs = null;
+        String query = "{CALL ListarSupervisores()}";
+        ResultSet rs = null;
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);            
-            resultado = cs.executeUpdate();
+            rs = cs.executeQuery();
             while (rs.next()) {
-//                administradores.add(new Administrador());
+                //
+                Administrador admin = new Administrador(
+                    rs.getInt("usuario_usuario_id"), 
+                    new java.util.Date(), "Diego", "Pérez", "Gonzalez", "miContrasena", new java.util.Date(), true,
+                    rs.getString("codigo_admin"),
+                    rs.getInt("codigo_cargo")
+                );
+                administradores.add(admin);
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally{
+            try{
+                if(rs != null) rs.close();
+                if(cs != null) cs.close();
+                if(conexion!=null) conexion.close();
+            } catch(SQLException e){
+                e.printStackTrace();
+            }
         }
         return administradores;
     }
