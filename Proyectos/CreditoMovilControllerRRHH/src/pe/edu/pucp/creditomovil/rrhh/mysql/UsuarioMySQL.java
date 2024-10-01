@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.UsuarioDAO;
+import pe.edu.pucp.creditomovil.rrhh.model.Supervisor;
 import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
 /**
  *
@@ -113,18 +114,38 @@ public class UsuarioMySQL implements UsuarioDAO{
     @Override
     public List<Usuario> listarTodos() {
         List<Usuario> usuarios = new ArrayList<>();
-        CallableStatement cs;
+        CallableStatement cs = null;
         String query = "{CALL ListarUsuarios()}";
-        int resultado = 0;
+        ResultSet rs = null;
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);            
-            resultado = cs.executeUpdate();
+            rs = cs.executeQuery();
             while (rs.next()) {
-//                usuarios.add(new Usuario());
+                //
+                Usuario usuario = new Supervisor(
+                    rs.getInt("usuario_id"), 
+                    rs.getDate("fecha"),
+                    rs.getString("nombre"),                   // Columna 'nombre'
+                    rs.getString("ap_paterno"),               // Columna 'ap_paterno'
+                    rs.getString("ap_materno"),               // Columna 'ap_materno'
+                    rs.getString("contrasena"),               // Columna 'contrasena'             
+                    rs.getDate("fecha_venc"),          // Columna 'fecha_vencimiento'
+                    rs.getString("activo").equals("S"),       // Convertimos "S" o "N" a booleano
+                    "A",1,"SUP123"
+                );
+                usuarios.add(usuario);
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally{
+            try{
+                if(rs != null) rs.close();
+                if(cs != null) cs.close();
+                if(conexion!=null) conexion.close();
+            } catch(SQLException e){
+                e.printStackTrace();
+            }
         }
         return usuarios;
     }    

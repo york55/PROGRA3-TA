@@ -5,11 +5,13 @@
 package pe.edu.pucp.creditomovil.program.main;
 
 import java.util.Date;
+import java.util.List;
 import pe.edu.pucp.creditomovil.rrhh.dao.AdministradorDAO;
 import pe.edu.pucp.creditomovil.rrhh.dao.SupervisorDAO;
 import pe.edu.pucp.creditomovil.rrhh.dao.UsuarioDAO;
 import pe.edu.pucp.creditomovil.rrhh.model.Administrador;
 import pe.edu.pucp.creditomovil.rrhh.model.Supervisor;
+import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
 import pe.edu.pucp.creditomovil.rrhh.mysql.AdministradorMySQL;
 import pe.edu.pucp.creditomovil.rrhh.mysql.SupervisorMySQL;
 import pe.edu.pucp.creditomovil.rrhh.mysql.UsuarioMySQL;
@@ -29,6 +31,11 @@ public class Principal {
         //daoUsuario.insertar(supervisor);
         //daoUsuario.modificar(2,supervisor);
         //daoUsuario.eliminar(3);
+        List<Usuario> listaUsuarios = daoUsuario.listarTodos();
+        for (Usuario usuario : listaUsuarios) {
+            System.out.println("ID: " + usuario.getIdUsuario());
+            System.out.println("Nombre: " + usuario.getNombre());
+        }
         SupervisorDAO daoSupervisor = new SupervisorMySQL();
         //daoSupervisor.insertar(supervisor);
         //daoSupervisor.modificar(1, supervisor);
