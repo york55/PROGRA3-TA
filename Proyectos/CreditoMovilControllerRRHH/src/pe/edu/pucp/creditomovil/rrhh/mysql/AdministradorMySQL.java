@@ -99,7 +99,7 @@ public class AdministradorMySQL implements AdministradorDAO{
     public List<Administrador> listarTodos() {
         List<Administrador> administradores = new ArrayList<>();
         CallableStatement cs = null;
-        String query = "{CALL ListarSupervisores()}";
+        String query = "{CALL ListarAdmin()}";
         ResultSet rs = null;
         try {
             conexion = DBManager.getInstance().getConnection();

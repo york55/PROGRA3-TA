@@ -25,7 +25,7 @@ public class ClienteMySQL implements ClienteDAO{
     @Override
     public void insertar(Cliente cliente) {
         CallableStatement cs;
-        String query = "{CALL InsertarCliente(?,?,?,?,?,?,?)}";
+        String query = "{CALL InsertarCliente(?,?,?,?,?,?)}";
         int resultado = 0;
         
         try {
@@ -37,7 +37,6 @@ public class ClienteMySQL implements ClienteDAO{
             cs.setString(4,cliente.getTelefono());
             cs.setString(5, cliente.getEmail());
             cs.setString(6, cliente.getTipoCliente());
-            // falta un atributo
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -48,19 +47,18 @@ public class ClienteMySQL implements ClienteDAO{
     @Override
     public void modificar(int id,Cliente cliente) {
         CallableStatement cs;
-        String query = "{CALL ModificarCliente(?,?,?,?,?,?,?)}";
+        String query = "{CALL ModificarCliente(?,?,?,?,?,?)}";
         int resultado = 0;
         
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setInt(1,cliente.getIdUsuario());
-            cs.setString(2, cliente.getCodigoCliente());
+            cs.setString(1, cliente.getCodigoCliente());
+            cs.setInt(2, cliente.getIdUsuario());
             cs.setString(3,cliente.getDireccion());
             cs.setString(4,cliente.getTelefono());
             cs.setString(5, cliente.getEmail());
             cs.setString(6, cliente.getTipoCliente());
-            // falta un atributo
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -106,18 +104,36 @@ public class ClienteMySQL implements ClienteDAO{
     @Override
     public List<Cliente> listarTodos() {
         List<Cliente> clientes = new ArrayList<>();
-        CallableStatement cs;
+        CallableStatement cs = null;
         String query = "{CALL ListarClientes()}";
-        int resultado = 0;
+        ResultSet rs = null;
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);            
-            resultado = cs.executeUpdate();
+            rs = cs.executeQuery();
             while (rs.next()) {
-//                clientes.add(new Cliente());
+                //
+                Cliente cliente = new Cliente(
+                    rs.getInt("usuario_usuario_id"), 
+                    new java.util.Date(), "Diego", "Pérez", "Gonzalez", "miContrasena", new java.util.Date(), true,
+                    rs.getString("codigo_cliente"),
+                    rs.getString("direccion"),
+                    rs.getString("telefono"),
+                    rs.getString("email"),
+                    rs.getString("tipo_cliente")
+                );
+                clientes.add(cliente);
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally{
+            try{
+                if(rs != null) rs.close();
+                if(cs != null) cs.close();
+                if(conexion!=null) conexion.close();
+            } catch(SQLException e){
+                e.printStackTrace();
+            }
         }
         return clientes;
     }  

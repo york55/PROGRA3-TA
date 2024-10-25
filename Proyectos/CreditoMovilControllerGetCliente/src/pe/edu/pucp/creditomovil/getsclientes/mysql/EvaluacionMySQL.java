@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
+import pe.edu.pucp.creditomovil.getscliente.model.Cliente;
 import pe.edu.pucp.creditomovil.getscliente.model.Evaluacion;
 import pe.edu.pucp.creditomovil.getsclientes.dao.EvaluacionDAO;
 /**
@@ -25,7 +26,7 @@ public class EvaluacionMySQL implements EvaluacionDAO{
     @Override
     public void insertar(Evaluacion evaluacion) {
         CallableStatement cs;
-        String query = "{CALL InsertarEvaluacion(?,?,?,?,?,?,?,?,?,?,?,?)}";
+        String query = "{CALL InsertarEvaluacion(?,?,?,?,?,?,?,?,?,?)}";
         int resultado = 0;
         
         try {
@@ -35,8 +36,6 @@ public class EvaluacionMySQL implements EvaluacionDAO{
             cs.setString(2,evaluacion.getNombreNegocio());
             cs.setString(3, evaluacion.getDireccionNegocio());
             cs.setString(4,evaluacion.getTelefonoNegocio());
-//            cs.setString(5, evaluacion.getClienteAsignado().getCodigoCliente()); //creo que va así
-//            cs.setString(6, evaluacion.getevaluador().getCodigoEv()); // creo que va así
             cs.setDouble(7,evaluacion.getVentasDiarias());
             cs.setDouble(8,evaluacion.getInventario());
             cs.setDouble(9, evaluacion.getCostoVentas());
@@ -44,7 +43,8 @@ public class EvaluacionMySQL implements EvaluacionDAO{
             if(evaluacion.isActivo()){
                 cs.setString(11,"S");
             }else cs.setString(11, "N");
-//            cs.setString(12, evaluacion.getClienteAsignado().getCodigoCliente()); // creo que es así
+            Cliente cli = (Cliente)evaluacion.getClienteAsignado();
+            cs.setString(12, cli.getCodigoCliente());
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
