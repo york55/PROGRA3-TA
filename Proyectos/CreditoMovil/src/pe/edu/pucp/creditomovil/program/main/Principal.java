@@ -9,7 +9,9 @@ import java.util.List;
 import pe.edu.pucp.creditomovil.getscliente.model.Cliente;
 import pe.edu.pucp.creditomovil.getscliente.model.Evaluacion;
 import pe.edu.pucp.creditomovil.getsclientes.dao.ClienteDAO;
+import pe.edu.pucp.creditomovil.getsclientes.dao.EvaluacionDAO;
 import pe.edu.pucp.creditomovil.getsclientes.mysql.ClienteMySQL;
+import pe.edu.pucp.creditomovil.getsclientes.mysql.EvaluacionMySQL;
 import pe.edu.pucp.creditomovil.rrhh.dao.AdministradorDAO;
 import pe.edu.pucp.creditomovil.rrhh.dao.SupervisorDAO;
 import pe.edu.pucp.creditomovil.rrhh.dao.UsuarioDAO;
@@ -82,9 +84,13 @@ public class Principal {
 //        }
 
     //EVALUACION
-        Evaluacion eval = new Evaluacion(new Date(),"negocio1","dirNego","302311",cliente,cliente,12,123,67,54,5,10,1,
-            true,14,"observacion");
-        EvaluacionDAO 
+        Evaluacion eval = new Evaluacion(new Date(),"negocioxd1","dixdrNego","302311",cliente,cliente,12,123,67,54,5,10,1,
+            true,14,"observacionModificado");
+        EvaluacionDAO daoEvaluacion = new EvaluacionMySQL();
+        //daoEvaluacion.insertar(eval);
+        eval.setNumeroEvaluacion(0);//wtf recien aca le agrego el id? y porque cuando creo no me pide, deberia devolverlo no?
+        daoEvaluacion.modificar(eval);
+        
     }
     
 }

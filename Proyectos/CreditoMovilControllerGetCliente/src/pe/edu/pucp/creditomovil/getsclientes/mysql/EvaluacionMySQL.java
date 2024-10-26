@@ -32,19 +32,19 @@ public class EvaluacionMySQL implements EvaluacionDAO{
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setDate(1, (Date) evaluacion.getFechaRegistro());
+            cs.setDate(1, new java.sql.Date(evaluacion.getFechaRegistro().getTime()));
             cs.setString(2,evaluacion.getNombreNegocio());
             cs.setString(3, evaluacion.getDireccionNegocio());
             cs.setString(4,evaluacion.getTelefonoNegocio());
-            cs.setDouble(7,evaluacion.getVentasDiarias());
-            cs.setDouble(8,evaluacion.getInventario());
-            cs.setDouble(9, evaluacion.getCostoVentas());
-            cs.setDouble(10, evaluacion.getMargenGanancia());
+            cs.setDouble(5,evaluacion.getVentasDiarias());
+            cs.setDouble(6,evaluacion.getInventario());
+            cs.setDouble(7, evaluacion.getCostoVentas());
+            cs.setDouble(8, evaluacion.getMargenGanancia());
             if(evaluacion.isActivo()){
-                cs.setString(11,"S");
-            }else cs.setString(11, "N");
+                cs.setString(9,"S");
+            }else cs.setString(9, "N");
             Cliente cli = (Cliente)evaluacion.getClienteAsignado();
-            cs.setString(12, cli.getCodigoCliente());
+            cs.setString(10, cli.getCodigoCliente());
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -55,26 +55,26 @@ public class EvaluacionMySQL implements EvaluacionDAO{
     @Override
     public void modificar(Evaluacion evaluacion) {
         CallableStatement cs;
-        String query = "{CALL ModificarEvaluacion(?,?,?,?,?,?,?,?,?,?,?,?)}";
+        String query = "{CALL ModificarEvaluacion(?,?,?,?,?,?,?,?,?,?,?)}";
         int resultado = 0;
         
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setDate(1, (Date) evaluacion.getFechaRegistro());
-            cs.setString(2,evaluacion.getNombreNegocio());
-            cs.setString(3, evaluacion.getDireccionNegocio());
-            cs.setString(4,evaluacion.getTelefonoNegocio());
-//            cs.setString(5, evaluacion.getClienteAsignado().getCodigoCliente()); //creo que va así
-//            cs.setString(6, evaluacion.getevaluador().getCodigoEv()); // creo que va así
-            cs.setDouble(7,evaluacion.getVentasDiarias());
-            cs.setDouble(8,evaluacion.getInventario());
-            cs.setDouble(9, evaluacion.getCostoVentas());
-            cs.setDouble(10, evaluacion.getMargenGanancia());
+            cs.setInt(1, evaluacion.getNumeroEvaluacion());
+            cs.setDate(2, new java.sql.Date(evaluacion.getFechaRegistro().getTime()));
+            cs.setString(3,evaluacion.getNombreNegocio());
+            cs.setString(4, evaluacion.getDireccionNegocio());
+            cs.setString(5,evaluacion.getTelefonoNegocio());
+            cs.setDouble(6,evaluacion.getVentasDiarias());
+            cs.setDouble(7,evaluacion.getInventario());
+            cs.setDouble(8, evaluacion.getCostoVentas());
+            cs.setDouble(9, evaluacion.getMargenGanancia());
             if(evaluacion.isActivo()){
-                cs.setString(11,"S");
-            }else cs.setString(11, "N");
-//            cs.setString(12, evaluacion.getClienteAsignado().getCodigoCliente()); // creo que es así
+                cs.setString(10,"S");
+            }else cs.setString(10, "N");
+            Cliente cli = (Cliente)evaluacion.getClienteAsignado();
+            cs.setString(11, cli.getCodigoCliente());
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
