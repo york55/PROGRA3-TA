@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="VisualizarCreditos.aspx.cs" Inherits="CreditoMovilWA.VisualizarCreditos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="VisualizarCreditosCliente.aspx.cs" Inherits="CreditoMovilWA.VisualizarCreditos" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -54,7 +54,7 @@
             margin: 10px 0 5px;
         }
         .input-text {
-            width: calc(100% - 20px); /* Deja espacio adicional a los lados */
+            width: calc(100% - 20px); 
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ddd;
@@ -63,7 +63,6 @@
             margin-bottom: 15px;
         }
 
-        /* Para el DropDownList, ocupa el ancho completo sin modificar */
         .select-dropdown {
             width: 100%; 
             padding: 10px;
@@ -115,7 +114,7 @@
             font-size: 16px;
             margin-top: 10px;
         }
-                .modal {
+        .modal {
             display: none; /* Oculto por defecto */
             position: fixed;
             z-index: 10;
@@ -153,6 +152,7 @@
 <body>
 
 <form id="mainForm" runat="server" enctype="multipart/form-data">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
     <!-- Encabezado con logo y botón de cerrar sesión -->
     <div class="header">
         <img src="logo.png" alt="Logo Crédito Móvil">

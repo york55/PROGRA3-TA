@@ -50,7 +50,7 @@ namespace CreditoMovilWA
 
         protected void btnVerCreditos_Click(object sender, EventArgs e)
         {
-            Response.Redirect("VisualizarCreditos.aspx");
+            Response.Redirect("VisualizarCreditosCliente.aspx");
         }
     }
 }

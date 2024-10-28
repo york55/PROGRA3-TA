@@ -61,19 +61,40 @@ namespace CreditoMovilWA
 
         protected void btnPagar_Click(object sender, EventArgs e)
         {
-            // Obtén el ID del crédito del CommandArgument
-            Button btn = (Button)sender;
-            string idCredito = btn.CommandArgument;
-
-            // Código para manejar el pago del crédito con el ID especificado
-            // Ejemplo: Response.Redirect("PagarCredito.aspx?id=" + idCredito);
+            string idCredito = (sender as Button).CommandArgument;
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "OpenModal", "openModal();", true);
         }
+
+       /* protected void btnSave_Click(object sender, EventArgs e)
+        {
+            if (fileUpload.HasFile)
+            {
+                // Lógica para procesar el archivo, guardar en base de datos o en el sistema de archivos
+                string fileName = fileUpload.FileName;
+                // Ejemplo: Guardar el archivo en una carpeta
+                string filePath = Server.MapPath("~/UploadedFiles/" + fileName);
+                fileUpload.SaveAs(filePath);
+
+                // Aquí puedes guardar la información del pago en la base de datos, si es necesario
+
+                lblMensaje.Text = "Archivo subido correctamente y pago registrado.";
+                lblMensaje.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                lblMensaje.Text = "Por favor, selecciona un archivo para subir.";
+                lblMensaje.ForeColor = System.Drawing.Color.Red;
+            }
+
+            // Cerrar el modal después de grabar
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+        }*/
 
         protected void btnVerDetalles_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             string idCredito = btn.CommandArgument;
-            Response.Redirect("DetallesCredito.aspx?id=" + idCredito);
+            Response.Redirect("DetalleCredito.aspx?id=" + idCredito);
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

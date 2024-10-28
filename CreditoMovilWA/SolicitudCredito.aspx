@@ -119,9 +119,9 @@
         }
 
         function updateInterest(amount) {
-            const minInterest = (amount * 0.05).toFixed(2); // 5% mínimo
+            const minInterest = (amount * 0.10).toFixed(2); // 5% mínimo
             const maxInterest = (amount * 0.15).toFixed(2); // 15% máximo
-            document.getElementById("interestDisplay").innerText = `Interés aproximado: S/. ${minInterest} - S/. ${maxInterest}`;
+            document.getElementById("interestDisplay").innerText = `Interés aproximado: S/. ${minInterest} - S/. ${maxInterest}   (10% - 15%)';
         }
     </script>
 </head>

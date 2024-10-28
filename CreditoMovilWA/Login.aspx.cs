@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Web.UI.WebControls;
+using System.Web.UI;
 
 namespace CreditoMovilWA
 {
@@ -12,7 +14,12 @@ namespace CreditoMovilWA
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
             // falta implementar logica de inicio
-        Response.Redirect("Main.aspx");
+            //if(esCliente)
+            Response.Redirect("MainCliente.aspx");
+            //else(esSupervisor)
+            //Response.Redirect("MainSupervisor.aspx");
+            //else
+            //Response.Redorect("MainAdmin.aspx");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Main.aspx.cs" Inherits="CreditoMovilWA.Main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MainCliente.aspx.cs" Inherits="CreditoMovilWA.Main" %>
 
 <!DOCTYPE html>
 <html lang="es">

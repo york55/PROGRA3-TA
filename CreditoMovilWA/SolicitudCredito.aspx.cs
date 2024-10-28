@@ -29,7 +29,7 @@ namespace CreditoMovilWA
 
             // Mostrar el interés en el Label
             //lblInteres.Text = $"Interés aproximado: S/. {minInteres:F2} - S/. {maxInteres:F2}";
-            Response.Redirect("Main.aspx");
+            Response.Redirect("MainCliente.aspx");
         }
     }
 }

@@ -70,15 +70,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DetalleCredito.aspx" />
+    <Content Include="DetalleEvaluacion.aspx" />
+    <Content Include="DetalleTransaccion.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="Main.aspx" />
+    <Content Include="MainCliente.aspx" />
+    <Content Include="MainSupervisor.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="SolicitudCredito.aspx" />
-    <Content Include="VisualizarCreditos.aspx" />
+    <Content Include="VisualizarCreditosCliente.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetalleCredito.aspx.cs">
+      <DependentUpon>DetalleCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleCredito.aspx.designer.cs">
+      <DependentUpon>DetalleCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleEvaluacion.aspx.cs">
+      <DependentUpon>DetalleEvaluacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleEvaluacion.aspx.designer.cs">
+      <DependentUpon>DetalleEvaluacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleTransaccion.aspx.cs">
+      <DependentUpon>DetalleTransaccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleTransaccion.aspx.designer.cs">
+      <DependentUpon>DetalleTransaccion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -93,12 +118,19 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Main.aspx.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="MainCliente.aspx.cs">
+      <DependentUpon>MainCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Main.aspx.designer.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="MainCliente.aspx.designer.cs">
+      <DependentUpon>MainCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainSupervisor.aspx.cs">
+      <DependentUpon>MainSupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainSupervisor.aspx.designer.cs">
+      <DependentUpon>MainSupervisor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.aspx.cs">
@@ -115,12 +147,12 @@
     <Compile Include="SolicitudCredito.aspx.designer.cs">
       <DependentUpon>SolicitudCredito.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VisualizarCreditos.aspx.cs">
-      <DependentUpon>VisualizarCreditos.aspx</DependentUpon>
+    <Compile Include="VisualizarCreditosCliente.aspx.cs">
+      <DependentUpon>VisualizarCreditosCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VisualizarCreditos.aspx.designer.cs">
-      <DependentUpon>VisualizarCreditos.aspx</DependentUpon>
+    <Compile Include="VisualizarCreditosCliente.aspx.designer.cs">
+      <DependentUpon>VisualizarCreditosCliente.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
