@@ -12,9 +12,9 @@ import pe.edu.pucp.creditomovil.getscredito.model.Transaccion;
  * @author diego
  */
 public interface TransaccionDAO {
-    void insertar(Transaccion transaccion);
-    void modificar(Transaccion transaccion);
-    void eliminar(int numOperacion);
+    boolean insertar(Transaccion transaccion);
+    boolean modificar(Transaccion transaccion);
+    boolean eliminar(int numOperacion);
     Transaccion obtenerPorId(int numOperacion);
     List<Transaccion> listarTodos();
 }

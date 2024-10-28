@@ -12,9 +12,9 @@ import pe.edu.pucp.creditomovil.getscliente.model.Cliente;
  * @author Bleak
  */
 public interface ClienteDAO {
-    void insertar(Cliente usuario);
-    void modificar(int id,Cliente usuario);
-    void eliminar(String id);
+    boolean insertar(Cliente usuario);
+    boolean modificar(Cliente usuario);
+    boolean eliminar(String id);
     Cliente obtenerPorId(String id);
     List<Cliente> listarTodos();
 }

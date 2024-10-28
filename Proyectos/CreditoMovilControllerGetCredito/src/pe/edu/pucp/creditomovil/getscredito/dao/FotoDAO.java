@@ -12,7 +12,7 @@ import pe.edu.pucp.creditomovil.getscredito.model.Foto;
  * @author diego
  */
 public interface FotoDAO {
-    void insertar(Foto foto);
+    boolean insertar(Foto foto);
     void modificar(Foto foto);
     void eliminar(int tipoFoto);
     Foto obtenerPorId(int tipoFoto);
