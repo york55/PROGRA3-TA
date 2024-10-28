@@ -15,6 +15,7 @@ import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.getscliente.model.Cliente;
 import pe.edu.pucp.creditomovil.getscliente.model.Evaluacion;
 import pe.edu.pucp.creditomovil.getsclientes.dao.EvaluacionDAO;
+import pe.edu.pucp.creditomovil.rrhh.model.Supervisor;
 
 /**
  *
@@ -29,10 +30,13 @@ public class EvaluacionMySQL implements EvaluacionDAO {
     public boolean insertar(Evaluacion evaluacion) {
         Connection conn = null;
         CallableStatement cs = null;
+        CallableStatement csAsociar = null;
         boolean resultado = false;
         
         try {
             conn = DBManager.getInstance().getConnection();
+            conn.setAutoCommit(false);
+            
             String sql = "{ CALL InsertarEvaluacion(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
             cs = conn.prepareCall(sql);
 
@@ -52,13 +56,32 @@ public class EvaluacionMySQL implements EvaluacionDAO {
             cs.setBoolean(11, evaluacion.isActivo());
             cs.setDouble(12, evaluacion.getPuntaje());
             cs.setString(13, evaluacion.getObservaciones());
-
-            // Ejecuta la consulta
-            resultado = cs.executeUpdate() > 0;
+            cs.execute();
+            
+            String sqlAsociar = "{ CALL AsociarEvaluacionASupervisor(?, ?) }";
+            Supervisor supervisor = (Supervisor)evaluacion.getevaluador();
+            csAsociar = conn.prepareCall(sqlAsociar);
+            csAsociar.setString(1, supervisor.getCodigoEv());
+            csAsociar.setInt(2, evaluacion.getNumeroEvaluacion());
+            csAsociar.execute();
+            
+            conn.commit();
+            resultado = true;
+            
         } catch (SQLException ex) {
+            if (conn != null) {
+                try {
+                    conn.rollback(); // Revierte la transacción en caso de error
+                } catch (SQLException rollbackEx) {
+                    rollbackEx.printStackTrace();
+                }
+            }
             ex.printStackTrace();
         } finally {
             try {
+                if (csAsociar != null) {
+                    csAsociar.close();
+                }
                 if (cs != null) {
                     cs.close();
                 }
@@ -69,7 +92,6 @@ public class EvaluacionMySQL implements EvaluacionDAO {
                 ex.printStackTrace();
             }
         }
-
         return resultado;
     }
 

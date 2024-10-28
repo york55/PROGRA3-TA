@@ -238,16 +238,21 @@ public class Principal {
         );
 
         // Insertar el supervisor en la base de datos
-        if (supervisorDAO.insertar(supervisor)) {
-            System.out.println("Supervisor insertado correctamente.");
-        } else {
-            System.out.println("Error al insertar el supervisor.");
-        }
+//        if (supervisorDAO.insertar(supervisor)) {
+//            System.out.println("Supervisor insertado correctamente.");
+//        } else {
+//            System.out.println("Error al insertar el supervisor.");
+//        }
         //eliminar
         //seguir similar a Usuario
         
         //EVALUACION
         //INSERTAR
+        EvaluacionDAO evaluacionDAO = new EvaluacionMySQL();
+        Evaluacion evaluacion= new Evaluacion(new Date(),"Negocio","direccion","telefonito",(Usuario)supervisor,
+                (Usuario)cliente,24.0,1022.0,224.0,12.0,0.0,0.0,1,true,20.0,"observando");
+        evaluacionDAO.insertar(evaluacion);
+        //ELIMINAR
         
     }
 
