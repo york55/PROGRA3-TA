@@ -12,7 +12,7 @@ import pe.edu.pucp.creditomovil.getscliente.model.Evaluacion;
  * @author diego
  */
 public interface EvaluacionDAO {
-    void insertar(Evaluacion evaluacion);
+    boolean insertar(Evaluacion evaluacion);
     void modificar(Evaluacion evaluacion);
     void eliminar(int idEvaluacion);
     Evaluacion obtenerPorId(int idEvaluacion);

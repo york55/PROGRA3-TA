@@ -12,7 +12,7 @@ import pe.edu.pucp.creditomovil.getscliente.model.Credito;
  * @author diego
  */
 public interface CreditoDAO {
-    void insertar(Credito credito);
+    void insertar(Credito credito, String codigoCliente);
     void modificar(Credito credito);
     void eliminar(String numCredito);
     Credito obtenerPorId(String numCredito);
