@@ -13,8 +13,8 @@ import pe.edu.pucp.creditomovil.rrhh.model.Supervisor;
  */
 public interface SupervisorDAO {
     boolean insertar(Supervisor supervisor);
-    void modificar(int id,Supervisor supervisor);
-    void eliminar(int id);
+    boolean modificar(Supervisor supervisor);
+    void eliminar(String id);
     Supervisor obtenerPorId(int id);
     List<Supervisor> listarTodos();
 }

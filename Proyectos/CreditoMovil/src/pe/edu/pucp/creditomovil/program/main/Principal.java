@@ -233,10 +233,9 @@ public class Principal {
                 new Date(System.currentTimeMillis() + 86400000L * 365), // Fecha de vencimiento (1 año después)
                 true, // Activo
                 "SUP001", // Código de supervisor
-                101, // Código de cargo
-                "Agencia Central" // Agencia de asignación
+                102, // Código de cargo
+                "Agencia CentralMOD" // Agencia de asignación
         );
-
         // Insertar el supervisor en la base de datos
 //        if (supervisorDAO.insertar(supervisor)) {
 //            System.out.println("Supervisor insertado correctamente.");
@@ -244,16 +243,44 @@ public class Principal {
 //            System.out.println("Error al insertar el supervisor.");
 //        }
         //eliminar
-        //seguir similar a Usuario
-        
+        //supervisorDAO.eliminar("SUP001");
+        //modificar
+        //supervisorDAO.modificar(supervisor);
+        //listar
+        List<Supervisor> supervisores = supervisorDAO.listarTodos();
+
+        for (Supervisor sup : supervisores) {
+            System.out.println("ID Usuario: " + sup.getIdUsuario());
+            System.out.println("Nombre: " + sup.getNombre());
+            System.out.println("Apellido Paterno: " + sup.getApPaterno());
+            System.out.println("Apellido Materno: " + sup.getApMaterno());
+            System.out.println("Codigo SUper: " + sup.getCodigoEv());
+            System.out.println("Codigo Cargo: " + sup.getCodigoCargo());
+            System.out.println("Agencia: " + sup.getAgenciaAsignacion());
+            System.out.println("Activo: " + sup.getActivo());
+            System.out.println("Fecha de Registro: " + sup.getFecha());
+            System.out.println("ultimo Logueo: " + sup.getUltimoLogueo());
+            System.out.println("----------------------------------------");
+        }
         //EVALUACION
         //INSERTAR
         EvaluacionDAO evaluacionDAO = new EvaluacionMySQL();
-        Evaluacion evaluacion= new Evaluacion(new Date(),"Negocio","direccion","telefonito",(Usuario)supervisor,
-                (Usuario)cliente,24.0,1022.0,224.0,12.0,0.0,0.0,1,true,20.0,"observando");
-        evaluacionDAO.insertar(evaluacion);
+        Evaluacion evaluacion = new Evaluacion(new Date(), "NegocioMOD", "direccion", "telefonitoXD", (Usuario) supervisor,
+                (Usuario) cliente, 24.0, 1022.0, 224.0, 12.0, 0.0, 0.0, 1, true, 20.0, "observandoMOD");
+        //evaluacionDAO.insertar(evaluacion);
         //ELIMINAR
-        
+        //evaluacionDAO.eliminar(1);
+        //MODIFICAR
+        //evaluacionDAO.modificar(evaluacion);
+        //LISTAR
+//        List<Evaluacion> evaluaciones = evaluacionDAO.listarTodos();
+//        for (Evaluacion eva : evaluaciones) {
+//            System.out.println("evaluacion #" + eva.getNumeroEvaluacion());
+//            System.out.println("Fecha: " + eva.getFechaRegistro());
+//            System.out.println("Dir: " + eva.getDireccionNegocio());
+//            System.out.println("-------------------------------------");
+//        }
+           
     }
 
 }
