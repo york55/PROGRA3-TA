@@ -28,5 +28,7 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.HiddenField selectedCuotas;
         protected global::System.Web.UI.WebControls.HiddenField selectedPrimerPago;
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.Label lblInteres;
+        protected global::System.Web.UI.WebControls.HiddenField hfMonto;
     }
 }

@@ -57,3 +57,4 @@ C:\Users\pdext\OneDrive\universidad\fci\7mo ciclo\prog3\proyecto\PROGRA3-TA\Cred
 C:\Users\pdext\OneDrive\universidad\fci\7mo ciclo\prog3\proyecto\PROGRA3-TA\CreditoMovilWA\obj\Debug\CreditoM.19D4B4B0.Up2Date
 C:\Users\pdext\OneDrive\universidad\fci\7mo ciclo\prog3\proyecto\PROGRA3-TA\CreditoMovilWA\obj\Debug\CreditoMovilWA.dll
 C:\Users\pdext\OneDrive\universidad\fci\7mo ciclo\prog3\proyecto\PROGRA3-TA\CreditoMovilWA\obj\Debug\CreditoMovilWA.pdb
+C:\Users\pdext\OneDrive\universidad\fci\7mo ciclo\prog3\proyecto\PROGRA3-TA\CreditoMovilWA\bin\AjaxControlToolkit.dll

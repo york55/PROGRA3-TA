@@ -20,10 +20,15 @@ namespace CreditoMovilWA
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            // Obtener el monto del HiddenField
+            int monto = int.Parse(hfMonto.Value);
 
-            // Lógica
+            // Calcular el rango de interés (5% - 15%)
+            double minInteres = monto * 0.05;
+            double maxInteres = monto * 0.15;
 
-            // Redirigir a una página de confirmación o resumen de solicitud
+            // Mostrar el interés en el Label
+            //lblInteres.Text = $"Interés aproximado: S/. {minInteres:F2} - S/. {maxInteres:F2}";
             Response.Redirect("Main.aspx");
         }
     }

@@ -28,5 +28,8 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.TextBox txtEstado;
         protected global::System.Web.UI.WebControls.Button btnFiltrar;
         protected global::System.Web.UI.WebControls.GridView gvCreditos;
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.Button btnPagar;
+        protected global::System.Web.UI.WebControls.Button btnVerDetalle;
     }
 }

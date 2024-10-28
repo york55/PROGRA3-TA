@@ -40,7 +40,7 @@
         .container {
             max-width: 600px;
             margin: 30px auto;
-            padding: 20px;
+            padding: 20px 40px;
             background-color: #faf8fc;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -95,12 +95,33 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
+            margin-top: 50px;
+            margin-bottom: 25px;
         }
+        .interest-display {
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+            text-align: left;
+        }
+
     </style>
     <script>
         function updateAmount(value) {
             document.getElementById("amountDisplay").innerText = "S/. " + value;
+            updateInterest(value); // Actualizar el interés cuando se cambie el monto
+        }
+
+        function selectOption(button, group) {
+            let options = document.querySelectorAll(`.btn-option[data-group="${group}"]`);
+            options.forEach(btn => btn.classList.remove("selected"));
+            button.classList.add("selected");
+        }
+
+        function updateInterest(amount) {
+            const minInterest = (amount * 0.05).toFixed(2); // 5% mínimo
+            const maxInterest = (amount * 0.15).toFixed(2); // 15% máximo
+            document.getElementById("interestDisplay").innerText = `Interés aproximado: S/. ${minInterest} - S/. ${maxInterest}`;
         }
     </script>
 </head>
@@ -125,19 +146,25 @@
         </div>
         <div id="amountDisplay" class="amount-display">S/. 3500</div>
 
+        <!-- HiddenField para almacenar el monto seleccionado -->
+        <asp:HiddenField ID="hfMonto" runat="server" Value="3500" />
+
         <label>¿En cuántas cuotas lo desea?</label>
         <div>
-            <button type="button" class="btn-option" onclick="selectOption(this)">0</button>
-            <button type="button" class="btn-option" onclick="selectOption(this)">1</button>
-            <button type="button" class="btn-option" onclick="selectOption(this)">2</button>
-            <button type="button" class="btn-option" onclick="selectOption(this)">3</button>
+            <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">0</button>
+            <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">1</button>
+            <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">2</button>
+            <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">3</button>
         </div>
 
         <label>¿Cuándo desea realizar el primer pago?</label>
         <div>
-            <button type="button" class="btn-option" onclick="selectOption(this)">Quincena más</button>
-            <button type="button" class="btn-option" onclick="selectOption(this)">Inicio de mes más</button>
+            <button type="button" class="btn-option" data-group="primerPago" onclick="selectOption(this, 'primerPago')">Quincena más</button>
+            <button type="button" class="btn-option" data-group="primerPago" onclick="selectOption(this, 'primerPago')">Inicio de mes más</button>
         </div>
+
+        <!-- Interés aproximado -->
+        <div id="interestDisplay" class="interest-display">Interés aproximado: S/. 175 - S/. 525</div>
 
         <asp:Button ID="btnSubmit" runat="server" Text="Solicitar Crédito" CssClass="submit-btn" OnClick="btnSubmit_Click" />
     </div>
