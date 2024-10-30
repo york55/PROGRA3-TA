@@ -44,7 +44,7 @@ public class SupervisorMySQL implements SupervisorDAO {
             cs.setString(4, supervisor.getApMaterno());
             cs.setString(5, supervisor.getContrasenha());
             cs.setDate(6, new java.sql.Date(supervisor.getFechaVencimiento().getTime()));
-            cs.setString(7, supervisor.getActivo() ? "1" : "0");
+            cs.setString(7, supervisor.getActivo()? "1" : "0");
             cs.setString(8, supervisor.getCodigoEv());
             cs.setInt(9, supervisor.getCodigoCargo());
             cs.setString(10, supervisor.getAgenciaAsignacion());
@@ -71,53 +71,26 @@ public class SupervisorMySQL implements SupervisorDAO {
     }
 
     @Override
-    public boolean modificar(Supervisor supervisor) {
-        Connection conn = null;
-        CallableStatement cs = null;
+    public void modificar(int id, Supervisor supervisor) {
+        CallableStatement cs;
+        String query = "{CALL ModificarSupervisor(?,?,?,?)}";
+        int resultado = 0;
 
         try {
-            conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL ModificarSupervisor(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
-            cs = conn.prepareCall(sql);
-
-            // Parámetros para la tabla usuario
-            cs.setInt(1, supervisor.getIdUsuario());
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1, id);
             cs.setString(2, supervisor.getCodigoEv());
-            cs.setDate(3, new java.sql.Date(supervisor.getFecha().getTime()));
-            cs.setString(4, supervisor.getNombre());
-            cs.setString(5, supervisor.getApPaterno());
-            cs.setString(6, supervisor.getApMaterno());
-            cs.setString(7, supervisor.getContrasenha());
-            cs.setDate(8, new java.sql.Date(supervisor.getFechaVencimiento().getTime()));
-            cs.setBoolean(9, supervisor.getActivo());
-            cs.setDate(10, supervisor.getUltimoLogueo() != null ? new java.sql.Date(supervisor.getUltimoLogueo().getTime()) : null);
-
-            // Parámetros para la tabla cliente
-            cs.setInt(11, supervisor.getCodigoCargo());
-            cs.setString(12, supervisor.getAgenciaAsignacion());
-
-            int filasAfectadas = cs.executeUpdate();
-            return filasAfectadas > 0;
-
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-            return false;
-        } finally {
-            try {
-                if (cs != null) {
-                    cs.close();
-                }
-                if (conn != null) {
-                    conn.close();
-                }
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
+            cs.setInt(3, supervisor.getCodigoCargo());
+            cs.setString(4, supervisor.getAgenciaAsignacion());
+            resultado = cs.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
     @Override
-    public void eliminar(String id) {
+    public void eliminar(int usuarioId) {
         CallableStatement cs;
         String query = "{CALL EliminarSupervisor(?)}";
         int resultado = 0;
@@ -125,7 +98,7 @@ public class SupervisorMySQL implements SupervisorDAO {
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setString(1, id);
+            cs.setInt(1, usuarioId);
 
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -153,20 +126,17 @@ public class SupervisorMySQL implements SupervisorDAO {
 
     @Override
     public List<Supervisor> listarTodos() {
-        List<Supervisor> listaSupervisores = new ArrayList<>();
-        Connection conn = null;
+        List<Supervisor> supervisores = new ArrayList<>();
         CallableStatement cs = null;
         ResultSet rs = null;
-
         try {
-            conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL ListarSupervisores() }";
-            cs = conn.prepareCall(sql);
+            conexion = DBManager.getInstance().getConnection();
+        String query = "{CALL ListarSupervisores()}";
+            cs = conexion.prepareCall(query);
             rs = cs.executeQuery();
-
             while (rs.next()) {
-                // Crea un nuevo objeto Cliente y llena sus datos
-                Supervisor sup = new Supervisor(
+                //
+                Supervisor supervisor = new Supervisor(
                         rs.getInt("usuario_id"),
                         rs.getDate("fecha"),
                         rs.getString("nombre"),
@@ -179,11 +149,10 @@ public class SupervisorMySQL implements SupervisorDAO {
                         rs.getInt("codigo_cargo"),
                         rs.getString("agencia_asignacion")
                 );
-
-                listaSupervisores.add(sup); // Añade el cliente a la lista
+                supervisores.add(supervisor);
             }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         } finally {
             try {
                 if (rs != null) {
@@ -192,14 +161,14 @@ public class SupervisorMySQL implements SupervisorDAO {
                 if (cs != null) {
                     cs.close();
                 }
-                if (conn != null) {
-                    conn.close();
+                if (conexion != null) {
+                    conexion.close();
                 }
-            } catch (SQLException ex) {
-                ex.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
-        return listaSupervisores;
+        return supervisores;
     }
 
 }

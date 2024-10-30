@@ -41,30 +41,35 @@ public class Principal {
     public static void main(String[] args) {
 
         // Crear la instancia de ClienteDAO
-        ClienteDAO clienteDAO = new ClienteMySQL();
-
+//        ClienteDAO clienteDAO = new ClienteMySQL();
+        SupervisorDAO daoSup = new SupervisorMySQL();
+        List<Supervisor>list =  daoSup.listarTodos();
+        for(Supervisor supervisor:list){
+            System.out.println(supervisor.getNombre());
+            System.out.println(supervisor.getIdUsuario());
+        }
 //         Configurar los datos del Cliente de prueba
-        Calendar fechaNacimiento = Calendar.getInstance();
-        fechaNacimiento.set(1990, Calendar.JANUARY, 1); // Fecha de ejemplo
-
-        Calendar fechaVencimiento = Calendar.getInstance();
-        fechaVencimiento.set(2025, Calendar.DECEMBER, 31); // Fecha de vencimiento de ejemplo
+//        Calendar fechaNacimiento = Calendar.getInstance();
+//        fechaNacimiento.set(1990, Calendar.JANUARY, 1); // Fecha de ejemplo
 //
-        Cliente cliente = new Cliente(
-                0, // idUsuario (se generará automáticamente en la base de datos)
-                fechaNacimiento.getTime(),
-                "Juan",
-                "Pérez",
-                "González",
-                "password123",
-                fechaVencimiento.getTime(),
-                true,
-                "CL123",
-                "123 Calle Falsa",
-                "123456789",
-                "juan.perez@example.com",
-                "Premium"
-        );
+//        Calendar fechaVencimiento = Calendar.getInstance();
+//        fechaVencimiento.set(2025, Calendar.DECEMBER, 31); // Fecha de vencimiento de ejemplo
+//
+//        Cliente cliente = new Cliente(
+//                0, // idUsuario (se generará automáticamente en la base de datos)
+//                fechaNacimiento.getTime(),
+//                "Juan",
+//                "Pérez",
+//                "González",
+//                "password123",
+//                fechaVencimiento.getTime(),
+//                true,
+//                "CL123",
+//                "123 Calle Falsa",
+//                "123456789",
+//                "juan.perez@example.com",
+//                "Premium"
+//        );
 //
 //        // Intentar insertar el cliente en la base de datos
 //        boolean exito = clienteDAO.insertar(cliente);
@@ -115,20 +120,20 @@ public class Principal {
 //            System.out.println("ultimo Logueo: " + cliente.getUltimoLogueo());
 //            System.out.println("----------------------------------------");
 //        }
-        //CREDITO
-        CreditoDAO creditoDAO = new CreditoMySQL();
-        //INSERTAR
-
-        // Crear un objeto Credito
-        Credito credito = new Credito(
-                "CRED123",
-                5000.00,
-                5.5,
-                new Date(), // Fecha de otorgamiento
-                cliente,
-                "Activo",
-                12 // Número de cuotas
-        );
+//        //CREDITO
+//        CreditoDAO creditoDAO = new CreditoMySQL();
+//        //INSERTAR
+//
+//        // Crear un objeto Credito
+//        Credito credito = new Credito(
+//                "CRED123",
+//                5000.00,
+//                5.5,
+//                new Date(), // Fecha de otorgamiento
+//                cliente,
+//                "Activo",
+//                12 // Número de cuotas
+//        );
 
         // Código del cliente al que se le asignará el crédito
 //        String codigoCliente = cliente.getCodigoCliente(); // Asegúrate de que este código exista en la base de datos
@@ -220,67 +225,35 @@ public class Principal {
         //FOTO
         //INSERTAR
         //ver lo de la foto, no se como se maneja
-        //SUPERVISOR
-        SupervisorDAO supervisorDAO = new SupervisorMySQL();
-        //INSERTAR
-        Supervisor supervisor = new Supervisor(
-                0, // ID de usuario (se generará automáticamente)
-                new Date(), // Fecha actual
-                "Carlos", // Nombre
-                "Pérez", // Apellido paterno
-                "López", // Apellido materno
-                "password123", // Contraseña
-                new Date(System.currentTimeMillis() + 86400000L * 365), // Fecha de vencimiento (1 año después)
-                true, // Activo
-                "SUP001", // Código de supervisor
-                102, // Código de cargo
-                "Agencia CentralMOD" // Agencia de asignación
-        );
-        // Insertar el supervisor en la base de datos
+//        //SUPERVISOR
+//        SupervisorDAO supervisorDAO = new SupervisorMySQL();
+//        //INSERTAR
+//        Supervisor supervisor = new Supervisor(
+//                0, // ID de usuario (se generará automáticamente)
+//                new Date(), // Fecha actual
+//                "Carlos", // Nombre
+//                "Pérez", // Apellido paterno
+//                "López", // Apellido materno
+//                "password123", // Contraseña
+//                new Date(System.currentTimeMillis() + 86400000L * 365), // Fecha de vencimiento (1 año después)
+//                true, // Activo
+//                "SUP001", // Código de supervisor
+//                101, // Código de cargo
+//                "Agencia Central" // Agencia de asignación
+//        );
+//
+//        // Insertar el supervisor en la base de datos
 //        if (supervisorDAO.insertar(supervisor)) {
 //            System.out.println("Supervisor insertado correctamente.");
 //        } else {
 //            System.out.println("Error al insertar el supervisor.");
 //        }
         //eliminar
-        //supervisorDAO.eliminar("SUP001");
-        //modificar
-        //supervisorDAO.modificar(supervisor);
-        //listar
-        List<Supervisor> supervisores = supervisorDAO.listarTodos();
-
-        for (Supervisor sup : supervisores) {
-            System.out.println("ID Usuario: " + sup.getIdUsuario());
-            System.out.println("Nombre: " + sup.getNombre());
-            System.out.println("Apellido Paterno: " + sup.getApPaterno());
-            System.out.println("Apellido Materno: " + sup.getApMaterno());
-            System.out.println("Codigo SUper: " + sup.getCodigoEv());
-            System.out.println("Codigo Cargo: " + sup.getCodigoCargo());
-            System.out.println("Agencia: " + sup.getAgenciaAsignacion());
-            System.out.println("Activo: " + sup.getActivo());
-            System.out.println("Fecha de Registro: " + sup.getFecha());
-            System.out.println("ultimo Logueo: " + sup.getUltimoLogueo());
-            System.out.println("----------------------------------------");
-        }
+        //seguir similar a Usuario
+        
         //EVALUACION
         //INSERTAR
-        EvaluacionDAO evaluacionDAO = new EvaluacionMySQL();
-        Evaluacion evaluacion = new Evaluacion(new Date(), "NegocioMOD", "direccion", "telefonitoXD", (Usuario) supervisor,
-                (Usuario) cliente, 24.0, 1022.0, 224.0, 12.0, 0.0, 0.0, 1, true, 20.0, "observandoMOD");
-        //evaluacionDAO.insertar(evaluacion);
-        //ELIMINAR
-        //evaluacionDAO.eliminar(1);
-        //MODIFICAR
-        //evaluacionDAO.modificar(evaluacion);
-        //LISTAR
-//        List<Evaluacion> evaluaciones = evaluacionDAO.listarTodos();
-//        for (Evaluacion eva : evaluaciones) {
-//            System.out.println("evaluacion #" + eva.getNumeroEvaluacion());
-//            System.out.println("Fecha: " + eva.getFechaRegistro());
-//            System.out.println("Dir: " + eva.getDireccionNegocio());
-//            System.out.println("-------------------------------------");
-//        }
-           
+        
     }
 
 }
