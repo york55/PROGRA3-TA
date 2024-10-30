@@ -47,6 +47,8 @@
       <HintPath>packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -70,6 +72,76 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ClienteWebService\ClienteWS.wsdl" />
+    <None Include="Connected Services\ClienteWebService\ClienteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\ClienteWebService\CreditoMovilWA.ClienteWebService.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ClienteWebService\CreditoMovilWA.ClienteWebService.eliminarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ClienteWebService\CreditoMovilWA.ClienteWebService.insertarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ClienteWebService\CreditoMovilWA.ClienteWebService.listarClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ClienteWebService\CreditoMovilWA.ClienteWebService.obtenerClientePorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CreditoWebService\configuration91.svcinfo" />
+    <None Include="Connected Services\CreditoWebService\configuration.svcinfo" />
+    <None Include="Connected Services\ClienteWebService\configuration91.svcinfo" />
+    <None Include="Connected Services\ClienteWebService\configuration.svcinfo" />
+    <None Include="Connected Services\ClienteWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\CreditoWebService\CreditoMovilWA.CreditoWebService.credito.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoWebService\CreditoMovilWA.CreditoWebService.eliminarCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoWebService\CreditoMovilWA.CreditoWebService.insertarCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoWebService\CreditoMovilWA.CreditoWebService.listarCreditosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoWebService\CreditoMovilWA.CreditoWebService.obtenerCreditoPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CreditoWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\SupervisorWebService\configuration91.svcinfo" />
+    <None Include="Connected Services\SupervisorWebService\configuration.svcinfo" />
+    <Content Include="Connected Services\SupervisorWebService\CreditoMovilWA.SupervisorWebService.eliminarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SupervisorWebService\CreditoMovilWA.SupervisorWebService.insertarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SupervisorWebService\CreditoMovilWA.SupervisorWebService.listarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SupervisorWebService\CreditoMovilWA.SupervisorWebService.modificarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SupervisorWebService\CreditoMovilWA.SupervisorWebService.obtenerSupervisorPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SupervisorWebService\CreditoMovilWA.SupervisorWebService.supervisor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SupervisorWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="DetalleCredito.aspx" />
     <Content Include="DetalleEvaluacion.aspx" />
     <Content Include="DetalleTransaccion.aspx" />
@@ -83,6 +155,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ClienteWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CreditoWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SupervisorWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DetalleCredito.aspx.cs">
       <DependentUpon>DetalleCredito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,6 +243,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\CreditoWebService\CreditoWS.wsdl" />
+    <None Include="Connected Services\CreditoWebService\CreditoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SupervisorWebService\SupervisorWS.wsdl" />
+    <None Include="Connected Services\SupervisorWebService\SupervisorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -163,6 +258,14 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ClienteWebService\" />
+    <WCFMetadataStorage Include="Connected Services\CreditoWebService\" />
+    <WCFMetadataStorage Include="Connected Services\SupervisorWebService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
