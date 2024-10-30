@@ -1,0 +1,7 @@
+E:\PROYECTO_PRO3_NEW\PROGRA3-TA\CreditoMovilWATesterC#\bin\Debug\CreditoMovilWATesterC#.exe.config
+E:\PROYECTO_PRO3_NEW\PROGRA3-TA\CreditoMovilWATesterC#\bin\Debug\CreditoMovilWATesterC#.exe
+E:\PROYECTO_PRO3_NEW\PROGRA3-TA\CreditoMovilWATesterC#\bin\Debug\CreditoMovilWATesterC#.pdb
+E:\PROYECTO_PRO3_NEW\PROGRA3-TA\CreditoMovilWATesterC#\obj\Debug\CreditoMovilWATesterC#.csproj.AssemblyReference.cache
+E:\PROYECTO_PRO3_NEW\PROGRA3-TA\CreditoMovilWATesterC#\obj\Debug\CreditoMovilWATesterC#.csproj.CoreCompileInputs.cache
+E:\PROYECTO_PRO3_NEW\PROGRA3-TA\CreditoMovilWATesterC#\obj\Debug\CreditoMovilWATesterC#.exe
+E:\PROYECTO_PRO3_NEW\PROGRA3-TA\CreditoMovilWATesterC#\obj\Debug\CreditoMovilWATesterC#.pdb
