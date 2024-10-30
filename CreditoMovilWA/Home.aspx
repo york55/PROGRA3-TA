@@ -140,7 +140,7 @@
 <form runat="server">
     <!-- Encabezado -->
     <header class="header">
-        <img src="logo.png" alt="Logo Crédito Móvil">
+        <img src="images/credit2.png" alt="Logo Crédito Móvil">
         <div class="buttons">
             <asp:Button ID="btnAbrirCuenta" runat="server" Text="Abrir una cuenta" OnClick="btnAbrirCuenta_Click" CssClass="open-account" />
             <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar Sesión" OnClick="btnIniciarSesion_Click" CssClass="sign-in" />
@@ -158,19 +158,19 @@
         <h2>¿Por qué escoger Crédito Móvil?</h2>
         <div class="benefits-container">
             <div class="benefit-item">
-                <img src="icon1.png" alt="Icono 1">
+                <img src="images/icono1.png" alt="Icono 1">
                 <p>Créditos para comerciantes adaptados a tus necesidades</p>
             </div>
             <div class="benefit-item">
-                <img src="icon2.png" alt="Icono 2">
+                <img src="images/icono2.png" alt="Icono 2">
                 <p>Evaluaciones de crédito rápidas y confiables</p>
             </div>
             <div class="benefit-item">
-                <img src="icon3.png" alt="Icono 3">
+                <img src="images/icono3.png" alt="Icono 3">
                 <p>Flexibilidad en los montos y plazos</p>
             </div>
             <div class="benefit-item">
-                <img src="icon4.png" alt="Icono 4">
+                <img src="images/icono4.png" alt="Icono 4">
                 <p>Sin trámites engorrosos</p>
             </div>
         </div>

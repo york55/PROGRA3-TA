@@ -98,7 +98,7 @@
 <form id="mainForm" runat="server" enctype="multipart/form-data">
     <!-- Encabezado con logo y botón de cerrar sesión -->
     <div class="header">
-        <img src="logo.png" alt="Logo Crédito Móvil">
+        <img src="images/credit2.png" alt="Logo Crédito Móvil">
         <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesión" CssClass="logout-btn" OnClick="btnLogout_Click" />
     </div>
 

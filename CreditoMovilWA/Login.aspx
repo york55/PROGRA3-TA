@@ -87,7 +87,7 @@
 <form runat="server">
     <!-- Encabezado con logo -->
     <div class="header">
-        <img src="logo.png" alt="Logo Crédito Móvil">
+        <img src="images/credit2.png" alt="Logo Crédito Móvil">
     </div>
 
     <div class="container">
