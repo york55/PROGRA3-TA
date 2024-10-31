@@ -111,15 +111,15 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="nombre">Nombre(s)</label>
-                <input type="text" id="nombre" name="nombre">
+                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" ></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="apellido-paterno">Apellido Paterno</label>
-                <input type="text" id="apellido-paterno" name="apellido-paterno">
+                <asp:TextBox ID="txtApPaterno" runat="server" CssClass="form-control" ></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="apellido-materno">Apellido Materno</label>
-                <input type="text" id="apellido-materno" name="apellido-materno">
+                <asp:TextBox ID="txtApMaterno" runat="server" CssClass="form-control" ></asp:TextBox>
             </div>
         </div>
         
@@ -127,27 +127,27 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="tipo-documento">Tipo de Documento</label>
-                <input type="text" id="tipo-documento" name="tipo-documento">
+                <asp:TextBox ID="txtTipoDocumento" runat="server" CssClass="form-control" ></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="numero-documento">Nro. Documento</label>
-                <input type="text" id="numero-documento" name="numero-documento">
+                <asp:TextBox ID="txtNroDoc" runat="server" CssClass="form-control" ></asp:TextBox>
             </div>
         </div>
         
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" ></asp:TextBox>
         </div>
         
         <div class="form-group">
             <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono">
+            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" ></asp:TextBox>
         </div>
         
         <div class="form-group">
             <label for="direccion">Dirección</label>
-            <input type="text" id="direccion" name="direccion">
+            <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control" ></asp:TextBox>
         </div>
 
         <!-- Botón Guardar -->
