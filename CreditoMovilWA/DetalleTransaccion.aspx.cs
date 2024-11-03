@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -14,40 +16,52 @@ namespace CreditoMovilWA
         {
             if (!IsPostBack)
             {
-                // datos transaccion...
-            }
-        }
-
-        protected void btnGuardar_Click(object sender, EventArgs e)
-        {
-            if (fileUploadImagen.HasFile)
-            {
-                string folderPath = Server.MapPath("~/Uploads/");
-                if (!Directory.Exists(folderPath))
+                // Obtener el ID de la transacción desde la consulta
+                string idTransaccion = Request.QueryString["id"];
+                if (!string.IsNullOrEmpty(idTransaccion))
                 {
-                    Directory.CreateDirectory(folderPath);
+                    // Cargar los datos de la transacción
+                    CargarDatosTransaccion(idTransaccion);
                 }
 
-                string filePath = folderPath + Path.GetFileName(fileUploadImagen.FileName);
-                fileUploadImagen.SaveAs(filePath);
-
-                // Aquí puedes añadir lógica adicional para guardar la ruta de la imagen en la base de datos
-                // o asociarla con la transacción específica.
-
-                // Feedback al usuario (opcional)
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Imagen subida correctamente.');", true);
-                Response.Redirect("DetalleCredito.aspx");
             }
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Por favor, seleccione un archivo.');", true);
-            }
-
         }
-
-        protected void btnLogout_Click(object sender, EventArgs e)
+        private void CargarDatosTransaccion(string idTransaccion)
         {
-            Response.Redirect("Home.aspx");
+            // Obtener la cadena de conexión desde Web.config
+            string connectionString = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT IdTransaccion, FechaTransaccion, Agencia, Monto, Imagen FROM Transacciones WHERE IdTransaccion = @IdTransaccion";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@IdTransaccion", idTransaccion);
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // Asignar los valores a los controles
+                    txtIdTransaccion.Text = reader["IdTransaccion"].ToString();
+                    txtFechaTransaccion.Text = Convert.ToDateTime(reader["FechaTransaccion"]).ToString("dd/MM/yyyy");
+                    txtAgencia.Text = reader["Agencia"].ToString();
+                    txtMonto.Text = Convert.ToDecimal(reader["Monto"]).ToString("C"); // Formato de moneda
+
+                    // Asignar el número de transacción al encabezado
+                    lblNumeroTransaccion.Text = reader["IdTransaccion"].ToString();
+
+                    // Asignar la imagen
+                    imgTransaccion.ImageUrl = $"Handlers/MostrarImagen.ashx?id={idTransaccion}";
+                }
+                else
+                {
+                    // Manejar si no se encuentra la transacción
+                    Response.Write("Transacción no encontrada.");
+                }
+
+                reader.Close();
+            }
         }
     }
 }

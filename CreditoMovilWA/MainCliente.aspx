@@ -1,43 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MainCliente.aspx.cs" Inherits="CreditoMovilWA.Main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Usuario.master" CodeFile="MainCliente.aspx.cs" Inherits="CreditoMovilWA.MainCliente" %>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuenta Iniciada - Crédito Móvil</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <script src="https://cdn.jsdelivr.net/npm/raphael@2.2.8/raphael.min.js"></script> <!-- Dependencia de JustGage -->
+    <script src="https://cdn.jsdelivr.net/npm/justgage"></script> <!-- CDN de JustGage -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f7f5fb;
-            text-align: center;
-            margin: 0;
-            padding: 0
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            border-bottom: 1px solid #ddd;
-        }
-        .header img {
-            width: 150px;
-        }
-        .header .logout-btn {
-            background-color: #002e6e;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 13px;
-            border-radius: 5px;
-            color: #fff;
-            font-weight: 700;
-            font-family: 'Poppins', sans-serif; 
-        }
         h1 {
             font-size: 40px;
             color: #265f21;
@@ -49,36 +16,6 @@
             margin-top: 10px;
             font-size: 20px;
             color: #333;
-        }
-        .gauge-container {
-            position: relative;
-            width: 300px;
-            height: 150px;
-            margin: 30px auto;
-            overflow: hidden;
-        }
-        .gauge {
-            width: 100%;
-            height: 100%;
-            background: conic-gradient(
-                red 0 25%, 
-                orange 25% 50%, 
-                yellow 50% 75%, 
-                green 75% 100%
-            );
-            border-radius: 150px 150px 0 0;
-            position: relative;
-        }
-        .needle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 4px;
-            height: 140px;
-            background-color: #000;
-            transform-origin: bottom center;
-            transform: rotate(0deg);
-            transition: transform 1s ease-out;
         }
         .btn {
             display: inline-block;
@@ -99,48 +36,97 @@
         .ranking-label {
             font-size: 30px;
             color: #ffb400; /*se cambia por detras*/
-            background-color: rgba(0, 0, 0,0.85);
+            background-color: rgba(0, 0, 0, 0);
             padding: 5px 50px;
             border-radius: 5px;
             margin-bottom: 10px;
             display: inline-block;
         }
-
+        #apexGauge {
+            max-width: 380px;
+            margin: auto;
+        }
     </style>
     <script>
-        function actualizarAguja(puntaje) {
-            const needle = document.querySelector('.needle');
-            const rotation = (puntaje / 100) * 180; // Calcula el ángulo de rotación en función del puntaje
-            needle.style.transform = `rotate(${rotation - 90}deg)`; // Ajusta para centrar en el medidor
+        function renderApexGauge(ranking) {
+            let color;
+
+            // Asigna un color específico basado en el valor de ranking
+            if (ranking <= 20) {
+                color = '#FF0000'; // Rojo para 0-20%
+            } else if (ranking <= 40) {
+                color = '#FFA500'; // Naranja para 20-40%
+            } else if (ranking <= 60) {
+                color = '#FFFF00'; // Amarillo para 40-60%
+            } else if (ranking <= 80) {
+                color = '#90EE90'; // Verde claro para 60-80%
+            } else {
+                color = '#006400'; // Verde oscuro para 80-100%
+            }
+
+            var options = {
+                series: [ranking],
+                chart: {
+                    type: 'radialBar',
+                    height: 350
+                },
+                plotOptions: {
+                    radialBar: {
+                        startAngle: -90,
+                        endAngle: 90,
+                        hollow: {
+                            margin: 15,
+                            size: '60%',
+                        },
+                        track: {
+                            background: '#ADBAC0', // Fondo gris para mejorar el contraste
+                            strokeWidth: '70%',
+                            margin: 5, // Espacio entre el track y el gráfico
+                            opacity: 0.7
+                        },
+                        dataLabels: {
+                            name: {
+                                show: false
+                            },
+                            value: {
+                                fontSize: '50px',
+                                color: '#78818D',
+                                offsetY: -10,
+                                fontFamily: 'Poppins, sans-serif', // Cambia la fuente
+                                fontWeight: 'bold'
+                            }
+                        }
+                    }
+                },
+                fill: {
+                    colors: [color] // Color asignado según el valor del ranking
+                },
+                labels: ['Puntaje']
+            };
+
+            var chart = new ApexCharts(document.querySelector("#apexGauge"), options);
+            chart.render();
         }
+
+        // Llama a la función con el puntaje desde el servidor
+        document.addEventListener("DOMContentLoaded", function () {
+            renderApexGauge(<%= ObtenerRankingSinPorcentaje() %>);
+        });
     </script>
-</head>
-<body onload="actualizarAguja(<%= ObtenerRankingSinPorcentaje() %>)">
+</asp:Content>
 
-<form runat="server">
-    <!-- Encabezado con logo y botón de cerrar sesión -->
-    <div class="header">
-        <img src="images/credit2.png" alt="Logo Crédito Móvil">
-        <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesión" CssClass="logout-btn" OnClick="btnLogout_Click" />
-    </div>
-
-    <!-- Contenido principal -->
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
         <h1>¡Hola!</h1>
         <p>Actualmente tu ranking crediticio es:</p>
-        <asp:Label ID="lblRanking" runat="server" CssClass="ranking-label" Font-Size="30px"></asp:Label>
+        <asp:Label ID="lblRanking" runat="server" CssClass="ranking-label" Font-Size="0px"></asp:Label>
 
-        <!-- Medidor de ranking -->
-        <div class="gauge-container">
-            <div class="gauge"></div>
-            <div class="needle"></div>
-        </div>
+        <!-- Contenedor del medidor con ApexCharts -->
+        <div id="apexGauge"></div>
 
         <!-- Botones de acción -->
         <asp:Button ID="btnSolicitarCredito" runat="server" Text="Solicitar un crédito" CssClass="btn" OnClick="btnSolicitarCredito_Click" />
         <asp:Button ID="btnVerCreditos" runat="server" Text="Visualizar mis créditos" CssClass="btn" OnClick="btnVerCreditos_Click" />
     </div>
-</form>
+</asp:Content>
 
-</body>
-</html>

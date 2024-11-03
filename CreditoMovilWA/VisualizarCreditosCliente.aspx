@@ -1,52 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="VisualizarCreditosCliente.aspx.cs" Inherits="CreditoMovilWA.VisualizarCreditos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Usuario.master" CodeFile="VisualizarCreditosCliente.aspx.cs" Inherits="CreditoMovilWA.VisualizarCreditos" %>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Créditos - Crédito Móvil</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f7f5fb;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            border-bottom: 1px solid #ddd;
-        }
-        .header img {
-            width: 150px;
-        }
-        .header .logout-btn {
-            background-color: #002e6e;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 13px;
-            border-radius: 5px;
-            color: #fff;
-            font-weight: 700;
-            font-family: 'Poppins', sans-serif; 
-        }
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            background-color: #faf8fc;
-            padding: 20px 40px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
         label {
             display: block;
             font-size: 18px;
@@ -127,11 +82,11 @@
         }
         .modal-content {
             background-color: #faf8fc;
-            margin: 10% auto;
-            padding: 20px;
+            margin: 20% auto;
+            padding: 20px 20px;
             border: 1px solid #888;
             width: 80%;
-            max-width: 500px;
+            max-width: 600px;
             text-align: left;
             border-radius: 10px;
         }
@@ -147,18 +102,80 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        .save-btn {
+            width: 48%; /* Ajusta el ancho para que ambos botones ocupen el mismo espacio */
+            background-color: #2f7a44;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .cancel-btn {
+            width: 48%; /* Ajusta el ancho para que ambos botones ocupen el mismo espacio */
+            background-color: #002e6e;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
-</head>
-<body>
 
-<form id="mainForm" runat="server" enctype="multipart/form-data">
-    <asp:ScriptManager ID="ScriptManager1" runat="server" />
-    <!-- Encabezado con logo y botón de cerrar sesión -->
-    <div class="header">
-        <img src="images/credit2.png" alt="Logo Crédito Móvil">
-        <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesión" CssClass="logout-btn" OnClick="btnLogout_Click" />
-    </div>
+    <script type="text/javascript">
+        function openModal() {
+            document.getElementById("PagoModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("PagoModal").style.display = "none";
+        }
 
+        function mostrarCamposPago() {
+            var metodo = document.getElementById("metodoPago").value;
+            var infoBanco = document.getElementById("infoBanco");
+            var infoBilletera = document.getElementById("infoBilletera");
+
+            // Mostrar u ocultar los campos según el método seleccionado
+            if (metodo === "banco") {
+                infoBanco.style.display = "block";
+                infoBilletera.style.display = "none";
+            } else if (metodo === "billetera") {
+                infoBanco.style.display = "none";
+                infoBilletera.style.display = "block";
+            } else {
+                infoBanco.style.display = "none";
+                infoBilletera.style.display = "none";
+            }
+        }
+
+        function mostrarInformacionBanco() {
+            const bancoElegido = document.getElementById("bancoElegido").value;
+            const detallesBanco = document.getElementById("detallesBanco");
+            const bancosInfo = {
+                "bcp": { cci: "12345678912345678901", titular: "Titular BCP", cuenta: "Cuenta en soles" },
+                "bbva": { cci: "23456789123456789012", titular: "Titular BBVA", cuenta: "Cuenta en dólares" },
+                "interbank": { cci: "34567891234567890123", titular: "Titular Interbank", cuenta: "Cuenta en soles" },
+                "scotiabank": { cci: "45678912345678901234", titular: "Titular Scotiabank", cuenta: "Cuenta en dólares" }
+            };
+
+            if (bancosInfo[bancoElegido]) {
+                detallesBanco.style.display = "block";
+                document.getElementById("txtCCI").value = bancosInfo[bancoElegido].cci;
+                document.getElementById("txtTitularBanco").value = bancosInfo[bancoElegido].titular;
+                document.getElementById("txtTipoCuenta").value = bancosInfo[bancoElegido].cuenta;
+            } else {
+                detallesBanco.style.display = "none";
+            }
+        }
+
+    </script>
+</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!-- Contenedor principal -->
     <div class="container">
         <h2>Listado de Créditos</h2>
@@ -199,36 +216,62 @@
                 </Columns>
             </asp:GridView>
         </div>
-        <asp:Label ID="lblMensaje" runat="server" ForeColor="Red" />
+        <asp:Label ID="lblError" runat="server" CssClass="error-message"></asp:Label>
     </div>
 
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2>Bancos Aceptados:</h2>
-            <img src="bancos.png" alt="Bancos Aceptados" style="width:100%; max-width:200px;">
-            <p>Inserte imagen jpeg o pdf:</p>
-            <asp:FileUpload ID="fileUpload" runat="server" />
-            <asp:Button ID="btnUpload" runat="server" Text="Subir Archivo" />
-            <br /><br />
-            <asp:Button ID="btnSave" runat="server" Text="Grabar" CssClass="filter-btn" />
-            <asp:Button ID="btnCancel" runat="server" Text="Cancelar" CssClass="filter-btn" OnClientClick="closeModal(); return false;" />
+    <div id="PagoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Métodos de Pago:</h2>
+
+        <!-- Selector de método de pago -->
+        <label for="metodoPago">Seleccione el método de pago:</label>
+        <select id="metodoPago" onchange="mostrarCamposPago()">
+            <option value="">Seleccione</option>
+            <option value="banco">Banco</option>
+            <option value="billetera">Billetera Digital</option>
+        </select>
+
+        <!-- Información de banco -->
+        <div id="infoBanco" style="display: none; margin-top: 20px;">
+            <h3>Bancos Aceptados:</h3>
+            <img src="images/bancos.png" alt="Bancos Aceptados" style="width:100%; max-width:400px;">
+             <label for="bancoElegido">Seleccione el banco</label>
+            <select id="bancoElegido" onchange="mostrarInformacionBanco()">
+                <option value="">Seleccione</option>
+                <option value="bcp">BCP</option>
+                <option value="bbva">BBVA</option>
+                <option value="interbank">Interbank</option>
+                <option value="scotiabank">Scotiabank</option>
+            </select>
+            <div id="detallesBanco" style="margin-top: 20px; display: none;">
+                <p>CCI:</p>
+                <input type="text" id="txtCCI" class="input-text" readonly />
+                <p>Nombre del Titular:</p>
+                <input type="text" id="txtTitularBanco" class="input-text" readonly />
+                <p>Tipo de Cuenta:</p>
+                <input type="text" id="txtTipoCuenta" class="input-text" readonly />
+            </div>
+        </div>
+
+        <!-- Información de billetera digital -->
+        <div id="infoBilletera" style="display: none; margin-top: 20px;">
+            <h3>Billeteras Digitales Aceptadas:</h3>
+            <img src="images/billeteras.png" alt="Billeteras Aceptadas" style="width:100%; max-width:180px;">
+            <p>Número de Billetera:</p>
+            <asp:TextBox ID="txtNumeroBilletera" runat="server" CssClass="input-text" Text="987654321" ReadOnly="True" Enabled="False" />
+            <p>Nombre del Titular:</p>
+            <asp:TextBox ID="txtTitularBilletera" runat="server" CssClass="input-text" Text="Nombre del Titular de la Billetera" ReadOnly="True" Enabled="False" />
+        </div>
+
+        <p>Inserte imagen jpeg:</p>
+        <asp:FileUpload ID="fileUpload" runat="server" />
+        <br /><br />
+    
+        <!-- Botones de acción -->
+        <asp:Button ID="btnSave" runat="server" Text="Grabar" CssClass="save-btn" />
+        <asp:Button ID="btnCancel" runat="server" Text="Cancelar" CssClass="cancel-btn" OnClientClick="closeModal(); return false;" />
         </div>
     </div>
-</form>
-
-
-
-
-<script>
-    function openModal() {
-        document.getElementById("myModal").style.display = "block";
-    }
-    function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-    }
-</script>
-
-</body>
-</html>
+</asp:Content>

@@ -1,41 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Registro.aspx.cs" Inherits="CreditoMovilWA.Registro" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Usuario.master" CodeFile="Registro.aspx.cs" Inherits="CreditoMovilWA.Registro" %>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crédito Móvil - Registro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f5fb;
-        }
-
-        .header {
-            text-align: left;
-            padding: 23px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .header img {
-            width: 150px; 
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #faf8fc;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
         .container h1 {
             font-size: 32px;
             color: #265f21;
@@ -56,7 +22,7 @@
             margin-bottom: 5px;
         }
 
-        .form-group input {
+        .form-group input, .form-group select {
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ddd;
@@ -87,18 +53,18 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 30px; /* Agrega espacio adicional arriba y abajo botón */
+            margin-top: 30px;
             margin-bottom: 30px;
         }
 
         .btn-save:hover {
             background-color: #265f21;
         }
-    </style>
-</head>
-<body>
 
-<form runat="server">
+    </style>
+</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!-- Logo en la parte superior -->
     <div class="header">
         <img src="images/credit2.png" alt="Logo Crédito Móvil">
@@ -111,49 +77,64 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="nombre">Nombre(s)</label>
-                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" ></asp:TextBox>
+                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="apellido-paterno">Apellido Paterno</label>
-                <asp:TextBox ID="txtApPaterno" runat="server" CssClass="form-control" ></asp:TextBox>
+                <asp:TextBox ID="txtApPaterno" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="apellido-materno">Apellido Materno</label>
-                <asp:TextBox ID="txtApMaterno" runat="server" CssClass="form-control" ></asp:TextBox>
+                <asp:TextBox ID="txtApMaterno" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
         
-        <!-- Resto de los campos -->
+        <!-- Fila para Tipo de Documento y Nro. Documento -->
         <div class="form-row">
             <div class="form-group">
                 <label for="tipo-documento">Tipo de Documento</label>
-                <asp:TextBox ID="txtTipoDocumento" runat="server" CssClass="form-control" ></asp:TextBox>
+                <asp:DropDownList ID="ddlTipoDocumento" runat="server" CssClass="form-control">
+                    <asp:ListItem Text="Selecciona una opción" Value="" />
+                    <asp:ListItem Text="DNI" Value="DNI" />
+                    <asp:ListItem Text="Pasaporte" Value="Pasaporte" />
+                </asp:DropDownList>
             </div>
             <div class="form-group">
                 <label for="numero-documento">Nro. Documento</label>
-                <asp:TextBox ID="txtNroDoc" runat="server" CssClass="form-control" ></asp:TextBox>
+                <asp:TextBox ID="txtNroDoc" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
         
+        <!-- Campos adicionales -->
         <div class="form-group">
             <label for="email">Email</label>
-            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" ></asp:TextBox>
+            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
         
         <div class="form-group">
             <label for="telefono">Teléfono</label>
-            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" ></asp:TextBox>
+            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
         
         <div class="form-group">
             <label for="direccion">Dirección</label>
-            <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control" ></asp:TextBox>
+            <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
 
+        <!-- Campos para Contraseña y Confirmar Contraseña -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <asp:TextBox ID="txtContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label for="confirmar-contraseña">Confirmar Contraseña</label>
+                <asp:TextBox ID="txtConfirmarContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+            </div>
+        </div>
+
+        <asp:Label ID="lblError" runat="server" CssClass="error-message" EnableViewState="false"></asp:Label>
         <!-- Botón Guardar -->
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn-save" OnClick="btnGuardar_Click" />
     </div>
-</form>
-
-</body>
-</html>
+</asp:Content>

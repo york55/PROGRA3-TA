@@ -1,37 +1,8 @@
 ﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="CreditoMovilWA.Home" %>
+<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Usuario.master" CodeFile="Home.aspx.cs" Inherits="CreditoMovilWA.Home" %>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crédito Móvil</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        /* Encabezado */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background-color: #f7f5fb;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .header img {
-            width: 150px;
-        }
-
         .header .buttons {
             display: flex;
             gap: 10px;
@@ -134,10 +105,9 @@
             font-weight: 400;
         }
     </style>
-</head>
-<body>
+</asp:Content>
 
-<form runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!-- Encabezado -->
     <header class="header">
         <img src="images/credit2.png" alt="Logo Crédito Móvil">
@@ -175,7 +145,4 @@
             </div>
         </div>
     </section>
-</form>
-
-</body>
-</html>
+</asp:Content>

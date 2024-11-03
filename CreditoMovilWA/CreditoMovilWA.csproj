@@ -146,6 +146,8 @@
     <Content Include="DetalleEvaluacion.aspx" />
     <Content Include="DetalleTransaccion.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="images\bancos.png" />
+    <Content Include="images\billeteras.png" />
     <Content Include="Login.aspx" />
     <Content Include="MainCliente.aspx" />
     <Content Include="MainSupervisor.aspx" />
@@ -234,6 +236,13 @@
     <Compile Include="SolicitudCredito.aspx.designer.cs">
       <DependentUpon>SolicitudCredito.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Usuario.master.cs">
+      <DependentUpon>Usuario.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario.master.designer.cs">
+      <DependentUpon>Usuario.master</DependentUpon>
+    </Compile>
     <Compile Include="VisualizarCreditosCliente.aspx.cs">
       <DependentUpon>VisualizarCreditosCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,7 +260,9 @@
     <None Include="Connected Services\SupervisorWebService\SupervisorWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Handlers\MostrarImagen.ashx" />
     <None Include="packages.config" />
+    <Content Include="Usuario.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -267,6 +278,7 @@
     <WCFMetadataStorage Include="Connected Services\CreditoWebService\" />
     <WCFMetadataStorage Include="Connected Services\SupervisorWebService\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

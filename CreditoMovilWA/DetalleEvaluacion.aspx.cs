@@ -106,11 +106,6 @@ namespace CreditoMovilWA
             // aca pa actualizar base de dates
         }
 
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Home.aspx");
-        }
-
         protected void btnBack_Click(object sender, EventArgs e)
         {
             Response.Redirect("MainSupervisor.aspx");

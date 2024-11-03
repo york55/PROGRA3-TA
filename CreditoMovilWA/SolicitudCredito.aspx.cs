@@ -13,10 +13,6 @@ namespace CreditoMovilWA
         {
 
         }
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Home.aspx");
-        }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {

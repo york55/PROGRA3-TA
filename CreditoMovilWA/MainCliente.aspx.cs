@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CreditoMovilWA
 {
-    public partial class Main : System.Web.UI.Page
+    public partial class MainCliente : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,10 +36,6 @@ namespace CreditoMovilWA
         public string ObtenerRankingSinPorcentaje()
         {
             return lblRanking.Text.Replace("%", "");
-        }
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Home.aspx");
         }
 
         protected void btnSolicitarCredito_Click(object sender, EventArgs e)

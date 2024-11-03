@@ -11,7 +11,7 @@ namespace CreditoMovilWA
 {
 
 
-    public partial class Main
+    public partial class MainCliente
     {
 
         /// <summary>

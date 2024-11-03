@@ -26,9 +26,10 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.Button btnLogout;
         protected global::System.Web.UI.WebControls.TextBox txtIdTransaccion;
         protected global::System.Web.UI.WebControls.TextBox txtFechaTransaccion;
-        protected global::System.Web.UI.WebControls.TextBox txtAgenciaTransaccion;
+        protected global::System.Web.UI.WebControls.TextBox txtAgencia;
         protected global::System.Web.UI.WebControls.TextBox txtMonto;
-        protected global::System.Web.UI.WebControls.FileUpload fileUploadImagen;
+        protected global::System.Web.UI.WebControls.TextBox lblNumeroTransaccion;
+        protected global::System.Web.UI.WebControls.Image imgTransaccion;
         protected global::System.Web.UI.WebControls.Button btnGuardar;
     }
 }

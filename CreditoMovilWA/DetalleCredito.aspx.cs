@@ -49,11 +49,6 @@ namespace CreditoMovilWA
                 new { IdTransaccion = "T002", Fecha = "01/11/2024", Concepto = "Pago", Monto = "200", Anulado = "No" }
             };
         }
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            // Lógica para cerrar sesión
-            Response.Redirect("Login.aspx");
-        }
 
         protected void btnBack_Click(object sender, EventArgs e)
         {

@@ -1,0 +1,69 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Usuario.master.cs" Inherits="CreditoMovilWA.Usuario" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Iniciada - Crédito Móvil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f5fb;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        .header img {
+            width: 150px;
+        }
+        .header .logout-btn {
+            background-color: #002e6e;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif; 
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #faf8fc;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .error-message {
+            color: red;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <!-- Encabezado común -->
+        <div class="header" runat="server" id="headerDiv">
+            <img src="images/credit2.png" alt="Logo Crédito Móvil">
+            <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesión" CssClass="logout-btn" OnClick="btnLogout_Click" />
+        </div>
+
+        <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+        <!-- ContentPlaceHolder para el contenido específico de cada página -->
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </form>
+</body>
+</html>

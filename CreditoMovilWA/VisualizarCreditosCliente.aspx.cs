@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -13,8 +11,11 @@ namespace CreditoMovilWA
         {
             if (!IsPostBack)
             {
-                // Inicializar datos o configuraciones necesarias
-                lblMensaje.Text = "";
+                lblError.Text = "";
+            }
+            else if (ViewState["ModalAbierto"] != null && (bool)ViewState["ModalAbierto"])
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal", "openModal();", true);
             }
         }
 
@@ -32,24 +33,23 @@ namespace CreditoMovilWA
                 {
                     gvCreditos.DataSource = resultados;
                     gvCreditos.DataBind();
-                    lblMensaje.Text = ""; // Limpia el mensaje si hay resultados
+                    lblError.Text = "";
                 }
                 else
                 {
                     gvCreditos.DataSource = null;
                     gvCreditos.DataBind();
-                    lblMensaje.Text = "No se encontraron créditos en el rango de fechas especificado.";
+                    lblError.Text = "No se encontraron créditos en el rango de fechas especificado.";
                 }
             }
             else
             {
-                lblMensaje.Text = "Por favor, seleccione ambas fechas.";
+                lblError.Text = "Por favor, seleccione ambas fechas.";
             }
         }
 
         private List<Credito> ObtenerCreditosPorFecha(DateTime fechaInicio, DateTime fechaFin)
         {
-            // Simulación de la obtención de datos. Reemplazar con la lógica de base de datos real.
             List<Credito> listaCreditos = new List<Credito>
             {
                 new Credito { IdCredito = 1, Monto = 1000, NumCuotas = 10, TasaInteres = 5.0, FechaOtorgamiento = DateTime.Now, Estado = "Activo" },
@@ -62,33 +62,30 @@ namespace CreditoMovilWA
         protected void btnPagar_Click(object sender, EventArgs e)
         {
             string idCredito = (sender as Button).CommandArgument;
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "OpenModal", "openModal();", true);
+            ViewState["ModalAbierto"] = true; // Almacena el estado del modal en ViewState
+            ClientScript.RegisterStartupScript(this.GetType(), "OpenModal", "openModal();", true);
         }
 
-       /* protected void btnSave_Click(object sender, EventArgs e)
+        protected void btnSave_Click(object sender, EventArgs e)
         {
             if (fileUpload.HasFile)
             {
-                // Lógica para procesar el archivo, guardar en base de datos o en el sistema de archivos
-                string fileName = fileUpload.FileName;
-                // Ejemplo: Guardar el archivo en una carpeta
-                string filePath = Server.MapPath("~/UploadedFiles/" + fileName);
-                fileUpload.SaveAs(filePath);
+                // Guarda el archivo en Session para uso posterior
+                Session["ImagenPago"] = fileUpload.FileBytes;
 
-                // Aquí puedes guardar la información del pago en la base de datos, si es necesario
-
-                lblMensaje.Text = "Archivo subido correctamente y pago registrado.";
-                lblMensaje.ForeColor = System.Drawing.Color.Green;
+                lblError.Text = "Archivo subido correctamente y pago registrado.";
+                lblError.ForeColor = System.Drawing.Color.Green;
             }
             else
             {
-                lblMensaje.Text = "Por favor, selecciona un archivo para subir.";
-                lblMensaje.ForeColor = System.Drawing.Color.Red;
+                lblError.Text = "Por favor, selecciona un archivo para subir.";
+                lblError.ForeColor = System.Drawing.Color.Red;
             }
 
-            // Cerrar el modal después de grabar
+            // Cierra el modal después de grabar
+            ViewState["ModalAbierto"] = false;
             ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
-        }*/
+        }
 
         protected void btnVerDetalles_Click(object sender, EventArgs e)
         {
@@ -96,15 +93,8 @@ namespace CreditoMovilWA
             string idCredito = btn.CommandArgument;
             Response.Redirect("DetalleCredito.aspx?id=" + idCredito);
         }
-
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            // Lógica para cerrar sesión
-            Response.Redirect("Login.aspx");
-        }
     }
 
-    //provisional para probar
     public class Credito
     {
         public int IdCredito { get; set; }

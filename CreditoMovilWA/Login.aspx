@@ -1,37 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="CreditoMovilWA.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Usuario.master" CodeFile="Login.aspx.cs" Inherits="CreditoMovilWA.Login" %>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - Crédito Móvil</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f7f5fb;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            text-align: left;
-            padding: 23px;
-            border-bottom: 1px solid #ddd;
-        }
-        .header img {
-            width: 150px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #faf8fc;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        .container{
+            max-width: 650px;
         }
         h1 {
             font-size: 32px;
@@ -81,10 +53,9 @@
             background-color: #265f21;
         }
     </style>
-</head>
-<body>
+</asp:Content>
 
-<form runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!-- Encabezado con logo -->
     <div class="header">
         <img src="images/credit2.png" alt="Logo Crédito Móvil">
@@ -104,10 +75,8 @@
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" placeholder="Contraseña"></asp:TextBox>
         </div>
 
+        <asp:Label ID="lblError" runat="server" CssClass="error-message"></asp:Label>
         
         <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn-login" OnClick="btnIngresar_Click" />
     </div>
-</form>
-
-</body>
-</html>
+</asp:Content>
