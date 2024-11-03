@@ -13,57 +13,63 @@ import java.util.List;
 
 import pe.edu.pucp.creditomovil.getsclientes.dao.CreditoDAO;
 import pe.edu.pucp.creditomovil.getsclientes.mysql.CreditoMySQL;
-import pe.edu.pucp.creditomovil.getscliente.model.Credito;
+import pe.edu.pucp.creditomovil.model.Credito;
 
 @WebService(serviceName = "CreditoWS", targetNamespace
         = "https://services.creditomovil.pucp.edu.pe")
 public class CreditoWS {
 
-    private CreditoDAO daoCredito;
+    private CreditoDAO daoCredito = new CreditoMySQL();
 
-    @WebMethod(operationName = "listarCreditos")
-    public List<Credito> listarCreditos() {
-        List<Credito> creditos = null;
-        try {
-            daoCredito = new CreditoMySQL();
-            creditos = daoCredito.listarTodos();
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
-        return creditos;
-    }
-    
     @WebMethod(operationName = "insertarCredito")
-    public void insertarCredito(@WebParam(name = "credito") Credito credito,
-            @WebParam(name = "codigoCliente") String codigoCliente) {
-        try {
-            daoCredito = new CreditoMySQL();
-            daoCredito.insertar(credito,codigoCliente);
-        } catch (Exception ex) {
+    public void insertarCredito(@WebParam(name = "credito") Credito credito, 
+            @WebParam(name = "idCliente") String id) {
+        try{
+            daoCredito.insertar(credito,id);
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-    }
 
-    @WebMethod(operationName = "eliminarCredito")
-    public void eliminarCredito(@WebParam(name = "numCredito") String numCredito) {
-        try {
-            daoCredito = new CreditoMySQL();
-            daoCredito.eliminar(numCredito);
-        } catch (Exception ex) {
+    }
+    
+    @WebMethod(operationName = "modificarCredito")
+    public void modificarCredito(@WebParam(name = "credito") Credito credito) {
+        try{
+            daoCredito.modificar(credito);
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
     }
     
-    @WebMethod(operationName = "obtenerCreditoPorId")
-    public Credito obtenerCreditoPorId(@WebParam(name = "numCredito") String numCredito) {
+    @WebMethod(operationName = "eliminarCredito")
+    public void eliminarCredito(@WebParam(name = "credito") String id) {
+        try{
+            daoCredito.eliminar(id);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+    
+    @WebMethod(operationName = "obtenerPorIDCredito")
+    public Credito obtenerPorIDCredito(@WebParam(name = "credito") String id) {
         Credito credito = null;
-        try {
-            daoCredito = new CreditoMySQL();
-            credito = daoCredito.obtenerPorId(numCredito);
-        } catch (Exception ex) {
+        try{
+            credito = daoCredito.obtenerPorId(id);
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return credito;
+    }
+    
+    @WebMethod(operationName = "listarTodosCreditos")
+    public List<Credito> listarTodosCreditos() {
+        List<Credito> creditos = null;
+        try{
+            creditos = daoCredito.listarTodos();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return creditos;
     }
     
 }

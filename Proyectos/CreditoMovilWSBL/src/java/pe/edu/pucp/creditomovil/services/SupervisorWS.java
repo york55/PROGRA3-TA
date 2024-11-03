@@ -11,7 +11,7 @@ import jakarta.jws.WebParam;
 import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.rrhh.dao.SupervisorDAO;
-import pe.edu.pucp.creditomovil.rrhh.model.Supervisor;
+import pe.edu.pucp.creditomovil.model.Supervisor;
 import pe.edu.pucp.creditomovil.rrhh.mysql.SupervisorMySQL;
 
 /**
@@ -21,63 +21,58 @@ import pe.edu.pucp.creditomovil.rrhh.mysql.SupervisorMySQL;
 @WebService(serviceName = "SupervisorWS")
 public class SupervisorWS {
 
-    /**
-     * This is a sample web service operation
-     */
-    private SupervisorDAO supDao;
-
-    @WebMethod(operationName = "listarSupervisor")
-    public List<Supervisor> listarSupervisor() {
-        List<Supervisor> supevisores = null;
-        try {
-            supDao = new SupervisorMySQL();
-            supevisores = supDao.listarTodos();
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
-        return supevisores;
-    }
+    private SupervisorDAO daoSupervisor = new SupervisorMySQL();
     
     @WebMethod(operationName = "insertarSupervisor")
-    public void insertarSupervisor(@WebParam(name = "credito") Supervisor supervisor) {
-        try {
-            supDao = new SupervisorMySQL();
-            supDao.insertar(supervisor);
-        } catch (Exception ex) {
+    public boolean insertarSupervisor(@WebParam(name = "supervisor") Supervisor supervisor) {
+        boolean resultado = false;
+        try{
+            resultado = daoSupervisor.insertar(supervisor);
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
+        return resultado;
     }
-
-    @WebMethod(operationName = "eliminarSupervisor")
-    public void eliminarSupervisor(@WebParam(name = "idSupervisor") int idSupervisor) {
-        try {
-            supDao = new SupervisorMySQL();
-            supDao.eliminar(idSupervisor);
-        } catch (Exception ex) {
+    
+    @WebMethod(operationName = "modificarSupervisor")
+    public void modificarSupervisor(@WebParam(name = "id") int id,
+            @WebParam(name = "supervisor") Supervisor supervisor) {
+        try{
+            daoSupervisor.modificar(id,supervisor);
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
     }
     
-    @WebMethod(operationName = "obtenerSupervisorPorId")
-    public Supervisor obtenerSupervisorPorId(@WebParam(name = "idSupervisor") int idSupervisor) {
+    @WebMethod(operationName = "eliminarSupervisor")
+    public void eliminarSupervisor(@WebParam(name = "idsupervisor") int id) {
+        try{
+            daoSupervisor.eliminar(id);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+    
+    @WebMethod(operationName = "obtenerPorIDSupervisor")
+    public Supervisor obtenerPorIDSupervisor(@WebParam(name = "idsupervisor") int id) {
         Supervisor supervisor = null;
-        try {
-            supDao = new SupervisorMySQL();
-            supervisor = supDao.obtenerPorId(idSupervisor);
-        } catch (Exception ex) {
+        try{
+            supervisor = daoSupervisor.obtenerPorId(id);
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return supervisor;
     }
     
-    @WebMethod(operationName = "modificarSupervisor")
-    public void modificar(@WebParam(name = "idSupervisor") int idSupervisor, 
-            @WebParam(name = "supervisor") Supervisor supervisor) {
-        try {
-            supDao = new SupervisorMySQL();
-            supDao.modificar(idSupervisor,supervisor);
-        } catch (Exception ex) {
+    @WebMethod(operationName = "listarTodosSupervisors")
+    public List<Supervisor> listarTodosSupervisors() {
+        List<Supervisor> supervisors = null;
+        try{
+            supervisors = daoSupervisor.listarTodos();
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
+        return supervisors;
     }
+    
 }

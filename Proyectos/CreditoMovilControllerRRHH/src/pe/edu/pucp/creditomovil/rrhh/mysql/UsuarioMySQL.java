@@ -14,6 +14,7 @@ import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.UsuarioDAO;
 import pe.edu.pucp.creditomovil.model.Supervisor;
+import pe.edu.pucp.creditomovil.model.TipoDocumento;
 import pe.edu.pucp.creditomovil.model.Usuario;
 /**
  *
@@ -41,7 +42,7 @@ public class UsuarioMySQL implements UsuarioDAO{
             if(usuario.getActivo()) cs.setString(7,"S");
             else cs.setString(7,"N");
             cs.setDate(8, usuario.getUltimoLogueo() != null ? new Date(usuario.getUltimoLogueo().getTime()) : new Date(System.currentTimeMillis()));
-            cs.setString(9, usuario.getTipoDocumento());
+            cs.setString(9, usuario.getTipoDocumento().name());
             cs.setString(10, usuario.getDocumento());
             cs.setBoolean(11,false);
             
@@ -71,7 +72,7 @@ public class UsuarioMySQL implements UsuarioDAO{
             else cs.setString(8,"N");
             cs.setDate(9, usuario.getUltimoLogueo() != null ? new Date(usuario.getUltimoLogueo().getTime()) : new Date(System.currentTimeMillis()));
             cs.setBoolean(10,false);
-            cs.setString(11, usuario.getTipoDocumento());
+            cs.setString(11, usuario.getTipoDocumento().name());
             cs.setString(12, usuario.getDocumento());
             
             resultado = cs.executeUpdate();
@@ -126,7 +127,16 @@ public class UsuarioMySQL implements UsuarioDAO{
             cs = conexion.prepareCall(query);            
             rs = cs.executeQuery();
             while (rs.next()) {
-                //
+                
+                String tipoDocStr = rs.getString("tipo_doc");
+                TipoDocumento tipoDoc; 
+                
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) {
+                    tipoDoc = TipoDocumento.OTRO; // solo como manejo básico
+                }
+                
                 Usuario usuario = new Supervisor(
                     rs.getInt("usuario_id"), 
                     rs.getDate("fecha"),
@@ -136,7 +146,7 @@ public class UsuarioMySQL implements UsuarioDAO{
                     rs.getString("contrasena"),               // Columna 'contrasena'             
                     rs.getDate("fecha_venc"),          // Columna 'fecha_vencimiento'
                     rs.getString("activo").equals("S"),       // Convertimos "S" o "N" a booleano
-                    rs.getString("tipo_doc"),
+                    tipoDoc,
                     rs.getString("documento"),
                     "A",1,"SUP123"
                 );

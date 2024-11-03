@@ -15,6 +15,7 @@ import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.getsclientes.dao.ClienteDAO;
 import pe.edu.pucp.creditomovil.model.Cliente;
+import pe.edu.pucp.creditomovil.model.TipoDocumento;
 
 /**
  *
@@ -46,7 +47,7 @@ public class ClienteMySQL implements ClienteDAO {
             stmtUsuario.setDate(6, new java.sql.Date(cliente.getFechaVencimiento().getTime()));
             stmtUsuario.setBoolean(7, true);
             stmtUsuario.setDate(8, cliente.getUltimoLogueo() != null ? new java.sql.Date(cliente.getUltimoLogueo().getTime()) : null);
-            stmtUsuario.setString(9, cliente.getTipoDocumento());
+            stmtUsuario.setString(9, cliente.getTipoDocumento().name());
             stmtUsuario.setString(10, cliente.getDocumento());
             
             stmtUsuario.registerOutParameter(11, Types.INTEGER); // Para capturar el ID generado
@@ -119,7 +120,7 @@ public class ClienteMySQL implements ClienteDAO {
             cs.setDate(8, new java.sql.Date(cliente.getFechaVencimiento().getTime()));
             cs.setBoolean(9, cliente.getActivo());
             cs.setDate(10, cliente.getUltimoLogueo() != null ? new java.sql.Date(cliente.getUltimoLogueo().getTime()) : null);
-            cs.setString(11, cliente.getTipoDocumento());
+            cs.setString(11, cliente.getTipoDocumento().name());
             cs.setString(12, cliente.getDocumento());
             // Parámetros para la tabla cliente
             cs.setString(13, cliente.getDireccion());
@@ -211,6 +212,14 @@ public class ClienteMySQL implements ClienteDAO {
 
             while (rs.next()) {
                 // Crea un nuevo objeto Cliente y llena sus datos
+                
+                String tipoDocStr = rs.getString("tipo_doc");
+                TipoDocumento tipoDoc;
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) { 
+                    tipoDoc = TipoDocumento.OTRO; // Puedes elegir otro manejo según tu lógica
+                }
                 Cliente cliente = new Cliente(
                         rs.getInt("usuario_id"),
                         rs.getDate("fecha"),
@@ -220,7 +229,7 @@ public class ClienteMySQL implements ClienteDAO {
                         rs.getString("contrasena"),
                         rs.getDate("fecha_venc"),
                         rs.getBoolean("activo"),
-                        rs.getString("tipo_doc"),
+                        tipoDoc,
                         rs.getString("documento"),
                         rs.getString("codigo_cliente"),
                         rs.getString("direccion"),

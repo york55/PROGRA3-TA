@@ -14,6 +14,7 @@ import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.SupervisorDAO;
 import pe.edu.pucp.creditomovil.model.Supervisor;
+import pe.edu.pucp.creditomovil.model.TipoDocumento;
 
 /**
  *
@@ -46,7 +47,7 @@ public class SupervisorMySQL implements SupervisorDAO {
             cs.setDate(6, new java.sql.Date(supervisor.getFechaVencimiento().getTime()));
             cs.setString(7, supervisor.getActivo()? "1" : "0");
             
-            cs.setString(8, supervisor.getTipoDocumento());
+            cs.setString(8, supervisor.getTipoDocumento().name());
             cs.setString(9, supervisor.getDocumento());
             
             cs.setString(10, supervisor.getCodigoEv());
@@ -135,11 +136,20 @@ public class SupervisorMySQL implements SupervisorDAO {
         ResultSet rs = null;
         try {
             conexion = DBManager.getInstance().getConnection();
-        String query = "{CALL ListarSupervisores()}";
+            String query = "{CALL ListarSupervisores()}";
             cs = conexion.prepareCall(query);
             rs = cs.executeQuery();
             while (rs.next()) {
-                //
+                
+                String tipoDocStr = rs.getString("tipo_doc");
+                TipoDocumento tipoDoc; 
+                // es un enum asi que toca hacer el cambio de string a enum
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) {
+                    tipoDoc = TipoDocumento.OTRO; // solo como manejo básico
+                }
+                
                 Supervisor supervisor = new Supervisor(
                         rs.getInt("usuario_id"),
                         rs.getDate("fecha"),
@@ -149,7 +159,7 @@ public class SupervisorMySQL implements SupervisorDAO {
                         rs.getString("contrasena"),
                         rs.getDate("fecha_venc"),
                         rs.getBoolean("activo"),
-                        rs.getString("tipo_doc"),
+                        tipoDoc,
                         rs.getString("documento"),
                         rs.getString("codigo_sup"),
                         rs.getInt("codigo_cargo"),

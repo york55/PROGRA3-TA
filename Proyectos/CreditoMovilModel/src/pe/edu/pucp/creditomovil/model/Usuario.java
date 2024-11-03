@@ -17,12 +17,12 @@ public abstract class Usuario {
     private Date fechaVencimiento;
     private boolean activo; // define si el usuario esta activo en el sistema o no
     private Date ultimoLogueo;
-    private String tipoDocumento;
+    private TipoDocumento tipoDocumento;
     private String documento;
     
     public Usuario(int idUsuario, Date fecha, String nombre, String apPaterno,
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, String tipoDocumento, String documento) {
+            boolean activo, TipoDocumento tipoDocumento, String documento) {
         this.idUsuario = idUsuario;
         this.fecha = fecha;
         this.nombre = nombre;
@@ -128,11 +128,11 @@ public abstract class Usuario {
         this.ultimoLogueo = ultimoLogueo;
     }
 
-    public String getTipoDocumento() {
+    public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(String tipoDocumento) {
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 

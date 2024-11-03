@@ -16,7 +16,7 @@ public class Supervisor extends Usuario {
 
     public Supervisor(int idUsuario, Date fecha, String nombre, String apPaterno,
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, String tipoDocumento, String documento, String codigoEv, int codigoCargo,
+            boolean activo, TipoDocumento tipoDocumento, String documento, String codigoEv, int codigoCargo,
             String agenciaAsignacion) {
         super(idUsuario, fecha, nombre, apPaterno, apMaterno, contrasenha,
                 fechaVencimiento, activo, tipoDocumento, documento);

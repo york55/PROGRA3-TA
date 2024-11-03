@@ -8,65 +8,71 @@ import jakarta.jws.WebService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import pe.edu.pucp.creditomovil.getsclientes.dao.ClienteDAO;
 import pe.edu.pucp.creditomovil.getsclientes.mysql.ClienteMySQL;
-import pe.edu.pucp.creditomovil.getscliente.model.Cliente;
+import pe.edu.pucp.creditomovil.model.Cliente;
 
 @WebService(serviceName = "ClienteWS", targetNamespace
         = "https://services.creditomovil.pucp.edu.pe")
 public class ClienteWS {
 
-    private ClienteDAO daoCliente;
-
-    @WebMethod(operationName = "listarClientes")
-    public List<Cliente> listarClientes() {
-        List<Cliente> clientes = null;
-        try {
-            daoCliente = new ClienteMySQL();
-            clientes = daoCliente.listarTodos();
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
-        return clientes;
-    }
+    private ClienteDAO daoCliente = new ClienteMySQL();
     
     @WebMethod(operationName = "insertarCliente")
     public boolean insertarCliente(@WebParam(name = "cliente") Cliente cliente) {
         boolean resultado = false;
-        try {
-            daoCliente = new ClienteMySQL();
+        try{
             resultado = daoCliente.insertar(cliente);
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
-        return resultado;
-    }
-
-    @WebMethod(operationName = "eliminarCliente")
-    public boolean eliminarCliente(@WebParam(name = "idCliente") String idCliente) {
-        boolean resultado = false;
-        try {
-            daoCliente = new ClienteMySQL();
-            resultado = daoCliente.eliminar(idCliente);
-        } catch (Exception ex) {
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return resultado;
     }
     
-    @WebMethod(operationName = "obtenerClientePorId")
-    public Cliente obtenerEventoPorId(@WebParam(name = "idCliente") String idCliente) {
+    @WebMethod(operationName = "modificarCliente")
+    public boolean modificarCliente(@WebParam(name = "cliente") Cliente cliente) {
+        boolean resultado = false;
+        try{
+            resultado = daoCliente.modificar(cliente);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "eliminarCliente")
+    public boolean eliminarCliente(@WebParam(name = "idcliente") String id) {
+        boolean resultado = false;
+        try{
+            resultado = daoCliente.eliminar(id);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "obtenerPorIDCliente")
+    public Cliente obtenerPorIDCliente(@WebParam(name = "idcliente") String id) {
         Cliente cliente = null;
-        try {
-            daoCliente = new ClienteMySQL();
-            cliente = daoCliente.obtenerPorId(idCliente);
-        } catch (Exception ex) {
+        try{
+            cliente = daoCliente.obtenerPorId(id);
+        }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return cliente;
+    }
+    
+    @WebMethod(operationName = "listarTodosClientes")
+    public List<Cliente> listarTodosClientes() {
+        List<Cliente> clientes = null;
+        try{
+            clientes = daoCliente.listarTodos();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return clientes;
     }
     
 }

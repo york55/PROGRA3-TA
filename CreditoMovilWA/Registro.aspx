@@ -97,6 +97,7 @@
                     <asp:ListItem Text="Selecciona una opción" Value="" />
                     <asp:ListItem Text="DNI" Value="DNI" />
                     <asp:ListItem Text="Pasaporte" Value="Pasaporte" />
+                    <asp:ListItem Text="Carnet de Extranjeria" Value="Carnet_Extranjeria" />
                 </asp:DropDownList>
             </div>
             <div class="form-group">
