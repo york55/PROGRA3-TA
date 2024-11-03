@@ -134,7 +134,7 @@ public class UsuarioMySQL implements UsuarioDAO{
                 try {
                     tipoDoc = TipoDocumento.valueOf(tipoDocStr);
                 } catch (IllegalArgumentException e) {
-                    tipoDoc = TipoDocumento.OTRO; // solo como manejo básico
+                    tipoDoc = TipoDocumento.DNI; // solo como manejo básico
                 }
                 
                 Usuario usuario = new Supervisor(

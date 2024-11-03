@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="EvaluacionWS">
-      <implementation-class>pe.edu.pucp.creditomovil.services.EvaluacionWS</implementation-class>
+    <service name="AdministradorWS">
+      <implementation-class>pe.edu.pucp.creditomovil.services.AdministradorWS</implementation-class>
     </service>
   </services>
   <clients/>

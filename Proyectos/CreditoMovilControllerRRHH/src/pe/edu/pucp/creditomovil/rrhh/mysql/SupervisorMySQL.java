@@ -147,7 +147,7 @@ public class SupervisorMySQL implements SupervisorDAO {
                 try {
                     tipoDoc = TipoDocumento.valueOf(tipoDocStr);
                 } catch (IllegalArgumentException e) {
-                    tipoDoc = TipoDocumento.OTRO; // solo como manejo básico
+                    tipoDoc = TipoDocumento.DNI; // solo como manejo básico
                 }
                 
                 Supervisor supervisor = new Supervisor(
