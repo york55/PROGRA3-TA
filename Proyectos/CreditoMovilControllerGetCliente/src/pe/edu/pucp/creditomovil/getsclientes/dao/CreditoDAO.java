@@ -5,7 +5,7 @@
 package pe.edu.pucp.creditomovil.getsclientes.dao;
 
 import java.util.List;
-import pe.edu.pucp.creditomovil.getscliente.model.Credito;
+import pe.edu.pucp.creditomovil.model.Credito;
 
 /**
  *

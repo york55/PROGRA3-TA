@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.SupervisorDAO;
-import pe.edu.pucp.creditomovil.rrhh.model.Supervisor;
+import pe.edu.pucp.creditomovil.model.Supervisor;
 
 /**
  *
@@ -35,7 +35,7 @@ public class SupervisorMySQL implements SupervisorDAO {
             con = DBManager.getInstance().getConnection();
 
             // Preparar la llamada al procedimiento almacenado
-            cs = con.prepareCall("{CALL InsertarSupervisor(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}");
+            cs = con.prepareCall("{CALL InsertarSupervisor(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}");
 
             // Asignar valores a los parámetros
             cs.setDate(1, new java.sql.Date(supervisor.getFecha().getTime()));
@@ -45,9 +45,13 @@ public class SupervisorMySQL implements SupervisorDAO {
             cs.setString(5, supervisor.getContrasenha());
             cs.setDate(6, new java.sql.Date(supervisor.getFechaVencimiento().getTime()));
             cs.setString(7, supervisor.getActivo()? "1" : "0");
-            cs.setString(8, supervisor.getCodigoEv());
-            cs.setInt(9, supervisor.getCodigoCargo());
-            cs.setString(10, supervisor.getAgenciaAsignacion());
+            
+            cs.setString(8, supervisor.getTipoDocumento());
+            cs.setString(9, supervisor.getDocumento());
+            
+            cs.setString(10, supervisor.getCodigoEv());
+            cs.setInt(11, supervisor.getCodigoCargo());
+            cs.setString(12, supervisor.getAgenciaAsignacion());
 
             // Ejecutar el procedimiento
             resultado = cs.executeUpdate() > 0;
@@ -145,6 +149,8 @@ public class SupervisorMySQL implements SupervisorDAO {
                         rs.getString("contrasena"),
                         rs.getDate("fecha_venc"),
                         rs.getBoolean("activo"),
+                        rs.getString("tipo_doc"),
+                        rs.getString("documento"),
                         rs.getString("codigo_sup"),
                         rs.getInt("codigo_cargo"),
                         rs.getString("agencia_asignacion")

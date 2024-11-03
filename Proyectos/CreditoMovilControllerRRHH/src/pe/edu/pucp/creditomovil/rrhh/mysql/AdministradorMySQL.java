@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.AdministradorDAO;
-import pe.edu.pucp.creditomovil.rrhh.model.Administrador;
+import pe.edu.pucp.creditomovil.model.Administrador;
 /**
  *
  * @author Bleak
@@ -110,7 +110,7 @@ public class AdministradorMySQL implements AdministradorDAO{
                 Administrador admin = new Administrador(
                     rs.getInt("usuario_usuario_id"), 
                     new java.util.Date(), "Diego", "Pérez", "Gonzalez", "miContrasena", new java.util.Date(), true,
-                    rs.getString("codigo_admin"),
+                    "DNI","71608817",rs.getString("codigo_admin"),
                     rs.getInt("codigo_cargo")
                 );
                 administradores.add(admin);

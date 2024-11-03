@@ -5,7 +5,7 @@
 package pe.edu.pucp.creditomovil.rrhh.dao;
 
 import java.util.List;
-import pe.edu.pucp.creditomovil.rrhh.model.Supervisor;
+import pe.edu.pucp.creditomovil.model.Supervisor;
 
 /**
  *

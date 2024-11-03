@@ -5,7 +5,7 @@
 package pe.edu.pucp.creditomovil.rrhh.dao;
 
 import java.util.List;
-import pe.edu.pucp.creditomovil.rrhh.model.Administrador;
+import pe.edu.pucp.creditomovil.model.Administrador;
 /**
  *
  * @author Bleak

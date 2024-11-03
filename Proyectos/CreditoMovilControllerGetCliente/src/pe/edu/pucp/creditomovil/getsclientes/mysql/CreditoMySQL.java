@@ -13,7 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import pe.edu.pucp.creditomovil.getscliente.model.Credito;
+import pe.edu.pucp.creditomovil.model.Credito;
 
 /**
  *

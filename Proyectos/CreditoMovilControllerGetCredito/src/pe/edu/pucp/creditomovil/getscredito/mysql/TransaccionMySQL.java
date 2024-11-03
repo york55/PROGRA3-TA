@@ -13,7 +13,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
-import pe.edu.pucp.creditomovil.getscredito.model.Transaccion;
+import pe.edu.pucp.creditomovil.model.Transaccion;
 
 /**
  *
@@ -32,7 +32,7 @@ public class TransaccionMySQL implements TransaccionDAO {
 
         try {
             conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL InsertarTransaccion(?, ?, ?, ?, ?, ?, ?, ?) }";
+            String sql = "{ CALL InsertarTransaccion(?, ?, ?, ?, ?, ?, ?, ?, ?) }";
             cs = conn.prepareCall(sql);
 
             // Configura los parámetros
@@ -44,6 +44,7 @@ public class TransaccionMySQL implements TransaccionDAO {
             cs.setBoolean(6, transaccion.isAnulado());
             cs.setString(7, transaccion.getAgencia());
             cs.setString(8, transaccion.getCredito().getNumCredito()); // Supone que credito no es null
+            cs.setBytes(9, transaccion.getFoto());
 
             // Ejecuta la consulta
             resultado = cs.executeUpdate() > 0;
@@ -76,7 +77,7 @@ public class TransaccionMySQL implements TransaccionDAO {
             con = DBManager.getInstance().getConnection();
 
             // Preparar la llamada al procedimiento almacenado
-            cs = con.prepareCall("{CALL ModificarTransaccion(?, ?, ?, ?, ?, ?, ?)}");
+            cs = con.prepareCall("{CALL ModificarTransaccion(?, ?, ?, ?, ?, ?, ?, ?)}");
 
             // Establecer los parámetros de entrada
             cs.setInt(1, transaccion.getNumOperacion());
@@ -86,6 +87,7 @@ public class TransaccionMySQL implements TransaccionDAO {
             cs.setDouble(5, transaccion.getMonto());
             cs.setBoolean(6, transaccion.isAnulado());
             cs.setString(7, transaccion.getAgencia());
+            cs.setBytes(8, transaccion.getFoto());
 
             // Ejecutar el procedimiento y verificar si se modificó correctamente
             modificado = (cs.executeUpdate() > 0);
@@ -189,7 +191,7 @@ public class TransaccionMySQL implements TransaccionDAO {
                 double monto = rs.getDouble("monto");
                 boolean anulado = rs.getBoolean("anulado");
                 String agencia = rs.getString("agencia");
-
+                byte[] foto = rs.getBytes("foto");
                 //cargar el usuario con metodo de obtenerCliente usando el ID
 
             // Crear una instancia de Transaccion
@@ -201,7 +203,8 @@ public class TransaccionMySQL implements TransaccionDAO {
                         null,
                         agencia,
                         numOperacion,
-                        null // Credito se puede cargar por separado si es necesario
+                        null, // Credito se puede cargar por separado si es necesario
+                        foto
                 );
 
                 // Agregar a la lista

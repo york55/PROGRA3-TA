@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.getsclientes.dao.ClienteDAO;
-import pe.edu.pucp.creditomovil.getscliente.model.Cliente;
+import pe.edu.pucp.creditomovil.model.Cliente;
 
 /**
  *
@@ -36,7 +36,7 @@ public class ClienteMySQL implements ClienteDAO {
             conn.setAutoCommit(false); // Inicia una transacción
 
             // Llamada al procedimiento `InsertarUsuario`
-            String sqlInsertarUsuario = "{ CALL InsertarUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?) }";
+            String sqlInsertarUsuario = "{ CALL InsertarUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ?) }";
             stmtUsuario = conn.prepareCall(sqlInsertarUsuario);
             stmtUsuario.setDate(1, new java.sql.Date(cliente.getFecha().getTime()));
             stmtUsuario.setString(2, cliente.getNombre());
@@ -46,12 +46,14 @@ public class ClienteMySQL implements ClienteDAO {
             stmtUsuario.setDate(6, new java.sql.Date(cliente.getFechaVencimiento().getTime()));
             stmtUsuario.setBoolean(7, true);
             stmtUsuario.setDate(8, cliente.getUltimoLogueo() != null ? new java.sql.Date(cliente.getUltimoLogueo().getTime()) : null);
-            stmtUsuario.registerOutParameter(9, Types.INTEGER); // Para capturar el ID generado
-
+            stmtUsuario.setString(9, cliente.getTipoDocumento());
+            stmtUsuario.setString(10, cliente.getDocumento());
+            
+            stmtUsuario.registerOutParameter(11, Types.INTEGER); // Para capturar el ID generado
             stmtUsuario.executeUpdate();
 
             // Obtener el ID generado
-            int usuarioId = stmtUsuario.getInt(9);
+            int usuarioId = stmtUsuario.getInt(11);
             cliente.setIdUsuario(usuarioId); // Asignar el ID al objeto cliente
 
             // Llamada al procedimiento `InsertarCliente`
@@ -103,7 +105,7 @@ public class ClienteMySQL implements ClienteDAO {
 
         try {
             conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL ModificarCliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
+            String sql = "{ CALL ModificarCliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
             cs = conn.prepareCall(sql);
 
             // Parámetros para la tabla usuario
@@ -117,12 +119,13 @@ public class ClienteMySQL implements ClienteDAO {
             cs.setDate(8, new java.sql.Date(cliente.getFechaVencimiento().getTime()));
             cs.setBoolean(9, cliente.getActivo());
             cs.setDate(10, cliente.getUltimoLogueo() != null ? new java.sql.Date(cliente.getUltimoLogueo().getTime()) : null);
-
+            cs.setString(11, cliente.getTipoDocumento());
+            cs.setString(12, cliente.getDocumento());
             // Parámetros para la tabla cliente
-            cs.setString(11, cliente.getDireccion());
-            cs.setString(12, cliente.getTelefono());
-            cs.setString(13, cliente.getEmail());
-            cs.setString(14, cliente.getTipoCliente());
+            cs.setString(13, cliente.getDireccion());
+            cs.setString(14, cliente.getTelefono());
+            cs.setString(15, cliente.getEmail());
+            cs.setString(16, cliente.getTipoCliente());
 
             int filasAfectadas = cs.executeUpdate();
             return filasAfectadas > 0;
@@ -217,6 +220,8 @@ public class ClienteMySQL implements ClienteDAO {
                         rs.getString("contrasena"),
                         rs.getDate("fecha_venc"),
                         rs.getBoolean("activo"),
+                        rs.getString("tipo_doc"),
+                        rs.getString("documento"),
                         rs.getString("codigo_cliente"),
                         rs.getString("direccion"),
                         rs.getString("telefono"),

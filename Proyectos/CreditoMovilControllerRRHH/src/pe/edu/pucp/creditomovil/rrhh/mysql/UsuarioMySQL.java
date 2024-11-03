@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.UsuarioDAO;
-import pe.edu.pucp.creditomovil.rrhh.model.Supervisor;
-import pe.edu.pucp.creditomovil.rrhh.model.Usuario;
+import pe.edu.pucp.creditomovil.model.Supervisor;
+import pe.edu.pucp.creditomovil.model.Usuario;
 /**
  *
  * @author diego
@@ -26,7 +26,7 @@ public class UsuarioMySQL implements UsuarioDAO{
     @Override
     public void insertar(Usuario usuario) {
         CallableStatement cs;
-        String query = "{CALL InsertarUsuario(?,?,?,?,?,?,?,?,?)}";
+        String query = "{CALL InsertarUsuario(?,?,?,?,?,?,?,?,?,?,?)}";
         int resultado = 0;
         
         try {
@@ -41,7 +41,9 @@ public class UsuarioMySQL implements UsuarioDAO{
             if(usuario.getActivo()) cs.setString(7,"S");
             else cs.setString(7,"N");
             cs.setDate(8, usuario.getUltimoLogueo() != null ? new Date(usuario.getUltimoLogueo().getTime()) : new Date(System.currentTimeMillis()));
-            cs.setBoolean(9,false);
+            cs.setString(9, usuario.getTipoDocumento());
+            cs.setString(10, usuario.getDocumento());
+            cs.setBoolean(11,false);
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -52,7 +54,7 @@ public class UsuarioMySQL implements UsuarioDAO{
     @Override
     public void modificar(int id,Usuario usuario) {
         CallableStatement cs;
-        String query = "{CALL ModificarUsuario(?,?,?,?,?,?,?,?,?,?)}";
+        String query = "{CALL ModificarUsuario(?,?,?,?,?,?,?,?,?,?,?,?)}";
         int resultado = 0;
         
         try {
@@ -69,6 +71,8 @@ public class UsuarioMySQL implements UsuarioDAO{
             else cs.setString(8,"N");
             cs.setDate(9, usuario.getUltimoLogueo() != null ? new Date(usuario.getUltimoLogueo().getTime()) : new Date(System.currentTimeMillis()));
             cs.setBoolean(10,false);
+            cs.setString(11, usuario.getTipoDocumento());
+            cs.setString(12, usuario.getDocumento());
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -132,6 +136,8 @@ public class UsuarioMySQL implements UsuarioDAO{
                     rs.getString("contrasena"),               // Columna 'contrasena'             
                     rs.getDate("fecha_venc"),          // Columna 'fecha_vencimiento'
                     rs.getString("activo").equals("S"),       // Convertimos "S" o "N" a booleano
+                    rs.getString("tipo_doc"),
+                    rs.getString("documento"),
                     "A",1,"SUP123"
                 );
                 usuarios.add(usuario);

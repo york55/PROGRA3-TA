@@ -12,9 +12,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
-import pe.edu.pucp.creditomovil.getscliente.model.Cliente;
-import pe.edu.pucp.creditomovil.getscliente.model.Evaluacion;
+import pe.edu.pucp.creditomovil.model.Cliente;
+import pe.edu.pucp.creditomovil.model.Evaluacion;
 import pe.edu.pucp.creditomovil.getsclientes.dao.EvaluacionDAO;
+import pe.edu.pucp.creditomovil.getsclientes.dao.ClienteDAO;
 
 /**
  *
@@ -38,7 +39,10 @@ public class EvaluacionMySQL implements EvaluacionDAO {
 
             // Configura los parámetros
             cs.setInt(1, evaluacion.getNumeroEvaluacion());
-            cs.setString(2, " "); // Asegúrate de que clienteAsignado no sea null
+            Cliente cli = (Cliente) evaluacion.getClienteAsignado();
+            if(cli.getCodigoCliente()!=null)
+                cs.setString(2, cli.getCodigoCliente()); // Asegúrate de que clienteAsignado no sea null
+            else cs.setString(2, " ");
             cs.setDate(3, new java.sql.Date(evaluacion.getFechaRegistro().getTime()));
             cs.setString(4, evaluacion.getNombreNegocio());
             cs.setString(5, evaluacion.getDireccionNegocio());
@@ -144,26 +148,34 @@ public class EvaluacionMySQL implements EvaluacionDAO {
         CallableStatement cs = null;
         String query = "{CALL ListarEvaluaciones()}";
         ResultSet rs = null;
+        CallableStatement stmtCliente = null;
+        
+        ClienteDAO clienteDAO = new ClienteMySQL();
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
             rs = cs.executeQuery();
             while (rs.next()) {
-                //
-//                Evaluacion eva = new Evaluacion(
-//                    rs.getDate("fecha_registro"), 
-//                    rs.getString("nombre_negocio"),
-//                    rs.getString("direccion_negocio"),                   
-//                    rs.getString("telefono_negocio"),               
-//                    rs.getDouble("ventas_diarias"),               
-//                    rs.getDouble("inventario"),                       
-//                    rs.getDouble("costo_ventas"),          
-//                    rs.getDouble("margen_ganancia"),      
-//                    rs.getInt("numero_evaluacion"),
-//                    rs.getString("activo").equals("S"),
-//                    rs.getString("cliente_codigo_cliente")
-//                );
-//                evaluaciones.add(eva);
+                int numEva = rs.getInt("num_evaluacion");
+                String codClien = rs.getString("cliente_codigo_cliente");
+                Cliente cliente = clienteDAO.obtenerPorId(codClien);
+                
+                Date fechaReg = rs.getDate("fecha_registro");
+                String nombreNeg = rs.getString("nombre_negocio");
+                String dirNeg = rs.getString("direccion_negocio");
+                String telNeg = rs.getString("telefono_negocio");
+                double ventasDia = rs.getDouble("ventas_diarias");
+                double inventario = rs.getDouble("inventario");
+                double costoVentas = rs.getDouble("costo_ventas");
+                double margenGan = rs.getDouble("margen_ganancia");
+                boolean activo = rs.getBoolean("activo");
+                double puntaje = rs.getDouble("puntaje");
+                String obser = rs.getString("observaciones");
+                        
+                Evaluacion eva = new Evaluacion(fechaReg, nombreNeg, dirNeg, telNeg,
+                        null, cliente, ventasDia, inventario, costoVentas, 
+                        margenGan, numEva, activo, puntaje, obser);
+                evaluaciones.add(eva);
             }
         } catch (SQLException e) {
             e.printStackTrace();
