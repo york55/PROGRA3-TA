@@ -187,6 +187,30 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\otroPrueba\configuration91.svcinfo" />
+    <None Include="Connected Services\otroPrueba\configuration.svcinfo" />
+    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.eliminarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.insertarClienteParametrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.listarTodosClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.modificarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.obtenerPorIDClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\otroPrueba\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="DetalleCredito.aspx" />
     <Content Include="DetalleEvaluacion.aspx" />
     <Content Include="DetalleTransaccion.aspx" />
@@ -203,6 +227,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connected Services\CreditoMovil\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\otroPrueba\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -312,6 +341,10 @@
     <None Include="Connected Services\CreditoMovil\TransaccionWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\otroPrueba\ClienteWS.wsdl" />
+    <None Include="Connected Services\otroPrueba\ClienteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="Usuario.master" />
     <None Include="Web.Debug.config">
@@ -326,6 +359,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\CreditoMovil\" />
+    <WCFMetadataStorage Include="Connected Services\otroPrueba\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
