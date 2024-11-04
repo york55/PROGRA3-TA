@@ -100,10 +100,10 @@
 
         <label>¿En cuántas cuotas lo desea?</label>
         <div>
-            <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">0</button>
             <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">1</button>
             <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">2</button>
             <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">3</button>
+            <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">4</button>
         </div>
 
         <label>¿Cuándo desea realizar el primer pago?</label>

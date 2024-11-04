@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CreditoMovilWA.CreditoMovil;
+using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
@@ -8,6 +9,7 @@ namespace CreditoMovilWA
 {
     public partial class DetalleEvaluacion : System.Web.UI.Page
     {
+        private EvaluacionWSClient daoEvaluacion = new EvaluacionWSClient();
         private bool modoEdicion = false;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,19 +27,23 @@ namespace CreditoMovilWA
             string idEvaluacion = Request.QueryString["IdEvaluacion"];
             lblNumeroEvaluacion.Text = idEvaluacion;
 
+            evaluacion ev = daoEvaluacion.obtenerPorIDEvaluacion(Int32.Parse(idEvaluacion));
+
             // ejemplo pa probart
-            txtNombreNegocio.Text = "Nombre del Negocio Ejemplo";
-            txtFechaRegistro.Text = DateTime.Now.ToShortDateString();
-            txtDireccionNegocio.Text = "Dirección Ejemplo";
-            txtTelefonoNegocio.Text = "123456789";
-            txtClienteAsignado.Text = "Cliente Ejemplo";
-            txtMargenGanancia.Text = "20%";
-            txtVentasDiarias.Text = "500";
-            txtInventario.Text = "Inventario Ejemplo";
-            txtCostoVentas.Text = "100";
-            txtEstado.Text = "Activo";
-            txtObservaciones.Text = "Observaciones sobre la evaluación...";
-            lblPuntaje.Text = "98";  
+            txtNombreNegocio.Text = ev.nombreNegocio;
+            txtFechaRegistro.Text = ev.fechaRegistro.ToString();
+            txtDireccionNegocio.Text = ev.direccionNegocio;
+            txtTelefonoNegocio.Text = ev.telefonoNegocio;
+            txtClienteAsignado.Text = ev.clienteAsignado.nombre+" "+ev.clienteAsignado.apPaterno+" "+ev.clienteAsignado.apMaterno;
+            txtMargenGanancia.Text = ev.margenGanancia.ToString();
+            txtVentasDiarias.Text = ev.ventasDiarias.ToString();
+            txtInventario.Text = ev.inventario.ToString();
+            txtCostoVentas.Text = ev.costoVentas.ToString();
+            txtEstado.Text = ev.activo ? "Activo" : "Inactivo";
+            txtObservaciones.Text = ev.observaciones.ToString();
+            lblPuntaje.Text = ev.puntaje.ToString();
+
+            Session["evaluacion"] = ev;
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
@@ -90,20 +96,23 @@ namespace CreditoMovilWA
 
         private void GuardarDatosEvaluacion()
         {
-            // lógica va aca
-            string nombreNegocio = txtNombreNegocio.Text;
-            string fechaRegistro = txtFechaRegistro.Text;
-            string direccionNegocio = txtDireccionNegocio.Text;
-            string telefonoNegocio = txtTelefonoNegocio.Text;
+            evaluacion ev = (evaluacion)Session["evaluacion"];
+            ev.nombreNegocio = txtNombreNegocio.Text;
+            ev.fechaRegistro = DateTime.Parse(txtFechaRegistro.Text);
+            ev.direccionNegocio = txtDireccionNegocio.Text;
+            ev.telefonoNegocio = txtTelefonoNegocio.Text;
+            //logica para el cliente asignado
             string clienteAsignado = txtClienteAsignado.Text;
-            string margenGanancia = txtMargenGanancia.Text;
-            string ventasDiarias = txtVentasDiarias.Text;
-            string inventario = txtInventario.Text;
-            string costoVentas = txtCostoVentas.Text;
-            string estado = txtEstado.Text;
-            string observaciones = txtObservaciones.Text;
+            //logica para el cliente asignado
+            ev.margenGanancia = Double.Parse(txtMargenGanancia.Text);
+            ev.ventasDiarias = Double.Parse(txtVentasDiarias.Text);
+            ev.inventario = Double.Parse(txtInventario.Text);
+            ev.costoVentas = Double.Parse(txtCostoVentas.Text);
+            ev.activo = txtEstado.Text=="Activo" ? true : false;
+            ev.observaciones = txtObservaciones.Text;
 
             // aca pa actualizar base de dates
+            daoEvaluacion.modificarEvaluacion(ev);
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
