@@ -18,7 +18,7 @@ public class Cliente extends Usuario{
 
     public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, TipoDocumento tipoDocumento, String documento, String codigoCliente, String direccion, 
+            boolean activo, TipoDocumento tipoDocumento, String documento, String codigoCliente, String direccion,
             String telefono, String email, String tipoCliente){
                 super(idUsuario,fecha,nombre,apPaterno,apMaterno,contrasenha,
                       fechaVencimiento,activo, tipoDocumento, documento);

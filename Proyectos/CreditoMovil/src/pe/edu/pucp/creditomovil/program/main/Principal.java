@@ -10,10 +10,10 @@ import java.util.List;
 import pe.edu.pucp.creditomovil.model.Cliente;
 import pe.edu.pucp.creditomovil.model.Credito;
 import pe.edu.pucp.creditomovil.model.Evaluacion;
+import pe.edu.pucp.creditomovil.getsclientes.mysql.ClienteMySQL;
 import pe.edu.pucp.creditomovil.getsclientes.dao.ClienteDAO;
 import pe.edu.pucp.creditomovil.getsclientes.dao.CreditoDAO;
 import pe.edu.pucp.creditomovil.getsclientes.dao.EvaluacionDAO;
-import pe.edu.pucp.creditomovil.getsclientes.mysql.ClienteMySQL;
 import pe.edu.pucp.creditomovil.getsclientes.mysql.CreditoMySQL;
 import pe.edu.pucp.creditomovil.getsclientes.mysql.EvaluacionMySQL;
 import pe.edu.pucp.creditomovil.getscredito.dao.TransaccionDAO;
@@ -24,6 +24,7 @@ import pe.edu.pucp.creditomovil.rrhh.dao.SupervisorDAO;
 import pe.edu.pucp.creditomovil.rrhh.dao.UsuarioDAO;
 import pe.edu.pucp.creditomovil.model.Administrador;
 import pe.edu.pucp.creditomovil.model.Supervisor;
+import pe.edu.pucp.creditomovil.model.TipoDocumento;
 import pe.edu.pucp.creditomovil.model.Usuario;
 import pe.edu.pucp.creditomovil.rrhh.mysql.AdministradorMySQL;
 import pe.edu.pucp.creditomovil.rrhh.mysql.SupervisorMySQL;
@@ -39,36 +40,39 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        
+//        ClienteDAO clienteDAO = new ClienteMySQL();
         // Crear la instancia de ClienteDAO
 //        ClienteDAO clienteDAO = new ClienteMySQL();
-        SupervisorDAO daoSup = new SupervisorMySQL();
-        List<Supervisor>list =  daoSup.listarTodos();
-        for(Supervisor supervisor:list){
-            System.out.println(supervisor.getNombre());
-            System.out.println(supervisor.getIdUsuario());
-        }
-//         Configurar los datos del Cliente de prueba
+//        SupervisorDAO daoSup = new SupervisorMySQL();
+//        List<Supervisor>list =  daoSup.listarTodos();
+//        for(Supervisor supervisor:list){
+//            System.out.println(supervisor.getNombre());
+//            System.out.println(supervisor.getIdUsuario());
+//        }
+         //Configurar los datos del Cliente de prueba
 //        Calendar fechaNacimiento = Calendar.getInstance();
 //        fechaNacimiento.set(1990, Calendar.JANUARY, 1); // Fecha de ejemplo
 //
 //        Calendar fechaVencimiento = Calendar.getInstance();
 //        fechaVencimiento.set(2025, Calendar.DECEMBER, 31); // Fecha de vencimiento de ejemplo
-//
+//      //INSERTAR CLIENTE (Funciona 3/11)
 //        Cliente cliente = new Cliente(
 //                0, // idUsuario (se generará automáticamente en la base de datos)
 //                fechaNacimiento.getTime(),
-//                "Juan",
-//                "Pérez",
+//                "Diego",
+//                "Silvestre",
 //                "González",
-//                "password123",
+//                "gaaaa123Password",
 //                fechaVencimiento.getTime(),
 //                true,
-//                "CL123",
-//                "123 Calle Falsa",
+//                TipoDocumento.DNI,
+//                "101024777",
+//                "CL183",
+//                "1563 Calle Falsa",
 //                "123456789",
 //                "juan.perez@example.com",
-//                "Premium"
+//                "EXCELENTE"
 //        );
 //
 //        // Intentar insertar el cliente en la base de datos
@@ -88,10 +92,10 @@ public class Principal {
 //        } else {
 //            System.out.println("No se pudo eliminar el cliente. Verifica el codigo.");
 //        }
-        //modificar
+//        //modificar (FUNCIONA 4/11)
 //        Cliente cliente = new Cliente(
 //            0, new Date(), "NombreActualizado", "ApellidoPaterno", "ApellidoMaterno", 
-//            "nuevaContrasena", new Date(), true, "CL123", "Nueva Direccion", 
+//            "nuevaContrasena", new Date(), true,TipoDocumento.PASAPORTE,"NUEVODNI", "CL183", "Nueva Direccion", 
 //            "987654321", "nuevoemail@example.com", "VIP"
 //        );
 //
@@ -102,10 +106,10 @@ public class Principal {
 //        } else {
 //            System.out.println("No se pudo actualizar el cliente.");
 //        }
-        //listar
-//        List<Cliente> clientes = clienteDAO.listarTodos();
+        //listar (Funciona 3/11)
+//        List<Cliente> listClientes = clienteDAO.listarTodos();
 //
-//        for (Cliente cliente : clientes) {
+//        for (Cliente cliente : listClientes) {
 //            System.out.println("ID Usuario: " + cliente.getIdUsuario());
 //            System.out.println("Nombre: " + cliente.getNombre());
 //            System.out.println("Apellido Paterno: " + cliente.getApPaterno());

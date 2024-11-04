@@ -214,11 +214,12 @@ public class ClienteMySQL implements ClienteDAO {
                 // Crea un nuevo objeto Cliente y llena sus datos
                 
                 String tipoDocStr = rs.getString("tipo_doc");
-                TipoDocumento tipoDoc;
+                if(tipoDocStr ==null) tipoDocStr = "DNI"; //Por defecto es peruano
+                TipoDocumento tipoDoc = null;
                 try {
                     tipoDoc = TipoDocumento.valueOf(tipoDocStr);
                 } catch (IllegalArgumentException e) { 
-                    tipoDoc = TipoDocumento.OTRO; // Puedes elegir otro manejo según tu lógica
+                    System.out.println("Error: " + e);
                 }
                 Cliente cliente = new Cliente(
                         rs.getInt("usuario_id"),
