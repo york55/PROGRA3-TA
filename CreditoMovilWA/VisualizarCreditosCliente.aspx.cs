@@ -91,7 +91,8 @@ namespace CreditoMovilWA
         {
             Button btn = (Button)sender;
             string idCredito = btn.CommandArgument;
-            Response.Redirect("DetalleCredito.aspx?id=" + idCredito);
+            Session["idCredito"] = idCredito;
+            Response.Redirect("DetalleCredito.aspx");
         }
     }
 

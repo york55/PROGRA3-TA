@@ -17,7 +17,7 @@ namespace CreditoMovilWA
             if (!IsPostBack)
             {
                 // Obtener el ID de la transacción desde la consulta
-                string idTransaccion = Request.QueryString["id"];
+                string idTransaccion = (string)Session["idTransaccion"];
                 if (!string.IsNullOrEmpty(idTransaccion))
                 {
                     // Cargar los datos de la transacción

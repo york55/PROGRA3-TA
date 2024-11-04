@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.creditomovil.pucp.edu.pe/" targetNamespace="http://services.creditomovil.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarEvaluacion" type="tns:eliminarEvaluacion" />
+  <xs:element name="eliminarEvaluacionResponse" type="tns:eliminarEvaluacionResponse" />
+  <xs:element name="insertarEvaluacion" type="tns:insertarEvaluacion" />
+  <xs:element name="insertarEvaluacionResponse" type="tns:insertarEvaluacionResponse" />
+  <xs:element name="listarTodosEvaluacions" type="tns:listarTodosEvaluacions" />
+  <xs:element name="listarTodosEvaluacionsResponse" type="tns:listarTodosEvaluacionsResponse" />
+  <xs:element name="modificarEvaluacion" type="tns:modificarEvaluacion" />
+  <xs:element name="modificarEvaluacionResponse" type="tns:modificarEvaluacionResponse" />
+  <xs:element name="obtenerPorIDEvaluacion" type="tns:obtenerPorIDEvaluacion" />
+  <xs:element name="obtenerPorIDEvaluacionResponse" type="tns:obtenerPorIDEvaluacionResponse" />
+  <xs:complexType name="modificarEvaluacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evaluacion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="clienteAsignado" type="tns:usuario" />
+      <xs:element name="costoVentas" type="xs:double" />
+      <xs:element minOccurs="0" name="direccionNegocio" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="inventario" type="xs:double" />
+      <xs:element name="margenGanancia" type="xs:double" />
+      <xs:element minOccurs="0" name="nombreNegocio" type="xs:string" />
+      <xs:element name="numeroEvaluacion" type="xs:int" />
+      <xs:element minOccurs="0" name="observaciones" type="xs:string" />
+      <xs:element name="puntaje" type="xs:double" />
+      <xs:element minOccurs="0" name="telefonoNegocio" type="xs:string" />
+      <xs:element name="ventasDiarias" type="xs:double" />
+      <xs:element minOccurs="0" name="evaluador" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario" abstract="true">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="documento" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="tns:tipoDocumento" />
+      <xs:element minOccurs="0" name="ultimoLogueo" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEvaluacionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertarEvaluacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEvaluacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorIDEvaluacion">
+    <xs:sequence>
+      <xs:element name="idevaluacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorIDEvaluacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEvaluacion">
+    <xs:sequence>
+      <xs:element name="idevaluacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEvaluacionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosEvaluacions">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosEvaluacionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoDocumento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DNI" />
+      <xs:enumeration value="CARNET_EXTRANJERIA" />
+      <xs:enumeration value="PASAPORTE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
