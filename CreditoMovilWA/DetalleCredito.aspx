@@ -100,14 +100,14 @@
         <div class="table-container">
             <asp:GridView ID="gvTransacciones" runat="server" AutoGenerateColumns="false">
                 <Columns>
-                    <asp:BoundField DataField="IdTransaccion" HeaderText="ID_TRANS." />
-                    <asp:BoundField DataField="Fecha" HeaderText="FECHA" />
-                    <asp:BoundField DataField="Concepto" HeaderText="CONCEPTO" />
-                    <asp:BoundField DataField="Monto" HeaderText="MONTO" />
-                    <asp:BoundField DataField="Anulado" HeaderText="ANULADO" />
+                    <asp:BoundField DataField="numOperacion" HeaderText="ID_TRANS." />
+                    <asp:BoundField DataField="fecha" HeaderText="FECHA" />
+                    <asp:BoundField DataField="concepto" HeaderText="CONCEPTO" />
+                    <asp:BoundField DataField="monto" HeaderText="MONTO" />
+                    <asp:BoundField DataField="anulado" HeaderText="ANULADO" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button ID="btnVerDetalle" runat="server" Text="👁️" CssClass="view-btn" CommandArgument='<%# Eval("IdTransaccion") %>' OnClick="btnVerDetalleTransaccion_Click" />
+                            <asp:Button ID="btnVerDetalle" runat="server" Text="👁️" CssClass="view-btn" CommandArgument='<%# Eval("numOperacion") %>' OnClick="btnVerDetalleTransaccion_Click" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

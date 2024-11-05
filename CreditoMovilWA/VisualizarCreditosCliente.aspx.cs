@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CreditoMovilWA.CreditoMovil;
+using System;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -7,6 +8,9 @@ namespace CreditoMovilWA
 {
     public partial class VisualizarCreditos : System.Web.UI.Page
     {
+
+        private CreditoWSClient daoCredito = new CreditoWSClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,9 +31,10 @@ namespace CreditoMovilWA
 
             if (isFechaInicio && isFechaFin)
             {
-                var resultados = ObtenerCreditosPorFecha(fechaInicio, fechaFin);
+                //var resultados = ObtenerCreditosPorFecha(fechaInicio, fechaFin);
+                var resultados = daoCredito.listarTodosCreditos();
 
-                if (resultados.Count > 0)
+                if (resultados.Length > 0)
                 {
                     gvCreditos.DataSource = resultados;
                     gvCreditos.DataBind();

@@ -22,7 +22,7 @@ namespace CreditoMovilWA
             }
             if (!IsPostBack)
             {
-                todoClientes = cliDao.listarTodosClientes();
+                //todoClientes = cliDao.listarTodosClientes();
             }
         }
 
@@ -42,7 +42,7 @@ namespace CreditoMovilWA
             string numDocumentoIdentidad = txtDocumento.Text.Trim();
             string password = txtPassword.Text;
 
-
+            Response.Redirect("MainCliente.aspx");
             foreach (cliente cli in todoClientes)
             {
                 if (cli.documento == numDocumentoIdentidad && cli.contrasenha == password)

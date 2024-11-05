@@ -52,20 +52,20 @@
   <xs:complexType name="modificarAdministradorResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="insertarAdministrador">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarAdministradorResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="eliminarAdministrador">
     <xs:sequence>
       <xs:element minOccurs="0" name="idadministrador" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarAdministradorResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertarAdministrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAdministradorResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="obtenerPorIDAdministrador">

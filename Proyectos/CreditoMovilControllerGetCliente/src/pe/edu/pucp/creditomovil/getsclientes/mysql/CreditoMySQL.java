@@ -142,6 +142,7 @@ public class CreditoMySQL implements CreditoDAO {
 
     @Override
     public Credito obtenerPorId(String numCredito) {
+        Credito cred = new Credito();
         CallableStatement cs;
         String query = "{CALL ObtenerCredito(?)}";
         int resultado = 0;
@@ -151,11 +152,20 @@ public class CreditoMySQL implements CreditoDAO {
             cs = conexion.prepareCall(query);
             cs.setString(1, numCredito);
 
-            resultado = cs.executeUpdate();
+            rs = cs.executeQuery();
+            if(rs.next()){
+                cred.setEstado(rs.getString("estado"));
+                cred.setFechaOtorgamiento(rs.getDate("fecha_otorgamiento"));
+                cred.setMonto(rs.getDouble("monto"));
+                cred.setNumCredito(rs.getString("num_credito"));
+                cred.setNumCuotas(rs.getInt("num_cuotas"));
+                cred.setTasaInteres(rs.getDouble("tasa_interes"));
+                cred.setCliente(null);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null; //por ahora es null, necesito ver qué añadirle
+        return cred;
     }
 
     public List<Credito> listarTodos() {

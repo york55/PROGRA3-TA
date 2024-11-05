@@ -72,6 +72,16 @@
             let options = document.querySelectorAll(`.btn-option[data-group="${group}"]`);
             options.forEach(btn => btn.classList.remove("selected"));
             button.classList.add("selected");
+
+            document.getElementById("selectedCuotas").value = button.textContent;
+        }
+
+        function selectOption2(button, group) {
+            let options = document.querySelectorAll(`.btn-option[data-group="${group}"]`);
+            options.forEach(btn => btn.classList.remove("selected"));
+            button.classList.add("selected");
+
+            document.getElementById("selectedPrimerPago").value = button.textContent;
         }
 
         function updateInterest(amount) {
@@ -104,12 +114,16 @@
             <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">2</button>
             <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">3</button>
             <button type="button" class="btn-option" data-group="cuotas" onclick="selectOption(this, 'cuotas')">4</button>
+
+            <asp:HiddenField ID ="selectedCuotas" runat="server" ClientIDMode="Static" />
         </div>
 
         <label>¿Cuándo desea realizar el primer pago?</label>
         <div>
-            <button type="button" class="btn-option" data-group="primerPago" onclick="selectOption(this, 'primerPago')">Quincena de mes</button>
-            <button type="button" class="btn-option" data-group="primerPago" onclick="selectOption(this, 'primerPago')">Inicio de mes</button>
+            <button type="button" class="btn-option" data-group="primerPago" onclick="selectOption2(this, 'primerPago')">Quincena de mes</button>
+            <button type="button" class="btn-option" data-group="primerPago" onclick="selectOption2(this, 'primerPago')">Inicio de mes</button>
+
+            <asp:HiddenField ID ="selectedPrimerPago" runat="server" ClientIDMode="Static" />
         </div>
 
         <!-- Interés aproximado -->

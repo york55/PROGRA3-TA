@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.creditomovil.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="BilleteraWS" targetNamespace="https://services.creditomovil.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/BilleteraWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
+    </xsd:schema>
+  </types>
+  <message name="insertarBilletera">
+    <part name="parameters" element="tns:insertarBilletera" />
+  </message>
+  <message name="insertarBilleteraResponse">
+    <part name="parameters" element="tns:insertarBilleteraResponse" />
+  </message>
+  <message name="modificarBilletera">
+    <part name="parameters" element="tns:modificarBilletera" />
+  </message>
+  <message name="modificarBilleteraResponse">
+    <part name="parameters" element="tns:modificarBilleteraResponse" />
+  </message>
+  <message name="eliminarBilletera">
+    <part name="parameters" element="tns:eliminarBilletera" />
+  </message>
+  <message name="eliminarBilleteraResponse">
+    <part name="parameters" element="tns:eliminarBilleteraResponse" />
+  </message>
+  <message name="listarTodosBilleteras">
+    <part name="parameters" element="tns:listarTodosBilleteras" />
+  </message>
+  <message name="listarTodosBilleterasResponse">
+    <part name="parameters" element="tns:listarTodosBilleterasResponse" />
+  </message>
+  <message name="obtenerPorIDBilletera">
+    <part name="parameters" element="tns:obtenerPorIDBilletera" />
+  </message>
+  <message name="obtenerPorIDBilleteraResponse">
+    <part name="parameters" element="tns:obtenerPorIDBilleteraResponse" />
+  </message>
+  <portType name="BilleteraWS">
+    <operation name="insertarBilletera">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/insertarBilleteraRequest" message="tns:insertarBilletera" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/insertarBilleteraResponse" message="tns:insertarBilleteraResponse" />
+    </operation>
+    <operation name="modificarBilletera">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/modificarBilleteraRequest" message="tns:modificarBilletera" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/modificarBilleteraResponse" message="tns:modificarBilleteraResponse" />
+    </operation>
+    <operation name="eliminarBilletera">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/eliminarBilleteraRequest" message="tns:eliminarBilletera" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/eliminarBilleteraResponse" message="tns:eliminarBilleteraResponse" />
+    </operation>
+    <operation name="listarTodosBilleteras">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/listarTodosBilleterasRequest" message="tns:listarTodosBilleteras" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/listarTodosBilleterasResponse" message="tns:listarTodosBilleterasResponse" />
+    </operation>
+    <operation name="obtenerPorIDBilletera">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/obtenerPorIDBilleteraRequest" message="tns:obtenerPorIDBilletera" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/obtenerPorIDBilleteraResponse" message="tns:obtenerPorIDBilleteraResponse" />
+    </operation>
+  </portType>
+  <binding name="BilleteraWSPortBinding" type="tns:BilleteraWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarBilletera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarBilletera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarBilletera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosBilleteras">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorIDBilletera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="BilleteraWS">
+    <port name="BilleteraWSPort" binding="tns:BilleteraWSPortBinding">
+      <soap:address location="http://localhost:8080/CreditoMovilWSBL/BilleteraWS" />
+    </port>
+  </service>
+</definitions>

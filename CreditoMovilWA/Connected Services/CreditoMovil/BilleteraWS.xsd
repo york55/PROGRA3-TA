@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://services.creditomovil.pucp.edu.pe" targetNamespace="https://services.creditomovil.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarBilletera" type="tns:eliminarBilletera" />
+  <xs:element name="eliminarBilleteraResponse" type="tns:eliminarBilleteraResponse" />
+  <xs:element name="insertarBilletera" type="tns:insertarBilletera" />
+  <xs:element name="insertarBilleteraResponse" type="tns:insertarBilleteraResponse" />
+  <xs:element name="listarTodosBilleteras" type="tns:listarTodosBilleteras" />
+  <xs:element name="listarTodosBilleterasResponse" type="tns:listarTodosBilleterasResponse" />
+  <xs:element name="modificarBilletera" type="tns:modificarBilletera" />
+  <xs:element name="modificarBilleteraResponse" type="tns:modificarBilleteraResponse" />
+  <xs:element name="obtenerPorIDBilletera" type="tns:obtenerPorIDBilletera" />
+  <xs:element name="obtenerPorIDBilleteraResponse" type="tns:obtenerPorIDBilleteraResponse" />
+  <xs:complexType name="obtenerPorIDBilletera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idbilletera" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorIDBilleteraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:billetera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="billetera">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:metodoPago">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="numeroTelefono" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="metodoPago" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idMetodoPago" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreTitular" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarBilletera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="billetera" type="tns:billetera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarBilleteraResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBilletera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idbilletera" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBilleteraResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosBilleteras">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosBilleterasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:billetera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBilletera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="billetera" type="tns:billetera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBilleteraResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -9,19 +9,22 @@ package pe.edu.pucp.creditomovil.model;
  * @author USER
  */
 public abstract class MetodoPago {
+
     private int idMetodoPago;
-    private String nombre;
-    private String beneficiario;
-    private String destinatario;
-    
-    
-    public MetodoPago(){}
-    public MetodoPago(int idMetodoPago,String nombre, String destinatario, String beneficiario){
+    private byte[] foto;
+    private String nombreTitular;
+
+    public MetodoPago() {
+    }
+
+    public MetodoPago(int idMetodoPago, byte[] foto,
+            String nombreTitular) {
         this.idMetodoPago = idMetodoPago;
-        this.nombre = nombre;
-        this.destinatario = destinatario;
-        this.beneficiario = beneficiario;
-    };
+        this.foto = foto;
+        this.nombreTitular = nombreTitular;
+    }
+
+    ;
 
     public int getIdMetodoPago() {
         return idMetodoPago;
@@ -31,28 +34,20 @@ public abstract class MetodoPago {
         this.idMetodoPago = idMetodoPago;
     }
 
-    public String getDestinatario() {
-        return destinatario;
+    public byte[] getFoto() {
+        return foto;
     }
 
-    public void setDestinatario(String destinatario) {
-        this.destinatario = destinatario;
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreTitular() {
+        return nombreTitular;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getBeneficiario() {
-        return beneficiario;
-    }
-
-    public void setBeneficiario(String beneficiario) {
-        this.beneficiario = beneficiario;
+    public void setNombreTitular(String nombreTitular) {
+        this.nombreTitular = nombreTitular;
     }
     
 }

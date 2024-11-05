@@ -10,11 +10,14 @@ package pe.edu.pucp.creditomovil.model;
  */
 public class Banco extends MetodoPago{
     private String CCI;
+    private String tipoCuenta;
     
     public Banco(){}
-    public Banco(int idMetodoPago, String nombre, String destinatario, String beneficiario, String CCI){
-        super(idMetodoPago,nombre,destinatario,beneficiario);
+    public Banco(int idMetodoPago,byte[] foto,
+            String nombreTitular, String CCI, String tipoCuenta){
+        super(idMetodoPago,foto,nombreTitular);
         this.CCI = CCI;
+        this.tipoCuenta = tipoCuenta;
     };
 
     public String getCCI() {
@@ -23,6 +26,14 @@ public class Banco extends MetodoPago{
 
     public void setCCI(String CCI) {
         this.CCI = CCI;
+    }
+
+    public String getTipoCuenta() {
+        return tipoCuenta;
+    }
+
+    public void setTipoCuenta(String tipoCuenta) {
+        this.tipoCuenta = tipoCuenta;
     }
     
 }

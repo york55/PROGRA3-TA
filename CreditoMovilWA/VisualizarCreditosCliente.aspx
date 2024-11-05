@@ -201,7 +201,7 @@
         <div class="table-container">
             <asp:GridView ID="gvCreditos" runat="server" AutoGenerateColumns="false">
                 <Columns>
-                    <asp:BoundField DataField="IdCredito" HeaderText="ID_CRÉDITO" />
+                    <asp:BoundField DataField="numCredito" HeaderText="ID_CRÉDITO" />
                     <asp:BoundField DataField="Monto" HeaderText="MONTO" />
                     <asp:BoundField DataField="NumCuotas" HeaderText="NUM. CUOTAS" />
                     <asp:BoundField DataField="TasaInteres" HeaderText="TASA INTERÉS" />
@@ -209,8 +209,8 @@
                     <asp:BoundField DataField="Estado" HeaderText="ESTADO" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button ID="btnPagar" runat="server" Text="Pagar" CssClass="pay-btn" CommandArgument='<%# Eval("IdCredito") %>' OnClick="btnPagar_Click" />
-                            <asp:Button ID="btnVerDetalle" runat="server" Text="👁️" CssClass="pay-btn" CommandArgument='<%# Eval("IdCredito") %>' OnClick="btnVerDetalles_Click" />
+                            <asp:Button ID="btnPagar" runat="server" Text="Pagar" CssClass="pay-btn" CommandArgument='<%# Eval("numCredito") %>' OnClick="btnPagar_Click" />
+                            <asp:Button ID="btnVerDetalle" runat="server" Text="👁️" CssClass="pay-btn" CommandArgument='<%# Eval("numCredito") %>' OnClick="btnVerDetalles_Click" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

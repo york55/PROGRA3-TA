@@ -15,12 +15,13 @@ public class Cliente extends Usuario{
     private String email;
     private String tipoCliente;
     private ArrayList<Credito> creditos;
+    private double ranking;
 
     public Cliente(){}
     public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo, TipoDocumento tipoDocumento, String documento, String codigoCliente, String direccion,
-            String telefono, String email, String tipoCliente){
+            String telefono, String email, String tipoCliente,double ranking){
                 super(idUsuario,fecha,nombre,apPaterno,apMaterno,contrasenha,
                       fechaVencimiento,activo, tipoDocumento, documento);
                 this.codigoCliente = codigoCliente;
@@ -28,6 +29,7 @@ public class Cliente extends Usuario{
                 this.telefono = telefono;
                 this.email = email;
                 this.tipoCliente = tipoCliente;
+                this.ranking = ranking;
         
                 creditos = new ArrayList<Credito>();
     }
@@ -93,4 +95,12 @@ public class Cliente extends Usuario{
         this.tipoCliente = tipoCliente;
     }
 
+    public double getRanking() {
+        return ranking;
+    }
+
+    public void setRanking(double ranking) {
+        this.ranking = ranking;
+    }
+    
 }

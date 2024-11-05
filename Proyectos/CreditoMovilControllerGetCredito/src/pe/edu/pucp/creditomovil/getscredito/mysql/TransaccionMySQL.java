@@ -151,6 +151,7 @@ public class TransaccionMySQL implements TransaccionDAO {
 
     @Override
     public Transaccion obtenerPorId(int numOperacion) {
+        Transaccion trans = new Transaccion();
         CallableStatement cs;
         String query = "{CALL ObtenerTransaccion(?)}";
         int resultado = 0;
@@ -160,11 +161,23 @@ public class TransaccionMySQL implements TransaccionDAO {
             cs = conexion.prepareCall(query);
             cs.setInt(1, numOperacion);
 
-            resultado = cs.executeUpdate();
+            rs = cs.executeQuery();
+            if(rs.next()){
+                trans.setAgencia(rs.getString("agencia"));
+                trans.setAnulado(rs.getInt("anulado")==0?false:true);
+                trans.setConcepto(rs.getString("concepto"));
+                trans.setCredito(null);
+                trans.setFecha(rs.getDate("fecha_y_hora"));
+                trans.setFoto(rs.getBytes("foto"));
+                trans.setMetodoPago(null);
+                trans.setMonto(rs.getDouble("monto"));
+                trans.setNumOperacion(rs.getInt("num_transaccion"));
+                trans.setUsuarioRegistrado(null);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null; //por ahora es null, necesito ver qué añadirle
+        return trans;
     }
 
     @Override

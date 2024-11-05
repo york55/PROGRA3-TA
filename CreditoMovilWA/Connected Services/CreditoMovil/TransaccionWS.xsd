@@ -70,10 +70,9 @@
   </xs:complexType>
   <xs:complexType name="metodoPago" abstract="true">
     <xs:sequence>
-      <xs:element minOccurs="0" name="beneficiario" type="xs:string" />
-      <xs:element minOccurs="0" name="destinatario" type="xs:string" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
       <xs:element name="idMetodoPago" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreTitular" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarTransaccion">

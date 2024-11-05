@@ -27,6 +27,7 @@
           <xs:element minOccurs="0" name="codigoCliente" type="xs:string" />
           <xs:element minOccurs="0" name="direccion" type="xs:string" />
           <xs:element minOccurs="0" name="email" type="xs:string" />
+          <xs:element name="ranking" type="xs:double" />
           <xs:element minOccurs="0" name="telefono" type="xs:string" />
           <xs:element minOccurs="0" name="tipoCliente" type="xs:string" />
         </xs:sequence>

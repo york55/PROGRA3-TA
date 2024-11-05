@@ -31,14 +31,17 @@ namespace CreditoMovilWA
             //lblInteres.Text = $"Interés aproximado: S/. {minInteres:F2} - S/. {maxInteres:F2}";
 
             credito cred = new credito();
-            cred.cliente = (cliente)Session["cliente"]; //falta guardar al cliente btw, eso se hace desde el login
+            //cred.cliente = (cliente)Session["cliente"]; //falta guardar al cliente btw, eso se hace desde el login
+            cred.cliente = null;
             cred.estado = "Solicitado";
             cred.tasaInteres = maxInteres;
             cred.fechaOtorgamiento = DateTime.Now;
             cred.monto = monto;
-            cred.numCuotas = Int32.Parse(selectedCuotas.Value); // no sé cómo colocar esto btw;
+            cred.numCuotas = Int32.Parse(selectedCuotas.Value); // no sé cómo colocar esto btw, creo que es así, vamos a ver
+            cred.numCredito = "CRED124";
+            cred.fechaOtorgamientoSpecified = true;
 
-            daoCredito.modificarCredito(cred);
+            daoCredito.insertarCredito(cred,"CL123");
 
             Response.Redirect("MainCliente.aspx");
         }
