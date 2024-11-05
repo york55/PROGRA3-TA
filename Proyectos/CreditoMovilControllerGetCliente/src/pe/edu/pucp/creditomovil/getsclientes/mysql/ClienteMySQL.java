@@ -7,7 +7,6 @@ package pe.edu.pucp.creditomovil.getsclientes.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Date;
 import java.sql.Types;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -58,7 +57,7 @@ public class ClienteMySQL implements ClienteDAO {
             cliente.setIdUsuario(usuarioId); // Asignar el ID al objeto cliente
 
             // Llamada al procedimiento `InsertarCliente`
-            String sqlInsertarCliente = "{ CALL InsertarCliente(?, ?, ?, ?, ?, ?) }";
+            String sqlInsertarCliente = "{ CALL InsertarCliente(?, ?, ?, ?, ?, ?, ?) }";
             stmtCliente = conn.prepareCall(sqlInsertarCliente);
             stmtCliente.setInt(1, usuarioId);
             stmtCliente.setString(2, cliente.getCodigoCliente());
@@ -66,6 +65,7 @@ public class ClienteMySQL implements ClienteDAO {
             stmtCliente.setString(4, cliente.getTelefono());
             stmtCliente.setString(5, cliente.getEmail());
             stmtCliente.setString(6, cliente.getTipoCliente());
+            stmtCliente.setDouble(7, cliente.getRanking());
 
             stmtCliente.executeUpdate();
 
@@ -236,7 +236,8 @@ public class ClienteMySQL implements ClienteDAO {
                         rs.getString("direccion"),
                         rs.getString("telefono"),
                         rs.getString("email"),
-                        rs.getString("tipo_cliente")
+                        rs.getString("tipo_cliente"),
+                        rs.getDouble("ranking")
                 );
 
                 listaClientes.add(cliente); // Añade el cliente a la lista

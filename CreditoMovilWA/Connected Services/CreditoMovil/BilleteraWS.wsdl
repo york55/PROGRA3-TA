@@ -5,24 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/BilleteraWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarBilletera">
-    <part name="parameters" element="tns:insertarBilletera" />
-  </message>
-  <message name="insertarBilleteraResponse">
-    <part name="parameters" element="tns:insertarBilleteraResponse" />
-  </message>
-  <message name="modificarBilletera">
-    <part name="parameters" element="tns:modificarBilletera" />
-  </message>
-  <message name="modificarBilleteraResponse">
-    <part name="parameters" element="tns:modificarBilleteraResponse" />
-  </message>
-  <message name="eliminarBilletera">
-    <part name="parameters" element="tns:eliminarBilletera" />
-  </message>
-  <message name="eliminarBilleteraResponse">
-    <part name="parameters" element="tns:eliminarBilleteraResponse" />
-  </message>
   <message name="listarTodosBilleteras">
     <part name="parameters" element="tns:listarTodosBilleteras" />
   </message>
@@ -35,19 +17,25 @@
   <message name="obtenerPorIDBilleteraResponse">
     <part name="parameters" element="tns:obtenerPorIDBilleteraResponse" />
   </message>
+  <message name="insertarBilletera">
+    <part name="parameters" element="tns:insertarBilletera" />
+  </message>
+  <message name="insertarBilleteraResponse">
+    <part name="parameters" element="tns:insertarBilleteraResponse" />
+  </message>
+  <message name="eliminarBilletera">
+    <part name="parameters" element="tns:eliminarBilletera" />
+  </message>
+  <message name="eliminarBilleteraResponse">
+    <part name="parameters" element="tns:eliminarBilleteraResponse" />
+  </message>
+  <message name="modificarBilletera">
+    <part name="parameters" element="tns:modificarBilletera" />
+  </message>
+  <message name="modificarBilleteraResponse">
+    <part name="parameters" element="tns:modificarBilleteraResponse" />
+  </message>
   <portType name="BilleteraWS">
-    <operation name="insertarBilletera">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/insertarBilleteraRequest" message="tns:insertarBilletera" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/insertarBilleteraResponse" message="tns:insertarBilleteraResponse" />
-    </operation>
-    <operation name="modificarBilletera">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/modificarBilleteraRequest" message="tns:modificarBilletera" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/modificarBilleteraResponse" message="tns:modificarBilleteraResponse" />
-    </operation>
-    <operation name="eliminarBilletera">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/eliminarBilleteraRequest" message="tns:eliminarBilletera" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/eliminarBilleteraResponse" message="tns:eliminarBilleteraResponse" />
-    </operation>
     <operation name="listarTodosBilleteras">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/listarTodosBilleterasRequest" message="tns:listarTodosBilleteras" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/listarTodosBilleterasResponse" message="tns:listarTodosBilleterasResponse" />
@@ -56,10 +44,22 @@
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/obtenerPorIDBilleteraRequest" message="tns:obtenerPorIDBilletera" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/obtenerPorIDBilleteraResponse" message="tns:obtenerPorIDBilleteraResponse" />
     </operation>
+    <operation name="insertarBilletera">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/insertarBilleteraRequest" message="tns:insertarBilletera" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/insertarBilleteraResponse" message="tns:insertarBilleteraResponse" />
+    </operation>
+    <operation name="eliminarBilletera">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/eliminarBilleteraRequest" message="tns:eliminarBilletera" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/eliminarBilleteraResponse" message="tns:eliminarBilleteraResponse" />
+    </operation>
+    <operation name="modificarBilletera">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/modificarBilleteraRequest" message="tns:modificarBilletera" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/modificarBilleteraResponse" message="tns:modificarBilleteraResponse" />
+    </operation>
   </portType>
   <binding name="BilleteraWSPortBinding" type="tns:BilleteraWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarBilletera">
+    <operation name="listarTodosBilleteras">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -68,7 +68,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarBilletera">
+    <operation name="obtenerPorIDBilletera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarBilletera">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,16 +95,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosBilleteras">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerPorIDBilletera">
+    <operation name="modificarBilletera">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

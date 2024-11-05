@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -35,7 +36,12 @@ namespace CreditoMovilWA
             txtIdTransaccion.Text = trans.numOperacion.ToString();
             txtFechaTransaccion.Text = trans.fecha.ToString();
             txtMonto.Text = trans.monto.ToString();
-            imgTransaccion = null; //falta ver esto
+            if (trans.foto != null)
+            {
+                string base64String = Convert.ToBase64String(trans.foto);
+                string imageUrl = "data:image/jpeg;base64," + base64String;
+                imgTransaccion.ImageUrl = imageUrl;
+            }
         }
     }
 }

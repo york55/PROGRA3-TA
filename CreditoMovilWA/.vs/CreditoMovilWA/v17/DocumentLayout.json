@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|c:\\users\\bleak\\onedrive\\documentos\\progra3-ta\\creditomovilwa\\detalletransaccion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|c:\\users\\bleak\\onedrive\\documentos\\progra3-ta\\creditomovilwa\\registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\detallecredito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:detallecredito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\detalletransaccion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:detalletransaccion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|c:\\users\\bleak\\onedrive\\documentos\\progra3-ta\\creditomovilwa\\detalletransaccion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\detalletransaccion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:detalletransaccion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|c:\\users\\bleak\\onedrive\\documentos\\progra3-ta\\creditomovilwa\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,6 +35,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "DetalleCredito.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\DetalleCredito.aspx.cs",
+              "RelativeDocumentMoniker": "DetalleCredito.aspx.cs",
+              "ToolTip": "C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\DetalleCredito.aspx.cs",
+              "RelativeToolTip": "DetalleCredito.aspx.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAArwCwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T17:06:23.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Registro.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\Registro.aspx.cs",
+              "RelativeDocumentMoniker": "Registro.aspx.cs",
+              "ToolTip": "C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\Registro.aspx.cs",
+              "RelativeToolTip": "Registro.aspx.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAYwE0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T17:01:23.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DetalleTransaccion.aspx",
               "DocumentMoniker": "C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\DetalleTransaccion.aspx",
               "RelativeDocumentMoniker": "DetalleTransaccion.aspx",
@@ -34,25 +67,23 @@
               "RelativeToolTip": "DetalleTransaccion.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-05T16:48:02.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T16:48:02.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DetalleTransaccion.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\DetalleTransaccion.aspx.cs",
               "RelativeDocumentMoniker": "DetalleTransaccion.aspx.cs",
               "ToolTip": "C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\DetalleTransaccion.aspx.cs",
               "RelativeToolTip": "DetalleTransaccion.aspx.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAzwB0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T16:44:27.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T16:44:27.305Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Bleak\\OneDrive\\Documentos\\PROGRA3-TA\\CreditoMovilWA\\Login.aspx.cs",
               "RelativeDocumentMoniker": "Login.aspx.cs",
@@ -60,8 +91,7 @@
               "RelativeToolTip": "Login.aspx.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAnwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T16:38:30.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T16:38:30.42Z"
             }
           ]
         }

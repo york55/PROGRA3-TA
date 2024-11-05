@@ -11,17 +11,17 @@
   <message name="listarTodosBancosResponse">
     <part name="parameters" element="tns:listarTodosBancosResponse" />
   </message>
-  <message name="modificarBanco">
-    <part name="parameters" element="tns:modificarBanco" />
-  </message>
-  <message name="modificarBancoResponse">
-    <part name="parameters" element="tns:modificarBancoResponse" />
-  </message>
   <message name="obtenerPorIDBanco">
     <part name="parameters" element="tns:obtenerPorIDBanco" />
   </message>
   <message name="obtenerPorIDBancoResponse">
     <part name="parameters" element="tns:obtenerPorIDBancoResponse" />
+  </message>
+  <message name="modificarBanco">
+    <part name="parameters" element="tns:modificarBanco" />
+  </message>
+  <message name="modificarBancoResponse">
+    <part name="parameters" element="tns:modificarBancoResponse" />
   </message>
   <message name="insertarBanco">
     <part name="parameters" element="tns:insertarBanco" />
@@ -40,13 +40,13 @@
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosRequest" message="tns:listarTodosBancos" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosResponse" message="tns:listarTodosBancosResponse" />
     </operation>
-    <operation name="modificarBanco">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoRequest" message="tns:modificarBanco" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoResponse" message="tns:modificarBancoResponse" />
-    </operation>
     <operation name="obtenerPorIDBanco">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorIDBancoRequest" message="tns:obtenerPorIDBanco" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorIDBancoResponse" message="tns:obtenerPorIDBancoResponse" />
+    </operation>
+    <operation name="modificarBanco">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoRequest" message="tns:modificarBanco" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoResponse" message="tns:modificarBancoResponse" />
     </operation>
     <operation name="insertarBanco">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoRequest" message="tns:insertarBanco" />
@@ -68,7 +68,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarBanco">
+    <operation name="obtenerPorIDBanco">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerPorIDBanco">
+    <operation name="modificarBanco">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
