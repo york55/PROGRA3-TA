@@ -6,12 +6,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
 using CreditoMovilWA.CreditoMovil;
+using System.Web.Security;
+using System.Web;
 
 namespace CreditoMovilWA
 {
     public partial class Login : System.Web.UI.Page
     {
-        private ClienteWSClient cliDao = new ClienteWSClient();
+        private ClienteWSClient daoCliente = new ClienteWSClient();
+        private SupervisorWSClient daoSupervisor = new SupervisorWSClient();    
         protected static cliente[] todoClientes = null;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -20,82 +23,81 @@ namespace CreditoMovilWA
             {
                 masterPage.MostrarHeader = false; // Oculta el header en esta página
             }
-            if (!IsPostBack)
-            {
-                //todoClientes = cliDao.listarTodosClientes();
-            }
         }
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            // falta implementar logica de inicio
-            //if(esCliente)
-            //Session["Usuario"] = new Usuario { Nombre = "NombreUsuario", Role = "Cliente" };
 
-            //else(esSupervisor)
-            //Response.Redirect("MainSupervisor.aspx");
-            //Session["Usuario"] = new Usuario { Nombre = "NombreUsuario", Role = "Supervisor" };
-            //else
-            //Response.Redorect("MainAdmin.aspx");
-            //Session["Usuario"] = new Usuario { Nombre = "NombreUsuario", Role = "Admin" };
-
+            string tipoDocumento = ddlTipoDocumento.SelectedValue;
             string numDocumentoIdentidad = txtDocumento.Text.Trim();
             string password = txtPassword.Text;
 
-            Response.Redirect("MainCliente.aspx");
-            foreach (cliente cli in todoClientes)
+            if (tipoDocumento != null && numDocumentoIdentidad != null && password != null)
             {
-                if (cli.documento == numDocumentoIdentidad && cli.contrasenha == password)
+
+                cliente cli = daoCliente.obtenerPorDocIdenCliente(numDocumentoIdentidad, tipoDocumento);
+                supervisor sup = daoSupervisor.obtenerPorDocIdenSup(numDocumentoIdentidad, tipoDocumento);
+                administrador admin = new administrador();
+                Session["Cliente"] = cli;
+                Session["Supervisor"] = sup;
+                if (cli != null)
                 {
-                    Response.Redirect("MainCliente.aspx");
-                    break;
-                }
-            }
-
-            lblError.Text = "Por favor, verifique sus datos.";
-
-            // Obtener la cadena de conexión desde Web.config
-            /*tring connectionString = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT ContraseñaHash, Sal FROM Usuarios WHERE DNI = @DNI";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@DNI", dni);
-
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    string contraseñaHashAlmacenada = reader["ContraseñaHash"].ToString();
-                    string salAlmacenada = reader["Sal"].ToString();
-
-                    // Verificar la contraseña ingresada
-                    bool esValida = VerificarContraseña(password, salAlmacenada, contraseñaHashAlmacenada);
-
-                    if (esValida)
+                    if (cli.contrasenha == password)
                     {
-                        // La contraseña es correcta, iniciar sesión
-                        Session["UsuarioDNI"] = dni;
-                        Response.Redirect("MainCliente.aspx");
+                        FormsAuthenticationTicket tkt;
+                        string cookiestr;
+                        HttpCookie ck;
+                        tkt = new FormsAuthenticationTicket(1, cli.codigoCliente, DateTime.Now,
+                        DateTime.Now.AddMinutes(30), true, cli.nombre+" "+cli.apPaterno+" "+cli.apMaterno);
+                        cookiestr = FormsAuthentication.Encrypt(tkt);
+                        ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
+                        ck.Expires = tkt.Expiration; //esto genera que la cookie se quede guardada
+                        ck.Path = FormsAuthentication.FormsCookiePath;
+                        Response.Cookies.Add(ck);
+
+                        string strRedirect;
+                        strRedirect = Request["ReturnUrl"];
+                        if (strRedirect == null)
+                            strRedirect = "MainCliente.aspx";
+                        Response.Redirect(strRedirect, true);
                     }
                     else
                     {
-                        // Contraseña incorrecta
                         lblError.Text = "Usuario o contraseña incorrectos.";
                     }
                 }
-                else
+                if (sup != null)
                 {
-                    // Usuario no encontrado
-                    lblError.Text = "Usuario o contraseña incorrectos.";
+                    if (sup.contrasenha != password)
+                    {
+                        FormsAuthenticationTicket tkt;
+                        string cookiestr;
+                        HttpCookie ck;
+                        tkt = new FormsAuthenticationTicket(1, cli.codigoCliente, DateTime.Now,
+                        DateTime.Now.AddMinutes(30), true, sup.nombre + " " + sup.apPaterno + " " + sup.apMaterno);
+                        cookiestr = FormsAuthentication.Encrypt(tkt);
+                        ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
+                        ck.Expires = tkt.Expiration; //esto genera que la cookie se quede guardada
+                        ck.Path = FormsAuthentication.FormsCookiePath;
+                        Response.Cookies.Add(ck);
+
+                        string strRedirect;
+                        strRedirect = Request["ReturnUrl"];
+                        if (strRedirect == null)
+                            strRedirect = "MainSupervisor.aspx";
+                        Response.Redirect(strRedirect, true);
+                    }
+                    else
+                    {
+                        lblError.Text = "Usuario o contraseña incorrectos.";
+                    }
                 }
+            }
+            else
+            {
+                lblError.Text = "Por favor, ingrese sus datos.";
+            }
 
-                reader.Close();
-            }*/
-
-            //Session["UsuarioDNI"] = dni;
         }
 
         private bool VerificarContraseña(string contraseñaIngresada, string salAlmacenada, string contraseñaHashAlmacenada)

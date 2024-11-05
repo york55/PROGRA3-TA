@@ -66,6 +66,16 @@
         <p>Ingresa tus credenciales</p>
         
         <div class="form-group">
+            <label for="tipo-documento">Tipo de Documento</label>
+            <asp:DropDownList ID="ddlTipoDocumento" runat="server" CssClass="form-control">
+                <asp:ListItem Text="Selecciona una opción" Value="" />
+                <asp:ListItem Text="DNI" Value="DNI" />
+                <asp:ListItem Text="Pasaporte" Value="Pasaporte" />
+                <asp:ListItem Text="Carnet de Extranjeria" Value="Carnet_Extranjeria" />
+            </asp:DropDownList>
+        </div>
+
+        <div class="form-group">
             <label for="documento">Documento de Identidad:</label>
             <asp:TextBox ID="txtDocumento" runat="server" CssClass="form-control" placeholder="Documento de Identidad"></asp:TextBox>
         </div>

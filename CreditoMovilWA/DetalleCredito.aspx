@@ -79,7 +79,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container">
-        <h1>Crédito Nro XXXXXXXXXXXX</h1>
+        <h1 id="idCredito" runat="server">Crédito Nro </h1>
 
         <label>Fecha de Otorgamiento</label>
         <asp:TextBox ID="txtFechaOtorgamiento" runat="server" CssClass="input-text" ReadOnly="true"></asp:TextBox>

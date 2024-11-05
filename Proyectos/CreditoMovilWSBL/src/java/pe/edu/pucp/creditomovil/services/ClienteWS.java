@@ -7,14 +7,12 @@ package pe.edu.pucp.creditomovil.services;
 import jakarta.jws.WebService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
-import java.util.Date;
 
 import java.util.List;
 
 import pe.edu.pucp.creditomovil.getsclientes.dao.ClienteDAO;
 import pe.edu.pucp.creditomovil.getsclientes.mysql.ClienteMySQL;
 import pe.edu.pucp.creditomovil.model.Cliente;
-import pe.edu.pucp.creditomovil.model.TipoDocumento;
 
 @WebService(serviceName = "ClienteWS", targetNamespace
         = "https://services.creditomovil.pucp.edu.pe")

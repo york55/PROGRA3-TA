@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CreditoMovilWA.CreditoMovil;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,13 +10,22 @@ namespace CreditoMovilWA
 {
     public partial class MainCliente : System.Web.UI.Page
     {
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            cliente cli = (cliente)Session["Cliente"];
+            if (cli == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            hola.InnerText += " " + cli.nombre + "!";
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                // ACa aun no implemento pero para mostrar
-                Random random = new Random();
-                int ranking = random.Next(1, 101);
+                cliente cli = (cliente)Session["Cliente"];
+                double ranking = cli.ranking;
 
                 // Asigna el puntaje al Label de ranking
                 lblRanking.Text = ranking + "%";

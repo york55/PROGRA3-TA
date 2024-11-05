@@ -8,6 +8,8 @@
   <xs:element name="listarTodosClientesResponse" type="tns:listarTodosClientesResponse" />
   <xs:element name="modificarCliente" type="tns:modificarCliente" />
   <xs:element name="modificarClienteResponse" type="tns:modificarClienteResponse" />
+  <xs:element name="obtenerPorDocIdenCliente" type="tns:obtenerPorDocIdenCliente" />
+  <xs:element name="obtenerPorDocIdenClienteResponse" type="tns:obtenerPorDocIdenClienteResponse" />
   <xs:element name="obtenerPorIDCliente" type="tns:obtenerPorIDCliente" />
   <xs:element name="obtenerPorIDClienteResponse" type="tns:obtenerPorIDClienteResponse" />
   <xs:complexType name="obtenerPorIDCliente">
@@ -47,6 +49,17 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="tipoDocumento" type="tns:tipoDocumento" />
       <xs:element minOccurs="0" name="ultimoLogueo" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorDocIdenCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="docIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorDocIdenClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarCliente">

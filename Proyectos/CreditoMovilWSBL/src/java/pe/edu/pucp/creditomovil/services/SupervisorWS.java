@@ -64,6 +64,18 @@ public class SupervisorWS {
         return supervisor;
     }
     
+    @WebMethod(operationName = "obtenerPorDocIdenSup")
+    public Supervisor obtenerPorDocIdenSup(@WebParam(name = "docIdentidad") String docIdentidad,
+                                                @WebParam(name = "tipoDocumento")String tipoDocumento) {
+        Supervisor sup = null;
+        try{
+            sup = daoSupervisor.obtenerPorDocIdentidad(docIdentidad,tipoDocumento);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return sup;
+    }
+    
     @WebMethod(operationName = "listarTodosSupervisors")
     public List<Supervisor> listarTodosSupervisors() {
         List<Supervisor> supervisors = null;

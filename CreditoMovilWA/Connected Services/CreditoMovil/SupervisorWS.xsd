@@ -8,8 +8,18 @@
   <xs:element name="listarTodosSupervisorsResponse" type="tns:listarTodosSupervisorsResponse" />
   <xs:element name="modificarSupervisor" type="tns:modificarSupervisor" />
   <xs:element name="modificarSupervisorResponse" type="tns:modificarSupervisorResponse" />
+  <xs:element name="obtenerPorDocIdenSup" type="tns:obtenerPorDocIdenSup" />
+  <xs:element name="obtenerPorDocIdenSupResponse" type="tns:obtenerPorDocIdenSupResponse" />
   <xs:element name="obtenerPorIDSupervisor" type="tns:obtenerPorIDSupervisor" />
   <xs:element name="obtenerPorIDSupervisorResponse" type="tns:obtenerPorIDSupervisorResponse" />
+  <xs:complexType name="eliminarSupervisor">
+    <xs:sequence>
+      <xs:element name="idsupervisor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSupervisorResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="listarTodosSupervisors">
     <xs:sequence />
   </xs:complexType>
@@ -44,14 +54,6 @@
       <xs:element minOccurs="0" name="ultimoLogueo" type="xs:dateTime" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarSupervisor">
-    <xs:sequence>
-      <xs:element name="idsupervisor" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarSupervisorResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="modificarSupervisor">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
@@ -60,6 +62,17 @@
   </xs:complexType>
   <xs:complexType name="modificarSupervisorResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerPorDocIdenSup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="docIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorDocIdenSupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:supervisor" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerPorIDSupervisor">
     <xs:sequence>

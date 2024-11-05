@@ -117,7 +117,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
-        <h1>¡Hola!</h1>
+        <h1 id="hola" runat="server">¡Hola, </h1>
         <p>Actualmente tu ranking crediticio es:</p>
         <asp:Label ID="lblRanking" runat="server" CssClass="ranking-label" Font-Size="0px"></asp:Label>
 

@@ -34,6 +34,8 @@ namespace CreditoMovilWA
             txtMonto.Text = cred.monto.ToString();
             txtNumeroCuotas.Text = cred.numCuotas.ToString();
             txtTasaInteres.Text = cred.tasaInteres.ToString()+"%";
+
+            idCredito.InnerText += " " + cred.numCredito;
         }
 
         private void CargarTransacciones()

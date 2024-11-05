@@ -26,5 +26,7 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.Label lblRanking;
         protected global::System.Web.UI.WebControls.Button btnSolicitarCredito;
         protected global::System.Web.UI.WebControls.Button btnVerCreditos;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hola;
+
     }
 }

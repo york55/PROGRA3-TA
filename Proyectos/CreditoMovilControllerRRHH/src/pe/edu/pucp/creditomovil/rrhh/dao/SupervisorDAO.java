@@ -16,5 +16,6 @@ public interface SupervisorDAO {
     void modificar(int id,Supervisor supervisor);
     void eliminar(int id);
     Supervisor obtenerPorId(int id);
+    Supervisor obtenerPorDocIdentidad(String docIden, String tipoDocIden);
     List<Supervisor> listarTodos();
 }

@@ -128,6 +128,67 @@ public class SupervisorMySQL implements SupervisorDAO {
         }
         return null; //por ahora es null, necesito ver qué añadirle
     }
+    
+        @Override
+    public Supervisor obtenerPorDocIdentidad(String docIden, String tipoDocIden) {
+        Supervisor sup = null;
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ObtenerClientePorDocIdentidad(?, ?) }";
+            cs = conn.prepareCall(sql);
+            cs.setString(1, docIden);
+            cs.setString(2, tipoDocIden);
+            rs = cs.executeQuery();
+            
+            
+            if(rs.next()){
+                String tipoDocStr = rs.getString("tipo_doc");
+                if(tipoDocStr ==null) tipoDocStr = "DNI"; //Por defecto es peruano
+                TipoDocumento tipoDoc = null;
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) { 
+                    System.out.println("Error: " + e);
+                }
+                sup = new Supervisor(
+                    rs.getInt("usuario_id"),
+                    rs.getDate("fecha"),
+                    rs.getString("nombre"),
+                    rs.getString("ap_paterno"),
+                    rs.getString("ap_materno"),
+                    rs.getString("contrasena"),
+                    rs.getDate("fecha_venc"),
+                    rs.getBoolean("activo"),
+                    tipoDoc,
+                    rs.getString("documento"),
+                    rs.getString("codigo_sup"),
+                    rs.getInt("codigo_cargo"),
+                    rs.getString("agencia_asignacion")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return sup; 
+    }
 
     @Override
     public List<Supervisor> listarTodos() {
