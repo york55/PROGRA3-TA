@@ -5,16 +5,24 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
+using CreditoMovilWA.CreditoMovil;
 
 namespace CreditoMovilWA
 {
     public partial class Login : System.Web.UI.Page
     {
+        private ClienteWSClient cliDao = new ClienteWSClient();
+        protected static cliente[] todoClientes = null;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Master is Usuario masterPage)
             {
                 masterPage.MostrarHeader = false; // Oculta el header en esta página
+            }
+            if (!IsPostBack)
+            {
+                todoClientes = cliDao.listarTodosClientes();
             }
         }
 
@@ -22,7 +30,6 @@ namespace CreditoMovilWA
         {
             // falta implementar logica de inicio
             //if(esCliente)
-            Response.Redirect("MainCliente.aspx");
             //Session["Usuario"] = new Usuario { Nombre = "NombreUsuario", Role = "Cliente" };
 
             //else(esSupervisor)
@@ -32,8 +39,20 @@ namespace CreditoMovilWA
             //Response.Redorect("MainAdmin.aspx");
             //Session["Usuario"] = new Usuario { Nombre = "NombreUsuario", Role = "Admin" };
 
-            string dni = txtDocumento.Text.Trim();
+            string numDocumentoIdentidad = txtDocumento.Text.Trim();
             string password = txtPassword.Text;
+
+
+            foreach (cliente cli in todoClientes)
+            {
+                if (cli.documento == numDocumentoIdentidad && cli.contrasenha == password)
+                {
+                    Response.Redirect("MainCliente.aspx");
+                    break;
+                }
+            }
+
+            lblError.Text = "Por favor, verifique sus datos.";
 
             // Obtener la cadena de conexión desde Web.config
             /*tring connectionString = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;

@@ -25,5 +25,6 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.TextBox txtDocumento;
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
         protected global::System.Web.UI.WebControls.Button btnIngresar;
+        protected global::System.Web.UI.WebControls.Button lblError;
     }
 }

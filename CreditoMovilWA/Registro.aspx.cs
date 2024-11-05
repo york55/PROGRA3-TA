@@ -50,7 +50,7 @@ namespace CreditoMovilWA
             //Cliente.email = txtEmail.Text.Trim();
             //Cliente.telefono = txtTelefono.Text.Trim();
             //Cliente.direccion = txtDireccion.Text.Trim();
-            string contrasena = txtContrasena.Text;
+            //string contrasena = txtContrasena.Text;
 
             //// Validaciones básicas
             //if (string.IsNullOrEmpty(Cliente.nombre) || string.IsNullOrEmpty(Cliente.apPaterno) ||
@@ -61,9 +61,9 @@ namespace CreditoMovilWA
             //    return;
             //}
 
-            //// Aquí puedes agregar lógica para guardar los datos en la base de datos
-            //// Asegúrate de hashear la contraseña antes de almacenarla
-            string hashedPassword = HashPassword(contrasena);
+            // Aquí puedes agregar lógica para guardar los datos en la base de datos
+            // Asegúrate de hashear la contraseña antes de almacenarla
+            //string hashedPassword = HashPassword(contrasena);
             //Cliente.contrasenha = hashedPassword;
 
             //// Código para guardar en la base de datos...
@@ -86,20 +86,20 @@ namespace CreditoMovilWA
             {
                 case "DNI":
                     val = cli.insertarClienteParametros(0, DateTime.Now, txtNombre.Text.Trim(), txtApPaterno.Text.Trim(),
-                        txtApMaterno.Text.Trim(), hashedPassword, DateTime.Now, true, CreditoMovilWA.otroPrueba.tipoDocumento.DNI,
-                        txtNroDoc.Text.Trim(), "CLI-004", txtDireccion.Text.Trim(), txtTelefono.Text.Trim(), txtEmail.Text.Trim(),
+                        txtApMaterno.Text.Trim(), txtContrasena.Text, DateTime.Now, true, CreditoMovilWA.otroPrueba.tipoDocumento.DNI,
+                        txtNroDoc.Text.Trim(), "CLI-010", txtDireccion.Text.Trim(), txtTelefono.Text.Trim(), txtEmail.Text.Trim(),
                         "EXCELENTE");
                     break;
                 case "Pasaporte":
                     val = cli.insertarClienteParametros(0, DateTime.Now, txtNombre.Text.Trim(), txtApPaterno.Text.Trim(),
-                            txtApMaterno.Text.Trim(), hashedPassword, DateTime.Now, true, CreditoMovilWA.otroPrueba.tipoDocumento.PASAPORTE,
-                            txtNroDoc.Text.Trim(), "CLI-004", txtDireccion.Text.Trim(), txtTelefono.Text.Trim(), txtEmail.Text.Trim(),
+                            txtApMaterno.Text.Trim(), txtContrasena.Text, DateTime.Now, true, CreditoMovilWA.otroPrueba.tipoDocumento.PASAPORTE,
+                            txtNroDoc.Text.Trim(), "CLI-010", txtDireccion.Text.Trim(), txtTelefono.Text.Trim(), txtEmail.Text.Trim(),
                             "EXCELENTE");
                     break;
                 case "Carnet_Extranjeria":
                     val = cli.insertarClienteParametros(0, DateTime.Now, txtNombre.Text.Trim(), txtApPaterno.Text.Trim(),
-                            txtApMaterno.Text.Trim(), hashedPassword, DateTime.Now, true, CreditoMovilWA.otroPrueba.tipoDocumento.CARNET_EXTRANJERIA,
-                            txtNroDoc.Text.Trim(), "CLI-004", txtDireccion.Text.Trim(), txtTelefono.Text.Trim(), txtEmail.Text.Trim(),
+                            txtApMaterno.Text.Trim(), txtContrasena.Text, DateTime.Now, true, CreditoMovilWA.otroPrueba.tipoDocumento.CARNET_EXTRANJERIA,
+                            txtNroDoc.Text.Trim(), "CLI-010", txtDireccion.Text.Trim(), txtTelefono.Text.Trim(), txtEmail.Text.Trim(),
                             "EXCELENTE");
                     break;
             }
