@@ -127,6 +127,7 @@ public class ClienteMySQL implements ClienteDAO {
             cs.setString(14, cliente.getTelefono());
             cs.setString(15, cliente.getEmail());
             cs.setString(16, cliente.getTipoCliente());
+            cs.setDouble(17, cliente.getRanking());
 
             int filasAfectadas = cs.executeUpdate();
             return filasAfectadas > 0;
@@ -181,20 +182,132 @@ public class ClienteMySQL implements ClienteDAO {
 
     @Override
     public Cliente obtenerPorId(String id) {
-        CallableStatement cs;
-        String query = "{CALL ObtenerCliente(?)}";
-        int resultado = 0;
+        Cliente cli = null;
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;
 
         try {
-            conexion = DBManager.getInstance().getConnection();
-            cs = conexion.prepareCall(query);
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ObtenerClientePorId(?) }";
+            cs = conn.prepareCall(sql);
             cs.setString(1, id);
-
-            resultado = cs.executeUpdate();
+            rs = cs.executeQuery();
+            
+            
+            if(rs.next()){
+                String tipoDocStr = rs.getString("tipo_doc");
+                if(tipoDocStr ==null) tipoDocStr = "DNI"; //Por defecto es peruano
+                TipoDocumento tipoDoc = null;
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) { 
+                    System.out.println("Error: " + e);
+                }
+                cli = new Cliente(
+                    rs.getInt("usuario_id"),
+                    rs.getDate("fecha"),
+                    rs.getString("nombre"),
+                    rs.getString("ap_paterno"),
+                    rs.getString("ap_materno"),
+                    rs.getString("contrasena"),
+                    rs.getDate("fecha_venc"),
+                    rs.getBoolean("activo"),
+                    tipoDoc,
+                    rs.getString("documento"),
+                    rs.getString("codigo_cliente"),
+                    rs.getString("direccion"),
+                    rs.getString("telefono"),
+                    rs.getString("email"),
+                    rs.getString("tipo_cliente"),
+                    rs.getDouble("ranking")
+                );
+            }else{
+                System.out.println("No se encontró el cliente");
+                return null;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
         }
-        return null; //por ahora es null, necesito ver qué añadirle
+        return cli;
+    }
+    
+    @Override
+    public Cliente obtenerPorDocIdentidad(String docIden, String tipoDocIden) {
+        Cliente cli = null;
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ObtenerClientePorDocIdentidad(?, ?) }";
+            cs = conn.prepareCall(sql);
+            cs.setString(1, docIden);
+            cs.setString(2, tipoDocIden);
+            rs = cs.executeQuery();
+            
+            
+            if(rs.next()){
+                String tipoDocStr = rs.getString("tipo_doc");
+                if(tipoDocStr ==null) tipoDocStr = "DNI"; //Por defecto es peruano
+                TipoDocumento tipoDoc = null;
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) { 
+                    System.out.println("Error: " + e);
+                }
+                cli = new Cliente(
+                    rs.getInt("usuario_id"),
+                    rs.getDate("fecha"),
+                    rs.getString("nombre"),
+                    rs.getString("ap_paterno"),
+                    rs.getString("ap_materno"),
+                    rs.getString("contrasena"),
+                    rs.getDate("fecha_venc"),
+                    rs.getBoolean("activo"),
+                    tipoDoc,
+                    rs.getString("documento"),
+                    rs.getString("codigo_cliente"),
+                    rs.getString("direccion"),
+                    rs.getString("telefono"),
+                    rs.getString("email"),
+                    rs.getString("tipo_cliente"),
+                    rs.getDouble("ranking")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return cli; 
     }
 
     @Override

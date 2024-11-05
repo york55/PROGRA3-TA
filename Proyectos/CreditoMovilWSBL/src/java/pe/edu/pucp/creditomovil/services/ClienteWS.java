@@ -32,7 +32,7 @@ public class ClienteWS {
         }
         return resultado;
     }
-   
+    
     
     @WebMethod(operationName = "modificarCliente")
     public boolean modificarCliente(@WebParam(name = "cliente") Cliente cliente) {
@@ -61,6 +61,18 @@ public class ClienteWS {
         Cliente cliente = null;
         try{
             cliente = daoCliente.obtenerPorId(id);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return cliente;
+    }
+    
+    @WebMethod(operationName = "obtenerPorDocIdenCliente")
+    public Cliente obtenerPorDocIdenCliente(@WebParam(name = "docIdentidad") String docIdentidad,
+                                                @WebParam(name = "tipoDocumento")String tipoDocumento) {
+        Cliente cliente = null;
+        try{
+            cliente = daoCliente.obtenerPorDocIdentidad(docIdentidad,tipoDocumento);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

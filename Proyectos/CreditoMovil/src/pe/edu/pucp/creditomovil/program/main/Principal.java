@@ -41,8 +41,26 @@ public class Principal {
      */
     public static void main(String[] args) {
         
-//        ClienteDAO clienteDAO = new ClienteMySQL();
-        // Crear la instancia de ClienteDAO
+        ClienteDAO clienteDAO = new ClienteMySQL();
+        Cliente cliente = clienteDAO.obtenerPorDocIdentidad("10551128", "DNI");
+        if(cliente != null){
+            System.out.println("ID Usuario: " + cliente.getIdUsuario());
+            System.out.println("Nombre: " + cliente.getNombre());
+            System.out.println("Apellido Paterno: " + cliente.getApPaterno());
+            System.out.println("Apellido Materno: " + cliente.getApMaterno());
+            System.out.println("Codigo Cliente: " + cliente.getCodigoCliente());
+            System.out.println("Direccion: " + cliente.getDireccion());
+            System.out.println("Telefono: " + cliente.getTelefono());
+            System.out.println("Email: " + cliente.getEmail());
+            System.out.println("Tipo Cliente: " + cliente.getTipoCliente());
+            System.out.println("Activo: " + cliente.getActivo());
+            System.out.println("Fecha de Registro: " + cliente.getFecha());
+            System.out.println("ultimo Logueo: " + cliente.getUltimoLogueo());
+            System.out.println("----------------------------------------");
+        }else {
+            System.out.println("No se encuentra sapo");
+        }
+//        // Crear la instancia de ClienteDAO
 //        ClienteDAO clienteDAO = new ClienteMySQL();
 //        SupervisorDAO daoSup = new SupervisorMySQL();
 //        List<Supervisor>list =  daoSup.listarTodos();

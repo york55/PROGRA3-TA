@@ -16,5 +16,6 @@ public interface ClienteDAO {
     boolean modificar(Cliente usuario);
     boolean eliminar(String id);
     Cliente obtenerPorId(String id);
+    Cliente obtenerPorDocIdentidad(String docIden, String tipoDocIden);
     List<Cliente> listarTodos();
 }
