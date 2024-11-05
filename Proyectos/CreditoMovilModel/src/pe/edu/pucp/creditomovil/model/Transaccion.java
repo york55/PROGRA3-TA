@@ -19,6 +19,7 @@ public class Transaccion {
     private byte[] foto;
     private MetodoPago metodoPago;
 
+    public Transaccion(){}
     public Transaccion(Date fecha, String concepto, double monto,
             boolean anulado, Usuario usuarioRegistrado, String agencia,
             int numOperacion, Credito credito, byte[] foto) {

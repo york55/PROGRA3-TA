@@ -23,6 +23,7 @@ public class Evaluacion {
     private double puntaje;
     private String observaciones;
 
+    public Evaluacion(){}
     public Evaluacion(Date fechaRegistro, String nombreNegocio,
             String direccionNegocio, String telefonoNegocio,
             Usuario evaluador, Usuario clienteAsignado, double ventasDiarias,

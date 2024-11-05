@@ -16,6 +16,7 @@ public class Cliente extends Usuario{
     private String tipoCliente;
     private ArrayList<Credito> creditos;
 
+    public Cliente(){}
     public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo, TipoDocumento tipoDocumento, String documento, String codigoCliente, String direccion,

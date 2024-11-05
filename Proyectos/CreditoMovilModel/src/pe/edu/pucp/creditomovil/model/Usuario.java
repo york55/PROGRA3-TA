@@ -20,6 +20,7 @@ public abstract class Usuario {
     private TipoDocumento tipoDocumento;
     private String documento;
     
+    public Usuario(){}
     public Usuario(int idUsuario, Date fecha, String nombre, String apPaterno,
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo, TipoDocumento tipoDocumento, String documento) {

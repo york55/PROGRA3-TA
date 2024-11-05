@@ -72,9 +72,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CreditoMovil\archivo.disco" />
-    <None Include="Connected Services\CreditoMovil\configuration91.svcinfo" />
-    <None Include="Connected Services\CreditoMovil\configuration.svcinfo" />
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -183,10 +180,6 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.transaccion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\CreditoMovil\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\otroPrueba\configuration91.svcinfo" />
     <None Include="Connected Services\otroPrueba\configuration.svcinfo" />
     <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.cliente.datasource">
@@ -211,6 +204,13 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\CreditoMovil\archivo.disco" />
+    <None Include="Connected Services\CreditoMovil\configuration91.svcinfo" />
+    <None Include="Connected Services\CreditoMovil\configuration.svcinfo" />
+    <None Include="Connected Services\CreditoMovil\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="DetalleCredito.aspx" />
     <Content Include="DetalleEvaluacion.aspx" />
     <Content Include="DetalleTransaccion.aspx" />
@@ -226,12 +226,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\CreditoMovil\Reference.cs">
+    <Compile Include="Connected Services\otroPrueba\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\otroPrueba\Reference.cs">
+    <Compile Include="Connected Services\CreditoMovil\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -317,6 +317,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Handlers\MostrarImagen.ashx" />
+    <None Include="Connected Services\otroPrueba\ClienteWS.wsdl" />
+    <None Include="Connected Services\otroPrueba\ClienteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CreditoMovil\AdministradorWS.wsdl" />
     <None Include="Connected Services\CreditoMovil\AdministradorWS.xsd">
       <SubType>Designer</SubType>
@@ -341,10 +345,6 @@
     <None Include="Connected Services\CreditoMovil\TransaccionWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\otroPrueba\ClienteWS.wsdl" />
-    <None Include="Connected Services\otroPrueba\ClienteWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <Content Include="Usuario.master" />
     <None Include="Web.Debug.config">
@@ -358,8 +358,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\CreditoMovil\" />
     <WCFMetadataStorage Include="Connected Services\otroPrueba\" />
+    <WCFMetadataStorage Include="Connected Services\CreditoMovil\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -14,6 +14,7 @@ public class Supervisor extends Usuario {
     private int codigoCargo;
     private ArrayList<Evaluacion> evaluaciones;
 
+    public Supervisor(){}
     public Supervisor(int idUsuario, Date fecha, String nombre, String apPaterno,
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo, TipoDocumento tipoDocumento, String documento, String codigoEv, int codigoCargo,

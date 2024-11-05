@@ -22,37 +22,17 @@ public class ClienteWS {
 
     private ClienteDAO daoCliente = new ClienteMySQL();
     
-//    @WebMethod(operationName = "insertarCliente")
-//    public boolean insertarCliente(@WebParam(name = "cliente") Cliente cliente) {
-//        boolean resultado = false;
-//        try{
-//            resultado = daoCliente.insertar(cliente);
-//        }catch(Exception ex){
-//            System.out.println(ex.getMessage());
-//        }
-//        return resultado;
-//    }
-    
-    @WebMethod(operationName = "insertarClienteParametros")
-    public boolean insertarCliente(@WebParam(name = "idUsuario") int idUsuario,@WebParam(name = "fecha") Date fecha,
-            @WebParam(name = "nombre") String nombre,@WebParam(name = "apPaterno") String apPaterno,
-            @WebParam(name = "apMaterno") String apMaterno,@WebParam(name = "contrasenha")String contrasenha,
-            @WebParam(name = "fechaVencimiento") Date fechaVencimiento,@WebParam(name = "activo") boolean activo,
-            @WebParam(name = "tipoDocumento") TipoDocumento tipoDocumento,@WebParam(name = "documento") String documento,
-            @WebParam(name = "codigoCliente") String codigoCliente,@WebParam(name = "direccion") String direccion,
-            @WebParam(name = "telefono") String telefono,
-            @WebParam(name = "email") String email,@WebParam(name = "tipoCliente") String tipoCliente) {
+    @WebMethod(operationName = "insertarCliente")
+    public boolean insertarCliente(@WebParam(name = "cliente") Cliente cliente) {
         boolean resultado = false;
         try{
-            Cliente cli = new Cliente(idUsuario, fecha, nombre, apPaterno, apMaterno, 
-                    contrasenha, fechaVencimiento, activo, tipoDocumento, documento, 
-                    codigoCliente, direccion, telefono, email, tipoCliente);
-            resultado = daoCliente.insertar(cli);
+            resultado = daoCliente.insertar(cliente);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return resultado;
     }
+   
     
     @WebMethod(operationName = "modificarCliente")
     public boolean modificarCliente(@WebParam(name = "cliente") Cliente cliente) {

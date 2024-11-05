@@ -18,6 +18,7 @@ public class Credito {
     private int numCuotas;
     private ArrayList<Transaccion> transacciones;
     
+    public Credito(){}
     public Credito(String numCredito, double monto, double tasaInteres,
             Date fechaOtorgamiento, Usuario cliente, String estado,
             int numCuotas){

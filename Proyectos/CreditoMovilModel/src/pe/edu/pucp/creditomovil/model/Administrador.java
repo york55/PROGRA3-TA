@@ -11,6 +11,7 @@ public class Administrador extends Usuario {
     private String codigoAdm;
     private int codigoCargo;
 
+    public Administrador(){}
     public Administrador(int idUsuario, Date fecha, String nombre, String apPaterno,
             String apMaterno, String contrasenha, Date fechaVencimiento,
             boolean activo, TipoDocumento tipoDocumento, String documento, String codigoAdm, int codigoCargo) {
