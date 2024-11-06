@@ -51,7 +51,8 @@
   <xs:complexType name="insertarCredito">
     <xs:sequence>
       <xs:element minOccurs="0" name="credito" type="tns:credito" />
-      <xs:element minOccurs="0" name="idCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="docCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo_doc" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCreditoResponse">

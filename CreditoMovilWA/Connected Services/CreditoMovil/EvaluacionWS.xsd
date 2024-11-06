@@ -4,6 +4,8 @@
   <xs:element name="eliminarEvaluacionResponse" type="tns:eliminarEvaluacionResponse" />
   <xs:element name="insertarEvaluacion" type="tns:insertarEvaluacion" />
   <xs:element name="insertarEvaluacionResponse" type="tns:insertarEvaluacionResponse" />
+  <xs:element name="listarEvaluacionesSupervisor" type="tns:listarEvaluacionesSupervisor" />
+  <xs:element name="listarEvaluacionesSupervisorResponse" type="tns:listarEvaluacionesSupervisorResponse" />
   <xs:element name="listarTodosEvaluacions" type="tns:listarTodosEvaluacions" />
   <xs:element name="listarTodosEvaluacionsResponse" type="tns:listarTodosEvaluacionsResponse" />
   <xs:element name="modificarEvaluacion" type="tns:modificarEvaluacion" />
@@ -18,7 +20,7 @@
   <xs:complexType name="evaluacion">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
-      <xs:element minOccurs="0" name="clienteAsignado" type="tns:usuario" />
+      <xs:element minOccurs="0" name="clienteAsignado" type="tns:cliente" />
       <xs:element name="costoVentas" type="xs:double" />
       <xs:element minOccurs="0" name="direccionNegocio" type="xs:string" />
       <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
@@ -32,6 +34,20 @@
       <xs:element name="ventasDiarias" type="xs:double" />
       <xs:element minOccurs="0" name="evaluador" type="tns:usuario" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codigoCliente" type="xs:string" />
+          <xs:element minOccurs="0" name="direccion" type="xs:string" />
+          <xs:element minOccurs="0" name="email" type="xs:string" />
+          <xs:element name="ranking" type="xs:double" />
+          <xs:element minOccurs="0" name="telefono" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoCliente" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="usuario" abstract="true">
     <xs:sequence>
@@ -83,6 +99,16 @@
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarTodosEvaluacionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacionesSupervisor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idSup" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvaluacionesSupervisorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
     </xs:sequence>

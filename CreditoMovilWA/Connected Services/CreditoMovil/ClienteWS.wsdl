@@ -23,12 +23,6 @@
   <message name="insertarClienteResponse">
     <part name="parameters" element="tns:insertarClienteResponse" />
   </message>
-  <message name="obtenerPorIDCliente">
-    <part name="parameters" element="tns:obtenerPorIDCliente" />
-  </message>
-  <message name="obtenerPorIDClienteResponse">
-    <part name="parameters" element="tns:obtenerPorIDClienteResponse" />
-  </message>
   <message name="listarTodosClientes">
     <part name="parameters" element="tns:listarTodosClientes" />
   </message>
@@ -40,6 +34,12 @@
   </message>
   <message name="obtenerPorDocIdenClienteResponse">
     <part name="parameters" element="tns:obtenerPorDocIdenClienteResponse" />
+  </message>
+  <message name="obtenerPorIDCliente">
+    <part name="parameters" element="tns:obtenerPorIDCliente" />
+  </message>
+  <message name="obtenerPorIDClienteResponse">
+    <part name="parameters" element="tns:obtenerPorIDClienteResponse" />
   </message>
   <portType name="ClienteWS">
     <operation name="modificarCliente">
@@ -54,10 +54,6 @@
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteRequest" message="tns:insertarCliente" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteResponse" message="tns:insertarClienteResponse" />
     </operation>
-    <operation name="obtenerPorIDCliente">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorIDClienteRequest" message="tns:obtenerPorIDCliente" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorIDClienteResponse" message="tns:obtenerPorIDClienteResponse" />
-    </operation>
     <operation name="listarTodosClientes">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest" message="tns:listarTodosClientes" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse" message="tns:listarTodosClientesResponse" />
@@ -65,6 +61,10 @@
     <operation name="obtenerPorDocIdenCliente">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteRequest" message="tns:obtenerPorDocIdenCliente" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteResponse" message="tns:obtenerPorDocIdenClienteResponse" />
+    </operation>
+    <operation name="obtenerPorIDCliente">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorIDClienteRequest" message="tns:obtenerPorIDCliente" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorIDClienteResponse" message="tns:obtenerPorIDClienteResponse" />
     </operation>
   </portType>
   <binding name="ClienteWSPortBinding" type="tns:ClienteWS">
@@ -96,15 +96,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerPorIDCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarTodosClientes">
       <soap:operation soapAction="" />
       <input>
@@ -115,6 +106,15 @@
       </output>
     </operation>
     <operation name="obtenerPorDocIdenCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorIDCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

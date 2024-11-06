@@ -99,10 +99,10 @@ namespace CreditoMovilWA
                     bank.foto = (Byte[])Session["ImagenPago"];
                     string banco1 = bancoElegido.Value;
 
-                    daoBanco.insertarBanco(bank);
+                    //daoBanco.insertarBanco(bank);
 
                     trans.agencia = banco1;
-                    trans.metodoPago = bank;
+                    //trans.metodoPago = bank;
 
                 }
                 else if(metodoP == "billetera")
@@ -112,7 +112,7 @@ namespace CreditoMovilWA
                     bill.foto = (Byte[])Session["ImagenPago"];
                     bill.numeroTelefono = txtNumeroBilletera.Text;
 
-                    daoBilletera.insertarBilletera(bill);
+                    //daoBilletera.insertarBilletera(bill);
 
                     trans.agencia = metodoP;
                 }

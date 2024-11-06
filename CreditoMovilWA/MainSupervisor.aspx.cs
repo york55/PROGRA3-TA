@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CreditoMovilWA.CreditoMovil;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,18 @@ namespace CreditoMovilWA
 {
     public partial class MainSupervisor : System.Web.UI.Page
     {
+
+        private EvaluacionWSClient daoEvaluacion = new EvaluacionWSClient();
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            supervisor sup = (supervisor)Session["Supervisor"];
+            if (sup == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,18 +33,24 @@ namespace CreditoMovilWA
 
         private void CargarEvaluaciones()
         {
+            supervisor sup = (supervisor)Session["Supervisor"];
+
+
             // Ejemplo de carga de datos, reemplaza con tu lógica real
-            gvEvaluaciones.DataSource = ObtenerEvaluaciones();
+            gvEvaluaciones.DataSource = daoEvaluacion.listarEvaluacionesSupervisor(sup.codigoEv);
             gvEvaluaciones.DataBind();
         }
 
         protected void btnVerDetalle_Click(object sender, EventArgs e)
         {
             var btn = (Button)sender;
-            var idEvaluacion = btn.CommandArgument;
+            string idEvaluacion = btn.CommandArgument;
 
-            // Redirigir a una página de detalles o abrir un modal con detalles
-            Response.Redirect($"DetalleEvaluacion.aspx?IdEvaluacion={idEvaluacion}");
+            // Redirigir a una página de detalles o abrir un modal con detalleS
+
+            Session["idEvaluacion"] = idEvaluacion;
+
+            Response.Redirect($"DetalleEvaluacion.aspx");
         }
 
         private object ObtenerEvaluaciones()

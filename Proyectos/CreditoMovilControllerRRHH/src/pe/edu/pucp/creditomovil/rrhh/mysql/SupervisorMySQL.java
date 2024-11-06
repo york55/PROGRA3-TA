@@ -138,7 +138,7 @@ public class SupervisorMySQL implements SupervisorDAO {
 
         try {
             conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL ObtenerClientePorDocIdentidad(?, ?) }";
+            String sql = "{ CALL ObtenerSupervisorPorDocIdentidad(?, ?) }";
             cs = conn.prepareCall(sql);
             cs.setString(1, docIden);
             cs.setString(2, tipoDocIden);

@@ -59,6 +59,17 @@ public class EvaluacionWS {
         return evaluacion;
     }
     
+    @WebMethod(operationName = "listarEvaluacionesSupervisor")
+    public List<Evaluacion> listarEvaluacionesSupervisor(@WebParam(name = "idSup") String idSup) {
+        List<Evaluacion> evaluacions = null;
+        try{
+            evaluacions = daoEvaluacion.listarPorSupervisor(idSup);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return evaluacions;
+    }
+    
     @WebMethod(operationName = "listarTodosEvaluacions")
     public List<Evaluacion> listarTodosEvaluacions() {
         List<Evaluacion> evaluacions = null;

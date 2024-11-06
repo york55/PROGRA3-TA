@@ -65,6 +65,7 @@
     <script>
         function updateAmount(value) {
             document.getElementById("amountDisplay").innerText = "S/. " + value;
+            document.getElementById("<%= hfMonto.ClientID %>").value = value;
             updateInterest(value); // Actualizar el interés cuando se cambie el monto
         }
 
@@ -100,7 +101,7 @@
         <label>¿Cuánto dinero desea solicitar?</label>
         <div class="slider-container">
             <span>0</span>
-            <input type="range" min="0" max="5000" value="3500" class="slider" oninput="updateAmount(this.value)" />
+            <input type="range" min="1000" max="5000" value="3500" class="slider" oninput="updateAmount(this.value)" />
             <span>5000</span>
         </div>
         <div id="amountDisplay" class="amount-display">S/. 3500</div>

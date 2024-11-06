@@ -45,15 +45,15 @@
         <div class="table-container">
             <asp:GridView ID="gvEvaluaciones" runat="server" AutoGenerateColumns="false">
                 <Columns>
-                    <asp:BoundField DataField="IdEvaluacion" HeaderText="ID_EVALUACION" />
-                    <asp:BoundField DataField="Negocio" HeaderText="NEGOCIO" />
-                    <asp:BoundField DataField="Ventas" HeaderText="VENTAS" />
-                    <asp:BoundField DataField="MargenGanancia" HeaderText="MR. GANANCIA" />
-                    <asp:BoundField DataField="Puntaje" HeaderText="PUNTAJE" />
-                    <asp:BoundField DataField="Estado" HeaderText="ESTADO" />
+                    <asp:BoundField DataField="numeroEvaluacion" HeaderText="ID_EVALUACION" />
+                    <asp:BoundField DataField="nombreNegocio" HeaderText="NEGOCIO" />
+                    <asp:BoundField DataField="ventasDiarias" HeaderText="VENTAS" />
+                    <asp:BoundField DataField="margenGanancia" HeaderText="MR. GANANCIA" />
+                    <asp:BoundField DataField="puntaje" HeaderText="PUNTAJE" />
+                    <asp:BoundField DataField="activo" HeaderText="ESTADO" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button ID="btnVerDetalle" runat="server" Text="👁️" CssClass="view-btn" CommandArgument='<%# Eval("IdEvaluacion") %>' OnClick="btnVerDetalle_Click" />
+                            <asp:Button ID="btnVerDetalle" runat="server" Text="👁️" CssClass="view-btn" CommandArgument='<%# Eval("numeroEvaluacion") %>' OnClick="btnVerDetalle_Click" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

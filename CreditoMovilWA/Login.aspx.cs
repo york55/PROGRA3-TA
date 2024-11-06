@@ -68,12 +68,12 @@ namespace CreditoMovilWA
                 }
                 if (sup != null)
                 {
-                    if (sup.contrasenha != password)
+                    if (sup.contrasenha == password)
                     {
                         FormsAuthenticationTicket tkt;
                         string cookiestr;
                         HttpCookie ck;
-                        tkt = new FormsAuthenticationTicket(1, cli.codigoCliente, DateTime.Now,
+                        tkt = new FormsAuthenticationTicket(1, sup.codigoEv, DateTime.Now,
                         DateTime.Now.AddMinutes(30), true, sup.nombre + " " + sup.apPaterno + " " + sup.apMaterno);
                         cookiestr = FormsAuthentication.Encrypt(tkt);
                         ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);

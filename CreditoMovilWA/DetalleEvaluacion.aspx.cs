@@ -10,7 +10,13 @@ namespace CreditoMovilWA
     public partial class DetalleEvaluacion : System.Web.UI.Page
     {
         private EvaluacionWSClient daoEvaluacion = new EvaluacionWSClient();
-        private bool modoEdicion = false;
+        private bool modoEdicion;
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            modoEdicion = false;
+            btnModificar.Text = "MODIFICAR";
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,9 +30,8 @@ namespace CreditoMovilWA
         private void CargarDatosEvaluacion()
         {
 
-            string idEvaluacion = Request.QueryString["IdEvaluacion"];
+            string idEvaluacion = (string)Session["idEvaluacion"];
             lblNumeroEvaluacion.Text = idEvaluacion;
-
             evaluacion ev = daoEvaluacion.obtenerPorIDEvaluacion(Int32.Parse(idEvaluacion));
 
             // ejemplo pa probart
@@ -34,7 +39,7 @@ namespace CreditoMovilWA
             txtFechaRegistro.Text = ev.fechaRegistro.ToString();
             txtDireccionNegocio.Text = ev.direccionNegocio;
             txtTelefonoNegocio.Text = ev.telefonoNegocio;
-            txtClienteAsignado.Text = ev.clienteAsignado.nombre+" "+ev.clienteAsignado.apPaterno+" "+ev.clienteAsignado.apMaterno;
+            txtClienteAsignado.Text = ev.clienteAsignado.nombre + " " + ev.clienteAsignado.apPaterno + " " + ev.clienteAsignado.apMaterno;
             txtMargenGanancia.Text = ev.margenGanancia.ToString();
             txtVentasDiarias.Text = ev.ventasDiarias.ToString();
             txtInventario.Text = ev.inventario.ToString();
@@ -49,9 +54,9 @@ namespace CreditoMovilWA
         protected void btnModificar_Click(object sender, EventArgs e)
         {
             // alternar 
-            modoEdicion = !modoEdicion;
+            modoEdicion = ! modoEdicion;
 
-            if (modoEdicion)
+            if (btnModificar.Text == "MODIFICAR")
             {
                 HabilitarCampos();
                 btnModificar.Text = "GUARDAR"; 

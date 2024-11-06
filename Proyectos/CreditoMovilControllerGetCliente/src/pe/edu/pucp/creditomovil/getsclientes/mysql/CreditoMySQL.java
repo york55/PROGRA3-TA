@@ -25,7 +25,7 @@ public class CreditoMySQL implements CreditoDAO {
     private ResultSet rs;
 
     @Override
-    public void insertar(Credito credito, String codigoCliente) {
+    public void insertar(Credito credito, String codigoCliente, String tipodocCli) {
         Connection conn = null;
         CallableStatement csCredito = null;
         CallableStatement csAsociar = null;
@@ -46,10 +46,11 @@ public class CreditoMySQL implements CreditoDAO {
             csCredito.execute();
 
             // Asociar el crédito al cliente
-            String sqlAsociar = "{ CALL AsociarCreditoACliente(?, ?) }";
+            String sqlAsociar = "{ CALL AsociarCreditoACliente(?, ?, ?) }";
             csAsociar = conn.prepareCall(sqlAsociar);
             csAsociar.setString(1, credito.getNumCredito());
             csAsociar.setString(2, codigoCliente);
+            csAsociar.setString(3, tipodocCli);
             csAsociar.execute();
 
             conn.commit(); // Confirma la transacción

@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/CreditoWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="modificarCredito">
-    <part name="parameters" element="tns:modificarCredito" />
-  </message>
-  <message name="modificarCreditoResponse">
-    <part name="parameters" element="tns:modificarCreditoResponse" />
-  </message>
   <message name="eliminarCredito">
     <part name="parameters" element="tns:eliminarCredito" />
   </message>
@@ -23,17 +17,23 @@
   <message name="insertarCreditoResponse">
     <part name="parameters" element="tns:insertarCreditoResponse" />
   </message>
-  <message name="obtenerPorIDCredito">
-    <part name="parameters" element="tns:obtenerPorIDCredito" />
+  <message name="modificarCredito">
+    <part name="parameters" element="tns:modificarCredito" />
   </message>
-  <message name="obtenerPorIDCreditoResponse">
-    <part name="parameters" element="tns:obtenerPorIDCreditoResponse" />
+  <message name="modificarCreditoResponse">
+    <part name="parameters" element="tns:modificarCreditoResponse" />
   </message>
   <message name="listarTodosCreditos">
     <part name="parameters" element="tns:listarTodosCreditos" />
   </message>
   <message name="listarTodosCreditosResponse">
     <part name="parameters" element="tns:listarTodosCreditosResponse" />
+  </message>
+  <message name="obtenerPorIDCredito">
+    <part name="parameters" element="tns:obtenerPorIDCredito" />
+  </message>
+  <message name="obtenerPorIDCreditoResponse">
+    <part name="parameters" element="tns:obtenerPorIDCreditoResponse" />
   </message>
   <message name="listarCreditosFiltro">
     <part name="parameters" element="tns:listarCreditosFiltro" />
@@ -42,10 +42,6 @@
     <part name="parameters" element="tns:listarCreditosFiltroResponse" />
   </message>
   <portType name="CreditoWS">
-    <operation name="modificarCredito">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoRequest" message="tns:modificarCredito" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoResponse" message="tns:modificarCreditoResponse" />
-    </operation>
     <operation name="eliminarCredito">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoRequest" message="tns:eliminarCredito" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoResponse" message="tns:eliminarCreditoResponse" />
@@ -54,13 +50,17 @@
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoRequest" message="tns:insertarCredito" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoResponse" message="tns:insertarCreditoResponse" />
     </operation>
-    <operation name="obtenerPorIDCredito">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/obtenerPorIDCreditoRequest" message="tns:obtenerPorIDCredito" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/obtenerPorIDCreditoResponse" message="tns:obtenerPorIDCreditoResponse" />
+    <operation name="modificarCredito">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoRequest" message="tns:modificarCredito" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoResponse" message="tns:modificarCreditoResponse" />
     </operation>
     <operation name="listarTodosCreditos">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarTodosCreditosRequest" message="tns:listarTodosCreditos" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarTodosCreditosResponse" message="tns:listarTodosCreditosResponse" />
+    </operation>
+    <operation name="obtenerPorIDCredito">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/obtenerPorIDCreditoRequest" message="tns:obtenerPorIDCredito" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/obtenerPorIDCreditoResponse" message="tns:obtenerPorIDCreditoResponse" />
     </operation>
     <operation name="listarCreditosFiltro">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosFiltroRequest" message="tns:listarCreditosFiltro" />
@@ -69,15 +69,6 @@
   </portType>
   <binding name="CreditoWSPortBinding" type="tns:CreditoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarCredito">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarCredito">
       <soap:operation soapAction="" />
       <input>
@@ -96,7 +87,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerPorIDCredito">
+    <operation name="modificarCredito">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -106,6 +97,15 @@
       </output>
     </operation>
     <operation name="listarTodosCreditos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorIDCredito">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

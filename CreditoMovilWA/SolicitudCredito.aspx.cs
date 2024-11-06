@@ -29,6 +29,7 @@ namespace CreditoMovilWA
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            cliente cli = (cliente)Session["Cliente"];
             // Obtener el monto del HiddenField
             int monto = int.Parse(hfMonto.Value);
 
@@ -40,16 +41,16 @@ namespace CreditoMovilWA
             //lblInteres.Text = $"Interés aproximado: S/. {minInteres:F2} - S/. {maxInteres:F2}";
 
             credito cred = new credito();
-            cred.cliente = (cliente)Session["Cliente"]; //falta guardar al cliente btw, eso se hace desde el login
+            cred.cliente = null; //falta guardar al cliente btw, eso se hace desde el login
             cred.estado = "Solicitado";
             cred.tasaInteres = maxInteres;
             cred.fechaOtorgamiento = DateTime.Now;
             cred.monto = monto;
             cred.numCuotas = Int32.Parse(selectedCuotas.Value); // no sé cómo colocar esto btw, creo que es así, vamos a ver
-            cred.numCredito = "CRED129";
+            cred.numCredito = "CRED133";
             cred.fechaOtorgamientoSpecified = true;
 
-            daoCredito.insertarCredito(cred,"CL123");
+            daoCredito.insertarCredito(cred,cli.documento,cli.tipoDocumento.ToString());
 
             Response.Redirect("MainCliente.aspx");
         }

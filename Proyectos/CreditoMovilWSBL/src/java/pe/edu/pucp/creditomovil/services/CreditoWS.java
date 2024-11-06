@@ -24,9 +24,9 @@ public class CreditoWS {
 
     @WebMethod(operationName = "insertarCredito")
     public void insertarCredito(@WebParam(name = "credito") Credito credito, 
-            @WebParam(name = "idCliente") String id) {
+            @WebParam(name = "docCliente") String doc, @WebParam(name = "tipo_doc") String tipo_doc) {
         try{
-            daoCredito.insertar(credito,id);
+            daoCredito.insertar(credito,doc,tipo_doc);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
