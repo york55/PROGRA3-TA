@@ -6,24 +6,18 @@
   <xs:element name="insertarTransaccionResponse" type="tns:insertarTransaccionResponse" />
   <xs:element name="listarTodosTransaccions" type="tns:listarTodosTransaccions" />
   <xs:element name="listarTodosTransaccionsResponse" type="tns:listarTodosTransaccionsResponse" />
+  <xs:element name="listarTransaccionCredito" type="tns:listarTransaccionCredito" />
+  <xs:element name="listarTransaccionCreditoResponse" type="tns:listarTransaccionCreditoResponse" />
   <xs:element name="modificarTransaccion" type="tns:modificarTransaccion" />
   <xs:element name="modificarTransaccionResponse" type="tns:modificarTransaccionResponse" />
   <xs:element name="obtenerPorIDTransaccion" type="tns:obtenerPorIDTransaccion" />
   <xs:element name="obtenerPorIDTransaccionResponse" type="tns:obtenerPorIDTransaccionResponse" />
-  <xs:complexType name="eliminarTransaccion">
+  <xs:complexType name="listarTransaccionCredito">
     <xs:sequence>
-      <xs:element name="idtransaccion" type="xs:int" />
+      <xs:element minOccurs="0" name="idCred" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarTransaccionResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarTodosTransaccions">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarTodosTransaccionsResponse">
+  <xs:complexType name="listarTransaccionCreditoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:transaccion" />
     </xs:sequence>
@@ -73,6 +67,24 @@
       <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
       <xs:element name="idMetodoPago" type="xs:int" />
       <xs:element minOccurs="0" name="nombreTitular" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTransaccion">
+    <xs:sequence>
+      <xs:element name="idtransaccion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTransaccionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosTransaccions">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosTransaccionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:transaccion" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarTransaccion">

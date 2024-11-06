@@ -16,5 +16,6 @@ public interface TransaccionDAO {
     boolean modificar(Transaccion transaccion);
     boolean eliminar(int numOperacion);
     Transaccion obtenerPorId(int numOperacion);
+    List<Transaccion> listarPorCredito(String numCred);
     List<Transaccion> listarTodos();
 }

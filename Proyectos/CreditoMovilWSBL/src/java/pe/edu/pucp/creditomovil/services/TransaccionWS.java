@@ -63,6 +63,17 @@ public class TransaccionWS {
         return transaccion;
     }
     
+    @WebMethod(operationName = "listarTransaccionCredito")
+    public List<Transaccion> listarTransaccionCredito(@WebParam(name = "idCred") String idCred) {
+        List<Transaccion> transaccions = null;
+        try{
+            transaccions = daoTransaccion.listarPorCredito(idCred);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return transaccions;
+    }
+    
     @WebMethod(operationName = "listarTodosTransaccions")
     public List<Transaccion> listarTodosTransaccions() {
         List<Transaccion> transaccions = null;

@@ -12,6 +12,16 @@ namespace CreditoMovilWA
     {
         private CreditoWSClient daoCredito = new CreditoWSClient();
         private TransaccionWSClient daoTransaccion = new TransaccionWSClient();
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            cliente cli = (cliente)Session["Cliente"];
+            if (cli == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -43,7 +53,7 @@ namespace CreditoMovilWA
             credito cred = (credito)Session["Credito"];
 
             // Cargar datos de ejemplo o conectar a la base de datos para obtener transacciones.
-            gvTransacciones.DataSource = daoTransaccion.listarTodosTransaccions(); // falta el metodo que sea listar por credito :p
+            gvTransacciones.DataSource = daoTransaccion.listarTransaccionCredito(cred.numCredito); // falta el metodo que sea listar por credito :p
             gvTransacciones.DataBind();
         }
 
@@ -53,18 +63,6 @@ namespace CreditoMovilWA
             string idTransaccion = btn.CommandArgument;
             Session["idTransaccion"] = idTransaccion;
             Response.Redirect("DetalleTransaccion.aspx");
-        }
-
-        private object ObtenerDatosTransacciones()
-        {
-
-
-            // Retorna una lista de transacciones de ejemplo.
-            return new[]
-            {
-                new { IdTransaccion = "T001", Fecha = "01/10/2024", Concepto = "Pago", Monto = "200", Anulado = "No" },
-                new { IdTransaccion = "T002", Fecha = "01/11/2024", Concepto = "Pago", Monto = "200", Anulado = "No" }
-            };
         }
 
         protected void btnBack_Click(object sender, EventArgs e)

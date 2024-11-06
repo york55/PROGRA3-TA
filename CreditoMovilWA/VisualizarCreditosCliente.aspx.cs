@@ -1,6 +1,7 @@
 ﻿using CreditoMovilWA.CreditoMovil;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -10,6 +11,19 @@ namespace CreditoMovilWA
     {
 
         private CreditoWSClient daoCredito = new CreditoWSClient();
+        private TransaccionWSClient daoTransaccion = new TransaccionWSClient();
+        private BancoWSClient daoBanco = new BancoWSClient();
+        private BilleteraWSClient daoBilletera = new BilleteraWSClient();
+
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            cliente cli = (cliente)Session["Cliente"];
+            if (cli == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,16 +39,23 @@ namespace CreditoMovilWA
 
         protected void btnFiltrar_Click(object sender, EventArgs e)
         {
+            cliente cli = (cliente) Session["Cliente"];
+            
             DateTime fechaInicio, fechaFin;
             bool isFechaInicio = DateTime.TryParse(txtFechaInicio.Text, out fechaInicio);
             bool isFechaFin = DateTime.TryParse(txtFechaFin.Text, out fechaFin);
+            string estado;
+            estado = ddlEstado.SelectedValue;
+            if (estado == "") estado = null;
 
             if (isFechaInicio && isFechaFin)
             {
-                //var resultados = ObtenerCreditosPorFecha(fechaInicio, fechaFin);
-                var resultados = daoCredito.listarTodosCreditos();
 
-                if (resultados.Length > 0)
+                
+                //var resultados = ObtenerCreditosPorFecha(fechaInicio, fechaFin);
+                var resultados = daoCredito.listarCreditosFiltro(cli.codigoCliente, fechaInicio, fechaFin, estado);
+
+                if (resultados != null)
                 {
                     gvCreditos.DataSource = resultados;
                     gvCreditos.DataBind();
@@ -53,17 +74,6 @@ namespace CreditoMovilWA
             }
         }
 
-        private List<Credito> ObtenerCreditosPorFecha(DateTime fechaInicio, DateTime fechaFin)
-        {
-            List<Credito> listaCreditos = new List<Credito>
-            {
-                new Credito { IdCredito = 1, Monto = 1000, NumCuotas = 10, TasaInteres = 5.0, FechaOtorgamiento = DateTime.Now, Estado = "Activo" },
-                new Credito { IdCredito = 2, Monto = 2000, NumCuotas = 15, TasaInteres = 4.5, FechaOtorgamiento = DateTime.Now.AddMonths(-1), Estado = "Inactivo" }
-            };
-
-            return listaCreditos.FindAll(c => c.FechaOtorgamiento >= fechaInicio && c.FechaOtorgamiento <= fechaFin);
-        }
-
         protected void btnPagar_Click(object sender, EventArgs e)
         {
             string idCredito = (sender as Button).CommandArgument;
@@ -73,10 +83,48 @@ namespace CreditoMovilWA
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            transaccion trans = new transaccion();
             if (fileUpload.HasFile)
             {
                 // Guarda el archivo en Session para uso posterior
                 Session["ImagenPago"] = fileUpload.FileBytes;
+
+                string metodoP = metodoPago.Value;
+                if(metodoP == "banco")
+                {
+                    banco bank = new banco();
+                    bank.CCI = txtCCI.Text;
+                    bank.nombreTitular = txtTitularBanco.Text;
+                    bank.tipoCuenta = txtTipoCuenta.Text;
+                    bank.foto = (Byte[])Session["ImagenPago"];
+                    string banco1 = bancoElegido.Value;
+
+                    daoBanco.insertarBanco(bank);
+
+                    trans.agencia = banco1;
+                    trans.metodoPago = bank;
+
+                }
+                else if(metodoP == "billetera")
+                {
+                    billetera bill = new billetera();
+                    bill.nombreTitular = txtTitularBilletera.Text;
+                    bill.foto = (Byte[])Session["ImagenPago"];
+                    bill.numeroTelefono = txtNumeroBilletera.Text;
+
+                    daoBilletera.insertarBilletera(bill);
+
+                    trans.agencia = metodoP;
+                }
+
+                trans.fecha = DateTime.Now;
+                trans.foto = (Byte[])Session["ImagenPago"];
+                trans.concepto = "Pago de Crédito";
+                trans.monto = 123; // FALTA EL MONTO
+                trans.anulado = false;
+                trans.credito = (credito1)Session["Credito"];
+                
+
 
                 lblError.Text = "Archivo subido correctamente y pago registrado.";
                 lblError.ForeColor = System.Drawing.Color.Green;
@@ -99,15 +147,6 @@ namespace CreditoMovilWA
             Session["idCredito"] = idCredito;
             Response.Redirect("DetalleCredito.aspx");
         }
-    }
 
-    public class Credito
-    {
-        public int IdCredito { get; set; }
-        public double Monto { get; set; }
-        public int NumCuotas { get; set; }
-        public double TasaInteres { get; set; }
-        public DateTime FechaOtorgamiento { get; set; }
-        public string Estado { get; set; }
     }
 }

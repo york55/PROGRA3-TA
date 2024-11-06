@@ -72,6 +72,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\CreditoMovil\AdministradorWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\AdministradorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\BancoWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\BancoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\BilleteraWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\BilleteraWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\ClienteWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\ClienteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -105,6 +121,9 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarMetodoPagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -132,10 +151,16 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarMetodoPagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarSupervisorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarTransaccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarCreditosFiltroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse.datasource">
@@ -156,10 +181,19 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosMetodoPagosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosTransaccionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.metodoPago.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarAdministradorResponse.datasource">
@@ -180,10 +214,19 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarMetodoPagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarSupervisorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarTransaccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorDocIdenClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorDocIdenSupResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse.datasource">
@@ -204,26 +247,50 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDMetodoPagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.transaccion.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorDocIdenClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.supervisor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorDocIdenSupResponse.datasource">
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.transaccion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\CreditoMovil\CreditoWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\CreditoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\EvaluacionWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\EvaluacionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\MetodoPagoWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\MetodoPagoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\SupervisorWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\SupervisorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\TransaccionWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\TransaccionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\otroPrueba\configuration91.svcinfo" />
     <None Include="Connected Services\otroPrueba\configuration.svcinfo" />
+    <None Include="Connected Services\CreditoMovil\archivo.disco" />
+    <None Include="Connected Services\CreditoMovil\configuration91.svcinfo" />
+    <None Include="Connected Services\CreditoMovil\configuration.svcinfo" />
+    <None Include="Connected Services\CreditoMovil\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.cliente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -246,13 +313,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\CreditoMovil\archivo.disco" />
-    <None Include="Connected Services\CreditoMovil\configuration91.svcinfo" />
-    <None Include="Connected Services\CreditoMovil\configuration.svcinfo" />
-    <None Include="Connected Services\CreditoMovil\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="DetalleCredito.aspx" />
     <Content Include="DetalleEvaluacion.aspx" />
     <Content Include="DetalleTransaccion.aspx" />
@@ -268,12 +328,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\otroPrueba\Reference.cs">
+    <Compile Include="Connected Services\CreditoMovil\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\CreditoMovil\Reference.cs">
+    <Compile Include="Connected Services\otroPrueba\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -363,38 +423,6 @@
     <None Include="Connected Services\otroPrueba\ClienteWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CreditoMovil\AdministradorWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\AdministradorWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\BancoWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\BancoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\BilleteraWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\BilleteraWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\ClienteWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\ClienteWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\CreditoWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\CreditoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\EvaluacionWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\EvaluacionWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\SupervisorWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\SupervisorWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\TransaccionWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\TransaccionWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <Content Include="Usuario.master" />
     <None Include="Web.Debug.config">
@@ -408,8 +436,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\otroPrueba\" />
     <WCFMetadataStorage Include="Connected Services\CreditoMovil\" />
+    <WCFMetadataStorage Include="Connected Services\otroPrueba\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

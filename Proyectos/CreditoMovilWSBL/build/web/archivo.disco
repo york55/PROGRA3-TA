@@ -15,4 +15,6 @@ ref="http://localhost:8080/CreditoMovilWSBL/TransaccionWS?WSDL"/>
 ref="http://localhost:8080/CreditoMovilWSBL/BancoWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
 ref="http://localhost:8080/CreditoMovilWSBL/BilleteraWS?WSDL"/>
+<contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
+ref="http://localhost:8080/CreditoMovilWSBL/MetodoPagoWS?WSDL"/>
 </discovery>

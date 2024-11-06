@@ -10,6 +10,7 @@ import jakarta.jws.WebParam;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 
 import pe.edu.pucp.creditomovil.getsclientes.dao.CreditoDAO;
 import pe.edu.pucp.creditomovil.getsclientes.mysql.CreditoMySQL;
@@ -59,6 +60,19 @@ public class CreditoWS {
             System.out.println(ex.getMessage());
         }
         return credito;
+    }
+    
+    @WebMethod(operationName = "listarCreditosFiltro")
+    public List<Credito> listarCreditosFiltro(@WebParam(name = "idcli") String idcli,
+            @WebParam(name = "fechaini") Date fechaini, @WebParam(name = "fechafin") Date fechafin,
+            @WebParam(name = "estado") String estado) {
+        List<Credito> creditos = null;
+        try{
+            creditos = daoCredito.listarTodosFiltros(idcli, fechaini, fechafin, estado);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return creditos;
     }
     
     @WebMethod(operationName = "listarTodosCreditos")

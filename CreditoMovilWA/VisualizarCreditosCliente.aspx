@@ -155,21 +155,7 @@
         function mostrarInformacionBanco() {
             const bancoElegido = document.getElementById("bancoElegido").value;
             const detallesBanco = document.getElementById("detallesBanco");
-            const bancosInfo = {
-                "bcp": { cci: "12345678912345678901", titular: "Titular BCP", cuenta: "Cuenta en soles" },
-                "bbva": { cci: "23456789123456789012", titular: "Titular BBVA", cuenta: "Cuenta en dólares" },
-                "interbank": { cci: "34567891234567890123", titular: "Titular Interbank", cuenta: "Cuenta en soles" },
-                "scotiabank": { cci: "45678912345678901234", titular: "Titular Scotiabank", cuenta: "Cuenta en dólares" }
-            };
-
-            if (bancosInfo[bancoElegido]) {
-                detallesBanco.style.display = "block";
-                document.getElementById("txtCCI").value = bancosInfo[bancoElegido].cci;
-                document.getElementById("txtTitularBanco").value = bancosInfo[bancoElegido].titular;
-                document.getElementById("txtTipoCuenta").value = bancosInfo[bancoElegido].cuenta;
-            } else {
-                detallesBanco.style.display = "none";
-            }
+            detallesBanco.style.display = "block";
         }
 
     </script>
@@ -227,7 +213,7 @@
 
         <!-- Selector de método de pago -->
         <label for="metodoPago">Seleccione el método de pago:</label>
-        <select id="metodoPago" onchange="mostrarCamposPago()">
+        <select id="metodoPago" runat="server" onchange="mostrarCamposPago()">
             <option value="">Seleccione</option>
             <option value="banco">Banco</option>
             <option value="billetera">Billetera Digital</option>
@@ -238,7 +224,7 @@
             <h3>Bancos Aceptados:</h3>
             <img src="images/bancos.png" alt="Bancos Aceptados" style="width:100%; max-width:400px;">
              <label for="bancoElegido">Seleccione el banco</label>
-            <select id="bancoElegido" onchange="mostrarInformacionBanco()">
+            <select id="bancoElegido" runat="server" onchange="mostrarInformacionBanco()">
                 <option value="">Seleccione</option>
                 <option value="bcp">BCP</option>
                 <option value="bbva">BBVA</option>
@@ -247,11 +233,11 @@
             </select>
             <div id="detallesBanco" style="margin-top: 20px; display: none;">
                 <p>CCI:</p>
-                <input type="text" id="txtCCI" class="input-text" readonly />
+                <asp:TextBox ID="txtCCI" runat="server" CssClass="input-text" Text="" ReadOnly="False" Enabled="True" />
                 <p>Nombre del Titular:</p>
-                <input type="text" id="txtTitularBanco" class="input-text" readonly />
+                <asp:TextBox ID="txtTitularBanco" runat="server" CssClass="input-text" Text="" ReadOnly="False" Enabled="True" />
                 <p>Tipo de Cuenta:</p>
-                <input type="text" id="txtTipoCuenta" class="input-text" readonly />
+                <asp:TextBox ID="txtTipoCuenta" runat="server" CssClass="input-text" Text="" ReadOnly="False" Enabled="True" />
             </div>
         </div>
 
@@ -260,9 +246,9 @@
             <h3>Billeteras Digitales Aceptadas:</h3>
             <img src="images/billeteras.png" alt="Billeteras Aceptadas" style="width:100%; max-width:180px;">
             <p>Número de Billetera:</p>
-            <asp:TextBox ID="txtNumeroBilletera" runat="server" CssClass="input-text" Text="987654321" ReadOnly="True" Enabled="False" />
+            <asp:TextBox ID="txtNumeroBilletera" runat="server" CssClass="input-text" Text="" ReadOnly="False" Enabled="True" />
             <p>Nombre del Titular:</p>
-            <asp:TextBox ID="txtTitularBilletera" runat="server" CssClass="input-text" Text="Nombre del Titular de la Billetera" ReadOnly="True" Enabled="False" />
+            <asp:TextBox ID="txtTitularBilletera" runat="server" CssClass="input-text" Text="" ReadOnly="False" Enabled="True" />
         </div>
 
         <p>Inserte imagen jpeg:</p>

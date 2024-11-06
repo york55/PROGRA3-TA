@@ -35,6 +35,12 @@
   <message name="listarTodosCreditosResponse">
     <part name="parameters" element="tns:listarTodosCreditosResponse" />
   </message>
+  <message name="listarCreditosFiltro">
+    <part name="parameters" element="tns:listarCreditosFiltro" />
+  </message>
+  <message name="listarCreditosFiltroResponse">
+    <part name="parameters" element="tns:listarCreditosFiltroResponse" />
+  </message>
   <portType name="CreditoWS">
     <operation name="modificarCredito">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoRequest" message="tns:modificarCredito" />
@@ -55,6 +61,10 @@
     <operation name="listarTodosCreditos">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarTodosCreditosRequest" message="tns:listarTodosCreditos" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarTodosCreditosResponse" message="tns:listarTodosCreditosResponse" />
+    </operation>
+    <operation name="listarCreditosFiltro">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosFiltroRequest" message="tns:listarCreditosFiltro" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosFiltroResponse" message="tns:listarCreditosFiltroResponse" />
     </operation>
   </portType>
   <binding name="CreditoWSPortBinding" type="tns:CreditoWS">
@@ -96,6 +106,15 @@
       </output>
     </operation>
     <operation name="listarTodosCreditos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCreditosFiltro">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

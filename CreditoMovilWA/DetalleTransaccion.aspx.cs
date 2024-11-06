@@ -15,6 +15,16 @@ namespace CreditoMovilWA
     public partial class DetalleTransaccion : System.Web.UI.Page
     {
         private TransaccionWSClient daoTransaccion = new TransaccionWSClient();
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            cliente cli = (cliente)Session["Cliente"];
+            if (cli == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

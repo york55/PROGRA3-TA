@@ -22,7 +22,7 @@ import pe.edu.pucp.creditomovil.model.Transaccion;
 public class TransaccionMySQL implements TransaccionDAO {
 
     private Connection conexion;
-    private ResultSet rs;
+    private ResultSet rs = null;
 
     @Override
     public boolean insertar(Transaccion transaccion) {
@@ -179,12 +179,77 @@ public class TransaccionMySQL implements TransaccionDAO {
         }
         return trans;
     }
+    
+    @Override
+    public List<Transaccion> listarPorCredito(String numCred){
+        Connection con = null;
+        CallableStatement cs = null;
+        List<Transaccion> transacciones = new ArrayList<>();
+
+        try {
+            // Obtener la conexión a la base de datos
+            con = DBManager.getInstance().getConnection();
+
+            // Preparar la llamada al procedimiento almacenado
+            cs = con.prepareCall("{CALL ObtenerTransaccionesPorCredito(?)}");
+            cs.setString(1, numCred);
+            // Ejecutar el procedimiento y obtener el resultado
+            rs = cs.executeQuery();
+
+            // Procesar el ResultSet y convertirlo en objetos Transaccion
+            while (rs.next()) {
+                int numOperacion = rs.getInt("num_transaccion");
+                int usuarioId = rs.getInt("usuario_usuario_id");
+                Date fecha = rs.getDate("fecha_y_hora");
+                String concepto = rs.getString("concepto");
+                double monto = rs.getDouble("monto");
+                boolean anulado = rs.getBoolean("anulado");
+                String agencia = rs.getString("agencia");
+                byte[] foto = rs.getBytes("foto");
+                int metodoPagoID = rs.getInt("metodo_metodo_pago_id");
+                //cargar el usuario con metodo de obtenerCliente usando el ID
+
+            // Crear una instancia de Transaccion
+            Transaccion transaccion = new Transaccion(
+                        fecha,
+                        concepto,
+                        monto,
+                        anulado,
+                        null,
+                        agencia,
+                        numOperacion,
+                        null, // Credito se puede cargar por separado si es necesario
+                        foto
+                );
+
+                // Agregar a la lista
+                transacciones.add(transaccion);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Cerrar recursos
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return transacciones;
+    }
 
     @Override
     public List<Transaccion> listarTodos() {
         Connection con = null;
         CallableStatement cs = null;
-        ResultSet rs = null;
         List<Transaccion> transacciones = new ArrayList<>();
 
         try {

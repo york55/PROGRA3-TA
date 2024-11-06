@@ -7,7 +7,7 @@ package pe.edu.pucp.creditomovil.getsclientes.mysql;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.getsclientes.dao.CreditoDAO;
 import java.sql.Connection;
-import java.sql.Date;
+import java.util.Date;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -167,6 +167,62 @@ public class CreditoMySQL implements CreditoDAO {
         }
         return cred;
     }
+    
+    @Override
+    public List<Credito> listarTodosFiltros(String cli, Date fechaini, Date fechafin, String estado){
+        List<Credito> listaCreditos = new ArrayList<>();
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;            
+        conn = DBManager.getInstance().getConnection();
+        String sql = "{ CALL ObtenerCreditosPorCliente(?, ?, ?, ?) }";
+        
+        java.sql.Date fechainiSQL = new java.sql.Date(fechaini.getTime());
+        java.sql.Date fechafinSQL = new java.sql.Date(fechafin.getTime());
+
+        
+        try{
+            cs = conn.prepareCall(sql);
+            cs.setString(1, cli);
+            cs.setDate(2, fechainiSQL);
+            cs.setDate(3, fechafinSQL);
+            cs.setString(4, estado);
+            rs = cs.executeQuery();
+            
+            
+            while (rs.next()) {
+                String numCredito = rs.getString("num_credito");
+                double monto = rs.getDouble("monto");
+                double tasaInteres = rs.getDouble("tasa_interes");
+                Date fechaOtorgamiento = rs.getDate("fecha_otorgamiento");
+                String est = rs.getString("estado");
+                int numCuotas = rs.getInt("num_cuotas");
+
+                // Crear el objeto Credito. Nota que el cliente es null por simplicidad
+                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, null, est, numCuotas);
+                listaCreditos.add(credito);
+            }
+            
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return listaCreditos;
+    }
+
 
     public List<Credito> listarTodos() {
         List<Credito> listaCreditos = new ArrayList<>();

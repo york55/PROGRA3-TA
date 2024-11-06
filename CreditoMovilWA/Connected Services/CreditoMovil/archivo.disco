@@ -8,4 +8,5 @@
   <contractRef ref="http://localhost:8080/CreditoMovilWSBL/TransaccionWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CreditoMovilWSBL/BancoWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CreditoMovilWSBL/BilleteraWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:8080/CreditoMovilWSBL/MetodoPagoWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
 </discovery>
