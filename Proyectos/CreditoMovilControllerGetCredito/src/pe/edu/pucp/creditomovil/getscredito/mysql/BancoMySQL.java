@@ -196,6 +196,55 @@ public class BancoMySQL implements BancoDAO{
     }
 
     @Override
+    public Banco obtenerPorNombre(String nombre) {
+        Banco bank = null;
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ObtenerBancoPorNombre(?) }";
+            cs = conn.prepareCall(sql);
+            cs.setString(1, nombre);
+            rs = cs.executeQuery();
+            
+            
+            if(rs.next()){
+                bank = new Banco(
+                    rs.getInt("idMetodoPago"),
+                    rs.getBytes("foto"),
+                    rs.getString("nombreTitular"),
+                    rs.getString("CCI"),
+                    rs.getString("tipoCuenta"),
+                    rs.getString("nombreBanco")//ACA NUEVO//ACA NUEVO//ACA NUEVO
+                );
+            }else{
+                System.out.println("No se encontró el cliente");
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return bank;
+    }
+    
+    
+    @Override
     public List<Banco> listarTodos() {
         List<Banco> listaBancos = new ArrayList<>();
         Connection conn = null;

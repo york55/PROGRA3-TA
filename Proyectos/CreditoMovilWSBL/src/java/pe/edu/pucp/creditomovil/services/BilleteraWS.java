@@ -66,6 +66,17 @@ public class BilleteraWS {
         return billetera;
     }
     
+    @WebMethod(operationName = "obtenerPorNombreBilletera")
+    public Billetera obtenerPorNombreBilletera(@WebParam(name = "nombrebilletera") String nombre) {
+        Billetera billetera = null;
+        try{
+            billetera = daoBilletera.obtenerPorNombre(nombre);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return billetera;
+    }
+    
     @WebMethod(operationName = "listarTodosBilleteras")
     public List<Billetera> listarTodosBilleteras() {
         List<Billetera> billeteras = null;

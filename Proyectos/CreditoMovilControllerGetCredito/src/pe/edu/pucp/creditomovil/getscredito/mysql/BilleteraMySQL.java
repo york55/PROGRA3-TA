@@ -193,7 +193,55 @@ public class BilleteraMySQL implements BilleteraDAO{
         }
         return bill;
     }
+    
+    @Override
+    public Billetera obtenerPorNombre(String nombre) {
+        
+        Billetera bill = null;
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;
 
+        try {
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ObtenerBilleteraPorNombre(?) }";
+            cs = conn.prepareCall(sql);
+            cs.setString(1, nombre);
+            rs = cs.executeQuery();
+            
+            
+            if(rs.next()){
+                bill = new Billetera(
+                    rs.getInt("idMetodoPago"),
+                    rs.getBytes("foto"),
+                    rs.getString("nombreTitular"),
+                    rs.getString("numeroTelefono"),
+                    rs.getString("nombreBilletera")
+                );
+            }else{
+                System.out.println("No se encontró el cliente");
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return bill;
+    }
+    
     @Override
     public List<Billetera> listarTodos() {
         List<Billetera> billeteras = new ArrayList<>();
