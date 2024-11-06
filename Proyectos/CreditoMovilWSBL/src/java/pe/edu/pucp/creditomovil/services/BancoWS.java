@@ -46,7 +46,7 @@ public class BancoWS {
     }
     
     @WebMethod(operationName = "eliminarBanco")
-    public boolean eliminarBanco(@WebParam(name = "idbanco") String id) {
+    public boolean eliminarBanco(@WebParam(name = "idbanco") int id) {
         boolean resultado = false;
         try{
             resultado = daoBanco.eliminar(id);
@@ -57,7 +57,7 @@ public class BancoWS {
     }
     
     @WebMethod(operationName = "obtenerPorIDBanco")
-    public Banco obtenerPorIDBanco(@WebParam(name = "idbanco") String id) {
+    public Banco obtenerPorIDBanco(@WebParam(name = "idbanco") int id) {
         Banco banco = null;
         try{
             banco = daoBanco.obtenerPorId(id);
