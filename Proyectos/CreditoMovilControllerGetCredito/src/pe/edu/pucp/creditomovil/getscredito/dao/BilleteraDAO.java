@@ -6,7 +6,7 @@ import pe.edu.pucp.creditomovil.model.Billetera;
 public interface BilleteraDAO {
     boolean insertar(Billetera billetera);
     boolean modificar(Billetera billetera);
-    boolean eliminar(String numeroTelefono);
-    Billetera obtenerPorId(String numeroTelefono);
+    boolean eliminar(int idMetodoPago);
+    Billetera obtenerPorId(int idMetodoPago);
     List<Billetera> listarTodos();
 }

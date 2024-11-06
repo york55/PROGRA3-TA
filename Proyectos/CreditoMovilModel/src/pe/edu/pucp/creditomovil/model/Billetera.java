@@ -11,14 +11,15 @@ package pe.edu.pucp.creditomovil.model;
 public class Billetera extends MetodoPago {
 
     private String numeroTelefono;
-
+    private String nombreBilletera;
     public Billetera() {
     }
 
     public Billetera(int idMetodoPago, byte[] foto,
-            String nombreTitular, String numeroTelefono) {
+            String nombreTitular, String numeroTelefono, String nombreBilletera) {
         super(idMetodoPago, foto, nombreTitular);
         this.numeroTelefono = numeroTelefono;
+        this.nombreBilletera = nombreBilletera;
     }
 
     ;
@@ -29,6 +30,14 @@ public class Billetera extends MetodoPago {
 
     public void setNumeroTelefono(String numeroTelefono) {
         this.numeroTelefono = numeroTelefono;
+    }
+
+    public String getNombreBilletera() {
+        return nombreBilletera;
+    }
+
+    public void setNombreBilletera(String nombreBilletera) {
+        this.nombreBilletera = nombreBilletera;
     }
 
 }

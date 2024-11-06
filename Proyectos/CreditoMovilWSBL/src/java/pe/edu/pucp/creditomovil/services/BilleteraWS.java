@@ -45,7 +45,7 @@ public class BilleteraWS {
     }
     
     @WebMethod(operationName = "eliminarBilletera")
-    public boolean eliminarBilletera(@WebParam(name = "idbilletera") String id) {
+    public boolean eliminarBilletera(@WebParam(name = "idbilletera") int id) {
         boolean resultado = false;
         try{
             resultado = daoBilletera.eliminar(id);
@@ -56,7 +56,7 @@ public class BilleteraWS {
     }
     
     @WebMethod(operationName = "obtenerPorIDBilletera")
-    public Billetera obtenerPorIDBilletera(@WebParam(name = "idbilletera") String id) {
+    public Billetera obtenerPorIDBilletera(@WebParam(name = "idbilletera") int id) {
         Billetera billetera = null;
         try{
             billetera = daoBilletera.obtenerPorId(id);
