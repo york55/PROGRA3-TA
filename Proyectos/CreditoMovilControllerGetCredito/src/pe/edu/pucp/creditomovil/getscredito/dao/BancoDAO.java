@@ -8,5 +8,6 @@ public interface BancoDAO {
     boolean modificar(Banco banco);
     boolean eliminar(int idMetodoPago);
     Banco obtenerPorId(int idMetodoPago);
+    Banco obtenerPorNombre(String nombre);
     List<Banco> listarTodos();
 }

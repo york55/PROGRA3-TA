@@ -8,5 +8,6 @@ public interface BilleteraDAO {
     boolean modificar(Billetera billetera);
     boolean eliminar(int idMetodoPago);
     Billetera obtenerPorId(int idMetodoPago);
+    Billetera obtenerPorNombre(String nombre);
     List<Billetera> listarTodos();
 }

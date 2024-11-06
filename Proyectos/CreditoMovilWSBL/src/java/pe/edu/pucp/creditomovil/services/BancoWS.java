@@ -67,6 +67,17 @@ public class BancoWS {
         return banco;
     }
     
+    @WebMethod(operationName = "obtenerPorNombreBanco")
+    public Banco obtenerPorNombreBanco(@WebParam(name = "nombrebanco") String nombre) {
+        Banco banco = null;
+        try{
+            banco = daoBanco.obtenerPorNombre(nombre);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return banco;
+    }
+    
     @WebMethod(operationName = "listarTodosBancos")
     public List<Banco> listarTodosBancos() {
         List<Banco> bancos = null;
