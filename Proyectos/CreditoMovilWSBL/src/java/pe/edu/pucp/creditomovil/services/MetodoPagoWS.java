@@ -20,7 +20,8 @@ import pe.edu.pucp.creditomovil.model.TipoDocumento;
  *
  * @author Bleak
  */
-@WebService(serviceName = "MetodoPagoWS")
+@WebService(serviceName = "MetodoPagoWS", targetNamespace
+        = "https://services.creditomovil.pucp.edu.pe")
 public class MetodoPagoWS {
 
 

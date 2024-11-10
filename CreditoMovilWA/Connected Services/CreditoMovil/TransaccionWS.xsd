@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://services.creditomovil.pucp.edu.pe/" targetNamespace="http://services.creditomovil.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="https://services.creditomovil.pucp.edu.pe" targetNamespace="https://services.creditomovil.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="eliminarTransaccion" type="tns:eliminarTransaccion" />
   <xs:element name="eliminarTransaccionResponse" type="tns:eliminarTransaccionResponse" />
   <xs:element name="insertarTransaccion" type="tns:insertarTransaccion" />

@@ -14,7 +14,8 @@ import pe.edu.pucp.creditomovil.getscredito.dao.TransaccionDAO;
 import pe.edu.pucp.creditomovil.getscredito.mysql.TransaccionMySQL;
 import pe.edu.pucp.creditomovil.model.Transaccion;
 
-@WebService(serviceName = "TransaccionWS")
+@WebService(serviceName = "TransaccionWS", targetNamespace
+        = "https://services.creditomovil.pucp.edu.pe")
 public class TransaccionWS {
 
     private TransaccionDAO daoTransaccion = new TransaccionMySQL();

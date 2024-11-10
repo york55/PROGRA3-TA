@@ -29,6 +29,12 @@
   <message name="obtenerPorIDBilleteraResponse">
     <part name="parameters" element="tns:obtenerPorIDBilleteraResponse" />
   </message>
+  <message name="obtenerPorNombreBilletera">
+    <part name="parameters" element="tns:obtenerPorNombreBilletera" />
+  </message>
+  <message name="obtenerPorNombreBilleteraResponse">
+    <part name="parameters" element="tns:obtenerPorNombreBilleteraResponse" />
+  </message>
   <message name="listarTodosBilleteras">
     <part name="parameters" element="tns:listarTodosBilleteras" />
   </message>
@@ -51,6 +57,10 @@
     <operation name="obtenerPorIDBilletera">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/obtenerPorIDBilleteraRequest" message="tns:obtenerPorIDBilletera" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/obtenerPorIDBilleteraResponse" message="tns:obtenerPorIDBilleteraResponse" />
+    </operation>
+    <operation name="obtenerPorNombreBilletera">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/obtenerPorNombreBilleteraRequest" message="tns:obtenerPorNombreBilletera" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/obtenerPorNombreBilleteraResponse" message="tns:obtenerPorNombreBilleteraResponse" />
     </operation>
     <operation name="listarTodosBilleteras">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BilleteraWS/listarTodosBilleterasRequest" message="tns:listarTodosBilleteras" />
@@ -87,6 +97,15 @@
       </output>
     </operation>
     <operation name="obtenerPorIDBilletera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorNombreBilletera">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

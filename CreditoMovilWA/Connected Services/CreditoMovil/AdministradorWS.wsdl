@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.creditomovil.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="AdministradorWS" targetNamespace="http://services.creditomovil.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.creditomovil.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="AdministradorWS" targetNamespace="https://services.creditomovil.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/AdministradorWS?xsd=1" namespace="http://services.creditomovil.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/AdministradorWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
     </xsd:schema>
   </types>
+  <message name="insertarAdministrador">
+    <part name="parameters" element="tns:insertarAdministrador" />
+  </message>
+  <message name="insertarAdministradorResponse">
+    <part name="parameters" element="tns:insertarAdministradorResponse" />
+  </message>
   <message name="eliminarAdministrador">
     <part name="parameters" element="tns:eliminarAdministrador" />
   </message>
@@ -29,36 +35,39 @@
   <message name="listarTodosAdministradoresResponse">
     <part name="parameters" element="tns:listarTodosAdministradoresResponse" />
   </message>
-  <message name="insertarAdministrador">
-    <part name="parameters" element="tns:insertarAdministrador" />
-  </message>
-  <message name="insertarAdministradorResponse">
-    <part name="parameters" element="tns:insertarAdministradorResponse" />
-  </message>
   <portType name="AdministradorWS">
+    <operation name="insertarAdministrador">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRequest" message="tns:insertarAdministrador" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorResponse" message="tns:insertarAdministradorResponse" />
+    </operation>
     <operation name="eliminarAdministrador">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
     </operation>
     <operation name="modificarAdministrador">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorRequest" message="tns:modificarAdministrador" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorResponse" message="tns:modificarAdministradorResponse" />
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorRequest" message="tns:modificarAdministrador" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorResponse" message="tns:modificarAdministradorResponse" />
     </operation>
     <operation name="obtenerPorIDAdministrador">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministradorRequest" message="tns:obtenerPorIDAdministrador" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministradorResponse" message="tns:obtenerPorIDAdministradorResponse" />
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministradorRequest" message="tns:obtenerPorIDAdministrador" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministradorResponse" message="tns:obtenerPorIDAdministradorResponse" />
     </operation>
     <operation name="listarTodosAdministradores">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministradoresRequest" message="tns:listarTodosAdministradores" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministradoresResponse" message="tns:listarTodosAdministradoresResponse" />
-    </operation>
-    <operation name="insertarAdministrador">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRequest" message="tns:insertarAdministrador" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorResponse" message="tns:insertarAdministradorResponse" />
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministradoresRequest" message="tns:listarTodosAdministradores" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministradoresResponse" message="tns:listarTodosAdministradoresResponse" />
     </operation>
   </portType>
   <binding name="AdministradorWSPortBinding" type="tns:AdministradorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="eliminarAdministrador">
       <soap:operation soapAction="" />
       <input>
@@ -87,15 +96,6 @@
       </output>
     </operation>
     <operation name="listarTodosAdministradores">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarAdministrador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

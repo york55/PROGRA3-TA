@@ -18,7 +18,8 @@ import pe.edu.pucp.creditomovil.rrhh.mysql.SupervisorMySQL;
  *
  * @author diego
  */
-@WebService(serviceName = "SupervisorWS")
+@WebService(serviceName = "SupervisorWS", targetNamespace
+        = "https://services.creditomovil.pucp.edu.pe")
 public class SupervisorWS {
 
     private SupervisorDAO daoSupervisor = new SupervisorMySQL();

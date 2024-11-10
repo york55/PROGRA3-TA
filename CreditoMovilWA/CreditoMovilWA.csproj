@@ -72,22 +72,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CreditoMovil\AdministradorWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\AdministradorWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\BancoWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\BancoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\BilleteraWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\BilleteraWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\ClienteWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\ClienteWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Connected Services\CreditoMovil\archivo.disco" />
+    <None Include="Connected Services\CreditoMovil\configuration91.svcinfo" />
+    <None Include="Connected Services\CreditoMovil\configuration.svcinfo" />
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -161,6 +148,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarCreditosFiltroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse.datasource">
@@ -256,63 +246,19 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorNombreBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorNombreBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.supervisor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.transaccion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\CreditoMovil\CreditoWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\CreditoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\EvaluacionWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\EvaluacionWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\MetodoPagoWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\MetodoPagoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\SupervisorWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\SupervisorWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CreditoMovil\TransaccionWS.wsdl" />
-    <None Include="Connected Services\CreditoMovil\TransaccionWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\otroPrueba\configuration91.svcinfo" />
-    <None Include="Connected Services\otroPrueba\configuration.svcinfo" />
-    <None Include="Connected Services\CreditoMovil\archivo.disco" />
-    <None Include="Connected Services\CreditoMovil\configuration91.svcinfo" />
-    <None Include="Connected Services\CreditoMovil\configuration.svcinfo" />
     <None Include="Connected Services\CreditoMovil\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.cliente.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.eliminarClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.insertarClienteParametrosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.listarTodosClientesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.modificarClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\otroPrueba\CreditoMovilWA.otroPrueba.obtenerPorIDClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\otroPrueba\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -332,11 +278,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connected Services\CreditoMovil\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\otroPrueba\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -422,8 +363,40 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Handlers\MostrarImagen.ashx" />
-    <None Include="Connected Services\otroPrueba\ClienteWS.wsdl" />
-    <None Include="Connected Services\otroPrueba\ClienteWS.xsd">
+    <None Include="Connected Services\CreditoMovil\AdministradorWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\AdministradorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\BancoWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\BancoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\BilleteraWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\BilleteraWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\ClienteWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\ClienteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\CreditoWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\CreditoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\EvaluacionWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\EvaluacionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\MetodoPagoWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\MetodoPagoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\SupervisorWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\SupervisorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\TransaccionWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\TransaccionWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -440,7 +413,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\CreditoMovil\" />
-    <WCFMetadataStorage Include="Connected Services\otroPrueba\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

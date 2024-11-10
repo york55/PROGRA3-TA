@@ -93,17 +93,13 @@ namespace CreditoMovilWA
                 if(metodoP == "banco")
                 {
                     banco bank = new banco();
-                    bank.CCI = txtCCI.Text;
-                    bank.nombreTitular = txtTitularBanco.Text;
-                    bank.tipoCuenta = txtTipoCuenta.Text;
                     bank.foto = (Byte[])Session["ImagenPago"];
-                    string banco1 = bancoElegido.Value;
+                    bank.nombreTitular = txtTitularBanco.Text;
+                    bank.CCI = txtCCI.Text;
+                    bank.tipoCuenta = txtTipoCuenta.Text;
+                    bank.nombreBanco = bancoElegido.Value;
 
-                    //daoBanco.insertarBanco(bank);
-
-                    trans.agencia = banco1;
-                    //trans.metodoPago = bank;
-
+                    daoBanco.insertarBanco(bank);
                 }
                 else if(metodoP == "billetera")
                 {
@@ -111,7 +107,6 @@ namespace CreditoMovilWA
                     bill.nombreTitular = txtTitularBilletera.Text;
                     bill.foto = (Byte[])Session["ImagenPago"];
                     bill.numeroTelefono = txtNumeroBilletera.Text;
-
                     //daoBilletera.insertarBilletera(bill);
 
                     trans.agencia = metodoP;
@@ -122,7 +117,7 @@ namespace CreditoMovilWA
                 trans.concepto = "Pago de Crédito";
                 trans.monto = 123; // FALTA EL MONTO
                 trans.anulado = false;
-                trans.credito = (credito1)Session["Credito"];
+                trans.credito = (credito)Session["Credito"];
                 
 
 

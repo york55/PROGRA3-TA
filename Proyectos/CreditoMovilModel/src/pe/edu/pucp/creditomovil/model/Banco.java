@@ -27,7 +27,7 @@ public class Banco extends MetodoPago{
         return nombreBanco;
     }
     
-    public void SetNombreBanco(String nombreBanco){
+    public void setNombreBanco(String nombreBanco){
         this.nombreBanco = nombreBanco;
     }
     

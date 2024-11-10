@@ -23,11 +23,11 @@
   <message name="insertarClienteResponse">
     <part name="parameters" element="tns:insertarClienteResponse" />
   </message>
-  <message name="listarTodosClientes">
-    <part name="parameters" element="tns:listarTodosClientes" />
+  <message name="obtenerPorIDCliente">
+    <part name="parameters" element="tns:obtenerPorIDCliente" />
   </message>
-  <message name="listarTodosClientesResponse">
-    <part name="parameters" element="tns:listarTodosClientesResponse" />
+  <message name="obtenerPorIDClienteResponse">
+    <part name="parameters" element="tns:obtenerPorIDClienteResponse" />
   </message>
   <message name="obtenerPorDocIdenCliente">
     <part name="parameters" element="tns:obtenerPorDocIdenCliente" />
@@ -35,11 +35,11 @@
   <message name="obtenerPorDocIdenClienteResponse">
     <part name="parameters" element="tns:obtenerPorDocIdenClienteResponse" />
   </message>
-  <message name="obtenerPorIDCliente">
-    <part name="parameters" element="tns:obtenerPorIDCliente" />
+  <message name="listarTodosClientes">
+    <part name="parameters" element="tns:listarTodosClientes" />
   </message>
-  <message name="obtenerPorIDClienteResponse">
-    <part name="parameters" element="tns:obtenerPorIDClienteResponse" />
+  <message name="listarTodosClientesResponse">
+    <part name="parameters" element="tns:listarTodosClientesResponse" />
   </message>
   <portType name="ClienteWS">
     <operation name="modificarCliente">
@@ -54,17 +54,17 @@
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteRequest" message="tns:insertarCliente" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteResponse" message="tns:insertarClienteResponse" />
     </operation>
-    <operation name="listarTodosClientes">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest" message="tns:listarTodosClientes" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse" message="tns:listarTodosClientesResponse" />
+    <operation name="obtenerPorIDCliente">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorIDClienteRequest" message="tns:obtenerPorIDCliente" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorIDClienteResponse" message="tns:obtenerPorIDClienteResponse" />
     </operation>
     <operation name="obtenerPorDocIdenCliente">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteRequest" message="tns:obtenerPorDocIdenCliente" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteResponse" message="tns:obtenerPorDocIdenClienteResponse" />
     </operation>
-    <operation name="obtenerPorIDCliente">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorIDClienteRequest" message="tns:obtenerPorIDCliente" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorIDClienteResponse" message="tns:obtenerPorIDClienteResponse" />
+    <operation name="listarTodosClientes">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest" message="tns:listarTodosClientes" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse" message="tns:listarTodosClientesResponse" />
     </operation>
   </portType>
   <binding name="ClienteWSPortBinding" type="tns:ClienteWS">
@@ -96,7 +96,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosClientes">
+    <operation name="obtenerPorIDCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -114,7 +114,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerPorIDCliente">
+    <operation name="listarTodosClientes">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

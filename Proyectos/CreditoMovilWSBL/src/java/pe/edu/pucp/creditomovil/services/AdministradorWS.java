@@ -14,7 +14,8 @@ import pe.edu.pucp.creditomovil.rrhh.dao.AdministradorDAO;
 import pe.edu.pucp.creditomovil.rrhh.mysql.AdministradorMySQL;
 import pe.edu.pucp.creditomovil.model.Administrador;
 
-@WebService(serviceName = "AdministradorWS")
+@WebService(serviceName = "AdministradorWS", targetNamespace
+        = "https://services.creditomovil.pucp.edu.pe")
 public class AdministradorWS {
 
     private AdministradorDAO daoAdministrador = new AdministradorMySQL();

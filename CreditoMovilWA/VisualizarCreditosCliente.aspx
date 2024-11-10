@@ -127,15 +127,19 @@
     </style>
 
     <script type="text/javascript">
+        // Abre el modal
         function openModal() {
             document.getElementById("PagoModal").style.display = "block";
         }
+
+        // Cierra el modal
         function closeModal() {
             document.getElementById("PagoModal").style.display = "none";
         }
 
+        // Muestra los campos según el método de pago seleccionado
         function mostrarCamposPago() {
-            var metodo = document.getElementById("metodoPago").value;
+            var metodo = document.getElementById("<%= metodoPago.ClientID %>").value;
             var infoBanco = document.getElementById("infoBanco");
             var infoBilletera = document.getElementById("infoBilletera");
 
@@ -152,12 +156,12 @@
             }
         }
 
+        // Muestra la información del banco seleccionado
         function mostrarInformacionBanco() {
-            const bancoElegido = document.getElementById("bancoElegido").value;
+            const bancoElegido = document.getElementById("<%= bancoElegido.ClientID %>").value;
             const detallesBanco = document.getElementById("detallesBanco");
             detallesBanco.style.display = "block";
         }
-
     </script>
 </asp:Content>
 

@@ -14,7 +14,8 @@ import pe.edu.pucp.creditomovil.getsclientes.dao.EvaluacionDAO;
 import pe.edu.pucp.creditomovil.getsclientes.mysql.EvaluacionMySQL;
 import pe.edu.pucp.creditomovil.model.Evaluacion;
 
-@WebService(serviceName = "EvaluacionWS")
+@WebService(serviceName = "EvaluacionWS", targetNamespace
+        = "https://services.creditomovil.pucp.edu.pe")
 public class EvaluacionWS {
 
     private EvaluacionDAO daoEvaluacion = new EvaluacionMySQL();

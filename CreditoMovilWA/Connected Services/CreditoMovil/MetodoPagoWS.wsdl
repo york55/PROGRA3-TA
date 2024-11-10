@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.creditomovil.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="MetodoPagoWS" targetNamespace="http://services.creditomovil.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.creditomovil.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="MetodoPagoWS" targetNamespace="https://services.creditomovil.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/MetodoPagoWS?xsd=1" namespace="http://services.creditomovil.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/MetodoPagoWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarMetodoPago">
-    <part name="parameters" element="tns:insertarMetodoPago" />
-  </message>
-  <message name="insertarMetodoPagoResponse">
-    <part name="parameters" element="tns:insertarMetodoPagoResponse" />
-  </message>
   <message name="eliminarMetodoPago">
     <part name="parameters" element="tns:eliminarMetodoPago" />
   </message>
   <message name="eliminarMetodoPagoResponse">
     <part name="parameters" element="tns:eliminarMetodoPagoResponse" />
+  </message>
+  <message name="insertarMetodoPago">
+    <part name="parameters" element="tns:insertarMetodoPago" />
+  </message>
+  <message name="insertarMetodoPagoResponse">
+    <part name="parameters" element="tns:insertarMetodoPagoResponse" />
   </message>
   <message name="obtenerPorIDMetodoPago">
     <part name="parameters" element="tns:obtenerPorIDMetodoPago" />
@@ -23,43 +23,43 @@
   <message name="obtenerPorIDMetodoPagoResponse">
     <part name="parameters" element="tns:obtenerPorIDMetodoPagoResponse" />
   </message>
-  <message name="modificarMetodoPago">
-    <part name="parameters" element="tns:modificarMetodoPago" />
-  </message>
-  <message name="modificarMetodoPagoResponse">
-    <part name="parameters" element="tns:modificarMetodoPagoResponse" />
-  </message>
   <message name="listarTodosMetodoPagos">
     <part name="parameters" element="tns:listarTodosMetodoPagos" />
   </message>
   <message name="listarTodosMetodoPagosResponse">
     <part name="parameters" element="tns:listarTodosMetodoPagosResponse" />
   </message>
+  <message name="modificarMetodoPago">
+    <part name="parameters" element="tns:modificarMetodoPago" />
+  </message>
+  <message name="modificarMetodoPagoResponse">
+    <part name="parameters" element="tns:modificarMetodoPagoResponse" />
+  </message>
   <portType name="MetodoPagoWS">
-    <operation name="insertarMetodoPago">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/insertarMetodoPagoRequest" message="tns:insertarMetodoPago" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/insertarMetodoPagoResponse" message="tns:insertarMetodoPagoResponse" />
-    </operation>
     <operation name="eliminarMetodoPago">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/eliminarMetodoPagoRequest" message="tns:eliminarMetodoPago" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/eliminarMetodoPagoResponse" message="tns:eliminarMetodoPagoResponse" />
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/eliminarMetodoPagoRequest" message="tns:eliminarMetodoPago" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/eliminarMetodoPagoResponse" message="tns:eliminarMetodoPagoResponse" />
+    </operation>
+    <operation name="insertarMetodoPago">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/insertarMetodoPagoRequest" message="tns:insertarMetodoPago" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/insertarMetodoPagoResponse" message="tns:insertarMetodoPagoResponse" />
     </operation>
     <operation name="obtenerPorIDMetodoPago">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/obtenerPorIDMetodoPagoRequest" message="tns:obtenerPorIDMetodoPago" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/obtenerPorIDMetodoPagoResponse" message="tns:obtenerPorIDMetodoPagoResponse" />
-    </operation>
-    <operation name="modificarMetodoPago">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/modificarMetodoPagoRequest" message="tns:modificarMetodoPago" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/modificarMetodoPagoResponse" message="tns:modificarMetodoPagoResponse" />
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/obtenerPorIDMetodoPagoRequest" message="tns:obtenerPorIDMetodoPago" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/obtenerPorIDMetodoPagoResponse" message="tns:obtenerPorIDMetodoPagoResponse" />
     </operation>
     <operation name="listarTodosMetodoPagos">
-      <input wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/listarTodosMetodoPagosRequest" message="tns:listarTodosMetodoPagos" />
-      <output wsam:Action="http://services.creditomovil.pucp.edu.pe/MetodoPagoWS/listarTodosMetodoPagosResponse" message="tns:listarTodosMetodoPagosResponse" />
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/listarTodosMetodoPagosRequest" message="tns:listarTodosMetodoPagos" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/listarTodosMetodoPagosResponse" message="tns:listarTodosMetodoPagosResponse" />
+    </operation>
+    <operation name="modificarMetodoPago">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/modificarMetodoPagoRequest" message="tns:modificarMetodoPago" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/MetodoPagoWS/modificarMetodoPagoResponse" message="tns:modificarMetodoPagoResponse" />
     </operation>
   </portType>
   <binding name="MetodoPagoWSPortBinding" type="tns:MetodoPagoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarMetodoPago">
+    <operation name="eliminarMetodoPago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -68,7 +68,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarMetodoPago">
+    <operation name="insertarMetodoPago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,7 +86,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarMetodoPago">
+    <operation name="listarTodosMetodoPagos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -95,7 +95,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosMetodoPagos">
+    <operation name="modificarMetodoPago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
