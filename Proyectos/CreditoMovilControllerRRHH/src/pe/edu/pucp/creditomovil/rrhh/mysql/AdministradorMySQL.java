@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Types;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.AdministradorDAO;
 import pe.edu.pucp.creditomovil.model.Administrador;
@@ -33,10 +34,12 @@ public class AdministradorMySQL implements AdministradorDAO{
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
             cs.setInt(1, administrador.getIdUsuario());
-            cs.setString(2, administrador.getCodigoAdm());
-            cs.setInt(3, administrador.getCodigoCargo());
-            
+            cs.setInt(2, administrador.getCodigoCargo());
+            cs.registerOutParameter(3, Types.INTEGER);
             resultado = cs.executeUpdate();
+            int administradorID = cs.getInt(3);
+            administrador.setCodigoAdm(administradorID);
+            
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -52,7 +55,7 @@ public class AdministradorMySQL implements AdministradorDAO{
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
             cs.setInt(1, administrador.getIdUsuario());
-            cs.setString(2, administrador.getCodigoAdm());
+            cs.setInt(2, administrador.getCodigoAdm());
             cs.setInt(3, administrador.getCodigoCargo());
             
             resultado = cs.executeUpdate();
@@ -111,7 +114,7 @@ public class AdministradorMySQL implements AdministradorDAO{
                 Administrador admin = new Administrador(
                     rs.getInt("usuario_usuario_id"), 
                     new java.util.Date(), "Diego", "Pérez", "Gonzalez", "miContrasena", new java.util.Date(), true,
-                        TipoDocumento.DNI,"71608817",rs.getString("codigo_admin"),
+                        TipoDocumento.DNI,"71608817",rs.getInt("codigo_admin"),
                     rs.getInt("codigo_cargo")
                 );
                 administradores.add(admin);

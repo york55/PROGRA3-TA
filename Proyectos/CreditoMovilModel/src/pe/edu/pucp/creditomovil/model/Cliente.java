@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Cliente extends Usuario{
 
-    private String codigoCliente;
+    private int codigoCliente;
     private String direccion;
     private String telefono;
     private String email;
@@ -20,7 +20,7 @@ public class Cliente extends Usuario{
     public Cliente(){}
     public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, TipoDocumento tipoDocumento, String documento, String codigoCliente, String direccion,
+            boolean activo, TipoDocumento tipoDocumento, String documento, int codigoCliente, String direccion,
             String telefono, String email, String tipoCliente,double ranking){
                 super(idUsuario,fecha,nombre,apPaterno,apMaterno,contrasenha,
                       fechaVencimiento,activo, tipoDocumento, documento);
@@ -55,11 +55,11 @@ public class Cliente extends Usuario{
         creditos.add(nuevo);
     }
 
-    public String getCodigoCliente() {
+    public int getCodigoCliente() {
         return codigoCliente;
     }
 
-    public void setCodigoCliente(String codigoCliente) {
+    public void setCodigoCliente(int codigoCliente) {
         this.codigoCliente = codigoCliente;
     }
 

@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Types;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.model.Transaccion;
 
@@ -36,19 +37,21 @@ public class TransaccionMySQL implements TransaccionDAO {
             cs = conn.prepareCall(sql);
 
             // Configura los parámetros
-            cs.setInt(1, transaccion.getNumOperacion());
-            cs.setInt(2, transaccion.getUsuarioRegistrado().getIdUsuario()); // Supone que usuarioRegistrado no es null
-            cs.setTimestamp(3, new java.sql.Timestamp(transaccion.getFecha().getTime()));
-            cs.setString(4, transaccion.getConcepto());
-            cs.setDouble(5, transaccion.getMonto());
-            cs.setBoolean(6, transaccion.isAnulado());
-            cs.setString(7, transaccion.getAgencia());
-            cs.setString(8, transaccion.getCredito().getNumCredito()); // Supone que credito no es null
-            cs.setBytes(9, transaccion.getFoto());
-            cs.setInt(10, transaccion.getMetodoPago().getIdMetodoPago());
-
+            
+            cs.setTimestamp(1, new java.sql.Timestamp(transaccion.getFecha().getTime()));
+            cs.setString(2, transaccion.getConcepto());
+            cs.setDouble(3, transaccion.getMonto());
+            cs.setBoolean(4, transaccion.isAnulado());
+            cs.setString(5, transaccion.getAgencia());
+            cs.setInt(6, transaccion.getCredito().getNumCredito()); // Supone que credito no es null
+            cs.setBytes(7, transaccion.getFoto());
+            cs.setInt(8, transaccion.getMetodoPago().getIdMetodoPago());
+            cs.registerOutParameter(9, Types.INTEGER);
             // Ejecuta la consulta
             resultado = cs.executeUpdate() > 0;
+            int transaccionId = cs.getInt(9);
+            transaccion.setNumOperacion(transaccionId);
+            
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Credito {
 
-    private String numCredito;
+    private int numCredito;
     private double monto;
     private double tasaInteres;
     private Date fechaOtorgamiento;
@@ -17,11 +17,12 @@ public class Credito {
     private String estado;
     private int numCuotas;
     private ArrayList<Transaccion> transacciones;
+    private boolean cancelado;
     
     public Credito(){}
-    public Credito(String numCredito, double monto, double tasaInteres,
+    public Credito(int numCredito, double monto, double tasaInteres,
             Date fechaOtorgamiento, Usuario cliente, String estado,
-            int numCuotas){
+            int numCuotas, boolean cancelado){
                 this.numCredito = numCredito;
                 this.monto = monto;
                 this.tasaInteres = tasaInteres;
@@ -30,6 +31,7 @@ public class Credito {
                 this.estado = estado;
                 this.numCuotas = numCuotas;
                 transacciones = new ArrayList<Transaccion>();
+                this.cancelado = cancelado;
     }
 
     public void CargaDatosCredito(){
@@ -56,11 +58,11 @@ public class Credito {
         transacciones.add(nuevo);
     }
 
-    public String getNumCredito() {
+    public int getNumCredito() {
         return numCredito;
     }
 
-    public void setNumCredito(String numCredito) {
+    public void setNumCredito(int numCredito) {
         this.numCredito = numCredito;
     }
 
@@ -110,6 +112,14 @@ public class Credito {
 
     public void setNumCuotas(int numCuotas) {
         this.numCuotas = numCuotas;
+    }
+
+    public boolean isCancelado() {
+        return cancelado;
+    }
+
+    public void setCancelado(boolean cancelado) {
+        this.cancelado = cancelado;
     }
 
 

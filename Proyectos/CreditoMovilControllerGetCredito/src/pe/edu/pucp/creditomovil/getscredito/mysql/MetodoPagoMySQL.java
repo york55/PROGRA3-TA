@@ -7,6 +7,7 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Types;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.getscredito.dao.MetodoPagoDAO;
 import pe.edu.pucp.creditomovil.model.MetodoPago;
@@ -26,12 +27,13 @@ public class MetodoPagoMySQL implements MetodoPagoDAO {
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-
-            cs.setInt(1, metodoPago.getIdMetodoPago());
-            cs.setString(2, metodoPago.getNombreTitular());
-            cs.setBytes(3, metodoPago.getFoto());
-
+            cs.setString(1, metodoPago.getNombreTitular());
+            cs.setBytes(2, metodoPago.getFoto());
+            cs.registerOutParameter(3, Types.INTEGER);
             resultado = cs.executeUpdate() > 0;
+            int metodoPagoId = cs.getInt(3);
+            metodoPago.setIdMetodoPago(metodoPagoId);
+            
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Supervisor extends Usuario {
 
-    private String codigoEv;
+    private int codigoEv;
     private String agenciaAsignacion;
     private int codigoCargo;
     private ArrayList<Evaluacion> evaluaciones;
@@ -17,7 +17,7 @@ public class Supervisor extends Usuario {
     public Supervisor(){}
     public Supervisor(int idUsuario, Date fecha, String nombre, String apPaterno,
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, TipoDocumento tipoDocumento, String documento, String codigoEv, int codigoCargo,
+            boolean activo, TipoDocumento tipoDocumento, String documento, int codigoEv, int codigoCargo,
             String agenciaAsignacion) {
         super(idUsuario, fecha, nombre, apPaterno, apMaterno, contrasenha,
                 fechaVencimiento, activo, tipoDocumento, documento);
@@ -42,11 +42,11 @@ public class Supervisor extends Usuario {
 
     }
 
-    public String getCodigoEv() {
+    public int getCodigoEv() {
         return codigoEv;
     }
 
-    public void setCodigoEv(String codigoEv) {
+    public void setCodigoEv(int codigoEv) {
         this.codigoEv = codigoEv;
     }
 

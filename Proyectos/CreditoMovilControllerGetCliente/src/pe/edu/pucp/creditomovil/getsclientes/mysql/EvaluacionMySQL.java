@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Types;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.model.Cliente;
 import pe.edu.pucp.creditomovil.model.Evaluacion;
@@ -30,33 +31,34 @@ public class EvaluacionMySQL implements EvaluacionDAO {
     public boolean insertar(Evaluacion evaluacion) {
         Connection conn = null;
         CallableStatement cs = null;
-        boolean resultado = false;
-
+        int resultado;
+        boolean res = false;
         try {
             conn = DBManager.getInstance().getConnection();
             String sql = "{ CALL InsertarEvaluacion(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
             cs = conn.prepareCall(sql);
 
-            // Configura los parámetros
-            cs.setInt(1, evaluacion.getNumeroEvaluacion());
             Cliente cli = (Cliente) evaluacion.getClienteAsignado();
-            if(cli.getCodigoCliente()!=null)
-                cs.setString(2, cli.getCodigoCliente()); // Asegúrate de que clienteAsignado no sea null
-            else cs.setString(2, " ");
-            cs.setDate(3, new java.sql.Date(evaluacion.getFechaRegistro().getTime()));
-            cs.setString(4, evaluacion.getNombreNegocio());
-            cs.setString(5, evaluacion.getDireccionNegocio());
-            cs.setString(6, evaluacion.getTelefonoNegocio());
-            cs.setDouble(7, evaluacion.getVentasDiarias());
-            cs.setDouble(8, evaluacion.getInventario());
-            cs.setDouble(9, evaluacion.getCostoVentas());
-            cs.setDouble(10, evaluacion.getMargenGanancia());
-            cs.setBoolean(11, evaluacion.isActivo());
-            cs.setDouble(12, evaluacion.getPuntaje());
-            cs.setString(13, evaluacion.getObservaciones());
-
+            cs.setInt(1, cli.getCodigoCliente()); // Asegúrate de que clienteAsignado no sea null
+            cs.setDate(2, new java.sql.Date(evaluacion.getFechaRegistro().getTime()));
+            cs.setString(3, evaluacion.getNombreNegocio());
+            cs.setString(4, evaluacion.getDireccionNegocio());
+            cs.setString(5, evaluacion.getTelefonoNegocio());
+            cs.setDouble(6, evaluacion.getVentasDiarias());
+            cs.setDouble(7, evaluacion.getInventario());
+            cs.setDouble(8, evaluacion.getCostoVentas());
+            cs.setDouble(9, evaluacion.getMargenGanancia());
+            cs.setBoolean(10, evaluacion.isActivo());
+            cs.setDouble(11, evaluacion.getPuntaje());
+            cs.setString(12, evaluacion.getObservaciones());
+            cs.registerOutParameter(13, Types.INTEGER);
             // Ejecuta la consulta
-            resultado = cs.executeUpdate() > 0;
+            resultado = cs.executeUpdate();
+            res = resultado>0;
+            int evaluacionID = cs.getInt(13);
+            evaluacion.setNumeroEvaluacion(evaluacionID);
+            
+            
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {
@@ -71,8 +73,9 @@ public class EvaluacionMySQL implements EvaluacionDAO {
                 ex.printStackTrace();
             }
         }
-
-        return resultado;
+        
+        
+        return res;
     }
 
     @Override
@@ -86,9 +89,7 @@ public class EvaluacionMySQL implements EvaluacionDAO {
             cs = conexion.prepareCall(query);
             cs.setInt(1, evaluacion.getNumeroEvaluacion());
             Cliente cli = (Cliente) evaluacion.getClienteAsignado();
-            if(cli.getCodigoCliente()!=null)
-                cs.setString(2, cli.getCodigoCliente()); // Asegúrate de que clienteAsignado no sea null
-            else cs.setString(2, " ");
+            cs.setInt(2, cli.getCodigoCliente()); // Asegúrate de que clienteAsignado no sea null
             cs.setDate(3, new java.sql.Date(evaluacion.getFechaRegistro().getTime()));
             cs.setString(4, evaluacion.getNombreNegocio());
             cs.setString(5, evaluacion.getDireccionNegocio());

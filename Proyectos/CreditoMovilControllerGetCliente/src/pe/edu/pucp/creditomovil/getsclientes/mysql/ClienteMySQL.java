@@ -60,15 +60,17 @@ public class ClienteMySQL implements ClienteDAO {
             String sqlInsertarCliente = "{ CALL InsertarCliente(?, ?, ?, ?, ?, ?, ?) }";
             stmtCliente = conn.prepareCall(sqlInsertarCliente);
             stmtCliente.setInt(1, usuarioId);
-            stmtCliente.setString(2, cliente.getCodigoCliente());
-            stmtCliente.setString(3, cliente.getDireccion());
-            stmtCliente.setString(4, cliente.getTelefono());
-            stmtCliente.setString(5, cliente.getEmail());
-            stmtCliente.setString(6, cliente.getTipoCliente());
-            stmtCliente.setDouble(7, cliente.getRanking());
-
+            stmtCliente.setString(2, cliente.getDireccion());
+            stmtCliente.setString(3, cliente.getTelefono());
+            stmtCliente.setString(4, cliente.getEmail());
+            stmtCliente.setString(5, cliente.getTipoCliente());
+            stmtCliente.setDouble(6, cliente.getRanking());
+            stmtCliente.registerOutParameter(7, Types.INTEGER);
             stmtCliente.executeUpdate();
-
+            
+            int clienteID = stmtCliente.getInt(7);
+            cliente.setCodigoCliente(clienteID);
+            
             conn.commit(); // Confirma la transacción
             return true;
 
@@ -111,7 +113,7 @@ public class ClienteMySQL implements ClienteDAO {
 
             // Parámetros para la tabla usuario
             cs.setInt(1, cliente.getIdUsuario());
-            cs.setString(2, cliente.getCodigoCliente());
+            cs.setInt(2, cliente.getCodigoCliente());
             cs.setDate(3, new java.sql.Date(cliente.getFecha().getTime()));
             cs.setString(4, cliente.getNombre());
             cs.setString(5, cliente.getApPaterno());
@@ -215,7 +217,7 @@ public class ClienteMySQL implements ClienteDAO {
                     rs.getBoolean("activo"),
                     tipoDoc,
                     rs.getString("documento"),
-                    rs.getString("codigo_cliente"),
+                    rs.getInt("codigo_cliente"),
                     rs.getString("direccion"),
                     rs.getString("telefono"),
                     rs.getString("email"),
@@ -282,7 +284,7 @@ public class ClienteMySQL implements ClienteDAO {
                     rs.getBoolean("activo"),
                     tipoDoc,
                     rs.getString("documento"),
-                    rs.getString("codigo_cliente"),
+                    rs.getInt("codigo_cliente"),
                     rs.getString("direccion"),
                     rs.getString("telefono"),
                     rs.getString("email"),
@@ -345,7 +347,7 @@ public class ClienteMySQL implements ClienteDAO {
                         rs.getBoolean("activo"),
                         tipoDoc,
                         rs.getString("documento"),
-                        rs.getString("codigo_cliente"),
+                        rs.getInt("codigo_cliente"),
                         rs.getString("direccion"),
                         rs.getString("telefono"),
                         rs.getString("email"),

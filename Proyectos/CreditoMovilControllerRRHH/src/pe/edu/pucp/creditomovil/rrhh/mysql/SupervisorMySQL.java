@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.sql.Types;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.SupervisorDAO;
 import pe.edu.pucp.creditomovil.model.Supervisor;
@@ -50,13 +51,15 @@ public class SupervisorMySQL implements SupervisorDAO {
             cs.setString(8, supervisor.getTipoDocumento().name());
             cs.setString(9, supervisor.getDocumento());
             
-            cs.setString(10, supervisor.getCodigoEv());
-            cs.setInt(11, supervisor.getCodigoCargo());
-            cs.setString(12, supervisor.getAgenciaAsignacion());
-
+            
+            cs.setInt(10, supervisor.getCodigoCargo());
+            cs.setString(11, supervisor.getAgenciaAsignacion());
+            cs.registerOutParameter(12, Types.INTEGER);
             // Ejecutar el procedimiento
             resultado = cs.executeUpdate() > 0;
-
+            int supervisorID = cs.getInt(12);
+            supervisor.setCodigoEv(supervisorID);
+            
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -85,7 +88,7 @@ public class SupervisorMySQL implements SupervisorDAO {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
             cs.setInt(1, id);
-            cs.setString(2, supervisor.getCodigoEv());
+            cs.setInt(2, supervisor.getCodigoEv());
             cs.setInt(3, supervisor.getCodigoCargo());
             cs.setString(4, supervisor.getAgenciaAsignacion());
             resultado = cs.executeUpdate();
@@ -165,7 +168,7 @@ public class SupervisorMySQL implements SupervisorDAO {
                     rs.getBoolean("activo"),
                     tipoDoc,
                     rs.getString("documento"),
-                    rs.getString("codigo_sup"),
+                    rs.getInt("codigo_sup"),
                     rs.getInt("codigo_cargo"),
                     rs.getString("agencia_asignacion")
                 );
@@ -222,7 +225,7 @@ public class SupervisorMySQL implements SupervisorDAO {
                         rs.getBoolean("activo"),
                         tipoDoc,
                         rs.getString("documento"),
-                        rs.getString("codigo_sup"),
+                        rs.getInt("codigo_sup"),
                         rs.getInt("codigo_cargo"),
                         rs.getString("agencia_asignacion")
                 );

@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.util.Date;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
+import java.sql.Types;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class CreditoMySQL implements CreditoDAO {
     private ResultSet rs;
 
     @Override
-    public void insertar(Credito credito, String codigoCliente, String tipodocCli) {
+    public void insertar(Credito credito, int codigoCliente) {
         Connection conn = null;
         CallableStatement csCredito = null;
         CallableStatement csAsociar = null;
@@ -35,22 +36,24 @@ public class CreditoMySQL implements CreditoDAO {
             conn.setAutoCommit(false); // Inicia una transacción
 
             // Insertar en la tabla credito
-            String sqlCredito = "{ CALL InsertarCredito(?, ?, ?, ?, ?, ?) }";
+            String sqlCredito = "{ CALL InsertarCredito(?, ?, ?, ?, ?, ?, ?) }";
             csCredito = conn.prepareCall(sqlCredito);
-            csCredito.setString(1, credito.getNumCredito());
-            csCredito.setDouble(2, credito.getMonto());
-            csCredito.setDouble(3, credito.getTasaInteres());
-            csCredito.setDate(4, new java.sql.Date(credito.getFechaOtorgamiento().getTime()));
-            csCredito.setString(5, credito.getEstado());
-            csCredito.setInt(6, credito.getNumCuotas());
-            csCredito.execute();
-
+            csCredito.setDouble(1, credito.getMonto());
+            csCredito.setDouble(2, credito.getTasaInteres());
+            csCredito.setDate(3, new java.sql.Date(credito.getFechaOtorgamiento().getTime()));
+            csCredito.setString(4, credito.getEstado());
+            csCredito.setInt(5, credito.getNumCuotas());
+            csCredito.setBoolean(6, credito.isCancelado());
+            csCredito.registerOutParameter(7, Types.INTEGER);
+            csCredito.executeUpdate();
+            int creditoID = csCredito.getInt(6);
+            credito.setNumCredito(creditoID);
+            
             // Asociar el crédito al cliente
             String sqlAsociar = "{ CALL AsociarCreditoACliente(?, ?, ?) }";
             csAsociar = conn.prepareCall(sqlAsociar);
-            csAsociar.setString(1, credito.getNumCredito());
-            csAsociar.setString(2, codigoCliente);
-            csAsociar.setString(3, tipodocCli);
+            csAsociar.setInt(1, creditoID);
+            csAsociar.setInt(2, codigoCliente);
             csAsociar.execute();
 
             conn.commit(); // Confirma la transacción
@@ -87,15 +90,16 @@ public class CreditoMySQL implements CreditoDAO {
 
         try {
             conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL ModificarCredito(?, ?, ?, ?, ?, ?) }";
+            String sql = "{ CALL ModificarCredito(?, ?, ?, ?, ?, ?, ?) }";
             cs = conn.prepareCall(sql);
 
-            cs.setString(1, credito.getNumCredito());
+            cs.setInt(1, credito.getNumCredito());
             cs.setDouble(2, credito.getMonto());
             cs.setDouble(3, credito.getTasaInteres());
             cs.setDate(4, new java.sql.Date(credito.getFechaOtorgamiento().getTime()));
             cs.setString(5, credito.getEstado());
             cs.setInt(6, credito.getNumCuotas());
+            cs.setBoolean(7, credito.isCancelado());
 
             cs.execute();
         } catch (SQLException ex) {
@@ -158,10 +162,11 @@ public class CreditoMySQL implements CreditoDAO {
                 cred.setEstado(rs.getString("estado"));
                 cred.setFechaOtorgamiento(rs.getDate("fecha_otorgamiento"));
                 cred.setMonto(rs.getDouble("monto"));
-                cred.setNumCredito(rs.getString("num_credito"));
+                cred.setNumCredito(rs.getInt("num_credito"));
                 cred.setNumCuotas(rs.getInt("num_cuotas"));
                 cred.setTasaInteres(rs.getDouble("tasa_interes"));
                 cred.setCliente(null);
+                cred.setCancelado(rs.getBoolean("cancelado"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -192,15 +197,15 @@ public class CreditoMySQL implements CreditoDAO {
             
             
             while (rs.next()) {
-                String numCredito = rs.getString("num_credito");
+                int numCredito = rs.getInt("num_credito");
                 double monto = rs.getDouble("monto");
                 double tasaInteres = rs.getDouble("tasa_interes");
                 Date fechaOtorgamiento = rs.getDate("fecha_otorgamiento");
                 String est = rs.getString("estado");
                 int numCuotas = rs.getInt("num_cuotas");
-
+                boolean cancelado = rs.getBoolean("cancelado");
                 // Crear el objeto Credito. Nota que el cliente es null por simplicidad
-                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, null, est, numCuotas);
+                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, null, est, numCuotas,cancelado);
                 listaCreditos.add(credito);
             }
             
@@ -238,15 +243,15 @@ public class CreditoMySQL implements CreditoDAO {
             rs = cs.executeQuery();
 
             while (rs.next()) {
-                String numCredito = rs.getString("num_credito");
+                int numCredito = rs.getInt("num_credito");
                 double monto = rs.getDouble("monto");
                 double tasaInteres = rs.getDouble("tasa_interes");
                 Date fechaOtorgamiento = rs.getDate("fecha_otorgamiento");
                 String estado = rs.getString("estado");
                 int numCuotas = rs.getInt("num_cuotas");
-
+                boolean cancelado = rs.getBoolean("cancelado");
                 // Crear el objeto Credito. Nota que el cliente es null por simplicidad
-                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, null, estado, numCuotas);
+                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, null, estado, numCuotas,cancelado);
                 listaCreditos.add(credito);
             }
         } catch (SQLException ex) {

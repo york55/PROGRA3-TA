@@ -11,6 +11,7 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Types;
 import pe.edu.pucp.creditomovil.conexion.DBManager;
 import pe.edu.pucp.creditomovil.rrhh.dao.UsuarioDAO;
 import pe.edu.pucp.creditomovil.model.Supervisor;
@@ -44,7 +45,7 @@ public class UsuarioMySQL implements UsuarioDAO{
             cs.setDate(8, usuario.getUltimoLogueo() != null ? new Date(usuario.getUltimoLogueo().getTime()) : new Date(System.currentTimeMillis()));
             cs.setString(9, usuario.getTipoDocumento().name());
             cs.setString(10, usuario.getDocumento());
-            cs.setBoolean(11,false);
+            cs.registerOutParameter(11, Types.INTEGER);
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -148,7 +149,7 @@ public class UsuarioMySQL implements UsuarioDAO{
                     rs.getString("activo").equals("S"),       // Convertimos "S" o "N" a booleano
                     tipoDoc,
                     rs.getString("documento"),
-                    "A",1,"SUP123"
+                    0,1,"SUP123"
                 );
                 usuarios.add(usuario);
             }
