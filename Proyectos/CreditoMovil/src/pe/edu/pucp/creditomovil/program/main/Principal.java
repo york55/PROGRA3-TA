@@ -4,6 +4,7 @@
  */
 package pe.edu.pucp.creditomovil.program.main;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -41,7 +42,25 @@ public class Principal {
      */
     public static void main(String[] args) {
 //        
+        CreditoDAO creditoDao = new CreditoMySQL();
         ClienteDAO clienteDAO = new ClienteMySQL();
+        String fecha1 = "2024-10-1";
+        String fecha2 = "2024-11-30";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        try{
+            Date fechaDat1 = sdf.parse(fecha1);
+            Date fechaDat2 = sdf.parse(fecha2);
+            List<Credito> list = creditoDao.listarTodosFiltros(1, fechaDat1, fechaDat2, null);
+            if(list != null){
+                for(Credito cred : list){
+                   System.out.println(cred.getMonto());
+                }
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        //fechaIni.
+        //creditoDao.listarTodosFiltros(1, fechaini, fechafin, estado);
 //        Cliente cliente = clienteDAO.obtenerPorDocIdentidad("10551128", "DNI");
 //        if(cliente != null){
 //            System.out.println("ID Usuario: " + cliente.getIdUsuario());
@@ -146,27 +165,27 @@ public class Principal {
 //            System.out.println("ultimo Logueo: " + cliente.getUltimoLogueo());
 //            System.out.println("----------------------------------------");
 //        }
-        //CREDITO
-        CreditoDAO creditoDAO = new CreditoMySQL();
-        //INSERTAR
-
-        // Crear un objeto Credito
-        Credito credito = new Credito(
-                0,
-                5000.00,
-                5.5,
-                new Date(), // Fecha de otorgamiento
-                null,
-                "Nuevo",
-                12, // Número de cuotas
-                true// Número de cuotas
-        );
-
-         //Código del cliente al que se le asignará el crédito
-        int codigoCliente = 1; // Asegúrate de que este código exista en la base de datos
-         //Insertar el crédito
-        creditoDAO.insertar(credito, codigoCliente);
-        System.out.println("Credito insertado y asociado al cliente con codigo: " + codigoCliente);
+//        //CREDITO
+//        CreditoDAO creditoDAO = new CreditoMySQL();
+//        //INSERTAR
+//
+//        // Crear un objeto Credito
+//        Credito credito = new Credito(
+//                0,
+//                5000.00,
+//                5.5,
+//                new Date(), // Fecha de otorgamiento
+//                null,
+//                "Nuevo",
+//                12, // Número de cuotas
+//                true// Número de cuotas
+//        );
+//
+//         //Código del cliente al que se le asignará el crédito
+//        int codigoCliente = 1; // Asegúrate de que este código exista en la base de datos
+//         //Insertar el crédito
+//        creditoDAO.insertar(credito, codigoCliente);
+//        System.out.println("Credito insertado y asociado al cliente con codigo: " + codigoCliente);
         //eliminar
 //        String numCredito = "CRED123";
 //        creditoDAO.eliminar(numCredito);

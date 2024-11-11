@@ -52,6 +52,9 @@ namespace CreditoMovilWA
             cli.email = txtEmail.Text;
             cli.telefono = txtTelefono.Text;
             cli.direccion = txtDireccion.Text;
+            string contrasena = txtContrasena.Text;
+            string hashedPassword = HashPassword(contrasena);
+            cli.contrasenha = contrasena;
 
             bool res = daoCliente.modificarCliente(cli);
             if (res) Response.Redirect("MainCliente.aspx");
@@ -72,6 +75,17 @@ namespace CreditoMovilWA
             txtEmail.Text = cli.email;
             txtTelefono.Text = cli.telefono;
             txtDireccion.Text = cli.direccion;
+        }
+        private string HashPassword(string password)
+        {
+            // Implementa un método seguro para hashear la contraseña
+            // Por ejemplo, utilizando SHA256 (aunque se recomienda usar algoritmos más seguros como BCrypt)
+            using (System.Security.Cryptography.SHA256 sha256 = System.Security.Cryptography.SHA256.Create())
+            {
+                byte[] bytes = System.Text.Encoding.UTF8.GetBytes(password);
+                byte[] hash = sha256.ComputeHash(bytes);
+                return Convert.ToBase64String(hash);
+            }
         }
     }
 }
