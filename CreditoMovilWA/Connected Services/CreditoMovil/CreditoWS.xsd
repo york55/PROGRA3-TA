@@ -24,11 +24,12 @@
   </xs:complexType>
   <xs:complexType name="credito">
     <xs:sequence>
+      <xs:element name="cancelado" type="xs:boolean" />
       <xs:element minOccurs="0" name="cliente" type="tns:usuario" />
       <xs:element minOccurs="0" name="estado" type="xs:string" />
       <xs:element minOccurs="0" name="fechaOtorgamiento" type="xs:dateTime" />
       <xs:element name="monto" type="xs:double" />
-      <xs:element minOccurs="0" name="numCredito" type="xs:string" />
+      <xs:element name="numCredito" type="xs:int" />
       <xs:element name="numCuotas" type="xs:int" />
       <xs:element name="tasaInteres" type="xs:double" />
     </xs:sequence>
@@ -51,16 +52,17 @@
   <xs:complexType name="insertarCredito">
     <xs:sequence>
       <xs:element minOccurs="0" name="credito" type="tns:credito" />
-      <xs:element minOccurs="0" name="docCliente" type="xs:string" />
-      <xs:element minOccurs="0" name="tipo_doc" type="xs:string" />
+      <xs:element name="codigoCliente" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCreditoResponse">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCreditosFiltro">
     <xs:sequence>
-      <xs:element minOccurs="0" name="idcli" type="xs:string" />
+      <xs:element name="idcli" type="xs:int" />
       <xs:element minOccurs="0" name="fechaini" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechafin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="estado" type="xs:string" />

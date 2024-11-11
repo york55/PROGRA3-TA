@@ -23,14 +23,15 @@ public class CreditoWS {
     private CreditoDAO daoCredito = new CreditoMySQL();
 
     @WebMethod(operationName = "insertarCredito")
-    public void insertarCredito(@WebParam(name = "credito") Credito credito, 
-            @WebParam(name = "docCliente") String doc, @WebParam(name = "tipo_doc") String tipo_doc) {
+    public boolean insertarCredito(@WebParam(name = "credito") Credito credito, 
+            @WebParam(name = "codigoCliente") int codigoCliente) {
+        boolean res = false;
         try{
-            daoCredito.insertar(credito,doc,tipo_doc);
+            res = daoCredito.insertar(credito,codigoCliente);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-
+        return res;
     }
     
     @WebMethod(operationName = "modificarCredito")
@@ -63,7 +64,7 @@ public class CreditoWS {
     }
     
     @WebMethod(operationName = "listarCreditosFiltro")
-    public List<Credito> listarCreditosFiltro(@WebParam(name = "idcli") String idcli,
+    public List<Credito> listarCreditosFiltro(@WebParam(name = "idcli") int idcli,
             @WebParam(name = "fechaini") Date fechaini, @WebParam(name = "fechafin") Date fechafin,
             @WebParam(name = "estado") String estado) {
         List<Credito> creditos = null;

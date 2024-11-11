@@ -12,14 +12,6 @@
   <xs:element name="obtenerPorDocIdenSupResponse" type="tns:obtenerPorDocIdenSupResponse" />
   <xs:element name="obtenerPorIDSupervisor" type="tns:obtenerPorIDSupervisor" />
   <xs:element name="obtenerPorIDSupervisorResponse" type="tns:obtenerPorIDSupervisorResponse" />
-  <xs:complexType name="eliminarSupervisor">
-    <xs:sequence>
-      <xs:element name="idsupervisor" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarSupervisorResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="listarTodosSupervisors">
     <xs:sequence />
   </xs:complexType>
@@ -34,7 +26,7 @@
         <xs:sequence>
           <xs:element minOccurs="0" name="agenciaAsignacion" type="xs:string" />
           <xs:element name="codigoCargo" type="xs:int" />
-          <xs:element minOccurs="0" name="codigoEv" type="xs:string" />
+          <xs:element name="codigoEv" type="xs:int" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -53,6 +45,14 @@
       <xs:element minOccurs="0" name="tipoDocumento" type="tns:tipoDocumento" />
       <xs:element minOccurs="0" name="ultimoLogueo" type="xs:dateTime" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSupervisor">
+    <xs:sequence>
+      <xs:element name="idsupervisor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSupervisorResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="modificarSupervisor">
     <xs:sequence>

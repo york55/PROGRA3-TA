@@ -1,4 +1,4 @@
-hostname=db-credito-movil-20242.cb8koixgmiui.us-east-1.rds.amazonaws.com
+hostname=db-creditomovil.cdyeweu6uoja.us-east-1.rds.amazonaws.com
 user=admin
 password=creditomovil20242
 port=3306

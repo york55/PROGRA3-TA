@@ -47,7 +47,7 @@ namespace CreditoMovilWA
                         FormsAuthenticationTicket tkt;
                         string cookiestr;
                         HttpCookie ck;
-                        tkt = new FormsAuthenticationTicket(1, cli.codigoCliente, DateTime.Now,
+                        tkt = new FormsAuthenticationTicket(1, cli.codigoCliente.ToString(), DateTime.Now,
                         DateTime.Now.AddMinutes(30), true, cli.nombre+" "+cli.apPaterno+" "+cli.apMaterno);
                         cookiestr = FormsAuthentication.Encrypt(tkt);
                         ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
@@ -73,7 +73,7 @@ namespace CreditoMovilWA
                         FormsAuthenticationTicket tkt;
                         string cookiestr;
                         HttpCookie ck;
-                        tkt = new FormsAuthenticationTicket(1, sup.codigoEv, DateTime.Now,
+                        tkt = new FormsAuthenticationTicket(1, sup.codigoEv.ToString(), DateTime.Now,
                         DateTime.Now.AddMinutes(30), true, sup.nombre + " " + sup.apPaterno + " " + sup.apMaterno);
                         cookiestr = FormsAuthentication.Encrypt(tkt);
                         ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);

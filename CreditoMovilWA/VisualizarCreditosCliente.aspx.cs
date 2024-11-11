@@ -50,8 +50,6 @@ namespace CreditoMovilWA
 
             if (isFechaInicio && isFechaFin)
             {
-
-                
                 //var resultados = ObtenerCreditosPorFecha(fechaInicio, fechaFin);
                 var resultados = daoCredito.listarCreditosFiltro(cli.codigoCliente, fechaInicio, fechaFin, estado);
 

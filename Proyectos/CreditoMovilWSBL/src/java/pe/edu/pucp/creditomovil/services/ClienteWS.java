@@ -44,7 +44,7 @@ public class ClienteWS {
     }
     
     @WebMethod(operationName = "eliminarCliente")
-    public boolean eliminarCliente(@WebParam(name = "idcliente") String id) {
+    public boolean eliminarCliente(@WebParam(name = "idcliente") int id) {
         boolean resultado = false;
         try{
             resultado = daoCliente.eliminar(id);
@@ -55,7 +55,7 @@ public class ClienteWS {
     }
     
     @WebMethod(operationName = "obtenerPorIDCliente")
-    public Cliente obtenerPorIDCliente(@WebParam(name = "idcliente") String id) {
+    public Cliente obtenerPorIDCliente(@WebParam(name = "idcliente") int id) {
         Cliente cliente = null;
         try{
             cliente = daoCliente.obtenerPorId(id);

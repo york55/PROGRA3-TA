@@ -164,7 +164,7 @@ public class EvaluacionMySQL implements EvaluacionDAO {
     }
     
     @Override
-    public List<Evaluacion> listarPorSupervisor(String codSup){
+    public List<Evaluacion> listarPorSupervisor(int codSup){
         List<Evaluacion> evaluaciones = new ArrayList<>();
         CallableStatement cs = null;
         String query = "{CALL ListarEvaluacionesPorSupervisor(?)}";
@@ -174,7 +174,7 @@ public class EvaluacionMySQL implements EvaluacionDAO {
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setString(1, codSup);
+            cs.setInt(1, codSup);
             
             rs = cs.executeQuery();
             while (rs.next()) {

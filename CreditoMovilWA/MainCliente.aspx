@@ -116,6 +116,11 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="header" runat="server" id="headerDiv">
+        <img src="images/credit2.png" alt="Logo Crédito Móvil">
+        <asp:Button ID="btnModificarDatos" runat="server" Text="Modificar Datos" CssClass="logout-btn" OnClick="btnModificarDatos_Click"/>
+        <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesión" CssClass="logout-btn" OnClick="btnLogout_Click" />
+    </div>
     <div>
         <h1 id="hola" runat="server">¡Hola, </h1>
         <p>Actualmente tu ranking crediticio es:</p>

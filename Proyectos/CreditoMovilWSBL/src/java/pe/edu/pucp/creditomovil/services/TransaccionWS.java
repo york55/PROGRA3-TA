@@ -65,7 +65,7 @@ public class TransaccionWS {
     }
     
     @WebMethod(operationName = "listarTransaccionCredito")
-    public List<Transaccion> listarTransaccionCredito(@WebParam(name = "idCred") String idCred) {
+    public List<Transaccion> listarTransaccionCredito(@WebParam(name = "idCred") int idCred) {
         List<Transaccion> transaccions = null;
         try{
             transaccions = daoTransaccion.listarPorCredito(idCred);

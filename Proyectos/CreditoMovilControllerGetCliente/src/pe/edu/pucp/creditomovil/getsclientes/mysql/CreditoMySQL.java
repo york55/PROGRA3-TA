@@ -26,7 +26,7 @@ public class CreditoMySQL implements CreditoDAO {
     private ResultSet rs;
 
     @Override
-    public void insertar(Credito credito, int codigoCliente) {
+    public boolean insertar(Credito credito, int codigoCliente) {
         Connection conn = null;
         CallableStatement csCredito = null;
         CallableStatement csAsociar = null;
@@ -46,17 +46,19 @@ public class CreditoMySQL implements CreditoDAO {
             csCredito.setBoolean(6, credito.isCancelado());
             csCredito.registerOutParameter(7, Types.INTEGER);
             csCredito.executeUpdate();
-            int creditoID = csCredito.getInt(6);
+            int creditoID = csCredito.getInt(7);
             credito.setNumCredito(creditoID);
             
             // Asociar el crédito al cliente
-            String sqlAsociar = "{ CALL AsociarCreditoACliente(?, ?, ?) }";
+            String sqlAsociar = "{ CALL AsociarCreditoACliente(?, ?) }";
             csAsociar = conn.prepareCall(sqlAsociar);
             csAsociar.setInt(1, creditoID);
             csAsociar.setInt(2, codigoCliente);
             csAsociar.execute();
 
             conn.commit(); // Confirma la transacción
+            
+            return true;
         } catch (SQLException ex) {
             if (conn != null) {
                 try {
@@ -66,6 +68,7 @@ public class CreditoMySQL implements CreditoDAO {
                 }
             }
             ex.printStackTrace();
+            return false;
         } finally {
             try {
                 if (csAsociar != null) {
@@ -175,7 +178,7 @@ public class CreditoMySQL implements CreditoDAO {
     }
     
     @Override
-    public List<Credito> listarTodosFiltros(String cli, Date fechaini, Date fechafin, String estado){
+    public List<Credito> listarTodosFiltros(int cliId, Date fechaini, Date fechafin, String estado){
         List<Credito> listaCreditos = new ArrayList<>();
         Connection conn = null;
         CallableStatement cs = null;
@@ -189,7 +192,7 @@ public class CreditoMySQL implements CreditoDAO {
         
         try{
             cs = conn.prepareCall(sql);
-            cs.setString(1, cli);
+            cs.setInt(1, cliId);
             cs.setDate(2, fechainiSQL);
             cs.setDate(3, fechafinSQL);
             cs.setString(4, estado);

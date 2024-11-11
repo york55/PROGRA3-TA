@@ -61,7 +61,7 @@ public class EvaluacionWS {
     }
     
     @WebMethod(operationName = "listarEvaluacionesSupervisor")
-    public List<Evaluacion> listarEvaluacionesSupervisor(@WebParam(name = "idSup") String idSup) {
+    public List<Evaluacion> listarEvaluacionesSupervisor(@WebParam(name = "idSup") int idSup) {
         List<Evaluacion> evaluacions = null;
         try{
             evaluacions = daoEvaluacion.listarPorSupervisor(idSup);

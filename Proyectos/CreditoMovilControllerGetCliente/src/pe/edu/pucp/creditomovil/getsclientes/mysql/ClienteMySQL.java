@@ -152,7 +152,7 @@ public class ClienteMySQL implements ClienteDAO {
     }
 
     @Override
-    public boolean eliminar(String id) {
+    public boolean eliminar(int id) {
         Connection conn = null;
         CallableStatement cs = null;
 
@@ -160,7 +160,7 @@ public class ClienteMySQL implements ClienteDAO {
             conn = DBManager.getInstance().getConnection();
             String sql = "{ CALL EliminarCliente(?) }";
             cs = conn.prepareCall(sql);
-            cs.setString(1, id);
+            cs.setInt(1, id);
 
             int filasAfectadas = cs.executeUpdate();
             return filasAfectadas > 0;
@@ -183,7 +183,7 @@ public class ClienteMySQL implements ClienteDAO {
     }
 
     @Override
-    public Cliente obtenerPorId(String id) {
+    public Cliente obtenerPorId(int id) {
         Cliente cli = null;
         Connection conn = null;
         CallableStatement cs = null;
@@ -193,7 +193,7 @@ public class ClienteMySQL implements ClienteDAO {
             conn = DBManager.getInstance().getConnection();
             String sql = "{ CALL ObtenerClientePorId(?) }";
             cs = conn.prepareCall(sql);
-            cs.setString(1, id);
+            cs.setInt(1, id);
             rs = cs.executeQuery();
             
             

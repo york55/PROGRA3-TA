@@ -16,6 +16,6 @@ public interface EvaluacionDAO {
     void modificar(Evaluacion evaluacion);
     void eliminar(int idEvaluacion);
     Evaluacion obtenerPorId(int idEvaluacion);
-    List<Evaluacion>listarPorSupervisor(String codSup);
+    List<Evaluacion>listarPorSupervisor(int codSup);
     List<Evaluacion> listarTodos();
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -12,6 +13,10 @@ namespace CreditoMovilWA
     {
         protected void Page_Init(object sender, EventArgs e)
         {
+            if (Master is Usuario masterPage)
+            {
+                masterPage.MostrarHeader = false; // Oculta el header en esta página
+            }
             cliente cli = (cliente)Session["Cliente"];
             if (cli == null)
             {
@@ -57,6 +62,19 @@ namespace CreditoMovilWA
         protected void btnVerCreditos_Click(object sender, EventArgs e)
         {
             Response.Redirect("VisualizarCreditosCliente.aspx");
+        }
+
+        protected void btnModificarDatos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ModificarDatosCliente.aspx");
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session["Cliente"] = null;
+            Session["Supervisor"] = null;
+            FormsAuthentication.SignOut();
+            Response.Redirect("Home.aspx");
         }
     }
 }

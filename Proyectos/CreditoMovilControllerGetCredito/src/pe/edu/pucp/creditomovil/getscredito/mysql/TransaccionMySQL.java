@@ -184,7 +184,7 @@ public class TransaccionMySQL implements TransaccionDAO {
     }
     
     @Override
-    public List<Transaccion> listarPorCredito(String numCred){
+    public List<Transaccion> listarPorCredito(int numCred){
         Connection con = null;
         CallableStatement cs = null;
         List<Transaccion> transacciones = new ArrayList<>();
@@ -195,7 +195,7 @@ public class TransaccionMySQL implements TransaccionDAO {
 
             // Preparar la llamada al procedimiento almacenado
             cs = con.prepareCall("{CALL ObtenerTransaccionesPorCredito(?)}");
-            cs.setString(1, numCred);
+            cs.setInt(1, numCred);
             // Ejecutar el procedimiento y obtener el resultado
             rs = cs.executeQuery();
 

@@ -40,26 +40,26 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+//        
         ClienteDAO clienteDAO = new ClienteMySQL();
-        Cliente cliente = clienteDAO.obtenerPorDocIdentidad("10551128", "DNI");
-        if(cliente != null){
-            System.out.println("ID Usuario: " + cliente.getIdUsuario());
-            System.out.println("Nombre: " + cliente.getNombre());
-            System.out.println("Apellido Paterno: " + cliente.getApPaterno());
-            System.out.println("Apellido Materno: " + cliente.getApMaterno());
-            System.out.println("Codigo Cliente: " + cliente.getCodigoCliente());
-            System.out.println("Direccion: " + cliente.getDireccion());
-            System.out.println("Telefono: " + cliente.getTelefono());
-            System.out.println("Email: " + cliente.getEmail());
-            System.out.println("Tipo Cliente: " + cliente.getTipoCliente());
-            System.out.println("Activo: " + cliente.getActivo());
-            System.out.println("Fecha de Registro: " + cliente.getFecha());
-            System.out.println("ultimo Logueo: " + cliente.getUltimoLogueo());
-            System.out.println("----------------------------------------");
-        }else {
-            System.out.println("No se encuentra sapo");
-        }
+//        Cliente cliente = clienteDAO.obtenerPorDocIdentidad("10551128", "DNI");
+//        if(cliente != null){
+//            System.out.println("ID Usuario: " + cliente.getIdUsuario());
+//            System.out.println("Nombre: " + cliente.getNombre());
+//            System.out.println("Apellido Paterno: " + cliente.getApPaterno());
+//            System.out.println("Apellido Materno: " + cliente.getApMaterno());
+//            System.out.println("Codigo Cliente: " + cliente.getCodigoCliente());
+//            System.out.println("Direccion: " + cliente.getDireccion());
+//            System.out.println("Telefono: " + cliente.getTelefono());
+//            System.out.println("Email: " + cliente.getEmail());
+//            System.out.println("Tipo Cliente: " + cliente.getTipoCliente());
+//            System.out.println("Activo: " + cliente.getActivo());
+//            System.out.println("Fecha de Registro: " + cliente.getFecha());
+//            System.out.println("ultimo Logueo: " + cliente.getUltimoLogueo());
+//            System.out.println("----------------------------------------");
+//        }else {
+//            System.out.println("No se encuentra sapo");
+//        }
 //        // Crear la instancia de ClienteDAO
 //        ClienteDAO clienteDAO = new ClienteMySQL();
 //        SupervisorDAO daoSup = new SupervisorMySQL();
@@ -68,7 +68,7 @@ public class Principal {
 //            System.out.println(supervisor.getNombre());
 //            System.out.println(supervisor.getIdUsuario());
 //        }
-         //Configurar los datos del Cliente de prueba
+//         //Configurar los datos del Cliente de prueba
 //        Calendar fechaNacimiento = Calendar.getInstance();
 //        fechaNacimiento.set(1990, Calendar.JANUARY, 1); // Fecha de ejemplo
 //
@@ -80,19 +80,23 @@ public class Principal {
 //                fechaNacimiento.getTime(),
 //                "Diego",
 //                "Silvestre",
-//                "González",
-//                "gaaaa123Password",
+//                "Huapaya",
+//                "diego123",
 //                fechaVencimiento.getTime(),
 //                true,
 //                TipoDocumento.DNI,
-//                "101024777",
-//                "CL183",
-//                "1563 Calle Falsa",
-//                "123456789",
-//                "juan.perez@example.com",
-//                "EXCELENTE"
+//                "7233415",
+//                0,
+//                "Jr. Gran Pajaten 281",
+//                "934933812",
+//                "diegosh18@gmail.com",
+//                "Nuevo",
+//                18.8
 //        );
-//
+//        
+//        Calendar ultimoLogueo = Calendar.getInstance();
+//        fechaVencimiento.set(2025, Calendar.NOVEMBER, 30); // Fecha de vencimiento de ejemplo
+//        cliente.setUltimoLogueo(ultimoLogueo.getTime());
 //        // Intentar insertar el cliente en la base de datos
 //        boolean exito = clienteDAO.insertar(cliente);
 //
@@ -142,26 +146,27 @@ public class Principal {
 //            System.out.println("ultimo Logueo: " + cliente.getUltimoLogueo());
 //            System.out.println("----------------------------------------");
 //        }
-//        //CREDITO
-//        CreditoDAO creditoDAO = new CreditoMySQL();
-//        //INSERTAR
-//
-//        // Crear un objeto Credito
-//        Credito credito = new Credito(
-//                "CRED123",
-//                5000.00,
-//                5.5,
-//                new Date(), // Fecha de otorgamiento
-//                cliente,
-//                "Activo",
-//                12 // Número de cuotas
-//        );
+        //CREDITO
+        CreditoDAO creditoDAO = new CreditoMySQL();
+        //INSERTAR
 
-        // Código del cliente al que se le asignará el crédito
-//        String codigoCliente = cliente.getCodigoCliente(); // Asegúrate de que este código exista en la base de datos
-        // Insertar el crédito
-//        creditoDAO.insertar(credito, codigoCliente);
-//        System.out.println("Credito insertado y asociado al cliente con codigo: " + codigoCliente);
+        // Crear un objeto Credito
+        Credito credito = new Credito(
+                0,
+                5000.00,
+                5.5,
+                new Date(), // Fecha de otorgamiento
+                null,
+                "Nuevo",
+                12, // Número de cuotas
+                true// Número de cuotas
+        );
+
+         //Código del cliente al que se le asignará el crédito
+        int codigoCliente = 1; // Asegúrate de que este código exista en la base de datos
+         //Insertar el crédito
+        creditoDAO.insertar(credito, codigoCliente);
+        System.out.println("Credito insertado y asociado al cliente con codigo: " + codigoCliente);
         //eliminar
 //        String numCredito = "CRED123";
 //        creditoDAO.eliminar(numCredito);
@@ -244,22 +249,24 @@ public class Principal {
 //        //System.out.println("Usuario ID: " + transaccion.getUsuarioRegistrado().getIdUsuario());
 //        System.out.println("-------------------------------------");
 //    }
-        //FOTO
-        //INSERTAR
-        //ver lo de la foto, no se como se maneja
+//        //FOTO
+//        //INSERTAR
+//        //ver lo de la foto, no se como se maneja
 //        //SUPERVISOR
 //        SupervisorDAO supervisorDAO = new SupervisorMySQL();
 //        //INSERTAR
 //        Supervisor supervisor = new Supervisor(
 //                0, // ID de usuario (se generará automáticamente)
 //                new Date(), // Fecha actual
-//                "Carlos", // Nombre
-//                "Pérez", // Apellido paterno
-//                "López", // Apellido materno
-//                "password123", // Contraseña
+//                "Matias", // Nombre
+//                "Echevarria", // Apellido paterno
+//                "Mateo", // Apellido materno
+//                "pas123", // Contraseña
 //                new Date(System.currentTimeMillis() + 86400000L * 365), // Fecha de vencimiento (1 año después)
 //                true, // Activo
-//                "SUP001", // Código de supervisor
+//                TipoDocumento.DNI,
+//                "12345678", // Código de supervisor
+//                1, // Código de Ev
 //                101, // Código de cargo
 //                "Agencia Central" // Agencia de asignación
 //        );

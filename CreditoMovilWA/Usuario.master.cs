@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 
 namespace CreditoMovilWA
 {
@@ -35,6 +36,9 @@ namespace CreditoMovilWA
         {
             // Lógica de cierre de sesión, por ejemplo:
             //ession.Clear();
+            Session["Cliente"] = null;
+            Session["Supervisor"] = null;
+            FormsAuthentication.SignOut();
             Response.Redirect("Home.aspx");
         }
 

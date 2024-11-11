@@ -14,7 +14,7 @@
   <xs:element name="obtenerPorIDTransaccionResponse" type="tns:obtenerPorIDTransaccionResponse" />
   <xs:complexType name="listarTransaccionCredito">
     <xs:sequence>
-      <xs:element minOccurs="0" name="idCred" type="xs:string" />
+      <xs:element name="idCred" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTransaccionCreditoResponse">
@@ -38,11 +38,12 @@
   </xs:complexType>
   <xs:complexType name="credito">
     <xs:sequence>
+      <xs:element name="cancelado" type="xs:boolean" />
       <xs:element minOccurs="0" name="cliente" type="tns:usuario" />
       <xs:element minOccurs="0" name="estado" type="xs:string" />
       <xs:element minOccurs="0" name="fechaOtorgamiento" type="xs:dateTime" />
       <xs:element name="monto" type="xs:double" />
-      <xs:element minOccurs="0" name="numCredito" type="xs:string" />
+      <xs:element name="numCredito" type="xs:int" />
       <xs:element name="numCuotas" type="xs:int" />
       <xs:element name="tasaInteres" type="xs:double" />
     </xs:sequence>

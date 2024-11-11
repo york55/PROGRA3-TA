@@ -42,17 +42,17 @@ namespace CreditoMovilWA
 
             credito cred = new credito();
             cred.cliente = null; //falta guardar al cliente btw, eso se hace desde el login
-            cred.estado = "Solicitado";
-            cred.tasaInteres = maxInteres;
-            cred.fechaOtorgamiento = DateTime.Now;
-            cred.monto = monto;
-            cred.numCuotas = Int32.Parse(selectedCuotas.Value); // no sé cómo colocar esto btw, creo que es así, vamos a ver
-            cred.numCredito = "CRED133";
+            cred.estado = "Solicitado";//importante
+            cred.tasaInteres = maxInteres;//importante
+            cred.fechaOtorgamiento = DateTime.Now;//importante
             cred.fechaOtorgamientoSpecified = true;
+            cred.monto = monto;//Importante
+            cred.numCuotas = Int32.Parse(selectedCuotas.Value); // no sé cómo colocar esto btw, creo que es así, vamos a ver//importante
+            cred.numCredito = 0;
+            cred.cancelado = false;//importante
 
-            daoCredito.insertarCredito(cred,cli.documento,cli.tipoDocumento.ToString());
-
-            Response.Redirect("MainCliente.aspx");
+            bool res = daoCredito.insertarCredito(cred, cli.codigoCliente);
+            if (res) Response.Redirect("MainCliente.aspx"); ;
         }
     }
 }
