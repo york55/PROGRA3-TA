@@ -40,7 +40,7 @@ public class AdministradorWS {
     }
     
     @WebMethod(operationName = "eliminarAdministrador")
-    public void eliminarAdministrador(@WebParam(name = "idadministrador") String id) {
+    public void eliminarAdministrador(@WebParam(name = "idadministrador") int id) {
         try{
             daoAdministrador.eliminar(id);
         }catch(Exception ex){
@@ -49,7 +49,7 @@ public class AdministradorWS {
     }
     
     @WebMethod(operationName = "obtenerPorIDAdministrador")
-    public Administrador obtenerPorIDAdministrador(@WebParam(name = "idadministrador") String id) {
+    public Administrador obtenerPorIDAdministrador(@WebParam(name = "idadministrador") int id) {
         Administrador administrador = null;
         try{
             administrador = daoAdministrador.obtenerPorId(id);
@@ -70,4 +70,15 @@ public class AdministradorWS {
         return administradores;
     }
     
+    @WebMethod(operationName = "obtenerPorDocIdenAdmin")
+    public Administrador obtenerPorDocIdenSup(@WebParam(name = "docIdentidad") String docIdentidad,
+                                                @WebParam(name = "tipoDocumento")String tipoDocumento) {
+        Administrador admin = null;
+        try{
+            admin = daoAdministrador.obtenerPorDocIdentidad(docIdentidad,tipoDocumento);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return admin;
+    }
 }

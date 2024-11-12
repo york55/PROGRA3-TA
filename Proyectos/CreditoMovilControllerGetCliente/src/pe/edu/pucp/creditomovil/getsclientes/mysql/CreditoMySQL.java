@@ -122,7 +122,7 @@ public class CreditoMySQL implements CreditoDAO {
     }
 
     @Override
-    public void eliminar(String numCredito) {
+    public void eliminar(int numCredito) {
         Connection conn = null;
         CallableStatement cs = null;
 
@@ -130,7 +130,7 @@ public class CreditoMySQL implements CreditoDAO {
             conn = DBManager.getInstance().getConnection();
             String sql = "{ CALL EliminarCredito(?) }";
             cs = conn.prepareCall(sql);
-            cs.setString(1, numCredito);
+            cs.setInt(1, numCredito);
             cs.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -149,7 +149,7 @@ public class CreditoMySQL implements CreditoDAO {
     }
 
     @Override
-    public Credito obtenerPorId(String numCredito) {
+    public Credito obtenerPorId(int numCredito) {
         Credito cred = new Credito();
         CallableStatement cs;
         String query = "{CALL ObtenerCredito(?)}";
@@ -158,7 +158,7 @@ public class CreditoMySQL implements CreditoDAO {
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setString(1, numCredito);
+            cs.setInt(1, numCredito);
 
             rs = cs.executeQuery();
             if(rs.next()){

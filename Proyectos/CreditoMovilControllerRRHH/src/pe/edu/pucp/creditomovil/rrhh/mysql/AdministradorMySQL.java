@@ -65,7 +65,7 @@ public class AdministradorMySQL implements AdministradorDAO{
     }
 
     @Override
-    public void eliminar(String codigoAdmin) {
+    public void eliminar(int codigoAdmin) {
         CallableStatement cs;
         String query = "{CALL EliminarAdmin(?)}";
         int resultado = 0;
@@ -73,7 +73,7 @@ public class AdministradorMySQL implements AdministradorDAO{
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setString(1, codigoAdmin);
+            cs.setInt(1, codigoAdmin);
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -82,7 +82,7 @@ public class AdministradorMySQL implements AdministradorDAO{
     }
 
     @Override
-    public Administrador obtenerPorId(String codigoAdmin) {
+    public Administrador obtenerPorId(int codigoAdmin) {
         CallableStatement cs;
         String query = "{CALL ObtenerAdmin(?)}";
         int resultado = 0;
@@ -90,7 +90,7 @@ public class AdministradorMySQL implements AdministradorDAO{
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setString(1, codigoAdmin);
+            cs.setInt(1, codigoAdmin);
             
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -131,6 +131,66 @@ public class AdministradorMySQL implements AdministradorDAO{
             }
         }
         return administradores;
+    }
+
+    @Override
+    public Administrador obtenerPorDocIdentidad(String docIden, String tipoDocIden) {
+        Administrador admin = null;
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ObtenerAdministradorPorDocIdentidad(?, ?) }";
+            cs = conn.prepareCall(sql);
+            cs.setString(1, docIden);
+            cs.setString(2, tipoDocIden);
+            rs = cs.executeQuery();
+            
+            
+            if(rs.next()){
+                String tipoDocStr = rs.getString("tipo_doc");
+                if(tipoDocStr ==null) tipoDocStr = "DNI"; //Por defecto es peruano
+                TipoDocumento tipoDoc = null;
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) { 
+                    System.out.println("Error: " + e);
+                }
+                admin = new Administrador(
+                    rs.getInt("usuario_id"),
+                    rs.getDate("fecha"),
+                    rs.getString("nombre"),
+                    rs.getString("ap_paterno"),
+                    rs.getString("ap_materno"),
+                    rs.getString("contrasena"),
+                    rs.getDate("fecha_venc"),
+                    rs.getBoolean("activo"),
+                    tipoDoc,
+                    rs.getString("documento"),
+                    rs.getInt("codigo_admin"),
+                    rs.getInt("codigo_cargo")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return admin; 
     }
     
 }

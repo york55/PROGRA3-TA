@@ -44,7 +44,7 @@ public class CreditoWS {
     }
     
     @WebMethod(operationName = "eliminarCredito")
-    public void eliminarCredito(@WebParam(name = "credito") String id) {
+    public void eliminarCredito(@WebParam(name = "credito") int id) {
         try{
             daoCredito.eliminar(id);
         }catch(Exception ex){
@@ -53,7 +53,7 @@ public class CreditoWS {
     }
     
     @WebMethod(operationName = "obtenerPorIDCredito")
-    public Credito obtenerPorIDCredito(@WebParam(name = "credito") String id) {
+    public Credito obtenerPorIDCredito(@WebParam(name = "credito") int id) {
         Credito credito = null;
         try{
             credito = daoCredito.obtenerPorId(id);
