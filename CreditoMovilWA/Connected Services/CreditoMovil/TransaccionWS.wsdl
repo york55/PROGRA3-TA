@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/TransaccionWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
     </xsd:schema>
   </types>
+  <message name="listarTransaccionCredito">
+    <part name="parameters" element="tns:listarTransaccionCredito" />
+  </message>
+  <message name="listarTransaccionCreditoResponse">
+    <part name="parameters" element="tns:listarTransaccionCreditoResponse" />
+  </message>
   <message name="insertarTransaccion">
     <part name="parameters" element="tns:insertarTransaccion" />
   </message>
@@ -16,18 +22,6 @@
   </message>
   <message name="eliminarTransaccionResponse">
     <part name="parameters" element="tns:eliminarTransaccionResponse" />
-  </message>
-  <message name="listarTransaccionCredito">
-    <part name="parameters" element="tns:listarTransaccionCredito" />
-  </message>
-  <message name="listarTransaccionCreditoResponse">
-    <part name="parameters" element="tns:listarTransaccionCreditoResponse" />
-  </message>
-  <message name="modificarTransaccion">
-    <part name="parameters" element="tns:modificarTransaccion" />
-  </message>
-  <message name="modificarTransaccionResponse">
-    <part name="parameters" element="tns:modificarTransaccionResponse" />
   </message>
   <message name="obtenerPorIDTransaccion">
     <part name="parameters" element="tns:obtenerPorIDTransaccion" />
@@ -41,7 +35,17 @@
   <message name="listarTodosTransaccionsResponse">
     <part name="parameters" element="tns:listarTodosTransaccionsResponse" />
   </message>
+  <message name="modificarTransaccion">
+    <part name="parameters" element="tns:modificarTransaccion" />
+  </message>
+  <message name="modificarTransaccionResponse">
+    <part name="parameters" element="tns:modificarTransaccionResponse" />
+  </message>
   <portType name="TransaccionWS">
+    <operation name="listarTransaccionCredito">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoRequest" message="tns:listarTransaccionCredito" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoResponse" message="tns:listarTransaccionCreditoResponse" />
+    </operation>
     <operation name="insertarTransaccion">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/insertarTransaccionRequest" message="tns:insertarTransaccion" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/insertarTransaccionResponse" message="tns:insertarTransaccionResponse" />
@@ -49,14 +53,6 @@
     <operation name="eliminarTransaccion">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionRequest" message="tns:eliminarTransaccion" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionResponse" message="tns:eliminarTransaccionResponse" />
-    </operation>
-    <operation name="listarTransaccionCredito">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoRequest" message="tns:listarTransaccionCredito" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoResponse" message="tns:listarTransaccionCreditoResponse" />
-    </operation>
-    <operation name="modificarTransaccion">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionRequest" message="tns:modificarTransaccion" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionResponse" message="tns:modificarTransaccionResponse" />
     </operation>
     <operation name="obtenerPorIDTransaccion">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRequest" message="tns:obtenerPorIDTransaccion" />
@@ -66,9 +62,22 @@
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTodosTransaccionsRequest" message="tns:listarTodosTransaccions" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTodosTransaccionsResponse" message="tns:listarTodosTransaccionsResponse" />
     </operation>
+    <operation name="modificarTransaccion">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionRequest" message="tns:modificarTransaccion" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionResponse" message="tns:modificarTransaccionResponse" />
+    </operation>
   </portType>
   <binding name="TransaccionWSPortBinding" type="tns:TransaccionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarTransaccionCredito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarTransaccion">
       <soap:operation soapAction="" />
       <input>
@@ -87,24 +96,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTransaccionCredito">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarTransaccion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="obtenerPorIDTransaccion">
       <soap:operation soapAction="" />
       <input>
@@ -115,6 +106,15 @@
       </output>
     </operation>
     <operation name="listarTodosTransaccions">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarTransaccion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

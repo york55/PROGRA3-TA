@@ -98,7 +98,7 @@ public class AdministradorMySQL implements AdministradorDAO{
         }
         return null; //por ahora es null, necesito ver qué añadirle
     }
-
+    
     @Override
     public List<Administrador> listarTodos() {
         List<Administrador> administradores = new ArrayList<>();

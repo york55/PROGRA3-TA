@@ -14,7 +14,7 @@
   <xs:element name="obtenerPorIDCreditoResponse" type="tns:obtenerPorIDCreditoResponse" />
   <xs:complexType name="obtenerPorIDCredito">
     <xs:sequence>
-      <xs:element minOccurs="0" name="credito" type="xs:string" />
+      <xs:element name="credito" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerPorIDCreditoResponse">
@@ -91,7 +91,7 @@
   </xs:complexType>
   <xs:complexType name="eliminarCredito">
     <xs:sequence>
-      <xs:element minOccurs="0" name="credito" type="xs:string" />
+      <xs:element name="credito" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarCreditoResponse">

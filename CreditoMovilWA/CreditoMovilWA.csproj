@@ -213,6 +213,9 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarTransaccionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorDocIdenAdminResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorDocIdenClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>

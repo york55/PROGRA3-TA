@@ -8,6 +8,8 @@
   <xs:element name="listarTodosAdministradoresResponse" type="tns:listarTodosAdministradoresResponse" />
   <xs:element name="modificarAdministrador" type="tns:modificarAdministrador" />
   <xs:element name="modificarAdministradorResponse" type="tns:modificarAdministradorResponse" />
+  <xs:element name="obtenerPorDocIdenAdmin" type="tns:obtenerPorDocIdenAdmin" />
+  <xs:element name="obtenerPorDocIdenAdminResponse" type="tns:obtenerPorDocIdenAdminResponse" />
   <xs:element name="obtenerPorIDAdministrador" type="tns:obtenerPorIDAdministrador" />
   <xs:element name="obtenerPorIDAdministradorResponse" type="tns:obtenerPorIDAdministradorResponse" />
   <xs:complexType name="listarTodosAdministradores">
@@ -52,9 +54,20 @@
   <xs:complexType name="modificarAdministradorResponse">
     <xs:sequence />
   </xs:complexType>
+  <xs:complexType name="obtenerPorDocIdenAdmin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="docIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorDocIdenAdminResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarAdministrador">
     <xs:sequence>
-      <xs:element minOccurs="0" name="idadministrador" type="xs:string" />
+      <xs:element name="idadministrador" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarAdministradorResponse">
@@ -70,7 +83,7 @@
   </xs:complexType>
   <xs:complexType name="obtenerPorIDAdministrador">
     <xs:sequence>
-      <xs:element minOccurs="0" name="idadministrador" type="xs:string" />
+      <xs:element name="idadministrador" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerPorIDAdministradorResponse">

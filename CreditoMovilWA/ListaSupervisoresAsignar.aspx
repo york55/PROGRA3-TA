@@ -45,11 +45,11 @@
         <div class="table-container">
             <asp:GridView ID="gvEvaluaciones" runat="server" AutoGenerateColumns="false">
                 <Columns>
-                    <asp:BoundField DataField="codigo_sup" HeaderText="Codigo" />
-                    <asp:BoundField DataField="codigo_cargo" HeaderText="Cargo" />
-                    <asp:BoundField DataField="agencia_asignacion" HeaderText="Agencia" />
+                    <asp:BoundField DataField="codigoEv" HeaderText="Codigo" />
+                    <asp:BoundField DataField="codigoCargo" HeaderText="Cargo" />
+                    <asp:BoundField DataField="agenciaAsignacion" HeaderText="Agencia" />
                     <asp:BoundField DataField="nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="apellido" HeaderText="Apellido" />
+                    <asp:BoundField DataField="apPaterno" HeaderText="Apellido" />
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Button ID="btnVerDetalle" runat="server" Text="Asignar" CssClass="view-btn"  OnClick="btnAsignar_Click" />

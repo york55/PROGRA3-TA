@@ -42,25 +42,34 @@ public class Principal {
      */
     public static void main(String[] args) {
 //        
-        CreditoDAO creditoDao = new CreditoMySQL();
-        ClienteDAO clienteDAO = new ClienteMySQL();
-        String fecha1 = "2024-10-1";
-        String fecha2 = "2024-11-30";
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        try{
-            Date fechaDat1 = sdf.parse(fecha1);
-            Date fechaDat2 = sdf.parse(fecha2);
-            List<Credito> list = creditoDao.listarTodosFiltros(1, fechaDat1, fechaDat2, null);
-            if(list != null){
-                for(Credito cred : list){
-                   System.out.println(cred.getMonto());
-                }
-            }
-        }catch(Exception e){
-            System.out.println(e);
-        }
-        //fechaIni.
-        //creditoDao.listarTodosFiltros(1, fechaini, fechafin, estado);
+//        CreditoDAO creditoDao = new CreditoMySQL();
+//        ClienteDAO clienteDAO = new ClienteMySQL();
+//        String fecha1 = "2024-10-1";
+//        String fecha2 = "2024-11-30";
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//        try{
+//            Date fechaDat1 = sdf.parse(fecha1);
+//            Date fechaDat2 = sdf.parse(fecha2);
+//            List<Credito> list = creditoDao.listarTodosFiltros(1, fechaDat1, fechaDat2, null);
+//            if(list != null){
+//                for(Credito cred : list){
+//                   System.out.println(cred.getMonto());
+//                }
+//            }
+//        }catch(Exception e){
+//            System.out.println(e);
+//        }
+//        SupervisorDAO supDao = new SupervisorMySQL();
+//        List<Supervisor> supList = supDao.listarTodos();
+//        
+//        for(Supervisor daa : supList){
+//            System.out.println(daa.getNombre());
+//            System.out.println(daa.getApMaterno());
+//            System.out.println(daa.getApPaterno());
+//            System.out.println(daa.getIdUsuario());
+//        }
+//        //fechaIni.
+//        //creditoDao.listarTodosFiltros(1, fechaini, fechafin, estado);
 //        Cliente cliente = clienteDAO.obtenerPorDocIdentidad("10551128", "DNI");
 //        if(cliente != null){
 //            System.out.println("ID Usuario: " + cliente.getIdUsuario());

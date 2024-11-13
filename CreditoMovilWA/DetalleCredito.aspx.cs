@@ -35,7 +35,7 @@ namespace CreditoMovilWA
         {
             String id = (String) Session["idCredito"];
 
-            credito cred = daoCredito.obtenerPorIDCredito(id);
+            credito cred = daoCredito.obtenerPorIDCredito(int.Parse(id));
 
             Session["Credito"] = cred;
             // Cargar datos de ejemplo para los detalles del crédito.

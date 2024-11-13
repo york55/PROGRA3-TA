@@ -14,7 +14,8 @@ namespace CreditoMovilWA
     public partial class Login : System.Web.UI.Page
     {
         private ClienteWSClient daoCliente = new ClienteWSClient();
-        private SupervisorWSClient daoSupervisor = new SupervisorWSClient();    
+        private SupervisorWSClient daoSupervisor = new SupervisorWSClient();
+        private AdministradorWSClient daoAdministrador = new AdministradorWSClient();
         protected static cliente[] todoClientes = null;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -37,9 +38,11 @@ namespace CreditoMovilWA
 
                 cliente cli = daoCliente.obtenerPorDocIdenCliente(numDocumentoIdentidad, tipoDocumento);
                 supervisor sup = daoSupervisor.obtenerPorDocIdenSup(numDocumentoIdentidad, tipoDocumento);
-                administrador admin = new administrador();
+                administrador admin = daoAdministrador.obtenerPorDocIdenAdmin(numDocumentoIdentidad, tipoDocumento);
+
                 Session["Cliente"] = cli;
                 Session["Supervisor"] = sup;
+                Session["Administrador"] = admin;
                 if (cli != null)
                 {
                     if (cli.contrasenha == password)
@@ -85,6 +88,32 @@ namespace CreditoMovilWA
                         strRedirect = Request["ReturnUrl"];
                         if (strRedirect == null)
                             strRedirect = "MainSupervisor.aspx";
+                        Response.Redirect(strRedirect, true);
+                    }
+                    else
+                    {
+                        lblError.Text = "Usuario o contraseña incorrectos.";
+                    }
+                }
+                if(admin != null)
+                {
+                    if (admin.contrasenha == password)
+                    {
+                        FormsAuthenticationTicket tkt;
+                        string cookiestr;
+                        HttpCookie ck;
+                        tkt = new FormsAuthenticationTicket(1, admin.codigoAdm.ToString(), DateTime.Now,
+                        DateTime.Now.AddMinutes(30), true, admin.nombre + " " + admin.apPaterno + " " + admin.apMaterno);
+                        cookiestr = FormsAuthentication.Encrypt(tkt);
+                        ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
+                        ck.Expires = tkt.Expiration; //esto genera que la cookie se quede guardada
+                        ck.Path = FormsAuthentication.FormsCookiePath;
+                        Response.Cookies.Add(ck);
+
+                        string strRedirect;
+                        strRedirect = Request["ReturnUrl"];
+                        if (strRedirect == null)
+                            strRedirect = "MainAdmin.aspx";
                         Response.Redirect(strRedirect, true);
                     }
                     else
