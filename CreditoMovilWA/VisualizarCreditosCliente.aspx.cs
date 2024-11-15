@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
+using System.IO;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -84,26 +85,32 @@ namespace CreditoMovilWA
             transaccion trans = new transaccion();
             if (fileUpload.HasFile)
             {
-                // Guarda el archivo en Session para uso posterior
-                Session["ImagenPago"] = fileUpload.FileBytes;
-
                 string metodoP = metodoPago.Value;
                 if(metodoP == "banco")
                 {
+                    agregarFoto();
                     banco bank = new banco();
-                    bank.foto = (Byte[])Session["ImagenPago"];
+                    bank.idMetodoPago = 0;
+                    bank.foto = (byte[])Session["ImagenPago"];
                     bank.nombreTitular = txtTitularBanco.Text;
                     bank.CCI = txtCCI.Text;
                     bank.tipoCuenta = txtTipoCuenta.Text;
                     bank.nombreBanco = bancoElegido.Value;
 
-                    daoBanco.insertarBanco(bank);
+                    if (daoBanco.insertarBanco(bank))
+                    {
+                        // Cierra el modal después de grabar
+                        ViewState["ModalAbierto"] = false;
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+                    }
+
                 }
                 else if(metodoP == "billetera")
                 {
+                    agregarFoto();
                     billetera bill = new billetera();
                     bill.nombreTitular = txtTitularBilletera.Text;
-                    bill.foto = (Byte[])Session["ImagenPago"];
+                    bill.foto = (byte[])Session["ImagenPago"];
                     bill.numeroTelefono = txtNumeroBilletera.Text;
                     //daoBilletera.insertarBilletera(bill);
 
@@ -111,7 +118,7 @@ namespace CreditoMovilWA
                 }
 
                 trans.fecha = DateTime.Now;
-                trans.foto = (Byte[])Session["ImagenPago"];
+                trans.foto = (byte[])Session["ImagenPago"];
                 trans.concepto = "Pago de Crédito";
                 trans.monto = 123; // FALTA EL MONTO
                 trans.anulado = false;
@@ -128,9 +135,9 @@ namespace CreditoMovilWA
                 lblError.ForeColor = System.Drawing.Color.Red;
             }
 
-            // Cierra el modal después de grabar
-            ViewState["ModalAbierto"] = false;
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+            //// Cierra el modal después de grabar
+            //ViewState["ModalAbierto"] = false;
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
         }
 
         protected void btnVerDetalles_Click(object sender, EventArgs e)
@@ -141,5 +148,36 @@ namespace CreditoMovilWA
             Response.Redirect("DetalleCredito.aspx");
         }
 
+        private void agregarFoto()
+        {
+            if (fileUpload.HasFile && fileUpload.PostedFile != null)
+            {
+                string extension = Path.GetExtension(fileUpload.FileName);
+                if (extension.ToLower() == ".jpg" || extension.ToLower() == ".jpeg" 
+                        || extension.ToLower() == ".png" || extension.ToLower() == ".pdf")
+                {
+                    string clienteCodigo = ((cliente)Session["Cliente"]).documento.ToString();
+                    string fechaActual = DateTime.Now.ToString("yyyy/MM/dd"); // Ejemplo: "2024/11/14"
+
+                    string directorioCliente = Server.MapPath("~/Uploads/" + clienteCodigo + "/" + fechaActual);
+
+                    //Verificar si la carpeta existe, y si no, crearla
+                    if (!Directory.Exists(directorioCliente))
+                    {
+                        Directory.CreateDirectory(directorioCliente);
+                    }
+                    string filename = Guid.NewGuid().ToString() + extension;
+
+                    //Ruta completa para guardar el archivo
+                    string filePath = Path.Combine(directorioCliente, filename);
+                    fileUpload.SaveAs(filePath);
+
+                    FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    Session["foto"] = br.ReadBytes((int)fs.Length);
+                    fs.Close();
+                }
+            }
+        }
     }
 }

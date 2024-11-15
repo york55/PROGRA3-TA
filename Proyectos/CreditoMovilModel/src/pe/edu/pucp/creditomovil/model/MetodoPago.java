@@ -23,9 +23,7 @@ public abstract class MetodoPago {
         this.foto = foto;
         this.nombreTitular = nombreTitular;
     }
-
-    ;
-
+    
     public int getIdMetodoPago() {
         return idMetodoPago;
     }

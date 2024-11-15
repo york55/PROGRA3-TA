@@ -46,8 +46,6 @@ public class BancoMySQL implements BancoDAO{
             stmtBanco.setString(4, banco.getNombreBanco());//ACA NUEVO//ACA NUEVO//ACA NUEVO
             stmtBanco.executeUpdate();            
 
-            stmtBanco.executeUpdate();
-
             conn.commit(); // Confirma la transacción
             return true;
 

@@ -21,7 +21,7 @@ public class Banco extends MetodoPago{
         this.nombreBanco = nombreBanco;
         this.CCI = CCI;
         this.tipoCuenta = tipoCuenta;
-    };
+    }
     
     public String getNombreBanco(){
         return nombreBanco;

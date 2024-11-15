@@ -260,8 +260,8 @@
         <br /><br />
     
         <!-- Botones de acción -->
-        <asp:Button ID="btnSave" runat="server" Text="Grabar" CssClass="save-btn" />
         <asp:Button ID="btnCancel" runat="server" Text="Cancelar" CssClass="cancel-btn" OnClientClick="closeModal(); return false;" />
+        <asp:Button ID="btnSave" runat="server" Text="Grabar" CssClass="save-btn" OnClick="btnSave_Click"/>
         </div>
     </div>
 </asp:Content>

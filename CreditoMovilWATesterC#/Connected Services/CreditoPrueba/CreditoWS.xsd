@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://services.creditomovil.pucp.edu.pe" targetNamespace="https://services.creditomovil.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarCredito" type="tns:eliminarCredito" />
+  <xs:element name="eliminarCreditoResponse" type="tns:eliminarCreditoResponse" />
+  <xs:element name="insertarCredito" type="tns:insertarCredito" />
+  <xs:element name="insertarCreditoResponse" type="tns:insertarCreditoResponse" />
+  <xs:element name="listarCreditosFiltro" type="tns:listarCreditosFiltro" />
+  <xs:element name="listarCreditosFiltroResponse" type="tns:listarCreditosFiltroResponse" />
+  <xs:element name="listarTodosCreditos" type="tns:listarTodosCreditos" />
+  <xs:element name="listarTodosCreditosResponse" type="tns:listarTodosCreditosResponse" />
+  <xs:element name="modificarCredito" type="tns:modificarCredito" />
+  <xs:element name="modificarCreditoResponse" type="tns:modificarCreditoResponse" />
+  <xs:element name="obtenerPorIDCredito" type="tns:obtenerPorIDCredito" />
+  <xs:element name="obtenerPorIDCreditoResponse" type="tns:obtenerPorIDCreditoResponse" />
+  <xs:complexType name="obtenerPorIDCredito">
+    <xs:sequence>
+      <xs:element name="credito" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorIDCreditoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:credito" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="credito">
+    <xs:sequence>
+      <xs:element name="cancelado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cliente" type="tns:usuario" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaOtorgamiento" type="xs:dateTime" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element name="numCredito" type="xs:int" />
+      <xs:element name="numCuotas" type="xs:int" />
+      <xs:element name="tasaInteres" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario" abstract="true">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="documento" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="tns:tipoDocumento" />
+      <xs:element minOccurs="0" name="ultimoLogueo" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCredito">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="credito" type="tns:credito" />
+      <xs:element name="codigoCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCreditoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreditosFiltro">
+    <xs:sequence>
+      <xs:element name="idcli" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaini" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechafin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreditosFiltroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:credito" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCredito">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="credito" type="tns:credito" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCreditoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosCreditos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosCreditosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:credito" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCredito">
+    <xs:sequence>
+      <xs:element name="credito" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCreditoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:simpleType name="tipoDocumento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DNI" />
+      <xs:enumeration value="CARNET_EXTRANJERIA" />
+      <xs:enumeration value="PASAPORTE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

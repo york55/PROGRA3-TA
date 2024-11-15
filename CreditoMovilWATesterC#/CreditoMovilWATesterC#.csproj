@@ -45,17 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\WSCliente\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\WSCredito\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\WSSupervisor\Reference.cs">
+    <Compile Include="Connected Services\CreditoPrueba\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -65,64 +55,204 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\WSCliente\ClienteWS.wsdl" />
-    <None Include="Connected Services\WSCliente\ClienteWS.xsd">
+    <None Include="Connected Services\CreditoPrueba\AdministradorWS.wsdl" />
+    <None Include="Connected Services\CreditoPrueba\AdministradorWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WSCliente\CreditoMovilWATesterC_.WSCliente.cliente.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCliente\CreditoMovilWATesterC_.WSCliente.eliminarClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCliente\CreditoMovilWATesterC_.WSCliente.insertarClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCliente\CreditoMovilWATesterC_.WSCliente.listarClientesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCliente\CreditoMovilWATesterC_.WSCliente.obtenerClientePorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCredito\CreditoMovilWATesterC_.WSCredito.credito.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCredito\CreditoMovilWATesterC_.WSCredito.eliminarCreditoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCredito\CreditoMovilWATesterC_.WSCredito.insertarCreditoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCredito\CreditoMovilWATesterC_.WSCredito.listarCreditosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCredito\CreditoMovilWATesterC_.WSCredito.obtenerCreditoPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WSCredito\CreditoWS.wsdl" />
-    <None Include="Connected Services\WSCredito\CreditoWS.xsd">
+    <None Include="Connected Services\CreditoPrueba\BancoWS.wsdl" />
+    <None Include="Connected Services\CreditoPrueba\BancoWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WSSupervisor\CreditoMovilWATesterC_.WSSupervisor.eliminarSupervisorResponse.datasource">
+    <None Include="Connected Services\CreditoPrueba\BilleteraWS.wsdl" />
+    <None Include="Connected Services\CreditoPrueba\BilleteraWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\ClienteWS.wsdl" />
+    <None Include="Connected Services\CreditoPrueba\ClienteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSSupervisor\CreditoMovilWATesterC_.WSSupervisor.insertarSupervisorResponse.datasource">
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.banco.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSSupervisor\CreditoMovilWATesterC_.WSSupervisor.listarSupervisorResponse.datasource">
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.billetera.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSSupervisor\CreditoMovilWATesterC_.WSSupervisor.modificarSupervisorResponse.datasource">
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.cliente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSSupervisor\CreditoMovilWATesterC_.WSSupervisor.obtenerSupervisorPorIdResponse.datasource">
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.credito.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSSupervisor\CreditoMovilWATesterC_.WSSupervisor.supervisor.datasource">
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.eliminarAdministradorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WSSupervisor\SupervisorWS.wsdl" />
-    <None Include="Connected Services\WSSupervisor\SupervisorWS.xsd">
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.eliminarBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.eliminarBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.eliminarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.eliminarCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.eliminarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.eliminarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.eliminarTransaccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.evaluacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.insertarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.insertarBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.insertarBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.insertarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.insertarCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.insertarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.insertarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.insertarTransaccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarCreditosFiltroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarEvaluacionesSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarTodosAdministradoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarTodosBancosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarTodosBilleterasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarTodosClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarTodosCreditosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarTodosEvaluacionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarTodosSupervisorsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarTodosTransaccionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.listarTransaccionCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.modificarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.modificarBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.modificarBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.modificarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.modificarCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.modificarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.modificarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.modificarTransaccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorDocIdenAdminResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorDocIdenClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorDocIdenSupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorIDAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorIDBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorIDBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorIDClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorIDCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorIDEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorIDSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorIDTransaccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorNombreBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.obtenerPorNombreBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.supervisor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoMovilWATesterC_.CreditoPrueba.transaccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\CreditoWS.wsdl" />
+    <None Include="Connected Services\CreditoPrueba\CreditoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\EvaluacionWS.wsdl" />
+    <None Include="Connected Services\CreditoPrueba\EvaluacionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\SupervisorWS.wsdl" />
+    <None Include="Connected Services\CreditoPrueba\SupervisorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoPrueba\TransaccionWS.wsdl" />
+    <None Include="Connected Services\CreditoPrueba\TransaccionWS.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -130,42 +260,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\WSCliente\" />
-    <WCFMetadataStorage Include="Connected Services\WSCredito\" />
-    <WCFMetadataStorage Include="Connected Services\WSSupervisor\" />
+    <WCFMetadataStorage Include="Connected Services\CreditoPrueba\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\WSCliente\configuration91.svcinfo" />
+    <None Include="Connected Services\CreditoPrueba\archivo.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\WSCliente\configuration.svcinfo" />
+    <None Include="Connected Services\CreditoPrueba\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\WSCliente\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <None Include="Connected Services\CreditoPrueba\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\WSSupervisor\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\WSSupervisor\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\WSSupervisor\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\WSCredito\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\WSCredito\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\WSCredito\Reference.svcmap">
+    <None Include="Connected Services\CreditoPrueba\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
