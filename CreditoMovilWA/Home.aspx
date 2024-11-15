@@ -42,6 +42,17 @@
             font-family: 'Poppins', sans-serif; 
         }
 
+        /* Hover Effects */
+        .header .open-account:hover {
+            background-color: #1f6232; /* Color más oscuro */
+            transition: background-color 0.3s ease;
+        }
+
+        .header .sign-in:hover {
+            background-color: #001e4f; /* Color más oscuro */
+            transition: background-color 0.3s ease;
+        }
+
         /* Sección Principal */
         .main-banner {
             background-color: #d1e7c0;
@@ -106,6 +117,7 @@
         }
     </style>
 </asp:Content>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!-- Encabezado -->

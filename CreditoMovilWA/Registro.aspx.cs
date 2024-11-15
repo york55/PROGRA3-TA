@@ -25,6 +25,11 @@ namespace CreditoMovilWA
             }
         }
 
+        protected void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
+        }
+
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             cliente Cliente = new cliente();

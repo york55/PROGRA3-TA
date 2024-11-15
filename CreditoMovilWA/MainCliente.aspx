@@ -29,6 +29,7 @@
             border-radius: 5px;
             cursor: pointer;
             margin: 20px;
+            transition: background-color 0.4s ease;
         }
         .btn:hover {
             background-color: #265f21;
@@ -41,6 +42,54 @@
             border-radius: 5px;
             margin-bottom: 10px;
             display: inline-block;
+        }
+        .header {
+            display: flex;
+            justify-content: flex-start;  /* Los elementos se alinean a la izquierda */
+            align-items: center;
+            width: 100%;
+        }
+
+        .header img {
+            max-width: 150px;  /* Ajusta el tamaño del logo si es necesario */
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: 1080px;  /* Ajusta este valor para reducir la distancia entre el logo y los botones */
+        }
+
+        .btn-logout {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            background-color: #FF0000; /* Rojo claro */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+        }
+
+        .btn-logout:hover {
+            background-color: #e60000; 
+        }
+
+        .btn-modificar {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            background-color: #273fab; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+        }
+
+        .btn-modificar:hover {
+            background-color: #1a2b75; 
         }
         #apexGauge {
             max-width: 380px;
@@ -118,8 +167,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="header" runat="server" id="headerDiv">
         <img src="images/credit2.png" alt="Logo Crédito Móvil">
-        <asp:Button ID="btnModificarDatos" runat="server" Text="Modificar Datos" CssClass="logout-btn" OnClick="btnModificarDatos_Click"/>
-        <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesión" CssClass="logout-btn" OnClick="btnLogout_Click" />
+        <div class="header-buttons">
+            <asp:Button ID="btnModificarDatos" runat="server" Text="Modificar Datos" CssClass="btn-modificar" OnClick="btnModificarDatos_Click" />
+            <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesión" CssClass="btn-logout" OnClick="btnLogout_Click" />
+        </div>
     </div>
     <div>
         <h1 id="hola" runat="server">¡Hola, </h1>

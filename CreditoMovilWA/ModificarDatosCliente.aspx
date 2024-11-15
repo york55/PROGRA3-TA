@@ -47,7 +47,6 @@
             gap: 30px;
         }
 
-        /* Estilos para el botón de guardar */
         .btn-save {
             width: 150px;
             padding: 12px;
@@ -60,6 +59,7 @@
             cursor: pointer;
             margin-top: 5px;
             margin-bottom: 10px;
+            transition: background-color 0.3s ease;
         }
 
         .btn-save:hover {
@@ -78,10 +78,25 @@
             cursor: pointer;
             margin-top: 5px;
             margin-bottom: 10px;
+            transition: background-color 0.3s ease;
         }
 
         .btn-regresar:hover {
             background-color: #ceaf18;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;  
+            height: 50%;
+            background: url('images/credit2.png') no-repeat center center;
+            background-size: contain;  
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
         }
 
     </style>
@@ -91,6 +106,8 @@
     <div class="header">
         <img src="images/credit2.png" alt="Logo Crédito Móvil">
     </div>
+
+    <div class="watermark"></div>
 
     <div class="container">
         <h1>Configuración de perfil</h1>
@@ -147,13 +164,17 @@
         <!-- Campos para Contraseña y Confirmar Contraseña -->
         <div class="form-row">
             <div class="form-group">
-                <label for="contraseña">Contraseña</label>
+                <label for="contraseña">Nueva Contraseña</label>
                 <asp:TextBox ID="txtContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
             <div class="form-group">
-                <label for="confirmar-contraseña">Confirmar Contraseña</label>
+                <label for="confirmar-contraseña">Confirmar Nueva Contraseña</label>
                 <asp:TextBox ID="txtConfirmarContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
+        </div>
+        <div class="form-group"> <!-- AQUI FALTA IMPLEMENTAR GAAAAAAAAAAAAA-->
+            <label for="confirmar-contraseña">Contraseña actual</label>
+            <asp:TextBox ID="txtContrasenhaActual" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
         </div>
 
         <asp:Label ID="lblError" runat="server" CssClass="error-message" EnableViewState="false"></asp:Label>

@@ -55,11 +55,65 @@
             cursor: pointer;
             margin-top: 30px;
             margin-bottom: 30px;
+            transition: background-color 0.4s ease;
         }
 
         .btn-save:hover {
             background-color: #265f21;
         }
+ 
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;  
+            height: 50%;
+            background: url('images/credit2.png') no-repeat center center;
+            background-size: contain;  
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            background-color: #2f7a44;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-login:hover {
+            background-color: #265f21;
+        }
+
+        .btn-back {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            background-color: #273fab;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #1a2b75;
+        }
+
+
 
     </style>
 </asp:Content>
@@ -69,6 +123,8 @@
     <div class="header">
         <img src="images/credit2.png" alt="Logo Crédito Móvil">
     </div>
+
+    <div class="watermark"></div>
 
     <div class="container">
         <h1>Ingresa tus datos personales</h1>
@@ -136,6 +192,9 @@
 
         <asp:Label ID="lblError" runat="server" CssClass="error-message" EnableViewState="false"></asp:Label>
         <!-- Botón Guardar -->
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn-save" OnClick="btnGuardar_Click" />
+        <div style="display: flex; gap: 10px;">
+            <asp:Button ID="btnGuardar" runat="server" Text="Ingresar" CssClass="btn-login" OnClick="btnGuardar_Click" />
+            <asp:Button ID="btnRegresar" runat="server" Text="Regresar" CssClass="btn-back" OnClick="btnRegresar_Click" />
+        </div>
     </div>
 </asp:Content>

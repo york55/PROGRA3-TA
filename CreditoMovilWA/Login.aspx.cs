@@ -33,6 +33,13 @@ namespace CreditoMovilWA
             string numDocumentoIdentidad = txtDocumento.Text.Trim();
             string password = txtPassword.Text;
 
+            if (string.IsNullOrEmpty(tipoDocumento) || string.IsNullOrEmpty(numDocumentoIdentidad) || string.IsNullOrEmpty(password))
+            {
+                lblError.Text = "Por favor, ingrese todos sus datos.";
+                lblError.Visible = true;
+                return; // Detener la ejecución si faltan datos
+            }
+
             if (tipoDocumento != null && numDocumentoIdentidad != null && password != null)
             {
 
@@ -67,9 +74,11 @@ namespace CreditoMovilWA
                     else
                     {
                         lblError.Text = "Usuario o contraseña incorrectos.";
+                        lblError.Visible = true;
+                        return;
                     }
                 }
-                if (sup != null)
+                else if (sup != null)
                 {
                     if (sup.contrasenha == password)
                     {
@@ -93,9 +102,11 @@ namespace CreditoMovilWA
                     else
                     {
                         lblError.Text = "Usuario o contraseña incorrectos.";
+                        lblError.Visible = true;
+                        return;
                     }
                 }
-                if(admin != null)
+                else if(admin != null)
                 {
                     if (admin.contrasenha == password)
                     {
@@ -119,14 +130,22 @@ namespace CreditoMovilWA
                     else
                     {
                         lblError.Text = "Usuario o contraseña incorrectos.";
+                        lblError.Visible = true;
+                        return;
                     }
                 }
             }
             else
             {
-                lblError.Text = "Por favor, ingrese sus datos.";
+                lblError.Text = "Usuario o contraseña incorrectos.";
+                lblError.Visible = true;
             }
 
+        }
+
+        protected void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
         }
 
         private bool VerificarContraseña(string contraseñaIngresada, string salAlmacenada, string contraseñaHashAlmacenada)
