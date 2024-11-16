@@ -97,23 +97,30 @@ namespace CreditoMovilWA
                     bank.tipoCuenta = txtTipoCuenta.Text;
                     bank.nombreBanco = bancoElegido.Value;
 
+                    trans.agencia = metodoP;
                     if (daoBanco.insertarBanco(bank))
                     {
                         // Cierra el modal después de grabar
                         ViewState["ModalAbierto"] = false;
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
                     }
-
                 }
                 else if(metodoP == "billetera")
                 {
                     agregarFoto();
                     billetera bill = new billetera();
-                    bill.nombreTitular = txtTitularBilletera.Text;
+                    bill.idMetodoPago = 0;
                     bill.foto = (byte[])Session["ImagenPago"];
+                    bill.nombreBilletera = "FALTA AGREGAR";
                     bill.numeroTelefono = txtNumeroBilletera.Text;
-                    //daoBilletera.insertarBilletera(bill);
+                    bill.nombreTitular = txtTitularBilletera.Text;
 
+                    if (daoBilletera.insertarBilletera(bill))
+                    {
+                        // Cierra el modal después de grabar
+                        ViewState["ModalAbierto"] = false;
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+                    }
                     trans.agencia = metodoP;
                 }
 
@@ -174,7 +181,7 @@ namespace CreditoMovilWA
 
                     FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
                     BinaryReader br = new BinaryReader(fs);
-                    Session["foto"] = br.ReadBytes((int)fs.Length);
+                    Session["ImagenPago"] = br.ReadBytes((int)fs.Length);
                     fs.Close();
                 }
             }
