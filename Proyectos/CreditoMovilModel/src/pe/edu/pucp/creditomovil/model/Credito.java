@@ -18,11 +18,12 @@ public class Credito {
     private int numCuotas;
     private ArrayList<Transaccion> transacciones;
     private boolean cancelado;
+    private String motivo;
     
     public Credito(){}
     public Credito(int numCredito, double monto, double tasaInteres,
             Date fechaOtorgamiento, Usuario cliente, String estado,
-            int numCuotas, boolean cancelado){
+            int numCuotas, boolean cancelado, String motivo){
                 this.numCredito = numCredito;
                 this.monto = monto;
                 this.tasaInteres = tasaInteres;
@@ -32,6 +33,7 @@ public class Credito {
                 this.numCuotas = numCuotas;
                 transacciones = new ArrayList<Transaccion>();
                 this.cancelado = cancelado;
+                this.motivo = motivo;
     }
 
     public void CargaDatosCredito(){
@@ -72,6 +74,14 @@ public class Credito {
 
     public void setMonto(double monto) {
         this.monto = monto;
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
     }
 
     public double getTasaInteres() {

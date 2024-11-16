@@ -314,3 +314,529 @@ file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/gener
 [2024-11-15T21:04:07.696610-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=22 _ThreadName=GlassFish Shutdown Hook] [levelValue: 800] [[
   Completed shutdown of GlassFish runtime]]
 
+[2024-11-16T00:24:08.700147-05:00] [GF 7.0.18] [INFO] [] [com.sun.enterprise.server.logging.LogManagerService] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Using property file: E:\PROYECTO_PRO3_NEW\PROGRA3-TA\glassfish7\glassfish\domains\domain1\config\logging.properties]]
+
+[2024-11-16T00:24:08.919146-05:00] [GF 7.0.18] [INFO] [NCLS-LOGGING-00009] [com.sun.enterprise.server.logging.LogManagerService] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Running GlassFish Version: Eclipse GlassFish 7.0.18 (commit: 9c7fd856064b9cb74226a825d6ef6c75d7ea5e6e)]]
+
+[2024-11-16T00:24:11.771144-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 685 ms - bound to [/0.0.0.0:8080]]]
+
+[2024-11-16T00:24:12.778143-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 345 ms - bound to [/0.0.0.0:8181]]]
+
+[2024-11-16T00:24:12.852145-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 64 ms - bound to [/0.0.0.0:4848]]]
+
+[2024-11-16T00:24:13.136144-05:00] [GF 7.0.18] [INFO] [SEC-SVCS-00100] [jakarta.enterprise.security.services] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Authorization Service has successfully initialized.]]
+
+[2024-11-16T00:24:13.304143-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01115] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2024-11-16T00:24:13.309143-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01115] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2024-11-16T00:24:13.378145-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01115] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.]]
+
+[2024-11-16T00:24:17.640142-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=74 _ThreadName=pool-8-thread-1] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 58 ms - bound to [/0.0.0.0:8080]]]
+
+[2024-11-16T00:24:17.692145-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=74 _ThreadName=pool-8-thread-1] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 33 ms - bound to [/0.0.0.0:8181]]]
+
+[2024-11-16T00:24:21.675144-05:00] [GF 7.0.18] [INFO] [AS-WSMETROGLUE-10010] [jakarta.enterprise.webservices.metroglue] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Web service endpoint deployment events listener registered successfully.]]
+
+[2024-11-16T00:24:22.569146-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01002] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Java security manager is disabled.]]
+
+[2024-11-16T00:24:22.571148-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01010] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Entering Security Startup Service.]]
+
+[2024-11-16T00:24:22.619141-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01143] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading policy provider org.glassfish.exousia.modules.locked.SimplePolicyProvider.]]
+
+[2024-11-16T00:24:22.886144-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01011] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Security Service(s) started successfully.]]
+
+[2024-11-16T00:24:23.525148-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2024-11-16T00:24:23.531145-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2024-11-16T00:24:23.535144-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created HTTP listener admin-listener on host/port 0.0.0.0:4848]]
+
+[2024-11-16T00:24:23.577140-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00200] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created virtual server server]]
+
+[2024-11-16T00:24:23.582145-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00200] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created virtual server __asadmin]]
+
+[2024-11-16T00:24:24.484146-05:00] [GF 7.0.18] [INFO] [AS-WEB-CORE-00306] [jakarta.enterprise.web.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Setting JAAS app name glassfish-web]]
+
+[2024-11-16T00:24:24.491145-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00201] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Virtual server server loaded default web module ]]
+
+[2024-11-16T00:24:27.360143-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-16T00:24:27.448147-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-16T00:24:27.450146-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-16T00:24:27.452147-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-16T00:24:27.454149-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-16T00:24:27.461146-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-16T00:24:27.464145-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-16T00:24:27.467144-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-16T00:24:27.472143-05:00] [GF 7.0.18] [INFO] [AS-WSMETROGLUE-10001] [jakarta.enterprise.webservices.metroglue] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading WS-TX Services. Please wait.]]
+
+[2024-11-16T00:24:28.916146-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed RegistrationRequesterPortTypeImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/RegistrationRequesterPortType.]]
+
+[2024-11-16T00:24:28.924145-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed CoordinatorPortTypePortImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/CoordinatorPortType11.]]
+
+[2024-11-16T00:24:28.927146-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed ParticipantPortTypeImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/ParticipantPortType.]]
+
+[2024-11-16T00:24:28.931143-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed RegistrationPortTypeImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/RegistrationPortTypeRPC.]]
+
+[2024-11-16T00:24:28.934147-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed CoordinatorPortTypeImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/CoordinatorPortType.]]
+
+[2024-11-16T00:24:28.939147-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed ParticipantPortTypePortImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/ParticipantPortType11.]]
+
+[2024-11-16T00:24:28.946147-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed RegistrationRequesterPortTypePortImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/RegistrationRequesterPortType11.]]
+
+[2024-11-16T00:24:28.950145-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed RegistrationPortTypeRPCPortImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/RegistrationPortTypeRPC11.]]
+
+[2024-11-16T00:24:28.960146-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@50e1f3fc[name=wstx-services], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/applications/wstx-services/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/wstx-services//
+][delegate=true, context=wstx-services, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=0, pathTimestamps.size=0, resourceEntryCache.size=0]]]
+
+[2024-11-16T00:24:32.717342-05:00] [GF 7.0.18] [WARNING] [] [com.sun.logging.LogDomains] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 900] [[
+  Cannot find the resource bundle for the name com.sun.logging.enterprise.system.core.security for class com.sun.enterprise.security.ee.jmac.ConfigDomainParser using classloader org.glassfish.main.security.ee [264]]]
+
+[2024-11-16T00:24:33.821381-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading application [wstx-services] at [/__wstx-services]]]
+
+[2024-11-16T00:24:33.825382-05:00] [GF 7.0.18] [INFO] [AS-WSMETROGLUE-10002] [jakarta.enterprise.webservices.metroglue] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  WS-TX Services successfully started.]]
+
+[2024-11-16T00:24:33.863382-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@445821a6[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL//
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=59, pathTimestamps.size=15, resourceEntryCache.size=26]]]
+
+[2024-11-16T00:24:37.052623-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-16T00:24:37.054624-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00022] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading application CreditoMovilWSBL done in 23,123 ms]]
+
+[2024-11-16T00:24:37.074626-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry]]
+
+[2024-11-16T00:24:37.123625-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 5 ms - bound to [/0.0.0.0:3700]]]
+
+[2024-11-16T00:24:37.138626-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00017] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Eclipse GlassFish 7.0.18 (commit: 9c7fd856064b9cb74226a825d6ef6c75d7ea5e6e) startup time: Embedded (11,573 ms), startup services (28,850 ms), total (40,423 ms)]]
+
+[2024-11-16T00:24:39.813194-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 251 ms - bound to [/0.0.0.0:7676]]]
+
+[2024-11-16T00:24:42.484224-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@521c67f0[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL//
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=111, pathTimestamps.size=15, resourceEntryCache.size=27]]]
+
+[2024-11-16T00:24:43.556342-05:00] [GF 7.0.18] [INFO] [NCLS-JMX-00005] [jakarta.enterprise.system.jmx] [tid: _ThreadID=111 _ThreadName=Thread-12] [levelValue: 800] [[
+  JMXStartupService has started JMXConnector on JMXService URL service:jmx:rmi://DESKTOP-O1B729N:8686/jndi/rmi://DESKTOP-O1B729N:8686/jmxrmi]]
+
+[2024-11-16T00:24:45.599959-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=145 _ThreadName=pool-23-thread-1] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2024-11-16T00:24:45.680956-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@6f45e01a[name=__admingui], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/lib/console-commandrecorder-plugin-7.0.18.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/lib/console-core-7.0.18.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/__admingui//
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/woodstock-webui-jsf-suntheme-6.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/dojo-ajax-nodemo-1.12.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/woodstock-webui-jsf-6.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/json-2.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/prototype-1.7.3.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/commons-io-2.16.1.jar
+][delegate=true, context=__admingui, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=0, pathTimestamps.size=2, resourceEntryCache.size=0]]]
+
+[2024-11-16T00:24:45.723954-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=145 _ThreadName=pool-23-thread-1] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 107 ms - bound to [/0.0.0.0:8181]]]
+
+[2024-11-16T00:24:45.742958-05:00] [GF 7.0.18] [INFO] [] [org.jboss.weld.Version] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  WELD-000900: 5.1.2 (Final)]]
+
+[2024-11-16T00:24:46.015956-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=74 _ThreadName=pool-8-thread-1] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2024-11-16T00:24:46.067956-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=74 _ThreadName=pool-8-thread-1] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 45 ms - bound to [/0.0.0.0:8080]]]
+
+[2024-11-16T00:24:46.901957-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.inject.spi] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  Enabling Weld for ApplicationInfo[name=__admingui]]]
+
+[2024-11-16T00:24:48.676957-05:00] [GF 7.0.18] [INFO] [NCLS-REST-00001] [jakarta.enterprise.admin.rest] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Listening to REST requests at context: /management/domain.]]
+
+[2024-11-16T00:24:48.993958-05:00] [GF 7.0.18] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jersey.ext.cdi1x.internal.ProcessAllAnnotatedTypes.processAnnotatedType(@Observes ProcessAnnotatedType<?>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2024-11-16T00:24:49.329956-05:00] [GF 7.0.18] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jersey.ext.cdi1x.internal.ProcessAllAnnotatedTypes.processAnnotatedType(@Observes ProcessAnnotatedType<?>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2024-11-16T00:24:49.334955-05:00] [GF 7.0.18] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jersey.ext.cdi1x.internal.ProcessAllAnnotatedTypes.processAnnotatedType(@Observes ProcessAnnotatedType<?>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2024-11-16T00:24:54.108958-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-16T00:24:54.109958-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-16T00:24:54.111956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-16T00:24:54.113956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-16T00:24:54.115957-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-16T00:24:54.116962-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-16T00:24:54.117961-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-16T00:24:54.118959-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-16T00:24:54.126956-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@459c3d42[name=web], urls=[
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=15, resourceEntryCache.size=26]]]
+
+[2024-11-16T00:24:56.517958-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-16T00:24:57.453971-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 8,646 milliseconds.]]
+
+[2024-11-16T00:24:57.567955-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  Initializing Soteria 3.0.3 for context '']]
+
+[2024-11-16T00:24:57.829956-05:00] [GF 7.0.18] [INFO] [faces.config.listener.version] [jakarta.enterprise.resource.webcontainer.faces.config] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  Inicializando Mojarra 4.0.7 para el contexto '']]
+
+[2024-11-16T00:25:02.761958-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  Loading application [__admingui] at [/]]]
+
+[2024-11-16T00:25:02.764959-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00022] [jakarta.enterprise.system.core] [tid: _ThreadID=110 _ThreadName=Thread-11] [levelValue: 800] [[
+  Loading application __admingui done in 25,569 ms]]
+
+[2024-11-16T00:25:04.028955-05:00] [GF 7.0.18] [WARNING] [] [com.sun.web.security.RealmAdapter] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 900] [[
+  Context path from ServletContext:  differs from path from bundle: /]]
+
+[2024-11-16T00:25:13.322960-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@1631a5d4[name=/CreditoMovilWSBL], urls=[
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=111, pathTimestamps.size=15, resourceEntryCache.size=27]]]
+
+[2024-11-16T00:25:16.132955-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-16T00:25:16.134957-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-16T00:25:16.137961-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-16T00:25:16.138960-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-16T00:25:16.141958-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-16T00:25:16.237957-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-16T00:25:16.253956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-16T00:25:16.260957-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-16T00:25:16.439958-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@2aedff83[name=web], urls=[
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=15, resourceEntryCache.size=26]]]
+
+[2024-11-16T00:25:18.988954-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-16T00:25:19.401956-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 6,136 milliseconds.]]
+
+[2024-11-16T00:25:20.516958-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@7ab1cce0[name=/CreditoMovilWSBL], urls=[
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=111, pathTimestamps.size=15, resourceEntryCache.size=27]]]
+
+[2024-11-16T00:25:22.890953-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-16T00:25:22.891957-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-16T00:25:22.892955-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-16T00:25:22.896958-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-16T00:25:22.897957-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-16T00:25:22.898959-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-16T00:25:22.903958-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-16T00:25:22.904958-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-16T00:25:22.938960-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@2078b3f3[name=web], urls=[
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=15, resourceEntryCache.size=26]]]
+
+[2024-11-16T00:25:24.121955-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-16T00:25:24.246957-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 3,795 milliseconds.]]
+
+[2024-11-16T00:48:21.478559-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00092] [jakarta.enterprise.system.core] [tid: _ThreadID=205 _ThreadName=Thread-36] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2024-11-16T00:48:21.705556-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=205 _ThreadName=Thread-36] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2024-11-16T00:48:21.753559-05:00] [GF 7.0.18] [INFO] [NCLS-JMX-00002] [jakarta.enterprise.system.jmx] [tid: _ThreadID=205 _ThreadName=Thread-36] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2024-11-16T00:48:21.754561-05:00] [GF 7.0.18] [INFO] [NCLS-JMX-00001] [jakarta.enterprise.system.jmx] [tid: _ThreadID=205 _ThreadName=Thread-36] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2024-11-16T00:48:21.785560-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=207 _ThreadName=RunLevelControllerThread-1731736101757] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@48460b2c[name=/CreditoMovilWSBL], urls=[
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=117, pathTimestamps.size=16, resourceEntryCache.size=361]]]
+
+[2024-11-16T00:48:22.083562-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.inject.spi] [tid: _ThreadID=207 _ThreadName=RunLevelControllerThread-1731736101757] [levelValue: 800] [[
+  Disabling Weld for ApplicationInfo[name=__admingui]]]
+
+[2024-11-16T00:48:22.114558-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=207 _ThreadName=RunLevelControllerThread-1731736101757] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@71683966[name=], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/lib/console-commandrecorder-plugin-7.0.18.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/lib/console-core-7.0.18.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/__admingui//
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/woodstock-webui-jsf-suntheme-6.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/dojo-ajax-nodemo-1.12.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/woodstock-webui-jsf-6.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/json-2.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/prototype-1.7.3.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/commons-io-2.16.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/__admingui/
+][delegate=true, context=, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=631, pathTimestamps.size=5, resourceEntryCache.size=11]]]
+
+[2024-11-16T00:48:22.117560-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=207 _ThreadName=RunLevelControllerThread-1731736101757] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@63d57c0f)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@2d0b1a0a)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-16T00:48:22.119559-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=207 _ThreadName=RunLevelControllerThread-1731736101757] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@63d57c0f)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@2d0b1a0a)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-16T00:48:22.122559-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=207 _ThreadName=RunLevelControllerThread-1731736101757] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@63d57c0f)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@2d0b1a0a)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-16T00:48:22.123559-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=207 _ThreadName=RunLevelControllerThread-1731736101757] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@63d57c0f)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@2d0b1a0a)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-16T00:48:22.134561-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=207 _ThreadName=RunLevelControllerThread-1731736101757] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@63d57c0f)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@2d0b1a0a)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-16T00:48:22.148558-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=207 _ThreadName=RunLevelControllerThread-1731736101757] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@bdda8a7[name=/__wstx-services], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/applications/wstx-services/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/wstx-services//
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/wstx-services/
+][delegate=true, context=/__wstx-services, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=25, pathTimestamps.size=0, resourceEntryCache.size=0]]]
+
+[2024-11-16T00:48:22.387560-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=214 _ThreadName=RunLevelControllerThread-1731736102210] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource(pool-name=SamplePool,jndi-name=jdbc/sample), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource(pool-name=__TimerPool,object-type=system-all,jndi-name=jdbc/__TimerPool), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource(pool-name=DerbyPool,object-type=system-all-req,jndi-name=jdbc/__default), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool(datasource-classname=org.apache.derby.jdbc.EmbeddedXADataSource,name=__TimerPool,res-type=javax.sql.XADataSource), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool(is-isolation-level-guaranteed=false,datasource-classname=org.apache.derby.jdbc.ClientDataSource,name=DerbyPool,res-type=javax.sql.DataSource), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool(is-isolation-level-guaranteed=false,datasource-classname=org.apache.derby.jdbc.ClientDataSource,name=SamplePool,res-type=javax.sql.DataSource)]]]
+
+[2024-11-16T00:48:22.426558-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00013] [jakarta.enterprise.system.core] [tid: _ThreadID=205 _ThreadName=Thread-36] [levelValue: 800] [[
+  Shutdown procedure finished]]
+
+[2024-11-16T00:48:22.494557-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=22 _ThreadName=GlassFish Shutdown Hook] [levelValue: 800] [[
+  Completed shutdown of GlassFish runtime]]
+

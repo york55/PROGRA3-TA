@@ -376,4 +376,70 @@ public class ClienteMySQL implements ClienteDAO {
         }
         return listaClientes;
     }
+
+    @Override
+    public List<Cliente> listarClientesPorNombre(String nombre) {
+        List<Cliente> listaClientes = new ArrayList<>();
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ListarClientesPorNombre(?) }";
+            cs = conn.prepareCall(sql);
+            cs.setString(1, nombre);
+            rs = cs.executeQuery();
+
+            while (rs.next()) {
+                // Crea un nuevo objeto Cliente y llena sus datos
+                
+                String tipoDocStr = rs.getString("tipo_doc");
+                if(tipoDocStr ==null) tipoDocStr = "DNI"; //Por defecto es peruano
+                TipoDocumento tipoDoc = null;
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) { 
+                    System.out.println("Error: " + e);
+                }
+                Cliente cliente = new Cliente(
+                        rs.getInt("usuario_id"),
+                        rs.getDate("fecha"),
+                        rs.getString("nombre"),
+                        rs.getString("ap_paterno"),
+                        rs.getString("ap_materno"),
+                        rs.getString("contrasena"),
+                        rs.getDate("fecha_venc"),
+                        rs.getBoolean("activo"),
+                        tipoDoc,
+                        rs.getString("documento"),
+                        rs.getInt("codigo_cliente"),
+                        rs.getString("direccion"),
+                        rs.getString("telefono"),
+                        rs.getString("email"),
+                        rs.getString("tipo_cliente"),
+                        rs.getDouble("ranking")
+                );
+
+                listaClientes.add(cliente); // Añade el cliente a la lista
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return listaClientes;
+    }
 }

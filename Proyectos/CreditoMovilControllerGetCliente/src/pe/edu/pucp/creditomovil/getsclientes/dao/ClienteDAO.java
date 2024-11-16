@@ -18,4 +18,5 @@ public interface ClienteDAO {
     Cliente obtenerPorId(int id);
     Cliente obtenerPorDocIdentidad(String docIden, String tipoDocIden);
     List<Cliente> listarTodos();
+    List<Cliente> listarClientesPorNombre(String nombre);
 }

@@ -88,4 +88,17 @@ public class ClienteWS {
         return clientes;
     }
     
+    @WebMethod(operationName = "listarClientesPorNombre")
+    public List<Cliente> listarClientesPorNombre(@WebParam(name = "nombre") String nombre) {
+        List<Cliente> clientes = null;
+        try{
+            clientes = daoCliente.listarClientesPorNombre(nombre );
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return clientes;
+    }
+    
+    
+    
 }
