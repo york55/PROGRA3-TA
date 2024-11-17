@@ -1,6 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Usuario.master" CodeFile="Registro.aspx.cs" Inherits="CreditoMovilWA.Registro" %>
-
-<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Usuario.master" AutoEventWireup="true" CodeBehind="DetalleCliente.aspx.cs" Inherits="CreditoMovilWA.DetalleCliente" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
         .container h1 {
             font-size: 32px;
@@ -117,18 +116,9 @@
 
     </style>
 </asp:Content>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <!-- Logo en la parte superior -->
-    <div id="headerProv" runat="server" class="header">
-        <img src="images/credit2.png" alt="Logo Crédito Móvil">
-    </div>
-
-    <div class="watermark"></div>
-
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-        <h1 id="text1" runat ="server">Ingresa tus datos personales</h1>
-        <h1 id="text2" runat="server">Datos del cliente seleccionado</h1>
+        <h1>Detalle Cliente</h1>
         
         <!-- Fila para Nombre y Apellidos -->
         <div class="form-row">
@@ -179,21 +169,9 @@
             <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
 
-        <!-- Campos para Contraseña y Confirmar Contraseña -->
-        <div id="containerPassword" runat="server" class="form-row">
-            <div class="form-group">
-                <label for="contraseña">Contraseña</label>
-                <asp:TextBox ID="txtContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="confirmar-contraseña">Confirmar Contraseña</label>
-                <asp:TextBox ID="txtConfirmarContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
-            </div>
-        </div>
-
         <asp:Label ID="lblError" runat="server" CssClass="error-message" EnableViewState="false"></asp:Label>
         <!-- Botón Guardar -->
-        <div id="containerBtn" runat="server" style="display: flex; gap: 10px;">
+        <div class="container-btn" style="display: flex; gap: 10px;">
             <asp:Button ID="btnGuardar" runat="server" Text="Ingresar" CssClass="btn-login" OnClick="btnGuardar_Click" />
             <asp:Button ID="btnRegresar" runat="server" Text="Regresar" CssClass="btn-back" OnClick="btnRegresar_Click" />
         </div>

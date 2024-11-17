@@ -8,15 +8,95 @@
             display: inline-block;
             margin: 0;
         }
-        .container {
+        h1{
+            font-size: 35px;
+            color: #002e6e;
+            margin: 0;
+        }
+
+        .container{
+            display:flex;
+            flex-direction:column;
+        }
+        .content-sup{
+            margin: 100px 0 0 0;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        .buscador{
+            display:flex;
+            justify-content:center;
+            margin:0;
+            background-color: rgb(198, 198, 198);
+            border-radius: 6px;
+        }
+        .input-buscar{
+            font-weight: 600;
+            font-size: 15px;
+            color: #2b2b2b;
+            background-color: rgb(198, 198, 198);
+            width:500px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            padding: 13px;
+            max-width: 450px;
+            transition: .4s;
+        }
+        .buscador:hover{
+            transition: .4s;
+            box-shadow: 0 0 5px 1.5px #2f7a44;
+        }
+        .btn-buscar{
+            border:none;
+            border-radius: 6px;
+            background-color: rgb(232, 232, 232);
+            color:#002e6e;
+            transition:.4s;
+        }
+        .btn-buscar:hover{
+            background-color: #2f7a44;
+            color:#ffffff;
+        }
+
+        .content-list{
+            margin:30px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #2f7a44;
+            color: #fff;
+        }
+        .btn-table{
+            padding: 5px 10px;
+            background-color: #2f7a44;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .content-mid {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            justify-content: space-between;
+            align-items: center;
         }
         .button-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 50px;
+            flex-direction: row;
+            align-items: flex-end;
         }
         .view-btn {
             padding: 10px 20px;
@@ -35,13 +115,41 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-        <div class="button-container">
-            <h2>¡Hola!</h2>
-            <asp:Button ID="btnGenerarReportes" runat="server" Text="Generar reportes" CssClass="view-btn" />
+        <div class="content-sup">
+            <h1>Encuentre el cliente que busca</h1>
+            <div class="buscador">
+                <asp:TextBox ID="texBuscar" placeholder="Ingrese el nombre del cliente..." AutoCompleteType="Disabled" runat="server" CssClass="input-buscar"></asp:TextBox>
+                <asp:Button ID="btnBuscarCli"  runat="server" Text="Buscar" CssClass="btn-buscar" OnClick="btnBuscarCli_Click"/>
+            </div>
+            <div class="content-list">
+                <asp:GridView ID="gvClientes" runat="server" AllowPaging="true" PageSize="5" AutoGenerateColumns="false" 
+                    CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
+                    <Columns>
+                        <asp:BoundField DataField="codigoCliente" HeaderText="Cod. Cliente" />
+                        <asp:BoundField DataField="nombre" HeaderText="Nombre" />
+                        <asp:BoundField DataField="apPaterno" HeaderText="Apellido Paterno" />
+                        <asp:BoundField DataField="tipoDocumento" HeaderText="Tipo documento" />
+                        <asp:BoundField DataField="documento" HeaderText="Nro. Documento" />
+                        <asp:BoundField DataField="activo" HeaderText="Activo" />
+                        <asp:TemplateField>
+                            <itemtemplate>
+                                <asp:Button ID="btnDetalles" runat="server" Text="Detalles" CssClass="btn-table" OnClick="btnDetalles_Click" CommandArgument='<%# Eval("codigoCliente") %>' />
+                                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn-table" OnClick="btnEliminar_Click" CommandArgument='<%# Eval("codigoCliente") %>' />
+                            </itemtemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+            </div>
         </div>
-        <div class="button-container">
-            <h2>¿Qué deseas hacer?</h2>
-            <asp:Button ID="btnVisualizarSupervisores" runat="server" Text="Visualizar supervisores" CssClass="view-btn" OnClick="btnVisualizarSupervisores_Click" />
+        <div class="content-mid">
+            <div class="text">            
+                <h2>Contenido general</h2>
+            </div>
+            <div class="button-container">
+                <asp:Button ID="btnGenerarReportes" runat="server" Text="Generar reportes" CssClass="view-btn" OnClick="btnGenerarReportes_Click"/>
+                <asp:Button ID="btnVisualizarSupervisores" runat="server" Text="Visualizar supervisores" CssClass="view-btn" OnClick="btnVisualizarSupervisores_Click" />
+                <asp:Button ID="btnVisualizarClientes" runat="server" Text="Visualizar clientes" CssClass="view-btn" OnClick="btnVisualizarClientes_Click"/>
+            </div>
         </div>
     </div>
 </asp:Content>

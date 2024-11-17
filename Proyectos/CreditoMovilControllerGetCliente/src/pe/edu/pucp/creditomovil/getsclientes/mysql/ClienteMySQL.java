@@ -183,7 +183,7 @@ public class ClienteMySQL implements ClienteDAO {
     }
 
     @Override
-    public Cliente obtenerPorId(int id) {
+    public Cliente obtenerPorCodigo(int cod) {
         Cliente cli = null;
         Connection conn = null;
         CallableStatement cs = null;
@@ -191,9 +191,9 @@ public class ClienteMySQL implements ClienteDAO {
 
         try {
             conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL ObtenerClientePorId(?) }";
+            String sql = "{ CALL ObtenerClientePorCod(?) }";
             cs = conn.prepareCall(sql);
-            cs.setInt(1, id);
+            cs.setInt(1, cod);
             rs = cs.executeQuery();
             
             

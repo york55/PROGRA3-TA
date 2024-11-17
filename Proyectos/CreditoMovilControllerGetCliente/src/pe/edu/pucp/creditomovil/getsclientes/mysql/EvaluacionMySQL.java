@@ -142,7 +142,7 @@ public class EvaluacionMySQL implements EvaluacionDAO {
             
             if(rs.next()){
                 ev.setActivo(true);
-                Cliente cli = daoCliente.obtenerPorId(rs.getInt("cliente_codigo_cliente"));
+                Cliente cli = daoCliente.obtenerPorCodigo(rs.getInt("cliente_codigo_cliente"));
                 ev.setClienteAsignado(cli);
                 ev.setCostoVentas(rs.getDouble("costo_ventas"));
                 ev.setDireccionNegocio(rs.getString("direccion_negocio"));
@@ -180,7 +180,7 @@ public class EvaluacionMySQL implements EvaluacionDAO {
             while (rs.next()) {
                 int numEva = rs.getInt("num_evaluacion");
                 int codClien = rs.getInt("cliente_codigo_cliente");
-                Cliente cliente = clienteDAO.obtenerPorId(codClien);
+                Cliente cliente = clienteDAO.obtenerPorCodigo(codClien);
                 
                 Date fechaReg = rs.getDate("fecha_registro");
                 String nombreNeg = rs.getString("nombre_negocio");
@@ -234,7 +234,7 @@ public class EvaluacionMySQL implements EvaluacionDAO {
             while (rs.next()) {
                 int numEva = rs.getInt("num_evaluacion");
                 int codClien = rs.getInt("cliente_codigo_cliente");
-                Cliente cliente = clienteDAO.obtenerPorId(codClien);
+                Cliente cliente = clienteDAO.obtenerPorCodigo(codClien);
                 
                 Date fechaReg = rs.getDate("fecha_registro");
                 String nombreNeg = rs.getString("nombre_negocio");

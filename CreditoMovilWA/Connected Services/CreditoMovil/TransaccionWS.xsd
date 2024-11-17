@@ -43,6 +43,7 @@
       <xs:element minOccurs="0" name="estado" type="xs:string" />
       <xs:element minOccurs="0" name="fechaOtorgamiento" type="xs:dateTime" />
       <xs:element name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="motivo" type="xs:string" />
       <xs:element name="numCredito" type="xs:int" />
       <xs:element name="numCuotas" type="xs:int" />
       <xs:element name="tasaInteres" type="xs:double" />

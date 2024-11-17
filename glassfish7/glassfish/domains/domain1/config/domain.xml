@@ -487,10 +487,10 @@
   </secure-admin>
   <clusters></clusters>
   <applications>
-    <application context-root="/CreditoMovilWSBL" object-type="user" name="CreditoMovilWSBL" directory-deployed="true" location="file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/">
+    <application context-root="/CreditoMovilWSBL" object-type="user" name="CreditoMovilWSBL" directory-deployed="true" location="file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/">
       <property name="archiveType" value="war"></property>
       <property name="defaultAppName" value="web"></property>
-      <property name="appLocation" value="file:/F:/Proyectos/Proyectos/Jorge/PROGRA3-TA-main/Proyectos/CreditoMovilWSBL/build/web/"></property>
+      <property name="appLocation" value="file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/"></property>
       <property name="keepSessions" value="true"></property>
       <module name="CreditoMovilWSBL">
         <engine sniffer="webservices"></engine>

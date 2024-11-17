@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|e:\\proyecto_pro3_new\\progra3-ta\\creditomovilwa\\visualizarcreditoscliente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:visualizarcreditoscliente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\visualizarcreditoscliente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:visualizarcreditoscliente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|e:\\proyecto_pro3_new\\progra3-ta\\creditomovilwa\\registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\maincliente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:maincliente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|e:\\proyecto_pro3_new\\progra3-ta\\creditomovilwa\\registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|e:\\proyecto_pro3_new\\progra3-ta\\creditomovilwa\\registro.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:registro.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\mainadmin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:mainadmin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|e:\\proyecto_pro3_new\\progra3-ta\\creditomovilwa\\mainadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{F3301FE0-2CF8-4D30-A344-FBEA6B765887}|CreditoMovilWA.csproj|solutionrelative:mainadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,46 +42,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VisualizarCreditosCliente.aspx.cs",
-              "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\VisualizarCreditosCliente.aspx.cs",
-              "RelativeDocumentMoniker": "VisualizarCreditosCliente.aspx.cs",
-              "ToolTip": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\VisualizarCreditosCliente.aspx.cs",
-              "RelativeToolTip": "VisualizarCreditosCliente.aspx.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAGMAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "MainAdmin.aspx",
+              "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\MainAdmin.aspx",
+              "RelativeDocumentMoniker": "MainAdmin.aspx",
+              "ToolTip": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\MainAdmin.aspx",
+              "RelativeToolTip": "MainAdmin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-17T02:25:07.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainAdmin.aspx.cs",
+              "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\MainAdmin.aspx.cs",
+              "RelativeDocumentMoniker": "MainAdmin.aspx.cs",
+              "ToolTip": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\MainAdmin.aspx.cs",
+              "RelativeToolTip": "MainAdmin.aspx.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwDQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T20:28:13.82Z",
+              "WhenOpened": "2024-11-17T06:31:02.975Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VisualizarCreditosCliente.aspx",
-              "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\VisualizarCreditosCliente.aspx",
-              "RelativeDocumentMoniker": "VisualizarCreditosCliente.aspx",
-              "ToolTip": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\VisualizarCreditosCliente.aspx",
-              "RelativeToolTip": "VisualizarCreditosCliente.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-15T20:28:12.619Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Registro.aspx.cs",
-              "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\Registro.aspx.cs",
-              "RelativeDocumentMoniker": "Registro.aspx.cs",
-              "ToolTip": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\Registro.aspx.cs",
-              "RelativeToolTip": "Registro.aspx.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAwwB0AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T06:41:04.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Registro.aspx",
               "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\Registro.aspx",
               "RelativeDocumentMoniker": "Registro.aspx",
@@ -93,31 +76,34 @@
               "RelativeToolTip": "Registro.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-15T06:39:03.006Z"
+              "WhenOpened": "2024-11-17T19:41:29.546Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\Login.aspx",
-              "RelativeDocumentMoniker": "Login.aspx",
-              "ToolTip": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\Login.aspx",
-              "RelativeToolTip": "Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-15T06:38:45.544Z"
+              "DocumentIndex": 0,
+              "Title": "Registro.aspx.cs",
+              "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\Registro.aspx.cs",
+              "RelativeDocumentMoniker": "Registro.aspx.cs",
+              "ToolTip": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\Registro.aspx.cs",
+              "RelativeToolTip": "Registro.aspx.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAlwIMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:39:33.29Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainCliente.aspx",
-              "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\MainCliente.aspx",
-              "RelativeDocumentMoniker": "MainCliente.aspx",
-              "ToolTip": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\MainCliente.aspx",
-              "RelativeToolTip": "MainCliente.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-15T06:25:18.714Z"
+              "DocumentIndex": 2,
+              "Title": "Registro.aspx.designer.cs",
+              "DocumentMoniker": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\Registro.aspx.designer.cs",
+              "RelativeDocumentMoniker": "Registro.aspx.designer.cs",
+              "ToolTip": "E:\\PROYECTO_PRO3_NEW\\PROGRA3-TA\\CreditoMovilWA\\Registro.aspx.designer.cs",
+              "RelativeToolTip": "Registro.aspx.designer.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAH8AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:48:03.708Z",
+              "EditorCaption": ""
             }
           ]
         }

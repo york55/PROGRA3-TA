@@ -216,9 +216,6 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDBilleteraResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDCreditoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -243,10 +240,17 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.transaccion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarClientesPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorCodClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\CreditoMovil\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="DetalleCliente.aspx" />
     <Content Include="DetalleCredito.aspx" />
     <Content Include="DetalleEvaluacion.aspx" />
     <Content Include="DetalleTransaccion.aspx" />
@@ -269,6 +273,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleCliente.aspx.cs">
+      <DependentUpon>DetalleCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleCliente.aspx.designer.cs">
+      <DependentUpon>DetalleCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="DetalleCredito.aspx.cs">
       <DependentUpon>DetalleCredito.aspx</DependentUpon>

@@ -54,11 +54,11 @@ public class ClienteWS {
         return resultado;
     }
     
-    @WebMethod(operationName = "obtenerPorIDCliente")
-    public Cliente obtenerPorIDCliente(@WebParam(name = "idcliente") int id) {
+    @WebMethod(operationName = "obtenerPorCodCliente")
+    public Cliente obtenerPorIDCliente(@WebParam(name = "codCliente") int cod) {
         Cliente cliente = null;
         try{
-            cliente = daoCliente.obtenerPorId(id);
+            cliente = daoCliente.obtenerPorCodigo(cod);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

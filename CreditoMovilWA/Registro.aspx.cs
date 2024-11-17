@@ -1,6 +1,7 @@
 ﻿using CreditoMovilWA.CreditoMovil;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
@@ -9,6 +10,8 @@ using System.Runtime.CompilerServices;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CreditoMovilWA
 {
@@ -19,15 +22,61 @@ namespace CreditoMovilWA
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack) {
+                text2.Visible = false;
+            }
             if (Master is Usuario masterPage)
             {
                 masterPage.MostrarHeader = false; // Oculta el header en esta página
             }
+            Session["TipoOperacion"] = Request.QueryString["op"];
+            string cod = Request.QueryString["cod_cli"];
+            if ((string)Session["TipoOperacion"] != null && cod != null)
+            {
+                containerPassword.Visible = false;
+                btnGuardar.Visible = false;
+                text1.Visible = false;
+                text2.Visible = true;
+                Deshabilitar_Componentes();
+                ContenidoCliente(int.Parse(cod));
+            }
+        }
+        
+        public void Deshabilitar_Componentes()
+        {
+            txtNombre.Enabled = false;
+            txtApPaterno.Enabled = false;
+            txtApMaterno.Enabled = false;
+            ddlTipoDocumento.Enabled = false;
+            txtNroDoc.Enabled = false;
+            txtEmail.Enabled = false;
+            txtTelefono.Enabled = false;
+            txtDireccion.Enabled = false;
+        }
+
+        public void ContenidoCliente(int codCliente)
+        {
+            cliente cli = daoCliente.obtenerPorCodCliente(codCliente);
+            txtNombre.Text = cli.nombre;
+            txtApPaterno.Text = cli.apPaterno;
+            txtApMaterno.Text = cli.apMaterno;
+            ddlTipoDocumento.Text = cli.tipoDocumento.ToString();
+            txtNroDoc.Text = cli.documento;
+            txtEmail.Text = cli.email;
+            txtTelefono.Text = cli.telefono;
+            txtDireccion.Text = cli.direccion;
         }
 
         protected void btnRegresar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Home.aspx");
+            if((string)Session["TipoOperacion"] != null)
+            {
+                if (((string)Session["TipoOperacion"]).Equals("detail_cliente"))
+                {
+                    Response.Redirect("MainAdmin.aspx");
+                }
+            }
+            else Response.Redirect("Home.aspx");
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -73,13 +122,14 @@ namespace CreditoMovilWA
             Cliente.contrasenha = contrasena;
 
             // Código para guardar en la base de datos...
-            Cliente.tipoCliente = "DE_BAJA";
+            Cliente.tipoCliente = "Nuevo";
             Cliente.activo = true;
             Cliente.fecha = DateTime.Now;
             Cliente.fechaSpecified = true;
             Cliente.fechaVencimiento = DateTime.Now; // falta ver
             Cliente.fechaVencimientoSpecified = true;
             Cliente.ultimoLogueo = DateTime.Now; // falta ver, no lo utiliza para la creacion de cliente
+            Cliente.ultimoLogueoSpecified = true;
             Cliente.codigoCliente = 0;
             Cliente.ranking = 30;
 

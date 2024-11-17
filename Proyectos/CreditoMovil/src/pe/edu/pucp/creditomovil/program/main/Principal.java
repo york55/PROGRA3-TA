@@ -44,15 +44,9 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        BancoDAO bancoDAO = new BancoMySQL();
-        Banco bank = new Banco();
-        bank.setCCI("0111111111111111");
-        bank.setFoto(new byte[]{1,2,34});
-        bank.setIdMetodoPago(0);
-        bank.setNombreBanco("Scotiabank");
-        bank.setNombreTitular("Diego");
-        bank.setTipoCuenta("Free");
-        
-        bancoDAO.insertar(bank);
+        ClienteDAO cliDAO = new ClienteMySQL();
+        Cliente cli = cliDAO.obtenerPorCodigo(1);
+        if(cli!=null)
+            System.out.println(cli.getNombre());
     }
 }
