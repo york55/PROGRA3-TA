@@ -32,11 +32,6 @@ namespace CreditoMovilWA
             Response.Redirect("~/ListaSupervisoresAsignar.aspx");
         }
 
-        protected void btnVisualizarClientes_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void btnGenerarReportes_Click(object sender, EventArgs e)
         {
 
@@ -48,6 +43,11 @@ namespace CreditoMovilWA
             gvClientes.DataBind();
         }
 
+        protected void btnAddMetodoPago_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminAddMetodoPago.aspx");
+        }
+
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
             Response.Redirect($"Registro.aspx?op=detail_cliente&cod_cli={Int32.Parse(((Button)sender).CommandArgument)}");
@@ -55,7 +55,16 @@ namespace CreditoMovilWA
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            // NO SE UNA PUTA MIERDA TIO JODER ME COMES LA POLLA 
+            // feliz chiqui ibai
+            // feliz illojuan
+            Button btnEliminar = (Button) sender;
+            int codigoCliente = Int32.Parse(btnEliminar.CommandArgument);
+            clienteDAO.eliminarCliente(codigoCliente);
+            gvClientes.DataBind();
         }
+
+        
+
     }
 }

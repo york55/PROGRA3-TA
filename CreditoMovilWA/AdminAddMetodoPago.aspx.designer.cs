@@ -11,61 +11,70 @@ namespace CreditoMovilWA
 {
 
 
-    public partial class MainAdmin
+    public partial class AdminAddMetodoPago
     {
 
         /// <summary>
-        /// Control texBuscar.
+        /// Control text1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox texBuscar;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl text1;
 
         /// <summary>
-        /// Control btnBuscarCli.
+        /// Control metodoPago.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscarCli;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect metodoPago;
 
         /// <summary>
-        /// Control gvClientes.
+        /// Control nombreBanco.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvClientes;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nombreBanco;
 
         /// <summary>
-        /// Control btnGenerarReportes.
+        /// Control cci.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGenerarReportes;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText cci;
 
         /// <summary>
-        /// Control btnVisualizarSupervisores.
+        /// Control nombreBilletera.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVisualizarSupervisores;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nombreBilletera;
 
         /// <summary>
-        /// Control btnAddMetodoPago.
+        /// Control btnSave.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddMetodoPago;
+        protected global::System.Web.UI.WebControls.Button btnSave;
+
+        /// <summary>
+        /// Control btnBack.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }

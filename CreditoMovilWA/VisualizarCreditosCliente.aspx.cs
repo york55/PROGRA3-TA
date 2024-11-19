@@ -155,6 +155,11 @@ namespace CreditoMovilWA
             Response.Redirect("DetalleCredito.aspx");
         }
 
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MainCliente.aspx");
+        }
+
         private void agregarFoto()
         {
             if (fileUpload.HasFile && fileUpload.PostedFile != null)

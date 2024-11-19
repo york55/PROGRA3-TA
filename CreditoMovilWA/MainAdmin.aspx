@@ -147,8 +147,8 @@
             </div>
             <div class="button-container">
                 <asp:Button ID="btnGenerarReportes" runat="server" Text="Generar reportes" CssClass="view-btn" OnClick="btnGenerarReportes_Click"/>
-                <asp:Button ID="btnVisualizarSupervisores" runat="server" Text="Visualizar supervisores" CssClass="view-btn" OnClick="btnVisualizarSupervisores_Click" />
-                <asp:Button ID="btnVisualizarClientes" runat="server" Text="Visualizar clientes" CssClass="view-btn" OnClick="btnVisualizarClientes_Click"/>
+                <asp:Button ID="btnVisualizarSupervisores" runat="server" Text="Administrar supervisores" CssClass="view-btn" OnClick="btnVisualizarSupervisores_Click" />
+                <asp:Button ID="btnAddMetodoPago" runat="server" Text="Añadir metodo de pago" CssClass="view-btn" OnClick="btnAddMetodoPago_Click"/>
             </div>
         </div>
     </div>

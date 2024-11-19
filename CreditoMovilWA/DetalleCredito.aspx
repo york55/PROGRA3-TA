@@ -73,6 +73,31 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .motivo-container {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .motivo-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .motivo-text {
+            font-size: 16px;
+            color: #555;
+            padding: 10px;
+            background-color: #e4e4e4;
+            border-radius: 5px;
+            width: 97%;
+            border: 1px solid #ddd;
+            pointer-events: none; 
+        }
+
     </style>
 </asp:Content>
 
@@ -95,6 +120,11 @@
 
         <label>Tasa de Interés</label>
         <asp:TextBox ID="txtTasaInteres" runat="server" CssClass="input-text" ReadOnly="true"></asp:TextBox>
+
+        <div class="motivo-container">
+            <div class="motivo-label">Motivo</div>
+            <asp:TextBox ID="txtMotivo" runat="server" CssClass="motivo-text" ReadOnly="true"></asp:TextBox>
+        </div>
 
         <div class="section-title">LISTADO DE TRANSACCIONES</div>
         <div class="table-container">

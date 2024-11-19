@@ -12,6 +12,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace CreditoMovilWA
 {

@@ -1,6 +1,7 @@
 ﻿using CreditoMovilWA.CreditoMovil;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -40,9 +41,15 @@ namespace CreditoMovilWA
             // Mostrar el interés en el Label
             //lblInteres.Text = $"Interés aproximado: S/. {minInteres:F2} - S/. {maxInteres:F2}";
 
+            string motivo = motivoSolicitud.Value;
+            if (string.IsNullOrWhiteSpace(motivo))
+            {
+                lblErrorMotivo.Visible = true;
+                return;
+            }
             credito cred = new credito();
             cred.cliente = null; //falta guardar al cliente btw, eso se hace desde el login
-            cred.estado = "Solicitado";//importante
+            cred.estado = "Pendiente";//importante
             cred.tasaInteres = maxInteres;//importante
             cred.fechaOtorgamiento = DateTime.Now;//importante
             cred.fechaOtorgamientoSpecified = true;
@@ -50,9 +57,15 @@ namespace CreditoMovilWA
             cred.numCuotas = Int32.Parse(selectedCuotas.Value); // no sé cómo colocar esto btw, creo que es así, vamos a ver//importante
             cred.numCredito = 0;
             cred.cancelado = false;//importante
+            cred.motivo = motivo;
 
             bool res = daoCredito.insertarCredito(cred, cli.codigoCliente);
             if (res) Response.Redirect("MainCliente.aspx"); ;
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MainCliente.aspx");
         }
     }
 }

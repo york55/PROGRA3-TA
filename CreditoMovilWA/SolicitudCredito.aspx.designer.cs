@@ -30,5 +30,7 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.Button btnSubmit;
         protected global::System.Web.UI.WebControls.Label lblInteres;
         protected global::System.Web.UI.WebControls.HiddenField hfMonto;
+        protected global::System.Web.UI.WebControls.Label lblErrorMotivo;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea motivoSolicitud;
     }
 }

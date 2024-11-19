@@ -31,7 +31,7 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.GridView gvTransacciones;
         protected global::System.Web.UI.WebControls.Button btnRegresar;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl idCredito;
-
+        protected global::System.Web.UI.WebControls.TextBox txtMotivo;
     }
 
 }
