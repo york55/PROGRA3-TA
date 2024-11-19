@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="https://services.creditomovil.pucp.edu.pe" targetNamespace="https://services.creditomovil.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
   <xs:element name="eliminarCliente" type="tns:eliminarCliente" />
   <xs:element name="eliminarClienteResponse" type="tns:eliminarClienteResponse" />
+  <xs:element name="generarBuffer" type="tns:generarBuffer" />
+  <xs:element name="generarBufferResponse" type="tns:generarBufferResponse" />
   <xs:element name="insertarCliente" type="tns:insertarCliente" />
   <xs:element name="insertarClienteResponse" type="tns:insertarClienteResponse" />
   <xs:element name="listarClientesPorNombre" type="tns:listarClientesPorNombre" />
@@ -14,6 +17,8 @@
   <xs:element name="obtenerPorCodClienteResponse" type="tns:obtenerPorCodClienteResponse" />
   <xs:element name="obtenerPorDocIdenCliente" type="tns:obtenerPorDocIdenCliente" />
   <xs:element name="obtenerPorDocIdenClienteResponse" type="tns:obtenerPorDocIdenClienteResponse" />
+  <xs:element name="reportePDF" type="tns:reportePDF" />
+  <xs:element name="reportePDFResponse" type="tns:reportePDFResponse" />
   <xs:complexType name="obtenerPorCodCliente">
     <xs:sequence>
       <xs:element name="codCliente" type="xs:int" />
@@ -49,6 +54,7 @@
       <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
       <xs:element name="idUsuario" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="salt" type="xs:string" />
       <xs:element minOccurs="0" name="tipoDocumento" type="tns:tipoDocumento" />
       <xs:element minOccurs="0" name="ultimoLogueo" type="xs:dateTime" />
     </xs:sequence>
@@ -84,6 +90,35 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="generarBuffer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element name="arg1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string" />
+                  <xs:element minOccurs="0" name="value" type="xs:anyType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarBufferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarCliente">
     <xs:sequence>
       <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
@@ -110,6 +145,14 @@
   <xs:complexType name="insertarClienteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportePDF">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reportePDFResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="tipoDocumento">

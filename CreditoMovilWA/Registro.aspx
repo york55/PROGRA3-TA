@@ -127,8 +127,11 @@
     <div class="watermark"></div>
 
     <div class="container">
-        <h1 id="text1" runat ="server">Ingresa tus datos personales</h1>
-        <h1 id="text2" runat="server">Datos del cliente seleccionado</h1>
+        <div class="text-header">
+            <h1 id="text1" runat ="server">Ingrese sus datos personales</h1>
+            <h1 id="text2" runat="server">Datos del cliente seleccionado</h1>
+            <h1 id="text3" runat ="server">Ingrese los datos del personal</h1>
+        </div>
         
         <!-- Fila para Nombre y Apellidos -->
         <div class="form-row">
@@ -178,7 +181,18 @@
             <label for="direccion">Dirección</label>
             <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
-
+        <!--Parte adicional en supervisor-->
+        <div id="datosSupervisor" runat="server" class="form-row">
+            <div class="form-group">
+                <label for="direccion">Codigo cargo</label>
+                <asp:TextBox ID="txtCodigoCargo" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Agencia asignada</label>
+                <asp:TextBox ID="txtAgencia" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+            
+        </div>
         <!-- Campos para Contraseña y Confirmar Contraseña -->
         <div id="containerPassword" runat="server" class="form-row">
             <div class="form-group">

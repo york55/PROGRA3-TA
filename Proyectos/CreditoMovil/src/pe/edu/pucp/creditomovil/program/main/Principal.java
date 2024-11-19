@@ -4,6 +4,7 @@
  */
 package pe.edu.pucp.creditomovil.program.main;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -43,10 +44,27 @@ public class Principal {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        ClienteDAO cliDAO = new ClienteMySQL();
-        Cliente cli = cliDAO.obtenerPorCodigo(1);
-        if(cli!=null)
-            System.out.println(cli.getNombre());
+    public static void main(String[] args) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String fe1 = "2024-11-19";
+        String fe2 = "2024-11-20";
+        Supervisor sup = new Supervisor(
+                0,
+                sdf.parse(fe2),
+                "PRUEBA",
+                "PRUEBA",
+                "PRUEBA",
+                "PRUEBA",
+                sdf.parse(fe2),
+                true,
+                TipoDocumento.DNI,
+                "PRUEBA",
+                "PRUEBA",
+                101,
+                10,
+                "PRUEBA"
+        );
+        SupervisorDAO supDAO = new SupervisorMySQL();
+        supDAO.insertar(sup);
     }
 }

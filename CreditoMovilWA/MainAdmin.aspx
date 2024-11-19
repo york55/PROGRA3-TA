@@ -97,6 +97,7 @@
             gap: 50px;
             flex-direction: row;
             align-items: flex-end;
+            justify-content:space-between;
         }
         .view-btn {
             padding: 10px 20px;
@@ -133,8 +134,12 @@
                         <asp:BoundField DataField="activo" HeaderText="Activo" />
                         <asp:TemplateField>
                             <itemtemplate>
-                                <asp:Button ID="btnDetalles" runat="server" Text="Detalles" CssClass="btn-table" OnClick="btnDetalles_Click" CommandArgument='<%# Eval("codigoCliente") %>' />
-                                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn-table" OnClick="btnEliminar_Click" CommandArgument='<%# Eval("codigoCliente") %>' />
+                                <asp:Button ID="btnDetalles" runat="server" 
+                                    Text="Detalles" CssClass="btn-table" OnClick="btnDetalles_Click"
+                                    CommandArgument='<%# Eval("codigoCliente") %>' />
+                                <asp:Button ID="btnEliminar" runat="server" 
+                                    Text="Eliminar" CssClass="btn-table" OnClick="btnEliminar_Click"
+                                    CommandArgument='<%# Eval("codigoCliente") %>' />
                             </itemtemplate>
                         </asp:TemplateField>
                     </Columns>
@@ -146,9 +151,14 @@
                 <h2>Contenido general</h2>
             </div>
             <div class="button-container">
-                <asp:Button ID="btnGenerarReportes" runat="server" Text="Generar reportes" CssClass="view-btn" OnClick="btnGenerarReportes_Click"/>
-                <asp:Button ID="btnVisualizarSupervisores" runat="server" Text="Administrar supervisores" CssClass="view-btn" OnClick="btnVisualizarSupervisores_Click" />
-                <asp:Button ID="btnAddMetodoPago" runat="server" Text="Añadir metodo de pago" CssClass="view-btn" OnClick="btnAddMetodoPago_Click"/>
+                <asp:Button ID="btnAddSupervisor" runat="server" 
+                    Text="Añadir Supervisor" CssClass="view-btn" OnClick="btnAddSupervisor_Click"/>
+                <asp:Button ID="btnVisualizarSupervisores" runat="server" 
+                    Text="Administrar supervisores" CssClass="view-btn" OnClick="btnVisualizarSupervisores_Click" />
+                <asp:Button ID="btnAddMetodoPago" runat="server" 
+                    Text="Añadir metodo de pago" CssClass="view-btn" OnClick="btnAddMetodoPago_Click"/>
+                <asp:Button ID="btnGenerarReportes" runat="server" 
+                    Text="Generar reportes" CssClass="view-btn" OnClick="btnGenerarReportes_Click"/>
             </div>
         </div>
     </div>

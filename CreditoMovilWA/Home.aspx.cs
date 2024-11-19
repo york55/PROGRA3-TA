@@ -14,7 +14,7 @@ namespace CreditoMovilWA
 
         protected void btnAbrirCuenta_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Registro.aspx");
+            Response.Redirect("Registro.aspx?op=add_cliente&cod_person=0");
         }
 
         protected void btnIniciarSesion_Click(object sender, EventArgs e)

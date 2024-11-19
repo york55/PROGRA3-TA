@@ -111,7 +111,25 @@ namespace CreditoMovilWA
         /// Campo generado automáticamente.
         /// Para modificarlo, muévalo desde el archivo de diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
+        protected global::System.Web.UI.WebControls.TextBox txtContrasena;        
+
+        /// <summary>
+        /// Control txtContrasena.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, muévalo desde el archivo de diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAgencia;
+
+        /// <summary>
+        /// Control txtContrasena.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, muévalo desde el archivo de diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCodigoCargo;
 
         /// <summary>
         /// Control btnGuardar.
@@ -124,7 +142,9 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl containerBtn;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl headerProv;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl containerPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl text3;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl text2;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl text1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl datosSupervisor;
     }
 }

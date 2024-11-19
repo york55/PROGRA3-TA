@@ -50,7 +50,7 @@ namespace CreditoMovilWA
 
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
-            Response.Redirect($"Registro.aspx?op=detail_cliente&cod_cli={Int32.Parse(((Button)sender).CommandArgument)}");
+            Response.Redirect($"Registro.aspx?op=detail_cliente&cod_person={Int32.Parse(((Button)sender).CommandArgument)}");
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
@@ -64,7 +64,9 @@ namespace CreditoMovilWA
             gvClientes.DataBind();
         }
 
-        
-
+        protected void btnAddSupervisor_Click(object sender, EventArgs e)
+        {
+            Response.Redirect($"Registro.aspx?op=add_supervisor&cod_person=0");
+        }
     }
 }

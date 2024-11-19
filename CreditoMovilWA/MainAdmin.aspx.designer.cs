@@ -42,13 +42,13 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.GridView gvClientes;
 
         /// <summary>
-        /// Control btnGenerarReportes.
+        /// Control btnAddSupervisor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGenerarReportes;
+        protected global::System.Web.UI.WebControls.Button btnAddSupervisor;
 
         /// <summary>
         /// Control btnVisualizarSupervisores.
@@ -67,5 +67,14 @@ namespace CreditoMovilWA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddMetodoPago;
+
+        /// <summary>
+        /// Control btnGenerarReportes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGenerarReportes;
     }
 }

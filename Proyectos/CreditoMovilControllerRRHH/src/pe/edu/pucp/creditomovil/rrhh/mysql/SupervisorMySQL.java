@@ -37,7 +37,7 @@ public class SupervisorMySQL implements SupervisorDAO {
             con = DBManager.getInstance().getConnection();
 
             // Preparar la llamada al procedimiento almacenado
-            cs = con.prepareCall("{CALL InsertarSupervisor(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}");
+            cs = con.prepareCall("{CALL InsertarSupervisor(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}");
 
             // Asignar valores a los parámetros
             cs.setDate(1, new java.sql.Date(supervisor.getFecha().getTime()));

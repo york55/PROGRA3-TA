@@ -36,7 +36,7 @@ public class ClienteMySQL implements ClienteDAO {
             conn.setAutoCommit(false); // Inicia una transacción
 
             // Llamada al procedimiento `InsertarUsuario`
-            String sqlInsertarUsuario = "{ CALL InsertarUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ?, ?) }";
+            String sqlInsertarUsuario = "{ CALL InsertarUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
             stmtUsuario = conn.prepareCall(sqlInsertarUsuario);
             stmtUsuario.setDate(1, new java.sql.Date(cliente.getFecha().getTime()));
             stmtUsuario.setString(2, cliente.getNombre());

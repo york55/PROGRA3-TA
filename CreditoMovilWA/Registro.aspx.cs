@@ -21,26 +21,45 @@ namespace CreditoMovilWA
     {
 
         private ClienteWSClient daoCliente = new ClienteWSClient();
+        private SupervisorWSClient daoSupervisor = new SupervisorWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) {
+                text3.Visible = false;
+                text1.Visible = false;
                 text2.Visible = false;
+                containerPassword.Visible = false;
+                btnGuardar.Visible = false;
+                datosSupervisor.Visible = false;
             }
             if (Master is Usuario masterPage)
             {
                 masterPage.MostrarHeader = false; // Oculta el header en esta página
             }
             Session["TipoOperacion"] = Request.QueryString["op"];
-            string cod = Request.QueryString["cod_cli"];
-            if ((string)Session["TipoOperacion"] != null && cod != null)
+            Session["CodigoPersona"] = Request.QueryString["cod_person"];
+            if ((string)Session["TipoOperacion"] != null && (string)Session["CodigoPersona"] != null)
             {
-                containerPassword.Visible = false;
-                btnGuardar.Visible = false;
-                text1.Visible = false;
-                text2.Visible = true;
-                Deshabilitar_Componentes();
-                ContenidoCliente(int.Parse(cod));
+                switch ((string)Session["TipoOperacion"])
+                {
+                    case ("detail_cliente"):
+                        text2.Visible = true;
+                        Deshabilitar_Componentes();
+                        verContenidoCliente(int.Parse((string)Session["CodigoPersona"]));
+                        break;
+                    case ("add_cliente"):
+                        text1.Visible = true;
+                        containerPassword.Visible = true;
+                        btnGuardar.Visible = true;
+                        break;
+                    case ("add_supervisor"):
+                        text3.Visible = true;
+                        datosSupervisor.Visible = true;
+                        containerPassword.Visible = true;
+                        btnGuardar.Visible = true;
+                        break;
+                }
             }
         }
         
@@ -56,7 +75,7 @@ namespace CreditoMovilWA
             txtDireccion.Enabled = false;
         }
 
-        public void ContenidoCliente(int codCliente)
+        public void verContenidoCliente(int codCliente)
         {
             cliente cli = daoCliente.obtenerPorCodCliente(codCliente);
             txtNombre.Text = cli.nombre;
@@ -83,8 +102,23 @@ namespace CreditoMovilWA
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-            cliente Cliente = new cliente();
+            int codPersona = int.Parse((string)Session["CodigoPersona"]);
+            string tipOperacion = (string)Session["TipoOperacion"];
 
+            switch (tipOperacion)
+            {
+                case ("add_cliente"):
+                    insertarCliente();
+                    break;
+                case ("add_supervisor"):
+                    insertarSupervisor();
+                    break;
+            }
+        }
+
+        private void insertarCliente()
+        {
+            cliente Cliente = new cliente();
             // Capturar los valores ingresados
             Cliente.idUsuario = 0;
             Cliente.nombre = txtNombre.Text.Trim();
@@ -133,6 +167,7 @@ namespace CreditoMovilWA
             Cliente.ultimoLogueo = DateTime.Now; // falta ver, no lo utiliza para la creacion de cliente
             Cliente.ultimoLogueoSpecified = true;
             Cliente.codigoCliente = 0;
+            Cliente.salt = "QUEXUXAES";
             Cliente.ranking = 30;
 
             bool resultado = daoCliente.insertarCliente(Cliente);
@@ -140,9 +175,54 @@ namespace CreditoMovilWA
             {
                 Response.Redirect("Home.aspx");
             }
-
         }
 
+        private void insertarSupervisor()
+        {
+            supervisor sup = new supervisor();
+            sup.idUsuario = 0;
+            sup.nombre = txtNombre.Text.Trim();
+            sup.apPaterno = txtApPaterno.Text.Trim();
+            sup.apMaterno = txtApMaterno.Text.Trim();
+            switch (ddlTipoDocumento.SelectedValue)
+            {
+                case "DNI":
+                    sup.tipoDocumento = tipoDocumento.DNI;
+                    break;
+                case "Pasaporte":
+                    sup.tipoDocumento = tipoDocumento.PASAPORTE;
+                    break;
+                case "Carnet_Extranjeria":
+                    sup.tipoDocumento = tipoDocumento.CARNET_EXTRANJERIA;
+                    break;
+            }
+            sup.tipoDocumentoSpecified = true;
+            sup.documento = txtNroDoc.Text.Trim();
+            // Validaciones básicas
+            string contrasena = txtContrasena.Text;
+            if (string.IsNullOrEmpty(sup.nombre) || string.IsNullOrEmpty(sup.apPaterno) ||
+                            string.IsNullOrEmpty(ddlTipoDocumento.SelectedValue) || string.IsNullOrEmpty(sup.documento) 
+                            || string.IsNullOrEmpty(contrasena))
+            {
+                lblError.Text = "Por favor, complete todos los campos.";
+                return;
+            }
+            sup.activo = true;
+            sup.contrasenha = contrasena;
+            sup.codigoCargo = int.Parse(txtCodigoCargo.Text.Trim());
+            sup.agenciaAsignacion = txtAgencia.Text.Trim();
+            sup.fecha = DateTime.Now;
+            sup.fechaSpecified = true;
+            sup.fechaVencimiento = DateTime.Now; // falta ver
+            sup.fechaVencimientoSpecified = true;
+            sup.ultimoLogueo = DateTime.Now; // falta ver, no lo utiliza para la creacion de cliente
+            sup.ultimoLogueoSpecified = true;
+            sup.salt = "QUEXUXAES";
+            sup.codigoEv = 11;
+
+            bool res = daoSupervisor.insertarSupervisor(sup);
+            if (res) Response.Redirect("MainAdmin.aspx");
+        }
         private string HashPassword(string password)
         {
             // Implementa un método seguro para hashear la contraseña
