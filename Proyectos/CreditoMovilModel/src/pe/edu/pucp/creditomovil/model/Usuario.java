@@ -19,11 +19,12 @@ public abstract class Usuario {
     private Date ultimoLogueo;
     private TipoDocumento tipoDocumento;
     private String documento;
+    private String salt;
     
     public Usuario(){}
     public Usuario(int idUsuario, Date fecha, String nombre, String apPaterno,
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, TipoDocumento tipoDocumento, String documento) {
+            boolean activo, TipoDocumento tipoDocumento, String documento, String salt) {
         this.idUsuario = idUsuario;
         this.fecha = fecha;
         this.nombre = nombre;
@@ -35,6 +36,7 @@ public abstract class Usuario {
         this.activo = activo;
         this.tipoDocumento = tipoDocumento;
         this.documento = documento;
+        this.salt = salt;
     }
 
     public void registrar() {
@@ -143,5 +145,13 @@ public abstract class Usuario {
 
     public void setDocumento(String documento) {
         this.documento = documento;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }

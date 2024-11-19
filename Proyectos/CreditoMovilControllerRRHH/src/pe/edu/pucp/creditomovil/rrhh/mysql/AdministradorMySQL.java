@@ -27,17 +27,28 @@ public class AdministradorMySQL implements AdministradorDAO{
     @Override
     public void insertar(Administrador administrador) {
         CallableStatement cs;
-        String query = "{CALL InsertarAdmin(?,?,?)}";
+        String query = "{CALL InsertarAdmin(?,?,?,?,?,?,?,?,?,?,?,?)}";
         int resultado = 0;
         
         try {
             conexion = DBManager.getInstance().getConnection();
             cs = conexion.prepareCall(query);
-            cs.setInt(1, administrador.getIdUsuario());
-            cs.setInt(2, administrador.getCodigoCargo());
-            cs.registerOutParameter(3, Types.INTEGER);
+            cs.setDate(1, new java.sql.Date(administrador.getFecha().getTime()));
+            cs.setString(2, administrador.getNombre());
+            cs.setString(3, administrador.getApPaterno());
+            cs.setString(4, administrador.getApMaterno());
+            cs.setString(5, administrador.getContrasenha());
+            cs.setDate(6, new java.sql.Date(administrador.getFechaVencimiento().getTime()));
+            cs.setString(7, administrador.getActivo()? "1" : "0");
+            
+            cs.setString(8, administrador.getTipoDocumento().name());
+            cs.setString(9, administrador.getDocumento());
+            cs.setString(10, administrador.getSalt());
+            cs.setInt(11, administrador.getCodigoCargo());
+            cs.registerOutParameter(12, Types.INTEGER);
+            
             resultado = cs.executeUpdate();
-            int administradorID = cs.getInt(3);
+            int administradorID = cs.getInt(12);
             administrador.setCodigoAdm(administradorID);
             
         } catch (SQLException e) {
@@ -110,12 +121,30 @@ public class AdministradorMySQL implements AdministradorDAO{
             cs = conexion.prepareCall(query);            
             rs = cs.executeQuery();
             while (rs.next()) {
+                
+                String tipoDocStr = rs.getString("tipo_doc");
+                TipoDocumento tipoDoc; 
+                // es un enum asi que toca hacer el cambio de string a enum
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) {
+                    tipoDoc = TipoDocumento.DNI; // solo como manejo básico
+                }
                 //
                 Administrador admin = new Administrador(
-                    rs.getInt("usuario_usuario_id"), 
-                    new java.util.Date(), "Diego", "Pérez", "Gonzalez", "miContrasena", new java.util.Date(), true,
-                        TipoDocumento.DNI,"71608817",rs.getInt("codigo_admin"),
-                    rs.getInt("codigo_cargo")
+                    rs.getInt("usuario_id"),
+                        rs.getDate("fecha"),
+                        rs.getString("nombre"),
+                        rs.getString("ap_paterno"),
+                        rs.getString("ap_materno"),
+                        rs.getString("contrasena"),
+                        rs.getDate("fecha_venc"),
+                        rs.getBoolean("activo"),
+                        tipoDoc,
+                        rs.getString("documento"),
+                        rs.getString("salt"),
+                        rs.getInt("codigo_admin"),
+                        rs.getInt("codigo_cargo")
                 );
                 administradores.add(admin);
             }
@@ -169,6 +198,7 @@ public class AdministradorMySQL implements AdministradorDAO{
                     rs.getBoolean("activo"),
                     tipoDoc,
                     rs.getString("documento"),
+                    rs.getString("salt"),
                     rs.getInt("codigo_admin"),
                     rs.getInt("codigo_cargo")
                 );

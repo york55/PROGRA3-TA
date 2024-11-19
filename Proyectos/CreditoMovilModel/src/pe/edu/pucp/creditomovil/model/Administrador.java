@@ -14,9 +14,9 @@ public class Administrador extends Usuario {
     public Administrador(){}
     public Administrador(int idUsuario, Date fecha, String nombre, String apPaterno,
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, TipoDocumento tipoDocumento, String documento, 
+            boolean activo, TipoDocumento tipoDocumento, String documento, String salt,
             int codigoAdm, int codigoCargo) {
-        super(idUsuario, fecha, nombre, apPaterno, apMaterno, contrasenha, fechaVencimiento, activo, tipoDocumento, documento);
+        super(idUsuario, fecha, nombre, apPaterno, apMaterno, contrasenha, fechaVencimiento, activo, tipoDocumento, documento, salt);
         this.codigoAdm = codigoAdm;
         this.codigoCargo = codigoCargo;
     }

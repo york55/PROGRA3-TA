@@ -20,10 +20,10 @@ public class Cliente extends Usuario{
     public Cliente(){}
     public Cliente(int idUsuario, Date fecha, String nombre, String apPaterno, 
             String apMaterno, String contrasenha, Date fechaVencimiento,
-            boolean activo, TipoDocumento tipoDocumento, String documento, int codigoCliente, String direccion,
+            boolean activo, TipoDocumento tipoDocumento, String documento,String salt, int codigoCliente, String direccion,
             String telefono, String email, String tipoCliente,double ranking){
                 super(idUsuario,fecha,nombre,apPaterno,apMaterno,contrasenha,
-                      fechaVencimiento,activo, tipoDocumento, documento);
+                      fechaVencimiento,activo, tipoDocumento, documento, salt);
                 this.codigoCliente = codigoCliente;
                 this.direccion = direccion;
                 this.telefono = telefono;

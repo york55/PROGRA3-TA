@@ -7,8 +7,22 @@ package pe.edu.pucp.creditomovil.services;
 import jakarta.jws.WebService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
+import java.io.File;
+import java.sql.Connection;
+import java.util.HashMap;
 
 import java.util.List;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import pe.edu.pucp.creditomovil.conexion.DBManager;
 
 import pe.edu.pucp.creditomovil.getsclientes.dao.ClienteDAO;
 import pe.edu.pucp.creditomovil.getsclientes.mysql.ClienteMySQL;
@@ -99,6 +113,41 @@ public class ClienteWS {
         return clientes;
     }
     
+    private String getFileResource(String fileName){ 
+        String filePath = ClienteWS.class.getResource("/pe/edu/pucp/creditomovil/resources/"+fileName).getPath();
+        filePath = filePath.replace("%20", " ");
+        return filePath;
+    }
     
+    @WebMethod(operationName = "reportePDF")
+    public byte[] reportePDF() throws Exception {
+        try {            
+            Map<String, Object> params = new HashMap<>();
+            params.put("docIden","7233415");
+            params.put("tipoDocIden","DNI");            
+            return generarBuffer(getFileResource("Cliente.jrxml"), params);                    
+         } catch (Exception ex) {
+            Logger.getLogger(ClienteWS.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
+    /*
+    Compila el xml,genera el reporte y lo retorna como un array de bytes
+    */
+    public byte[] generarBuffer(String inFileXML, Map<String, Object> params) throws Exception{
+        //Se compila una sola vez
+        String fileJasper = inFileXML +".jasper";
+        if(!new File(fileJasper).exists()){
+            //para compilar en GlassFish se requiere las librerias: jasperreports-jdt, ecj
+            JasperCompileManager.compileReportToFile(inFileXML, fileJasper);         
+        }
+        //1- leer el archivo compilado
+        JasperReport jr = (JasperReport) JRLoader.loadObjectFromFile(fileJasper);
+        //2- poblar el reporte
+        Connection conn = DBManager.getInstance().getConnection();
+        JasperPrint jp = JasperFillManager.fillReport(jr,params, conn);          
+        return JasperExportManager.exportReportToPdf(jp);
+    }
     
 }
