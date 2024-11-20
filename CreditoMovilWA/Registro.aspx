@@ -204,7 +204,7 @@
                 <asp:TextBox ID="txtConfirmarContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
         </div>
-
+        <!-- Mensaje de error -->
         <asp:Label ID="lblError" runat="server" CssClass="error-message" EnableViewState="false"></asp:Label>
         <!-- Botón Guardar -->
         <div id="containerBtn" runat="server" style="display: flex; gap: 10px;">

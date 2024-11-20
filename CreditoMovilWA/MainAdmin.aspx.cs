@@ -34,7 +34,13 @@ namespace CreditoMovilWA
 
         protected void btnGenerarReportes_Click(object sender, EventArgs e)
         {
-
+            Byte[] FileBuffer = clienteDAO.reportePDF();
+            if (FileBuffer != null)
+            {
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-length", FileBuffer.Length.ToString());
+                Response.BinaryWrite(FileBuffer);
+            }
         }
 
         protected void btnBuscarCli_Click(object sender, EventArgs e)
@@ -55,13 +61,18 @@ namespace CreditoMovilWA
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            // NO SE UNA PUTA MIERDA TIO JODER ME COMES LA POLLA 
-            // feliz chiqui ibai
-            // feliz illojuan
+            /*CAMBIO*/
             Button btnEliminar = (Button) sender;
             int codigoCliente = Int32.Parse(btnEliminar.CommandArgument);
-            clienteDAO.eliminarCliente(codigoCliente);
-            gvClientes.DataBind();
+            if (clienteDAO.eliminarClienteLogico(codigoCliente))
+            {
+                msjSuccess.Text = "Se ha desactivado correctamente el cliente";
+                gvClientes.DataBind();
+            }
+            else
+            {
+                msjError.Text = "Error: No se ha desactivo el cliente";
+            }
         }
 
         protected void btnAddSupervisor_Click(object sender, EventArgs e)

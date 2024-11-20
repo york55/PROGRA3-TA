@@ -22,7 +22,7 @@ namespace CreditoMovilWA
 
         private ClienteWSClient daoCliente = new ClienteWSClient();
         private SupervisorWSClient daoSupervisor = new SupervisorWSClient();
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) {
@@ -90,14 +90,22 @@ namespace CreditoMovilWA
 
         protected void btnRegresar_Click(object sender, EventArgs e)
         {
-            if((string)Session["TipoOperacion"] != null)
+            /*CAMBIO*/
+            if ((string)Session["TipoOperacion"] != null)
             {
-                if (((string)Session["TipoOperacion"]).Equals("detail_cliente"))
+                switch ((string)Session["TipoOperacion"])
                 {
-                    Response.Redirect("MainAdmin.aspx");
+                    case ("detail_cliente"):
+                        Response.Redirect("MainAdmin.aspx");
+                        break;
+                    case("add_cliente"):
+                        Response.Redirect("Home.aspx");
+                        break;
+                    case("add_supervisor"):
+                        Response.Redirect("MainAdmin.aspx");
+                        break;
                 }
             }
-            else Response.Redirect("Home.aspx");
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -152,10 +160,12 @@ namespace CreditoMovilWA
                 return;
             }
 
+
+            string salt = GenerarSalt();
             // Aquí puedes agregar lógica para guardar los datos en la base de datos
             // Asegúrate de hashear la contraseña antes de almacenarla
-            string hashedPassword = HashPassword(contrasena);
-            Cliente.contrasenha = contrasena;
+            string hashedPassword = HashPassword(contrasena, salt);
+            Cliente.contrasenha = hashedPassword;
 
             // Código para guardar en la base de datos...
             Cliente.tipoCliente = "Nuevo";
@@ -167,7 +177,7 @@ namespace CreditoMovilWA
             Cliente.ultimoLogueo = DateTime.Now; // falta ver, no lo utiliza para la creacion de cliente
             Cliente.ultimoLogueoSpecified = true;
             Cliente.codigoCliente = 0;
-            Cliente.salt = "QUEXUXAES";
+            Cliente.salt = salt;
             Cliente.ranking = 30;
 
             bool resultado = daoCliente.insertarCliente(Cliente);
@@ -201,14 +211,15 @@ namespace CreditoMovilWA
             // Validaciones básicas
             string contrasena = txtContrasena.Text;
             if (string.IsNullOrEmpty(sup.nombre) || string.IsNullOrEmpty(sup.apPaterno) ||
-                            string.IsNullOrEmpty(ddlTipoDocumento.SelectedValue) || string.IsNullOrEmpty(sup.documento) 
+                            string.IsNullOrEmpty(ddlTipoDocumento.SelectedValue) || string.IsNullOrEmpty(sup.documento)
                             || string.IsNullOrEmpty(contrasena))
             {
                 lblError.Text = "Por favor, complete todos los campos.";
                 return;
             }
+            string saltSup = GenerarSalt();
             sup.activo = true;
-            sup.contrasenha = contrasena;
+            sup.contrasenha = HashPassword(contrasena, saltSup);
             sup.codigoCargo = int.Parse(txtCodigoCargo.Text.Trim());
             sup.agenciaAsignacion = txtAgencia.Text.Trim();
             sup.fecha = DateTime.Now;
@@ -217,21 +228,29 @@ namespace CreditoMovilWA
             sup.fechaVencimientoSpecified = true;
             sup.ultimoLogueo = DateTime.Now; // falta ver, no lo utiliza para la creacion de cliente
             sup.ultimoLogueoSpecified = true;
-            sup.salt = "QUEXUXAES";
+            sup.salt = saltSup;
             sup.codigoEv = 11;
 
             bool res = daoSupervisor.insertarSupervisor(sup);
             if (res) Response.Redirect("MainAdmin.aspx");
         }
-        private string HashPassword(string password)
+        private string HashPassword(string password, string salt)
         {
-            // Implementa un método seguro para hashear la contraseña
-            // Por ejemplo, utilizando SHA256 (aunque se recomienda usar algoritmos más seguros como BCrypt)
-            using (System.Security.Cryptography.SHA256 sha256 = System.Security.Cryptography.SHA256.Create())
+            string saltedPassword = password + salt;
+
+            using (var sha256 = SHA256.Create())
             {
-                byte[] bytes = System.Text.Encoding.UTF8.GetBytes(password);
-                byte[] hash = sha256.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(saltedPassword));
+                return Convert.ToBase64String(hashBytes);
+            }
+        }
+        private string GenerarSalt()
+        {
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                byte[] saltBytes = new byte[16];
+                rng.GetBytes(saltBytes);
+                return Convert.ToBase64String(saltBytes);
             }
         }
     }

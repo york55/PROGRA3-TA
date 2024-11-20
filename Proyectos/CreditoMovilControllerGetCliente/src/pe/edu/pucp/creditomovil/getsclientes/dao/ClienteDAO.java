@@ -14,7 +14,8 @@ import pe.edu.pucp.creditomovil.model.Cliente;
 public interface ClienteDAO {
     boolean insertar(Cliente usuario);
     boolean modificar(Cliente usuario);
-    boolean eliminar(int id);
+    boolean eliminarCompleto(int id);
+    boolean eliminarLogico(int id);
     Cliente obtenerPorCodigo(int cod);
     Cliente obtenerPorDocIdentidad(String docIden, String tipoDocIden);
     List<Cliente> listarTodos();

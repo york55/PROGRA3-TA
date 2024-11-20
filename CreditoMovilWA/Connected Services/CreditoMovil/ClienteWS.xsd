@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="https://services.creditomovil.pucp.edu.pe" targetNamespace="https://services.creditomovil.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="Exception" type="tns:Exception" />
-  <xs:element name="eliminarCliente" type="tns:eliminarCliente" />
-  <xs:element name="eliminarClienteResponse" type="tns:eliminarClienteResponse" />
+  <xs:element name="eliminarClienteLogico" type="tns:eliminarClienteLogico" />
+  <xs:element name="eliminarClienteLogicoResponse" type="tns:eliminarClienteLogicoResponse" />
+  <xs:element name="eliminarCompletoCliente" type="tns:eliminarCompletoCliente" />
+  <xs:element name="eliminarCompletoClienteResponse" type="tns:eliminarCompletoClienteResponse" />
   <xs:element name="generarBuffer" type="tns:generarBuffer" />
   <xs:element name="generarBufferResponse" type="tns:generarBufferResponse" />
   <xs:element name="insertarCliente" type="tns:insertarCliente" />
@@ -80,12 +82,22 @@
       <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarCliente">
+  <xs:complexType name="eliminarCompletoCliente">
     <xs:sequence>
-      <xs:element name="idcliente" type="xs:int" />
+      <xs:element name="codCliente" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarClienteResponse">
+  <xs:complexType name="eliminarCompletoClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarClienteLogico">
+    <xs:sequence>
+      <xs:element name="codCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarClienteLogicoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>

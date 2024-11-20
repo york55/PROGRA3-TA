@@ -1613,70 +1613,6 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
-    public partial class obtenerPorIDBancoResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private banco returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public banco @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
-    public partial class obtenerPorIDBanco : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int idbancoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int idbanco {
-            get {
-                return this.idbancoField;
-            }
-            set {
-                this.idbancoField = value;
-                this.RaisePropertyChanged("idbanco");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
     public partial class modificarBancoResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool returnField;
@@ -1722,6 +1658,70 @@ namespace CreditoMovilWA.CreditoMovil {
             set {
                 this.bancoField = value;
                 this.RaisePropertyChanged("banco");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
+    public partial class obtenerPorIDBancoResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private banco returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public banco @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
+    public partial class obtenerPorIDBanco : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idbancoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idbanco {
+            get {
+                return this.idbancoField;
+            }
+            set {
+                this.idbancoField = value;
+                this.RaisePropertyChanged("idbanco");
             }
         }
         
@@ -2144,7 +2144,7 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
-    public partial class eliminarClienteResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class eliminarClienteLogicoResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool returnField;
         
@@ -2176,19 +2176,83 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
-    public partial class eliminarCliente : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class eliminarClienteLogico : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int idclienteField;
+        private int codClienteField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int idcliente {
+        public int codCliente {
             get {
-                return this.idclienteField;
+                return this.codClienteField;
             }
             set {
-                this.idclienteField = value;
-                this.RaisePropertyChanged("idcliente");
+                this.codClienteField = value;
+                this.RaisePropertyChanged("codCliente");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
+    public partial class eliminarCompletoClienteResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
+    public partial class eliminarCompletoCliente : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int codClienteField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int codCliente {
+            get {
+                return this.codClienteField;
+            }
+            set {
+                this.codClienteField = value;
+                this.RaisePropertyChanged("codCliente");
             }
         }
         
@@ -3082,56 +3146,6 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
-    public partial class insertarAdministradorResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
-    public partial class insertarAdministrador : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private administrador administradorField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public administrador administrador {
-            get {
-                return this.administradorField;
-            }
-            set {
-                this.administradorField = value;
-                this.RaisePropertyChanged("administrador");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
     public partial class eliminarAdministradorResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -3163,6 +3177,56 @@ namespace CreditoMovilWA.CreditoMovil {
             set {
                 this.idadministradorField = value;
                 this.RaisePropertyChanged("idadministrador");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
+    public partial class insertarAdministradorResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://services.creditomovil.pucp.edu.pe")]
+    public partial class insertarAdministrador : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private administrador administradorField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public administrador administrador {
+            get {
+                return this.administradorField;
+            }
+            set {
+                this.administradorField = value;
+                this.RaisePropertyChanged("administrador");
             }
         }
         
@@ -4068,10 +4132,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -4084,8 +4148,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -4103,10 +4169,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -4138,105 +4204,6 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoResponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCreditoResponse1> eliminarCreditoAsync(CreditoMovilWA.CreditoMovil.eliminarCreditoRequest request);
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.insertarCreditoResponse1 insertarCredito(CreditoMovilWA.CreditoMovil.insertarCreditoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarCreditoResponse1> insertarCreditoAsync(CreditoMovilWA.CreditoMovil.insertarCreditoRequest request);
-        
         // CODEGEN: El parámetro 'credito' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -4265,10 +4232,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -4281,8 +4248,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -4300,10 +4269,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -4336,6 +4305,107 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse1> modificarCreditoAsync(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.insertarCreditoResponse1 insertarCredito(CreditoMovilWA.CreditoMovil.insertarCreditoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarCreditoResponse1> insertarCreditoAsync(CreditoMovilWA.CreditoMovil.insertarCreditoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/obtenerPorIDCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/obtenerPorIDCreditoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
@@ -4363,10 +4433,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -4379,8 +4449,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -4398,10 +4470,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -4462,10 +4534,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -4478,8 +4550,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -4497,10 +4571,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -4561,10 +4635,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -4577,8 +4651,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -4596,10 +4672,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -4664,6 +4740,34 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarCreditoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.credito credito;
+        
+        public modificarCreditoRequest() {
+        }
+        
+        public modificarCreditoRequest(CreditoMovilWA.CreditoMovil.credito credito) {
+            this.credito = credito;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCreditoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarCreditoResponse1 {
+        
+        public modificarCreditoResponse1() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class insertarCreditoRequest {
         
@@ -4699,34 +4803,6 @@ namespace CreditoMovilWA.CreditoMovil {
         
         public insertarCreditoResponse1(bool @return) {
             this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarCreditoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.credito credito;
-        
-        public modificarCreditoRequest() {
-        }
-        
-        public modificarCreditoRequest(CreditoMovilWA.CreditoMovil.credito credito) {
-            this.credito = credito;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCreditoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarCreditoResponse1 {
-        
-        public modificarCreditoResponse1() {
         }
     }
     
@@ -4895,6 +4971,28 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.modificarCreditoResponse1 CreditoMovilWA.CreditoMovil.CreditoWS.modificarCredito(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request) {
+            return base.Channel.modificarCredito(request);
+        }
+        
+        public void modificarCredito(CreditoMovilWA.CreditoMovil.credito credito) {
+            CreditoMovilWA.CreditoMovil.modificarCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarCreditoRequest();
+            inValue.credito = credito;
+            CreditoMovilWA.CreditoMovil.modificarCreditoResponse1 retVal = ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).modificarCredito(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse1> CreditoMovilWA.CreditoMovil.CreditoWS.modificarCreditoAsync(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request) {
+            return base.Channel.modificarCreditoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse1> modificarCreditoAsync(CreditoMovilWA.CreditoMovil.credito credito) {
+            CreditoMovilWA.CreditoMovil.modificarCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarCreditoRequest();
+            inValue.credito = credito;
+            return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).modificarCreditoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.insertarCreditoResponse1 CreditoMovilWA.CreditoMovil.CreditoWS.insertarCredito(CreditoMovilWA.CreditoMovil.insertarCreditoRequest request) {
             return base.Channel.insertarCredito(request);
         }
@@ -4917,28 +5015,6 @@ namespace CreditoMovilWA.CreditoMovil {
             inValue.credito = credito;
             inValue.codigoCliente = codigoCliente;
             return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).insertarCreditoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.modificarCreditoResponse1 CreditoMovilWA.CreditoMovil.CreditoWS.modificarCredito(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request) {
-            return base.Channel.modificarCredito(request);
-        }
-        
-        public void modificarCredito(CreditoMovilWA.CreditoMovil.credito credito) {
-            CreditoMovilWA.CreditoMovil.modificarCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarCreditoRequest();
-            inValue.credito = credito;
-            CreditoMovilWA.CreditoMovil.modificarCreditoResponse1 retVal = ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).modificarCredito(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse1> CreditoMovilWA.CreditoMovil.CreditoWS.modificarCreditoAsync(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request) {
-            return base.Channel.modificarCreditoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse1> modificarCreditoAsync(CreditoMovilWA.CreditoMovil.credito credito) {
-            CreditoMovilWA.CreditoMovil.modificarCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarCreditoRequest();
-            inValue.credito = credito;
-            return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).modificarCreditoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5047,10 +5123,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -5063,8 +5139,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -5082,10 +5160,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -5146,10 +5224,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -5162,8 +5240,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -5181,10 +5261,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -5245,10 +5325,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -5261,8 +5341,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -5280,10 +5362,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -5346,10 +5428,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -5362,8 +5444,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -5381,10 +5465,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -5449,10 +5533,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -5465,8 +5549,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -5484,10 +5570,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -5552,10 +5638,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -5568,8 +5654,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -5587,10 +5675,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -6002,6 +6090,320 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.ServiceModel.ServiceContractAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", ConfigurationName="CreditoMovil.AdministradorWS")]
     public interface AdministradorWS {
         
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
+            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
+            "orResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1 obtenerPorIDAdministrador(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
+            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
+            "orResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1> obtenerPorIDAdministradorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
+            "resRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
+            "resResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse listarTodosAdministradores(CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
+            "resRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
+            "resResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync(CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest request);
+        
+        // CODEGEN: El parámetro 'administrador' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
+            "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1 insertarAdministrador(CreditoMovilWA.CreditoMovil.insertarAdministradorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
+            "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1> insertarAdministradorAsync(CreditoMovilWA.CreditoMovil.insertarAdministradorRequest request);
+        
         // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
             "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
@@ -6032,10 +6434,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -6048,8 +6450,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -6067,10 +6471,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -6134,10 +6538,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -6150,8 +6554,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -6169,10 +6575,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -6207,314 +6613,6 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarAdministradorResponse1> eliminarAdministradorAsync(CreditoMovilWA.CreditoMovil.eliminarAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
-            "resRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
-            "resResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse listarTodosAdministradores(CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
-            "resRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
-            "resResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync(CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
-            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
-            "orResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1 obtenerPorIDAdministrador(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
-            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
-            "orResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1> obtenerPorIDAdministradorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request);
-        
-        // CODEGEN: El parámetro 'administrador' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
-            "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1 insertarAdministrador(CreditoMovilWA.CreditoMovil.insertarAdministradorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
-            "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1> insertarAdministradorAsync(CreditoMovilWA.CreditoMovil.insertarAdministradorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorDocIdenAdminR" +
             "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorDocIdenAdminR" +
             "esponse")]
@@ -6544,10 +6642,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -6560,8 +6658,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -6579,10 +6679,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -6616,6 +6716,98 @@ namespace CreditoMovilWA.CreditoMovil {
             "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorDocIdenAdminR" +
             "esponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorDocIdenAdminResponse1> obtenerPorDocIdenAdminAsync(CreditoMovilWA.CreditoMovil.obtenerPorDocIdenAdminRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDAdministrador", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDAdministradorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idadministrador;
+        
+        public obtenerPorIDAdministradorRequest() {
+        }
+        
+        public obtenerPorIDAdministradorRequest(int idadministrador) {
+            this.idadministrador = idadministrador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDAdministradorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDAdministradorResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.administrador @return;
+        
+        public obtenerPorIDAdministradorResponse1() {
+        }
+        
+        public obtenerPorIDAdministradorResponse1(CreditoMovilWA.CreditoMovil.administrador @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAdministradores", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosAdministradoresRequest {
+        
+        public listarTodosAdministradoresRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAdministradoresResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosAdministradoresResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.administrador[] @return;
+        
+        public listarTodosAdministradoresResponse() {
+        }
+        
+        public listarTodosAdministradoresResponse(CreditoMovilWA.CreditoMovil.administrador[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAdministrador", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarAdministradorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.administrador administrador;
+        
+        public insertarAdministradorRequest() {
+        }
+        
+        public insertarAdministradorRequest(CreditoMovilWA.CreditoMovil.administrador administrador) {
+            this.administrador = administrador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAdministradorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarAdministradorResponse1 {
+        
+        public insertarAdministradorResponse1() {
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6676,98 +6868,6 @@ namespace CreditoMovilWA.CreditoMovil {
     public partial class eliminarAdministradorResponse1 {
         
         public eliminarAdministradorResponse1() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAdministradores", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosAdministradoresRequest {
-        
-        public listarTodosAdministradoresRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAdministradoresResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosAdministradoresResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.administrador[] @return;
-        
-        public listarTodosAdministradoresResponse() {
-        }
-        
-        public listarTodosAdministradoresResponse(CreditoMovilWA.CreditoMovil.administrador[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDAdministrador", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDAdministradorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idadministrador;
-        
-        public obtenerPorIDAdministradorRequest() {
-        }
-        
-        public obtenerPorIDAdministradorRequest(int idadministrador) {
-            this.idadministrador = idadministrador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDAdministradorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDAdministradorResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.administrador @return;
-        
-        public obtenerPorIDAdministradorResponse1() {
-        }
-        
-        public obtenerPorIDAdministradorResponse1(CreditoMovilWA.CreditoMovil.administrador @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAdministrador", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarAdministradorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.administrador administrador;
-        
-        public insertarAdministradorRequest() {
-        }
-        
-        public insertarAdministradorRequest(CreditoMovilWA.CreditoMovil.administrador administrador) {
-            this.administrador = administrador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAdministradorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarAdministradorResponse1 {
-        
-        public insertarAdministradorResponse1() {
         }
     }
     
@@ -6840,6 +6940,72 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1 CreditoMovilWA.CreditoMovil.AdministradorWS.obtenerPorIDAdministrador(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request) {
+            return base.Channel.obtenerPorIDAdministrador(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.administrador obtenerPorIDAdministrador(int idadministrador) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest();
+            inValue.idadministrador = idadministrador;
+            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1 retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).obtenerPorIDAdministrador(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1> CreditoMovilWA.CreditoMovil.AdministradorWS.obtenerPorIDAdministradorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request) {
+            return base.Channel.obtenerPorIDAdministradorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1> obtenerPorIDAdministradorAsync(int idadministrador) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest();
+            inValue.idadministrador = idadministrador;
+            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).obtenerPorIDAdministradorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse CreditoMovilWA.CreditoMovil.AdministradorWS.listarTodosAdministradores(CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest request) {
+            return base.Channel.listarTodosAdministradores(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.administrador[] listarTodosAdministradores() {
+            CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest();
+            CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).listarTodosAdministradores(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse> CreditoMovilWA.CreditoMovil.AdministradorWS.listarTodosAdministradoresAsync(CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest request) {
+            return base.Channel.listarTodosAdministradoresAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync() {
+            CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest();
+            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).listarTodosAdministradoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1 CreditoMovilWA.CreditoMovil.AdministradorWS.insertarAdministrador(CreditoMovilWA.CreditoMovil.insertarAdministradorRequest request) {
+            return base.Channel.insertarAdministrador(request);
+        }
+        
+        public void insertarAdministrador(CreditoMovilWA.CreditoMovil.administrador administrador) {
+            CreditoMovilWA.CreditoMovil.insertarAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.insertarAdministradorRequest();
+            inValue.administrador = administrador;
+            CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1 retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).insertarAdministrador(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1> CreditoMovilWA.CreditoMovil.AdministradorWS.insertarAdministradorAsync(CreditoMovilWA.CreditoMovil.insertarAdministradorRequest request) {
+            return base.Channel.insertarAdministradorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1> insertarAdministradorAsync(CreditoMovilWA.CreditoMovil.administrador administrador) {
+            CreditoMovilWA.CreditoMovil.insertarAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.insertarAdministradorRequest();
+            inValue.administrador = administrador;
+            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).insertarAdministradorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.modificarAdministradorResponse1 CreditoMovilWA.CreditoMovil.AdministradorWS.modificarAdministrador(CreditoMovilWA.CreditoMovil.modificarAdministradorRequest request) {
             return base.Channel.modificarAdministrador(request);
         }
@@ -6886,72 +7052,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse CreditoMovilWA.CreditoMovil.AdministradorWS.listarTodosAdministradores(CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest request) {
-            return base.Channel.listarTodosAdministradores(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.administrador[] listarTodosAdministradores() {
-            CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest();
-            CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).listarTodosAdministradores(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse> CreditoMovilWA.CreditoMovil.AdministradorWS.listarTodosAdministradoresAsync(CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest request) {
-            return base.Channel.listarTodosAdministradoresAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync() {
-            CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest();
-            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).listarTodosAdministradoresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1 CreditoMovilWA.CreditoMovil.AdministradorWS.obtenerPorIDAdministrador(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request) {
-            return base.Channel.obtenerPorIDAdministrador(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.administrador obtenerPorIDAdministrador(int idadministrador) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest();
-            inValue.idadministrador = idadministrador;
-            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1 retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).obtenerPorIDAdministrador(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1> CreditoMovilWA.CreditoMovil.AdministradorWS.obtenerPorIDAdministradorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request) {
-            return base.Channel.obtenerPorIDAdministradorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse1> obtenerPorIDAdministradorAsync(int idadministrador) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest();
-            inValue.idadministrador = idadministrador;
-            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).obtenerPorIDAdministradorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1 CreditoMovilWA.CreditoMovil.AdministradorWS.insertarAdministrador(CreditoMovilWA.CreditoMovil.insertarAdministradorRequest request) {
-            return base.Channel.insertarAdministrador(request);
-        }
-        
-        public void insertarAdministrador(CreditoMovilWA.CreditoMovil.administrador administrador) {
-            CreditoMovilWA.CreditoMovil.insertarAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.insertarAdministradorRequest();
-            inValue.administrador = administrador;
-            CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1 retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).insertarAdministrador(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1> CreditoMovilWA.CreditoMovil.AdministradorWS.insertarAdministradorAsync(CreditoMovilWA.CreditoMovil.insertarAdministradorRequest request) {
-            return base.Channel.insertarAdministradorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarAdministradorResponse1> insertarAdministradorAsync(CreditoMovilWA.CreditoMovil.administrador administrador) {
-            CreditoMovilWA.CreditoMovil.insertarAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.insertarAdministradorRequest();
-            inValue.administrador = administrador;
-            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).insertarAdministradorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.obtenerPorDocIdenAdminResponse1 CreditoMovilWA.CreditoMovil.AdministradorWS.obtenerPorDocIdenAdmin(CreditoMovilWA.CreditoMovil.obtenerPorDocIdenAdminRequest request) {
             return base.Channel.obtenerPorDocIdenAdmin(request);
         }
@@ -6980,109 +7080,6 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", ConfigurationName="CreditoMovil.TransaccionWS")]
     public interface TransaccionWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionReque" +
-            "st", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1 modificarTransaccion(CreditoMovilWA.CreditoMovil.modificarTransaccionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionReque" +
-            "st", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1> modificarTransaccionAsync(CreditoMovilWA.CreditoMovil.modificarTransaccionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/insertarTransaccionReques" +
@@ -7114,10 +7111,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -7130,8 +7127,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -7149,10 +7148,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -7188,6 +7187,321 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarTransaccionResponse1> insertarTransaccionAsync(CreditoMovilWA.CreditoMovil.insertarTransaccionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
+            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
+            "esponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse listarTransaccionCredito(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
+            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
+            "esponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> listarTransaccionCreditoAsync(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRe" +
+            "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1 obtenerPorIDTransaccion(CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRe" +
+            "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1> obtenerPorIDTransaccionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionReque" +
+            "st", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1 modificarTransaccion(CreditoMovilWA.CreditoMovil.modificarTransaccionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionReque" +
+            "st", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1> modificarTransaccionAsync(CreditoMovilWA.CreditoMovil.modificarTransaccionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionReques" +
             "t", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionRespon" +
             "se")]
@@ -7217,10 +7531,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -7233,8 +7547,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -7252,10 +7568,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -7320,10 +7636,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -7336,8 +7652,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -7355,10 +7673,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -7392,248 +7710,6 @@ namespace CreditoMovilWA.CreditoMovil {
             "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTodosTransaccionsRe" +
             "sponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosTransaccionsResponse> listarTodosTransaccionsAsync(CreditoMovilWA.CreditoMovil.listarTodosTransaccionsRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRe" +
-            "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1 obtenerPorIDTransaccion(CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRe" +
-            "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1> obtenerPorIDTransaccionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
-            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
-            "esponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse listarTransaccionCredito(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
-            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
-            "esponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> listarTransaccionCreditoAsync(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarTransaccion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarTransaccionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.transaccion transaccion;
-        
-        public modificarTransaccionRequest() {
-        }
-        
-        public modificarTransaccionRequest(CreditoMovilWA.CreditoMovil.transaccion transaccion) {
-            this.transaccion = transaccion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarTransaccionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarTransaccionResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public modificarTransaccionResponse1() {
-        }
-        
-        public modificarTransaccionResponse1(bool @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -7668,6 +7744,114 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         public insertarTransaccionResponse1(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransaccionCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTransaccionCreditoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCred;
+        
+        public listarTransaccionCreditoRequest() {
+        }
+        
+        public listarTransaccionCreditoRequest(int idCred) {
+            this.idCred = idCred;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransaccionCreditoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTransaccionCreditoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.transaccion[] @return;
+        
+        public listarTransaccionCreditoResponse() {
+        }
+        
+        public listarTransaccionCreditoResponse(CreditoMovilWA.CreditoMovil.transaccion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDTransaccion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDTransaccionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idtransaccion;
+        
+        public obtenerPorIDTransaccionRequest() {
+        }
+        
+        public obtenerPorIDTransaccionRequest(int idtransaccion) {
+            this.idtransaccion = idtransaccion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDTransaccionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDTransaccionResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.transaccion @return;
+        
+        public obtenerPorIDTransaccionResponse1() {
+        }
+        
+        public obtenerPorIDTransaccionResponse1(CreditoMovilWA.CreditoMovil.transaccion @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarTransaccion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarTransaccionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.transaccion transaccion;
+        
+        public modificarTransaccionRequest() {
+        }
+        
+        public modificarTransaccionRequest(CreditoMovilWA.CreditoMovil.transaccion transaccion) {
+            this.transaccion = transaccion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarTransaccionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarTransaccionResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public modificarTransaccionResponse1() {
+        }
+        
+        public modificarTransaccionResponse1(bool @return) {
             this.@return = @return;
         }
     }
@@ -7736,78 +7920,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDTransaccion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDTransaccionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idtransaccion;
-        
-        public obtenerPorIDTransaccionRequest() {
-        }
-        
-        public obtenerPorIDTransaccionRequest(int idtransaccion) {
-            this.idtransaccion = idtransaccion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDTransaccionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDTransaccionResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.transaccion @return;
-        
-        public obtenerPorIDTransaccionResponse1() {
-        }
-        
-        public obtenerPorIDTransaccionResponse1(CreditoMovilWA.CreditoMovil.transaccion @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransaccionCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTransaccionCreditoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCred;
-        
-        public listarTransaccionCreditoRequest() {
-        }
-        
-        public listarTransaccionCreditoRequest(int idCred) {
-            this.idCred = idCred;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransaccionCreditoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTransaccionCreditoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.transaccion[] @return;
-        
-        public listarTransaccionCreditoResponse() {
-        }
-        
-        public listarTransaccionCreditoResponse(CreditoMovilWA.CreditoMovil.transaccion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface TransaccionWSChannel : CreditoMovilWA.CreditoMovil.TransaccionWS, System.ServiceModel.IClientChannel {
     }
@@ -7836,29 +7948,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1 CreditoMovilWA.CreditoMovil.TransaccionWS.modificarTransaccion(CreditoMovilWA.CreditoMovil.modificarTransaccionRequest request) {
-            return base.Channel.modificarTransaccion(request);
-        }
-        
-        public bool modificarTransaccion(CreditoMovilWA.CreditoMovil.transaccion transaccion) {
-            CreditoMovilWA.CreditoMovil.modificarTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.modificarTransaccionRequest();
-            inValue.transaccion = transaccion;
-            CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).modificarTransaccion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1> CreditoMovilWA.CreditoMovil.TransaccionWS.modificarTransaccionAsync(CreditoMovilWA.CreditoMovil.modificarTransaccionRequest request) {
-            return base.Channel.modificarTransaccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1> modificarTransaccionAsync(CreditoMovilWA.CreditoMovil.transaccion transaccion) {
-            CreditoMovilWA.CreditoMovil.modificarTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.modificarTransaccionRequest();
-            inValue.transaccion = transaccion;
-            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).modificarTransaccionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.insertarTransaccionResponse1 CreditoMovilWA.CreditoMovil.TransaccionWS.insertarTransaccion(CreditoMovilWA.CreditoMovil.insertarTransaccionRequest request) {
             return base.Channel.insertarTransaccion(request);
         }
@@ -7879,6 +7968,75 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.insertarTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.insertarTransaccionRequest();
             inValue.transaccion = transaccion;
             return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).insertarTransaccionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse CreditoMovilWA.CreditoMovil.TransaccionWS.listarTransaccionCredito(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request) {
+            return base.Channel.listarTransaccionCredito(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.transaccion[] listarTransaccionCredito(int idCred) {
+            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest();
+            inValue.idCred = idCred;
+            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).listarTransaccionCredito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> CreditoMovilWA.CreditoMovil.TransaccionWS.listarTransaccionCreditoAsync(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request) {
+            return base.Channel.listarTransaccionCreditoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> listarTransaccionCreditoAsync(int idCred) {
+            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest();
+            inValue.idCred = idCred;
+            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).listarTransaccionCreditoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1 CreditoMovilWA.CreditoMovil.TransaccionWS.obtenerPorIDTransaccion(CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest request) {
+            return base.Channel.obtenerPorIDTransaccion(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.transaccion obtenerPorIDTransaccion(int idtransaccion) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest();
+            inValue.idtransaccion = idtransaccion;
+            CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).obtenerPorIDTransaccion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1> CreditoMovilWA.CreditoMovil.TransaccionWS.obtenerPorIDTransaccionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest request) {
+            return base.Channel.obtenerPorIDTransaccionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1> obtenerPorIDTransaccionAsync(int idtransaccion) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest();
+            inValue.idtransaccion = idtransaccion;
+            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).obtenerPorIDTransaccionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1 CreditoMovilWA.CreditoMovil.TransaccionWS.modificarTransaccion(CreditoMovilWA.CreditoMovil.modificarTransaccionRequest request) {
+            return base.Channel.modificarTransaccion(request);
+        }
+        
+        public bool modificarTransaccion(CreditoMovilWA.CreditoMovil.transaccion transaccion) {
+            CreditoMovilWA.CreditoMovil.modificarTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.modificarTransaccionRequest();
+            inValue.transaccion = transaccion;
+            CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).modificarTransaccion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1> CreditoMovilWA.CreditoMovil.TransaccionWS.modificarTransaccionAsync(CreditoMovilWA.CreditoMovil.modificarTransaccionRequest request) {
+            return base.Channel.modificarTransaccionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarTransaccionResponse1> modificarTransaccionAsync(CreditoMovilWA.CreditoMovil.transaccion transaccion) {
+            CreditoMovilWA.CreditoMovil.modificarTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.modificarTransaccionRequest();
+            inValue.transaccion = transaccion;
+            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).modificarTransaccionAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7924,52 +8082,6 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.listarTodosTransaccionsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosTransaccionsRequest();
             return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).listarTodosTransaccionsAsync(inValue);
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1 CreditoMovilWA.CreditoMovil.TransaccionWS.obtenerPorIDTransaccion(CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest request) {
-            return base.Channel.obtenerPorIDTransaccion(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.transaccion obtenerPorIDTransaccion(int idtransaccion) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest();
-            inValue.idtransaccion = idtransaccion;
-            CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).obtenerPorIDTransaccion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1> CreditoMovilWA.CreditoMovil.TransaccionWS.obtenerPorIDTransaccionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest request) {
-            return base.Channel.obtenerPorIDTransaccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse1> obtenerPorIDTransaccionAsync(int idtransaccion) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest();
-            inValue.idtransaccion = idtransaccion;
-            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).obtenerPorIDTransaccionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse CreditoMovilWA.CreditoMovil.TransaccionWS.listarTransaccionCredito(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request) {
-            return base.Channel.listarTransaccionCredito(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.transaccion[] listarTransaccionCredito(int idCred) {
-            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest();
-            inValue.idCred = idCred;
-            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).listarTransaccionCredito(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> CreditoMovilWA.CreditoMovil.TransaccionWS.listarTransaccionCreditoAsync(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request) {
-            return base.Channel.listarTransaccionCreditoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> listarTransaccionCreditoAsync(int idCred) {
-            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest();
-            inValue.idCred = idCred;
-            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).listarTransaccionCreditoAsync(inValue);
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -8004,10 +8116,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -8020,8 +8132,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -8039,10 +8153,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -8103,10 +8217,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -8119,8 +8233,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -8138,10 +8254,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -8175,105 +8291,6 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarClienteResponse1> modificarClienteAsync(CreditoMovilWA.CreditoMovil.modificarClienteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.eliminarClienteResponse1 eliminarCliente(CreditoMovilWA.CreditoMovil.eliminarClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteResponse1> eliminarClienteAsync(CreditoMovilWA.CreditoMovil.eliminarClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(CreditoMovilWA.CreditoMovil.Exception), Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBuffer/Fault/Exception" +
             "", Name="Exception")]
@@ -8303,10 +8320,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -8319,8 +8336,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -8338,10 +8357,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -8375,6 +8394,314 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.generarBufferResponse1> generarBufferAsync(CreditoMovilWA.CreditoMovil.generarBufferRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarCompletoClienteReques" +
+            "t", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarCompletoClienteRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse1 eliminarCompletoCliente(CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarCompletoClienteReques" +
+            "t", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarCompletoClienteRespon" +
+            "se")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse1> eliminarCompletoClienteAsync(CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CreditoMovilWA.CreditoMovil.Exception), Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDF/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.reportePDFResponse1 reportePDF(CreditoMovilWA.CreditoMovil.reportePDFRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse1> reportePDFAsync(CreditoMovilWA.CreditoMovil.reportePDFRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.listarTodosClientesResponse listarTodosClientes(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> listarTodosClientesAsync(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteReque" +
             "st", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteRespo" +
             "nse")]
@@ -8404,10 +8731,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -8420,8 +8747,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -8439,10 +8768,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -8478,105 +8807,6 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorDocIdenClienteResponse1> obtenerPorDocIdenClienteAsync(CreditoMovilWA.CreditoMovil.obtenerPorDocIdenClienteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarTodosClientesResponse listarTodosClientes(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> listarTodosClientesAsync(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
@@ -8604,10 +8834,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -8620,8 +8850,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -8639,10 +8871,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -8705,10 +8937,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -8721,8 +8953,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -8740,10 +8974,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -8779,8 +9013,8 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarClientesPorNombreResponse> listarClientesPorNombreAsync(CreditoMovilWA.CreditoMovil.listarClientesPorNombreRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(CreditoMovilWA.CreditoMovil.Exception), Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDF/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoResponse" +
+            "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
@@ -8807,10 +9041,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -8823,8 +9057,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -8842,10 +9078,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -8873,10 +9109,11 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.reportePDFResponse1 reportePDF(CreditoMovilWA.CreditoMovil.reportePDFRequest request);
+        CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse1 eliminarClienteLogico(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse1> reportePDFAsync(CreditoMovilWA.CreditoMovil.reportePDFRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoResponse" +
+            "")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse1> eliminarClienteLogicoAsync(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -8954,42 +9191,6 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarClienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idcliente;
-        
-        public eliminarClienteRequest() {
-        }
-        
-        public eliminarClienteRequest(int idcliente) {
-            this.idcliente = idcliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarClienteResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarClienteResponse1() {
-        }
-        
-        public eliminarClienteResponse1(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="generarBuffer", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class generarBufferRequest {
         
@@ -9032,6 +9233,98 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCompletoCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarCompletoClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int codCliente;
+        
+        public eliminarCompletoClienteRequest() {
+        }
+        
+        public eliminarCompletoClienteRequest(int codCliente) {
+            this.codCliente = codCliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCompletoClienteResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarCompletoClienteResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarCompletoClienteResponse1() {
+        }
+        
+        public eliminarCompletoClienteResponse1(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePDF", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class reportePDFRequest {
+        
+        public reportePDFRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePDFResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class reportePDFResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public reportePDFResponse1() {
+        }
+        
+        public reportePDFResponse1(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosClientes", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosClientesRequest {
+        
+        public listarTodosClientesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosClientesResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosClientesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.cliente[] @return;
+        
+        public listarTodosClientesResponse() {
+        }
+        
+        public listarTodosClientesResponse(CreditoMovilWA.CreditoMovil.cliente[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorDocIdenCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class obtenerPorDocIdenClienteRequest {
         
@@ -9066,34 +9359,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         public obtenerPorDocIdenClienteResponse1(CreditoMovilWA.CreditoMovil.cliente @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosClientes", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosClientesRequest {
-        
-        public listarTodosClientesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosClientesResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosClientesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.cliente[] @return;
-        
-        public listarTodosClientesResponse() {
-        }
-        
-        public listarTodosClientesResponse(CreditoMovilWA.CreditoMovil.cliente[] @return) {
             this.@return = @return;
         }
     }
@@ -9173,27 +9438,35 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePDF", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class reportePDFRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteLogico", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarClienteLogicoRequest {
         
-        public reportePDFRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int codCliente;
+        
+        public eliminarClienteLogicoRequest() {
+        }
+        
+        public eliminarClienteLogicoRequest(int codCliente) {
+            this.codCliente = codCliente;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePDFResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class reportePDFResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteLogicoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarClienteLogicoResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
-        public byte[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
         
-        public reportePDFResponse1() {
+        public eliminarClienteLogicoResponse1() {
         }
         
-        public reportePDFResponse1(byte[] @return) {
+        public eliminarClienteLogicoResponse1(bool @return) {
             this.@return = @return;
         }
     }
@@ -9272,29 +9545,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.eliminarClienteResponse1 CreditoMovilWA.CreditoMovil.ClienteWS.eliminarCliente(CreditoMovilWA.CreditoMovil.eliminarClienteRequest request) {
-            return base.Channel.eliminarCliente(request);
-        }
-        
-        public bool eliminarCliente(int idcliente) {
-            CreditoMovilWA.CreditoMovil.eliminarClienteRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarClienteRequest();
-            inValue.idcliente = idcliente;
-            CreditoMovilWA.CreditoMovil.eliminarClienteResponse1 retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarCliente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteResponse1> CreditoMovilWA.CreditoMovil.ClienteWS.eliminarClienteAsync(CreditoMovilWA.CreditoMovil.eliminarClienteRequest request) {
-            return base.Channel.eliminarClienteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteResponse1> eliminarClienteAsync(int idcliente) {
-            CreditoMovilWA.CreditoMovil.eliminarClienteRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarClienteRequest();
-            inValue.idcliente = idcliente;
-            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarClienteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.generarBufferResponse1 CreditoMovilWA.CreditoMovil.ClienteWS.generarBuffer(CreditoMovilWA.CreditoMovil.generarBufferRequest request) {
             return base.Channel.generarBuffer(request);
         }
@@ -9320,6 +9570,71 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse1 CreditoMovilWA.CreditoMovil.ClienteWS.eliminarCompletoCliente(CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest request) {
+            return base.Channel.eliminarCompletoCliente(request);
+        }
+        
+        public bool eliminarCompletoCliente(int codCliente) {
+            CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest();
+            inValue.codCliente = codCliente;
+            CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse1 retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarCompletoCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse1> CreditoMovilWA.CreditoMovil.ClienteWS.eliminarCompletoClienteAsync(CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest request) {
+            return base.Channel.eliminarCompletoClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse1> eliminarCompletoClienteAsync(int codCliente) {
+            CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest();
+            inValue.codCliente = codCliente;
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarCompletoClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.reportePDFResponse1 CreditoMovilWA.CreditoMovil.ClienteWS.reportePDF(CreditoMovilWA.CreditoMovil.reportePDFRequest request) {
+            return base.Channel.reportePDF(request);
+        }
+        
+        public byte[] reportePDF() {
+            CreditoMovilWA.CreditoMovil.reportePDFRequest inValue = new CreditoMovilWA.CreditoMovil.reportePDFRequest();
+            CreditoMovilWA.CreditoMovil.reportePDFResponse1 retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).reportePDF(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse1> CreditoMovilWA.CreditoMovil.ClienteWS.reportePDFAsync(CreditoMovilWA.CreditoMovil.reportePDFRequest request) {
+            return base.Channel.reportePDFAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse1> reportePDFAsync() {
+            CreditoMovilWA.CreditoMovil.reportePDFRequest inValue = new CreditoMovilWA.CreditoMovil.reportePDFRequest();
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).reportePDFAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.listarTodosClientesResponse CreditoMovilWA.CreditoMovil.ClienteWS.listarTodosClientes(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request) {
+            return base.Channel.listarTodosClientes(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.cliente[] listarTodosClientes() {
+            CreditoMovilWA.CreditoMovil.listarTodosClientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosClientesRequest();
+            CreditoMovilWA.CreditoMovil.listarTodosClientesResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarTodosClientes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> CreditoMovilWA.CreditoMovil.ClienteWS.listarTodosClientesAsync(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request) {
+            return base.Channel.listarTodosClientesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> listarTodosClientesAsync() {
+            CreditoMovilWA.CreditoMovil.listarTodosClientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosClientesRequest();
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarTodosClientesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.obtenerPorDocIdenClienteResponse1 CreditoMovilWA.CreditoMovil.ClienteWS.obtenerPorDocIdenCliente(CreditoMovilWA.CreditoMovil.obtenerPorDocIdenClienteRequest request) {
             return base.Channel.obtenerPorDocIdenCliente(request);
         }
@@ -9342,27 +9657,6 @@ namespace CreditoMovilWA.CreditoMovil {
             inValue.docIdentidad = docIdentidad;
             inValue.tipoDocumento = tipoDocumento;
             return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).obtenerPorDocIdenClienteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarTodosClientesResponse CreditoMovilWA.CreditoMovil.ClienteWS.listarTodosClientes(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request) {
-            return base.Channel.listarTodosClientes(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.cliente[] listarTodosClientes() {
-            CreditoMovilWA.CreditoMovil.listarTodosClientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosClientesRequest();
-            CreditoMovilWA.CreditoMovil.listarTodosClientesResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarTodosClientes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> CreditoMovilWA.CreditoMovil.ClienteWS.listarTodosClientesAsync(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request) {
-            return base.Channel.listarTodosClientesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> listarTodosClientesAsync() {
-            CreditoMovilWA.CreditoMovil.listarTodosClientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosClientesRequest();
-            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarTodosClientesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9412,228 +9706,32 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.reportePDFResponse1 CreditoMovilWA.CreditoMovil.ClienteWS.reportePDF(CreditoMovilWA.CreditoMovil.reportePDFRequest request) {
-            return base.Channel.reportePDF(request);
+        CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse1 CreditoMovilWA.CreditoMovil.ClienteWS.eliminarClienteLogico(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request) {
+            return base.Channel.eliminarClienteLogico(request);
         }
         
-        public byte[] reportePDF() {
-            CreditoMovilWA.CreditoMovil.reportePDFRequest inValue = new CreditoMovilWA.CreditoMovil.reportePDFRequest();
-            CreditoMovilWA.CreditoMovil.reportePDFResponse1 retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).reportePDF(inValue);
+        public bool eliminarClienteLogico(int codCliente) {
+            CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest();
+            inValue.codCliente = codCliente;
+            CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse1 retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarClienteLogico(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse1> CreditoMovilWA.CreditoMovil.ClienteWS.reportePDFAsync(CreditoMovilWA.CreditoMovil.reportePDFRequest request) {
-            return base.Channel.reportePDFAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse1> CreditoMovilWA.CreditoMovil.ClienteWS.eliminarClienteLogicoAsync(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request) {
+            return base.Channel.eliminarClienteLogicoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse1> reportePDFAsync() {
-            CreditoMovilWA.CreditoMovil.reportePDFRequest inValue = new CreditoMovilWA.CreditoMovil.reportePDFRequest();
-            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).reportePDFAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse1> eliminarClienteLogicoAsync(int codCliente) {
+            CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest();
+            inValue.codCliente = codCliente;
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarClienteLogicoAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", ConfigurationName="CreditoMovil.BancoWS")]
     public interface BancoWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarTodosBancosResponse listarTodosBancos(CreditoMovilWA.CreditoMovil.listarTodosBancosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosBancosResponse> listarTodosBancosAsync(CreditoMovilWA.CreditoMovil.listarTodosBancosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.modificarBancoResponse1 modificarBanco(CreditoMovilWA.CreditoMovil.modificarBancoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarBancoResponse1> modificarBancoAsync(CreditoMovilWA.CreditoMovil.modificarBancoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorIDBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorIDBancoResponse")]
@@ -9663,10 +9761,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -9679,8 +9777,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -9698,10 +9798,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -9735,105 +9835,6 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDBancoResponse1> obtenerPorIDBancoAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDBancoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.eliminarBancoResponse1 eliminarBanco(CreditoMovilWA.CreditoMovil.eliminarBancoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarBancoResponse1> eliminarBancoAsync(CreditoMovilWA.CreditoMovil.eliminarBancoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
@@ -9861,10 +9862,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -9877,8 +9878,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -9896,10 +9899,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -9933,6 +9936,309 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse1> insertarBancoAsync(CreditoMovilWA.CreditoMovil.insertarBancoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.listarTodosBancosResponse listarTodosBancos(CreditoMovilWA.CreditoMovil.listarTodosBancosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosBancosResponse> listarTodosBancosAsync(CreditoMovilWA.CreditoMovil.listarTodosBancosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.eliminarBancoResponse1 eliminarBanco(CreditoMovilWA.CreditoMovil.eliminarBancoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarBancoResponse1> eliminarBancoAsync(CreditoMovilWA.CreditoMovil.eliminarBancoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.modificarBancoResponse1 modificarBanco(CreditoMovilWA.CreditoMovil.modificarBancoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarBancoResponse1> modificarBancoAsync(CreditoMovilWA.CreditoMovil.modificarBancoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorNombreBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorNombreBancoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
@@ -9960,10 +10266,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -9976,8 +10282,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -9995,10 +10303,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -10035,70 +10343,6 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosBancos", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosBancosRequest {
-        
-        public listarTodosBancosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosBancosResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosBancosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.banco[] @return;
-        
-        public listarTodosBancosResponse() {
-        }
-        
-        public listarTodosBancosResponse(CreditoMovilWA.CreditoMovil.banco[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarBanco", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarBancoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.banco banco;
-        
-        public modificarBancoRequest() {
-        }
-        
-        public modificarBancoRequest(CreditoMovilWA.CreditoMovil.banco banco) {
-            this.banco = banco;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarBancoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarBancoResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public modificarBancoResponse1() {
-        }
-        
-        public modificarBancoResponse1(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDBanco", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class obtenerPorIDBancoRequest {
         
@@ -10128,6 +10372,70 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         public obtenerPorIDBancoResponse1(CreditoMovilWA.CreditoMovil.banco @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBanco", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarBancoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.banco banco;
+        
+        public insertarBancoRequest() {
+        }
+        
+        public insertarBancoRequest(CreditoMovilWA.CreditoMovil.banco banco) {
+            this.banco = banco;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBancoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarBancoResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public insertarBancoResponse1() {
+        }
+        
+        public insertarBancoResponse1(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosBancos", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosBancosRequest {
+        
+        public listarTodosBancosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosBancosResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosBancosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.banco[] @return;
+        
+        public listarTodosBancosResponse() {
+        }
+        
+        public listarTodosBancosResponse(CreditoMovilWA.CreditoMovil.banco[] @return) {
             this.@return = @return;
         }
     }
@@ -10171,17 +10479,17 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBanco", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarBancoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarBanco", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarBancoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public CreditoMovilWA.CreditoMovil.banco banco;
         
-        public insertarBancoRequest() {
+        public modificarBancoRequest() {
         }
         
-        public insertarBancoRequest(CreditoMovilWA.CreditoMovil.banco banco) {
+        public modificarBancoRequest(CreditoMovilWA.CreditoMovil.banco banco) {
             this.banco = banco;
         }
     }
@@ -10189,17 +10497,17 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBancoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarBancoResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarBancoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarBancoResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
         
-        public insertarBancoResponse1() {
+        public modificarBancoResponse1() {
         }
         
-        public insertarBancoResponse1(bool @return) {
+        public modificarBancoResponse1(bool @return) {
             this.@return = @return;
         }
     }
@@ -10268,50 +10576,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarTodosBancosResponse CreditoMovilWA.CreditoMovil.BancoWS.listarTodosBancos(CreditoMovilWA.CreditoMovil.listarTodosBancosRequest request) {
-            return base.Channel.listarTodosBancos(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.banco[] listarTodosBancos() {
-            CreditoMovilWA.CreditoMovil.listarTodosBancosRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosBancosRequest();
-            CreditoMovilWA.CreditoMovil.listarTodosBancosResponse retVal = ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).listarTodosBancos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosBancosResponse> CreditoMovilWA.CreditoMovil.BancoWS.listarTodosBancosAsync(CreditoMovilWA.CreditoMovil.listarTodosBancosRequest request) {
-            return base.Channel.listarTodosBancosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosBancosResponse> listarTodosBancosAsync() {
-            CreditoMovilWA.CreditoMovil.listarTodosBancosRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosBancosRequest();
-            return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).listarTodosBancosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.modificarBancoResponse1 CreditoMovilWA.CreditoMovil.BancoWS.modificarBanco(CreditoMovilWA.CreditoMovil.modificarBancoRequest request) {
-            return base.Channel.modificarBanco(request);
-        }
-        
-        public bool modificarBanco(CreditoMovilWA.CreditoMovil.banco banco) {
-            CreditoMovilWA.CreditoMovil.modificarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarBancoRequest();
-            inValue.banco = banco;
-            CreditoMovilWA.CreditoMovil.modificarBancoResponse1 retVal = ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).modificarBanco(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarBancoResponse1> CreditoMovilWA.CreditoMovil.BancoWS.modificarBancoAsync(CreditoMovilWA.CreditoMovil.modificarBancoRequest request) {
-            return base.Channel.modificarBancoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarBancoResponse1> modificarBancoAsync(CreditoMovilWA.CreditoMovil.banco banco) {
-            CreditoMovilWA.CreditoMovil.modificarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarBancoRequest();
-            inValue.banco = banco;
-            return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).modificarBancoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.obtenerPorIDBancoResponse1 CreditoMovilWA.CreditoMovil.BancoWS.obtenerPorIDBanco(CreditoMovilWA.CreditoMovil.obtenerPorIDBancoRequest request) {
             return base.Channel.obtenerPorIDBanco(request);
         }
@@ -10332,6 +10596,50 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.obtenerPorIDBancoRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDBancoRequest();
             inValue.idbanco = idbanco;
             return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).obtenerPorIDBancoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.insertarBancoResponse1 CreditoMovilWA.CreditoMovil.BancoWS.insertarBanco(CreditoMovilWA.CreditoMovil.insertarBancoRequest request) {
+            return base.Channel.insertarBanco(request);
+        }
+        
+        public bool insertarBanco(CreditoMovilWA.CreditoMovil.banco banco) {
+            CreditoMovilWA.CreditoMovil.insertarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.insertarBancoRequest();
+            inValue.banco = banco;
+            CreditoMovilWA.CreditoMovil.insertarBancoResponse1 retVal = ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).insertarBanco(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse1> CreditoMovilWA.CreditoMovil.BancoWS.insertarBancoAsync(CreditoMovilWA.CreditoMovil.insertarBancoRequest request) {
+            return base.Channel.insertarBancoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse1> insertarBancoAsync(CreditoMovilWA.CreditoMovil.banco banco) {
+            CreditoMovilWA.CreditoMovil.insertarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.insertarBancoRequest();
+            inValue.banco = banco;
+            return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).insertarBancoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.listarTodosBancosResponse CreditoMovilWA.CreditoMovil.BancoWS.listarTodosBancos(CreditoMovilWA.CreditoMovil.listarTodosBancosRequest request) {
+            return base.Channel.listarTodosBancos(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.banco[] listarTodosBancos() {
+            CreditoMovilWA.CreditoMovil.listarTodosBancosRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosBancosRequest();
+            CreditoMovilWA.CreditoMovil.listarTodosBancosResponse retVal = ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).listarTodosBancos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosBancosResponse> CreditoMovilWA.CreditoMovil.BancoWS.listarTodosBancosAsync(CreditoMovilWA.CreditoMovil.listarTodosBancosRequest request) {
+            return base.Channel.listarTodosBancosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosBancosResponse> listarTodosBancosAsync() {
+            CreditoMovilWA.CreditoMovil.listarTodosBancosRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosBancosRequest();
+            return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).listarTodosBancosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -10358,26 +10666,26 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.insertarBancoResponse1 CreditoMovilWA.CreditoMovil.BancoWS.insertarBanco(CreditoMovilWA.CreditoMovil.insertarBancoRequest request) {
-            return base.Channel.insertarBanco(request);
+        CreditoMovilWA.CreditoMovil.modificarBancoResponse1 CreditoMovilWA.CreditoMovil.BancoWS.modificarBanco(CreditoMovilWA.CreditoMovil.modificarBancoRequest request) {
+            return base.Channel.modificarBanco(request);
         }
         
-        public bool insertarBanco(CreditoMovilWA.CreditoMovil.banco banco) {
-            CreditoMovilWA.CreditoMovil.insertarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.insertarBancoRequest();
+        public bool modificarBanco(CreditoMovilWA.CreditoMovil.banco banco) {
+            CreditoMovilWA.CreditoMovil.modificarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarBancoRequest();
             inValue.banco = banco;
-            CreditoMovilWA.CreditoMovil.insertarBancoResponse1 retVal = ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).insertarBanco(inValue);
+            CreditoMovilWA.CreditoMovil.modificarBancoResponse1 retVal = ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).modificarBanco(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse1> CreditoMovilWA.CreditoMovil.BancoWS.insertarBancoAsync(CreditoMovilWA.CreditoMovil.insertarBancoRequest request) {
-            return base.Channel.insertarBancoAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarBancoResponse1> CreditoMovilWA.CreditoMovil.BancoWS.modificarBancoAsync(CreditoMovilWA.CreditoMovil.modificarBancoRequest request) {
+            return base.Channel.modificarBancoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse1> insertarBancoAsync(CreditoMovilWA.CreditoMovil.banco banco) {
-            CreditoMovilWA.CreditoMovil.insertarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.insertarBancoRequest();
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarBancoResponse1> modificarBancoAsync(CreditoMovilWA.CreditoMovil.banco banco) {
+            CreditoMovilWA.CreditoMovil.modificarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarBancoRequest();
             inValue.banco = banco;
-            return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).insertarBancoAsync(inValue);
+            return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).modificarBancoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -10437,10 +10745,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -10453,8 +10761,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -10472,10 +10782,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -10538,10 +10848,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -10554,8 +10864,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -10573,10 +10885,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -10610,211 +10922,6 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse1> eliminarSupervisorAsync(CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1 obtenerPorIDSupervisor(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResp" +
-            "onse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1> obtenerPorIDSupervisorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request);
-        
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRequest" +
-            "", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1 modificarSupervisor(CreditoMovilWA.CreditoMovil.modificarSupervisorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRequest" +
-            "", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRespons" +
-            "e")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1> modificarSupervisorAsync(CreditoMovilWA.CreditoMovil.modificarSupervisorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorDocIdenSupReques" +
             "t", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorDocIdenSupRespon" +
             "se")]
@@ -10844,10 +10951,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -10860,8 +10967,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -10879,10 +10988,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -10918,6 +11027,111 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorDocIdenSupResponse1> obtenerPorDocIdenSupAsync(CreditoMovilWA.CreditoMovil.obtenerPorDocIdenSupRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1 obtenerPorIDSupervisor(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResp" +
+            "onse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1> obtenerPorIDSupervisorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsRequ" +
             "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsResp" +
             "onse")]
@@ -10947,10 +11161,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -10963,8 +11177,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -10982,10 +11198,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -11019,6 +11235,110 @@ namespace CreditoMovilWA.CreditoMovil {
             "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsResp" +
             "onse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse> listarTodosSupervisorsAsync(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request);
+        
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRequest" +
+            "", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1 modificarSupervisor(CreditoMovilWA.CreditoMovil.modificarSupervisorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRequest" +
+            "", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRespons" +
+            "e")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1> modificarSupervisorAsync(CreditoMovilWA.CreditoMovil.modificarSupervisorRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -11088,75 +11408,6 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDSupervisorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idsupervisor;
-        
-        public obtenerPorIDSupervisorRequest() {
-        }
-        
-        public obtenerPorIDSupervisorRequest(int idsupervisor) {
-            this.idsupervisor = idsupervisor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDSupervisorResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.supervisor @return;
-        
-        public obtenerPorIDSupervisorResponse1() {
-        }
-        
-        public obtenerPorIDSupervisorResponse1(CreditoMovilWA.CreditoMovil.supervisor @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarSupervisorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.supervisor supervisor;
-        
-        public modificarSupervisorRequest() {
-        }
-        
-        public modificarSupervisorRequest(int id, CreditoMovilWA.CreditoMovil.supervisor supervisor) {
-            this.id = id;
-            this.supervisor = supervisor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarSupervisorResponse1 {
-        
-        public modificarSupervisorResponse1() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorDocIdenSup", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class obtenerPorDocIdenSupRequest {
         
@@ -11198,6 +11449,42 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDSupervisorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idsupervisor;
+        
+        public obtenerPorIDSupervisorRequest() {
+        }
+        
+        public obtenerPorIDSupervisorRequest(int idsupervisor) {
+            this.idsupervisor = idsupervisor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDSupervisorResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.supervisor @return;
+        
+        public obtenerPorIDSupervisorResponse1() {
+        }
+        
+        public obtenerPorIDSupervisorResponse1(CreditoMovilWA.CreditoMovil.supervisor @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosSupervisors", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class listarTodosSupervisorsRequest {
         
@@ -11220,6 +11507,39 @@ namespace CreditoMovilWA.CreditoMovil {
         
         public listarTodosSupervisorsResponse(CreditoMovilWA.CreditoMovil.supervisor[] @return) {
             this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarSupervisorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.supervisor supervisor;
+        
+        public modificarSupervisorRequest() {
+        }
+        
+        public modificarSupervisorRequest(int id, CreditoMovilWA.CreditoMovil.supervisor supervisor) {
+            this.id = id;
+            this.supervisor = supervisor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarSupervisorResponse1 {
+        
+        public modificarSupervisorResponse1() {
         }
     }
     
@@ -11296,53 +11616,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1 CreditoMovilWA.CreditoMovil.SupervisorWS.obtenerPorIDSupervisor(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request) {
-            return base.Channel.obtenerPorIDSupervisor(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.supervisor obtenerPorIDSupervisor(int idsupervisor) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest();
-            inValue.idsupervisor = idsupervisor;
-            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1 retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).obtenerPorIDSupervisor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1> CreditoMovilWA.CreditoMovil.SupervisorWS.obtenerPorIDSupervisorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request) {
-            return base.Channel.obtenerPorIDSupervisorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1> obtenerPorIDSupervisorAsync(int idsupervisor) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest();
-            inValue.idsupervisor = idsupervisor;
-            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).obtenerPorIDSupervisorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1 CreditoMovilWA.CreditoMovil.SupervisorWS.modificarSupervisor(CreditoMovilWA.CreditoMovil.modificarSupervisorRequest request) {
-            return base.Channel.modificarSupervisor(request);
-        }
-        
-        public void modificarSupervisor(int id, CreditoMovilWA.CreditoMovil.supervisor supervisor) {
-            CreditoMovilWA.CreditoMovil.modificarSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.modificarSupervisorRequest();
-            inValue.id = id;
-            inValue.supervisor = supervisor;
-            CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1 retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).modificarSupervisor(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1> CreditoMovilWA.CreditoMovil.SupervisorWS.modificarSupervisorAsync(CreditoMovilWA.CreditoMovil.modificarSupervisorRequest request) {
-            return base.Channel.modificarSupervisorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1> modificarSupervisorAsync(int id, CreditoMovilWA.CreditoMovil.supervisor supervisor) {
-            CreditoMovilWA.CreditoMovil.modificarSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.modificarSupervisorRequest();
-            inValue.id = id;
-            inValue.supervisor = supervisor;
-            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).modificarSupervisorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.obtenerPorDocIdenSupResponse1 CreditoMovilWA.CreditoMovil.SupervisorWS.obtenerPorDocIdenSup(CreditoMovilWA.CreditoMovil.obtenerPorDocIdenSupRequest request) {
             return base.Channel.obtenerPorDocIdenSup(request);
         }
@@ -11368,6 +11641,29 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1 CreditoMovilWA.CreditoMovil.SupervisorWS.obtenerPorIDSupervisor(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request) {
+            return base.Channel.obtenerPorIDSupervisor(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.supervisor obtenerPorIDSupervisor(int idsupervisor) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest();
+            inValue.idsupervisor = idsupervisor;
+            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1 retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).obtenerPorIDSupervisor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1> CreditoMovilWA.CreditoMovil.SupervisorWS.obtenerPorIDSupervisorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request) {
+            return base.Channel.obtenerPorIDSupervisorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse1> obtenerPorIDSupervisorAsync(int idsupervisor) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest();
+            inValue.idsupervisor = idsupervisor;
+            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).obtenerPorIDSupervisorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse CreditoMovilWA.CreditoMovil.SupervisorWS.listarTodosSupervisors(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request) {
             return base.Channel.listarTodosSupervisors(request);
         }
@@ -11387,115 +11683,40 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest();
             return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).listarTodosSupervisorsAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1 CreditoMovilWA.CreditoMovil.SupervisorWS.modificarSupervisor(CreditoMovilWA.CreditoMovil.modificarSupervisorRequest request) {
+            return base.Channel.modificarSupervisor(request);
+        }
+        
+        public void modificarSupervisor(int id, CreditoMovilWA.CreditoMovil.supervisor supervisor) {
+            CreditoMovilWA.CreditoMovil.modificarSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.modificarSupervisorRequest();
+            inValue.id = id;
+            inValue.supervisor = supervisor;
+            CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1 retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).modificarSupervisor(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1> CreditoMovilWA.CreditoMovil.SupervisorWS.modificarSupervisorAsync(CreditoMovilWA.CreditoMovil.modificarSupervisorRequest request) {
+            return base.Channel.modificarSupervisorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarSupervisorResponse1> modificarSupervisorAsync(int id, CreditoMovilWA.CreditoMovil.supervisor supervisor) {
+            CreditoMovilWA.CreditoMovil.modificarSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.modificarSupervisorRequest();
+            inValue.id = id;
+            inValue.supervisor = supervisor;
+            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).modificarSupervisorAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", ConfigurationName="CreditoMovil.EvaluacionWS")]
     public interface EvaluacionWS {
         
-        // CODEGEN: El parámetro 'idevaluacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1 eliminarEvaluacion(CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionResponse" +
-            "")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1> eliminarEvaluacionAsync(CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest request);
-        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionResponse" +
-            "")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionResp" +
+            "onse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
@@ -11522,10 +11743,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -11538,8 +11759,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -11557,10 +11780,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -11588,11 +11811,117 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1 insertarEvaluacion(CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest request);
+        CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1 obtenerPorIDEvaluacion(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionResponse" +
-            "")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1> insertarEvaluacionAsync(CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionResp" +
+            "onse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1> obtenerPorIDEvaluacionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosEvaluacionsRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosEvaluacionsResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse listarTodosEvaluacions(CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosEvaluacionsRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosEvaluacionsResp" +
+            "onse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse> listarTodosEvaluacionsAsync(CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarEvaluacionesSupervis" +
@@ -11624,10 +11953,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -11640,8 +11969,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -11659,10 +11990,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -11698,9 +12029,8 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse> listarEvaluacionesSupervisorAsync(CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosEvaluacionsRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosEvaluacionsResp" +
-            "onse")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionResponse" +
+            "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
@@ -11727,10 +12057,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -11743,8 +12073,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -11762,10 +12094,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -11793,12 +12125,113 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse listarTodosEvaluacions(CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest request);
+        CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1 insertarEvaluacion(CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosEvaluacionsRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosEvaluacionsResp" +
-            "onse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse> listarTodosEvaluacionsAsync(CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionResponse" +
+            "")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1> insertarEvaluacionAsync(CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest request);
+        
+        // CODEGEN: El parámetro 'idevaluacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
+        CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1 eliminarEvaluacion(CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionResponse" +
+            "")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1> eliminarEvaluacionAsync(CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest request);
         
         // CODEGEN: El parámetro 'evaluacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRequest" +
@@ -11830,10 +12263,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
@@ -11846,8 +12279,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogicoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteLogico))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoClienteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCompletoCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
@@ -11865,10 +12300,10 @@ namespace CreditoMovilWA.CreditoMovil {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
@@ -11901,125 +12336,22 @@ namespace CreditoMovilWA.CreditoMovil {
             "", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRespons" +
             "e")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse1> modificarEvaluacionAsync(CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEvaluacionesSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosEvaluacions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEvaluacion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSupResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenSup))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosSupervisors))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarSupervisor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBancos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBancoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBanco))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDFResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(reportePDF))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosClientes))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBufferResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(generarBuffer))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarClientesPorNombre))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodClienteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorCodCliente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosTransaccions))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccionResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarTransaccion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTransaccionCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdminResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorDocIdenAdmin))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministradorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAdministrador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosAdministradores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorNombreBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosBilleteras))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilleteraResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDBilletera))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarTodosCreditos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCreditosFiltro))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCredito))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCreditoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(obtenerPorIDCredito))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1 obtenerPorIDEvaluacion(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionResp" +
-            "onse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1> obtenerPorIDEvaluacionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEvaluacion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarEvaluacionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDEvaluacion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDEvaluacionRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idevaluacion;
         
-        public eliminarEvaluacionRequest() {
+        public obtenerPorIDEvaluacionRequest() {
         }
         
-        public eliminarEvaluacionRequest(int idevaluacion) {
+        public obtenerPorIDEvaluacionRequest(int idevaluacion) {
             this.idevaluacion = idevaluacion;
         }
     }
@@ -12027,45 +12359,45 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEvaluacionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarEvaluacionResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDEvaluacionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDEvaluacionResponse1 {
         
-        public eliminarEvaluacionResponse1() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.evaluacion @return;
+        
+        public obtenerPorIDEvaluacionResponse1() {
+        }
+        
+        public obtenerPorIDEvaluacionResponse1(CreditoMovilWA.CreditoMovil.evaluacion @return) {
+            this.@return = @return;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEvaluacion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarEvaluacionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEvaluacions", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosEvaluacionsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.evaluacion evaluacion;
-        
-        public insertarEvaluacionRequest() {
-        }
-        
-        public insertarEvaluacionRequest(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
-            this.evaluacion = evaluacion;
+        public listarTodosEvaluacionsRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEvaluacionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarEvaluacionResponse1 {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEvaluacionsResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosEvaluacionsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.evaluacion[] @return;
         
-        public insertarEvaluacionResponse1() {
+        public listarTodosEvaluacionsResponse() {
         }
         
-        public insertarEvaluacionResponse1(bool @return) {
+        public listarTodosEvaluacionsResponse(CreditoMovilWA.CreditoMovil.evaluacion[] @return) {
             this.@return = @return;
         }
     }
@@ -12109,28 +12441,64 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEvaluacions", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosEvaluacionsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEvaluacion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarEvaluacionRequest {
         
-        public listarTodosEvaluacionsRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.evaluacion evaluacion;
+        
+        public insertarEvaluacionRequest() {
+        }
+        
+        public insertarEvaluacionRequest(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
+            this.evaluacion = evaluacion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEvaluacionsResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosEvaluacionsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEvaluacionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarEvaluacionResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.evaluacion[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
         
-        public listarTodosEvaluacionsResponse() {
+        public insertarEvaluacionResponse1() {
         }
         
-        public listarTodosEvaluacionsResponse(CreditoMovilWA.CreditoMovil.evaluacion[] @return) {
+        public insertarEvaluacionResponse1(bool @return) {
             this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEvaluacion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarEvaluacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idevaluacion;
+        
+        public eliminarEvaluacionRequest() {
+        }
+        
+        public eliminarEvaluacionRequest(int idevaluacion) {
+            this.idevaluacion = idevaluacion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEvaluacionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarEvaluacionResponse1 {
+        
+        public eliminarEvaluacionResponse1() {
         }
     }
     
@@ -12162,42 +12530,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDEvaluacion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDEvaluacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idevaluacion;
-        
-        public obtenerPorIDEvaluacionRequest() {
-        }
-        
-        public obtenerPorIDEvaluacionRequest(int idevaluacion) {
-            this.idevaluacion = idevaluacion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDEvaluacionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDEvaluacionResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.evaluacion @return;
-        
-        public obtenerPorIDEvaluacionResponse1() {
-        }
-        
-        public obtenerPorIDEvaluacionResponse1(CreditoMovilWA.CreditoMovil.evaluacion @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface EvaluacionWSChannel : CreditoMovilWA.CreditoMovil.EvaluacionWS, System.ServiceModel.IClientChannel {
     }
@@ -12226,48 +12558,47 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1 CreditoMovilWA.CreditoMovil.EvaluacionWS.eliminarEvaluacion(CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest request) {
-            return base.Channel.eliminarEvaluacion(request);
+        CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1 CreditoMovilWA.CreditoMovil.EvaluacionWS.obtenerPorIDEvaluacion(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request) {
+            return base.Channel.obtenerPorIDEvaluacion(request);
         }
         
-        public void eliminarEvaluacion(int idevaluacion) {
-            CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest();
+        public CreditoMovilWA.CreditoMovil.evaluacion obtenerPorIDEvaluacion(int idevaluacion) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest();
             inValue.idevaluacion = idevaluacion;
-            CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).eliminarEvaluacion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1> CreditoMovilWA.CreditoMovil.EvaluacionWS.eliminarEvaluacionAsync(CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest request) {
-            return base.Channel.eliminarEvaluacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1> eliminarEvaluacionAsync(int idevaluacion) {
-            CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest();
-            inValue.idevaluacion = idevaluacion;
-            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).eliminarEvaluacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1 CreditoMovilWA.CreditoMovil.EvaluacionWS.insertarEvaluacion(CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest request) {
-            return base.Channel.insertarEvaluacion(request);
-        }
-        
-        public bool insertarEvaluacion(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
-            CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest();
-            inValue.evaluacion = evaluacion;
-            CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).insertarEvaluacion(inValue);
+            CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).obtenerPorIDEvaluacion(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1> CreditoMovilWA.CreditoMovil.EvaluacionWS.insertarEvaluacionAsync(CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest request) {
-            return base.Channel.insertarEvaluacionAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1> CreditoMovilWA.CreditoMovil.EvaluacionWS.obtenerPorIDEvaluacionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request) {
+            return base.Channel.obtenerPorIDEvaluacionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1> insertarEvaluacionAsync(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
-            CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest();
-            inValue.evaluacion = evaluacion;
-            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).insertarEvaluacionAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1> obtenerPorIDEvaluacionAsync(int idevaluacion) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest();
+            inValue.idevaluacion = idevaluacion;
+            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).obtenerPorIDEvaluacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse CreditoMovilWA.CreditoMovil.EvaluacionWS.listarTodosEvaluacions(CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest request) {
+            return base.Channel.listarTodosEvaluacions(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.evaluacion[] listarTodosEvaluacions() {
+            CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest();
+            CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).listarTodosEvaluacions(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse> CreditoMovilWA.CreditoMovil.EvaluacionWS.listarTodosEvaluacionsAsync(CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest request) {
+            return base.Channel.listarTodosEvaluacionsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse> listarTodosEvaluacionsAsync() {
+            CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest();
+            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).listarTodosEvaluacionsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -12294,24 +12625,48 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse CreditoMovilWA.CreditoMovil.EvaluacionWS.listarTodosEvaluacions(CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest request) {
-            return base.Channel.listarTodosEvaluacions(request);
+        CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1 CreditoMovilWA.CreditoMovil.EvaluacionWS.insertarEvaluacion(CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest request) {
+            return base.Channel.insertarEvaluacion(request);
         }
         
-        public CreditoMovilWA.CreditoMovil.evaluacion[] listarTodosEvaluacions() {
-            CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest();
-            CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).listarTodosEvaluacions(inValue);
+        public bool insertarEvaluacion(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
+            CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest();
+            inValue.evaluacion = evaluacion;
+            CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).insertarEvaluacion(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse> CreditoMovilWA.CreditoMovil.EvaluacionWS.listarTodosEvaluacionsAsync(CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest request) {
-            return base.Channel.listarTodosEvaluacionsAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1> CreditoMovilWA.CreditoMovil.EvaluacionWS.insertarEvaluacionAsync(CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest request) {
+            return base.Channel.insertarEvaluacionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse> listarTodosEvaluacionsAsync() {
-            CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest();
-            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).listarTodosEvaluacionsAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse1> insertarEvaluacionAsync(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
+            CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.insertarEvaluacionRequest();
+            inValue.evaluacion = evaluacion;
+            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).insertarEvaluacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1 CreditoMovilWA.CreditoMovil.EvaluacionWS.eliminarEvaluacion(CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest request) {
+            return base.Channel.eliminarEvaluacion(request);
+        }
+        
+        public void eliminarEvaluacion(int idevaluacion) {
+            CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest();
+            inValue.idevaluacion = idevaluacion;
+            CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).eliminarEvaluacion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1> CreditoMovilWA.CreditoMovil.EvaluacionWS.eliminarEvaluacionAsync(CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest request) {
+            return base.Channel.eliminarEvaluacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse1> eliminarEvaluacionAsync(int idevaluacion) {
+            CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarEvaluacionRequest();
+            inValue.idevaluacion = idevaluacion;
+            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).eliminarEvaluacionAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -12334,29 +12689,6 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest();
             inValue.evaluacion = evaluacion;
             return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).modificarEvaluacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1 CreditoMovilWA.CreditoMovil.EvaluacionWS.obtenerPorIDEvaluacion(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request) {
-            return base.Channel.obtenerPorIDEvaluacion(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.evaluacion obtenerPorIDEvaluacion(int idevaluacion) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest();
-            inValue.idevaluacion = idevaluacion;
-            CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1 retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).obtenerPorIDEvaluacion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1> CreditoMovilWA.CreditoMovil.EvaluacionWS.obtenerPorIDEvaluacionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request) {
-            return base.Channel.obtenerPorIDEvaluacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse1> obtenerPorIDEvaluacionAsync(int idevaluacion) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest();
-            inValue.idevaluacion = idevaluacion;
-            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).obtenerPorIDEvaluacionAsync(inValue);
         }
     }
 }

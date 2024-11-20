@@ -57,11 +57,22 @@ public class ClienteWS {
         return resultado;
     }
     
-    @WebMethod(operationName = "eliminarCliente")
-    public boolean eliminarCliente(@WebParam(name = "idcliente") int id) {
+    @WebMethod(operationName = "eliminarCompletoCliente")
+    public boolean eliminarCliente(@WebParam(name = "codCliente") int codCliente) {
         boolean resultado = false;
         try{
-            resultado = daoCliente.eliminar(id);
+            resultado = daoCliente.eliminarCompleto(codCliente);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "eliminarClienteLogico")
+    public boolean eliminarClienteLogico(@WebParam(name = "codCliente") int codCliente) {
+        boolean resultado = false;
+        try{
+            resultado = daoCliente.eliminarLogico(codCliente);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

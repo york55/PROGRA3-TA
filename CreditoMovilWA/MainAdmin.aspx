@@ -144,6 +144,9 @@
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
+                <!-- Mensaje de error -->
+                <asp:Label ID="msjError" runat="server" CssClass="error-message" EnableViewState="false"></asp:Label>
+                <asp:Label ID="msjSuccess" runat="server" CssClass="success-message" EnableViewState="false"></asp:Label>
             </div>
         </div>
         <div class="content-mid">

@@ -145,9 +145,6 @@
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarBilleteraResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarClienteResponse1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarCreditoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -251,6 +248,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.reportePDFResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\CreditoMovil\Reference.svcmap">

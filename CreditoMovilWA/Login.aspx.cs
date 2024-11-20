@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using CreditoMovilWA.CreditoMovil;
 using System.Web.Security;
 using System.Web;
+using System.Text;
 
 namespace CreditoMovilWA
 {
@@ -52,13 +53,13 @@ namespace CreditoMovilWA
                 Session["Administrador"] = admin;
                 if (cli != null)
                 {
-                    if (cli.contrasenha == password)
+                    if (VerificarContraseña(password, cli.salt, cli.contrasenha))
                     {
                         FormsAuthenticationTicket tkt;
                         string cookiestr;
                         HttpCookie ck;
                         tkt = new FormsAuthenticationTicket(1, cli.codigoCliente.ToString(), DateTime.Now,
-                        DateTime.Now.AddMinutes(30), true, cli.nombre+" "+cli.apPaterno+" "+cli.apMaterno);
+                        DateTime.Now.AddMinutes(30), true, cli.nombre + " " + cli.apPaterno + " " + cli.apMaterno);
                         cookiestr = FormsAuthentication.Encrypt(tkt);
                         ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
                         ck.Expires = tkt.Expiration; //esto genera que la cookie se quede guardada
@@ -80,7 +81,7 @@ namespace CreditoMovilWA
                 }
                 else if (sup != null)
                 {
-                    if (sup.contrasenha == password)
+                    if (VerificarContraseña(password, sup.salt, sup.contrasenha))
                     {
                         FormsAuthenticationTicket tkt;
                         string cookiestr;
@@ -106,7 +107,7 @@ namespace CreditoMovilWA
                         return;
                     }
                 }
-                else if(admin != null)
+                else if (admin != null)
                 {
                     if (admin.contrasenha == password)
                     {
@@ -150,17 +151,17 @@ namespace CreditoMovilWA
 
         private bool VerificarContraseña(string contraseñaIngresada, string salAlmacenada, string contraseñaHashAlmacenada)
         {
-            // Convertir la sal y la contraseña hasheada almacenadas de Base64 a bytes
-            byte[] salBytes = Convert.FromBase64String(salAlmacenada);
-            byte[] hashAlmacenadoBytes = Convert.FromBase64String(contraseñaHashAlmacenada);
+            // Combinar la contraseña ingresada con el salt almacenado
+            string saltedPassword = contraseñaIngresada + salAlmacenada;
 
-            // Hashear la contraseña ingresada con la misma sal
-            using (var pbkdf2 = new Rfc2898DeriveBytes(contraseñaIngresada, salBytes, 10000))
+            // Recalcular el hash usando SHA256
+            using (var sha256 = SHA256.Create())
             {
-                byte[] hashIngresadoBytes = pbkdf2.GetBytes(32); // 256 bits
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(saltedPassword));
+                string computedHash = Convert.ToBase64String(hashBytes);
 
-                // Comparar los hashes
-                return hashIngresadoBytes.SequenceEqual(hashAlmacenadoBytes);
+                // Comparar el hash calculado con el hash almacenado
+                return computedHash == contraseñaHashAlmacenada;
             }
         }
     }

@@ -11,17 +11,17 @@
   <message name="eliminarCreditoResponse">
     <part name="parameters" element="tns:eliminarCreditoResponse" />
   </message>
-  <message name="insertarCredito">
-    <part name="parameters" element="tns:insertarCredito" />
-  </message>
-  <message name="insertarCreditoResponse">
-    <part name="parameters" element="tns:insertarCreditoResponse" />
-  </message>
   <message name="modificarCredito">
     <part name="parameters" element="tns:modificarCredito" />
   </message>
   <message name="modificarCreditoResponse">
     <part name="parameters" element="tns:modificarCreditoResponse" />
+  </message>
+  <message name="insertarCredito">
+    <part name="parameters" element="tns:insertarCredito" />
+  </message>
+  <message name="insertarCreditoResponse">
+    <part name="parameters" element="tns:insertarCreditoResponse" />
   </message>
   <message name="obtenerPorIDCredito">
     <part name="parameters" element="tns:obtenerPorIDCredito" />
@@ -46,13 +46,13 @@
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoRequest" message="tns:eliminarCredito" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoResponse" message="tns:eliminarCreditoResponse" />
     </operation>
-    <operation name="insertarCredito">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoRequest" message="tns:insertarCredito" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoResponse" message="tns:insertarCreditoResponse" />
-    </operation>
     <operation name="modificarCredito">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoRequest" message="tns:modificarCredito" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoResponse" message="tns:modificarCreditoResponse" />
+    </operation>
+    <operation name="insertarCredito">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoRequest" message="tns:insertarCredito" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoResponse" message="tns:insertarCreditoResponse" />
     </operation>
     <operation name="obtenerPorIDCredito">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/obtenerPorIDCreditoRequest" message="tns:obtenerPorIDCredito" />
@@ -78,7 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCredito">
+    <operation name="modificarCredito">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -87,7 +87,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCredito">
+    <operation name="insertarCredito">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
