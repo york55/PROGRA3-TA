@@ -146,8 +146,8 @@
         <asp:Label ID="lblError" runat="server" CssClass="error-message" Visible="false" EnableViewState="false"></asp:Label>
         
         <div style="display: flex; gap: 10px;">
-            <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn-login" OnClick="btnIngresar_Click" />
             <asp:Button ID="btnRegresar" runat="server" Text="Regresar" CssClass="btn-back" OnClick="btnRegresar_Click" />
+            <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn-login" OnClick="btnIngresar_Click" />
         </div>
 
     </div>

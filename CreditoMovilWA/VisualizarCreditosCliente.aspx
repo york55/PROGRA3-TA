@@ -255,8 +255,8 @@
         </asp:DropDownList>
 
         <div class="btn-container">
-            <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" CssClass="filter-btn" OnClick="btnFiltrar_Click" />
             <asp:Button ID="btnBack" runat="server" Text="Regresar" CssClass="btnBack" OnClick="btnBack_Click" />
+            <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" CssClass="filter-btn" OnClick="btnFiltrar_Click" />
         </div>
 
         <!-- Tabla de créditos -->
@@ -333,8 +333,8 @@
             <br /><br />
         
             <!-- Botones de acción -->
-            <asp:Button ID="btnCancel" runat="server" Text="Cancelar" CssClass="cancel-btn" OnClientClick="closeModal(); return false;" />
             <asp:Button ID="btnSave" runat="server" Text="Grabar" CssClass="save-btn" OnClick="btnSave_Click"/>
+            <asp:Button ID="btnCancel" runat="server" Text="Cancelar" CssClass="cancel-btn" OnClientClick="closeModal(); return false;" />
         </div>
     </div>
 </asp:Content>

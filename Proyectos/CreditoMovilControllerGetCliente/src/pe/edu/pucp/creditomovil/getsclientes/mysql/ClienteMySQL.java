@@ -416,7 +416,7 @@ public class ClienteMySQL implements ClienteDAO {
     }
 
     @Override
-    public List<Cliente> listarClientesPorNombre(String nombre) {
+    public List<Cliente> listarClientesActivosPorNombre(String nombre) {
         List<Cliente> listaClientes = new ArrayList<>();
         Connection conn = null;
         CallableStatement cs = null;
@@ -424,7 +424,7 @@ public class ClienteMySQL implements ClienteDAO {
 
         try {
             conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL ListarClientesPorNombre(?) }";
+            String sql = "{ CALL ListarClientesActivosPorNombre(?) }";
             cs = conn.prepareCall(sql);
             cs.setString(1, nombre);
             rs = cs.executeQuery();

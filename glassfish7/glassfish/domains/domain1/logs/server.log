@@ -11303,3 +11303,1155 @@ file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/gener
 [2024-11-20T23:01:08.496027-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=22 _ThreadName=GlassFish Shutdown Hook] [levelValue: 800] [[
   Completed shutdown of GlassFish runtime]]
 
+[2024-11-20T23:44:58.960002-05:00] [GF 7.0.18] [INFO] [] [com.sun.enterprise.server.logging.LogManagerService] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Using property file: E:\PROYECTO_PRO3_NEW\PROGRA3-TA\glassfish7\glassfish\domains\domain1\config\logging.properties]]
+
+[2024-11-20T23:44:59.036006-05:00] [GF 7.0.18] [INFO] [NCLS-LOGGING-00009] [com.sun.enterprise.server.logging.LogManagerService] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Running GlassFish Version: Eclipse GlassFish 7.0.18 (commit: 9c7fd856064b9cb74226a825d6ef6c75d7ea5e6e)]]
+
+[2024-11-20T23:45:00.215002-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 121 ms - bound to [/0.0.0.0:8080]]]
+
+[2024-11-20T23:45:00.252008-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 4 ms - bound to [/0.0.0.0:8181]]]
+
+[2024-11-20T23:45:00.277007-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 7 ms - bound to [/0.0.0.0:4848]]]
+
+[2024-11-20T23:45:00.545007-05:00] [GF 7.0.18] [INFO] [SEC-SVCS-00100] [jakarta.enterprise.security.services] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Authorization Service has successfully initialized.]]
+
+[2024-11-20T23:45:00.636002-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01115] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2024-11-20T23:45:00.640005-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01115] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2024-11-20T23:45:00.653007-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01115] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.]]
+
+[2024-11-20T23:45:05.430054-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=72 _ThreadName=pool-6-thread-1] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 24 ms - bound to [/0.0.0.0:8080]]]
+
+[2024-11-20T23:45:05.496055-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=72 _ThreadName=pool-6-thread-1] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 29 ms - bound to [/0.0.0.0:8181]]]
+
+[2024-11-20T23:45:06.948056-05:00] [GF 7.0.18] [INFO] [AS-WSMETROGLUE-10010] [jakarta.enterprise.webservices.metroglue] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Web service endpoint deployment events listener registered successfully.]]
+
+[2024-11-20T23:45:07.425055-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01002] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Java security manager is disabled.]]
+
+[2024-11-20T23:45:07.426053-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01010] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Entering Security Startup Service.]]
+
+[2024-11-20T23:45:07.434052-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01143] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading policy provider org.glassfish.exousia.modules.locked.SimplePolicyProvider.]]
+
+[2024-11-20T23:45:07.491055-05:00] [GF 7.0.18] [INFO] [NCLS-SECURITY-01011] [jakarta.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Security Service(s) started successfully.]]
+
+[2024-11-20T23:45:08.046050-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2024-11-20T23:45:08.049054-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2024-11-20T23:45:08.055052-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created HTTP listener admin-listener on host/port 0.0.0.0:4848]]
+
+[2024-11-20T23:45:08.096050-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00200] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created virtual server server]]
+
+[2024-11-20T23:45:08.099050-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00200] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Created virtual server __asadmin]]
+
+[2024-11-20T23:45:08.477050-05:00] [GF 7.0.18] [INFO] [AS-WEB-CORE-00306] [jakarta.enterprise.web.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Setting JAAS app name glassfish-web]]
+
+[2024-11-20T23:45:08.478053-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00201] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Virtual server server loaded default web module ]]
+
+[2024-11-20T23:45:09.890058-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-20T23:45:09.892054-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-20T23:45:09.893054-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-20T23:45:09.894055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-20T23:45:09.897055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-20T23:45:09.901053-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-20T23:45:09.905053-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-20T23:45:09.908055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-20T23:45:09.913054-05:00] [GF 7.0.18] [INFO] [AS-WSMETROGLUE-10001] [jakarta.enterprise.webservices.metroglue] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading WS-TX Services. Please wait.]]
+
+[2024-11-20T23:45:10.457054-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed RegistrationRequesterPortTypeImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/RegistrationRequesterPortType.]]
+
+[2024-11-20T23:45:10.459056-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed ParticipantPortTypePortImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/ParticipantPortType11.]]
+
+[2024-11-20T23:45:10.464055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed CoordinatorPortTypeImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/CoordinatorPortType.]]
+
+[2024-11-20T23:45:10.466054-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed RegistrationRequesterPortTypePortImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/RegistrationRequesterPortType11.]]
+
+[2024-11-20T23:45:10.467054-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed RegistrationPortTypeRPCPortImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/RegistrationPortTypeRPC11.]]
+
+[2024-11-20T23:45:10.472052-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed ParticipantPortTypeImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/ParticipantPortType.]]
+
+[2024-11-20T23:45:10.475055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed CoordinatorPortTypePortImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/CoordinatorPortType11.]]
+
+[2024-11-20T23:45:10.476056-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Webservice Endpoint deployed RegistrationPortTypeImpl
+ listening at address at http://DESKTOP-O1B729N:8080/__wstx-services/RegistrationPortTypeRPC.]]
+
+[2024-11-20T23:45:10.479053-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@61d7bb61[name=wstx-services], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/applications/wstx-services/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/wstx-services//
+][delegate=true, context=wstx-services, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=0, pathTimestamps.size=0, resourceEntryCache.size=0]]]
+
+[2024-11-20T23:45:12.425049-05:00] [GF 7.0.18] [WARNING] [] [com.sun.logging.LogDomains] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 900] [[
+  Cannot find the resource bundle for the name com.sun.logging.enterprise.system.core.security for class com.sun.enterprise.security.ee.jmac.ConfigDomainParser using classloader org.glassfish.main.security.ee [264]]]
+
+[2024-11-20T23:45:13.033054-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading application [wstx-services] at [/__wstx-services]]]
+
+[2024-11-20T23:45:13.039056-05:00] [GF 7.0.18] [INFO] [AS-WSMETROGLUE-10002] [jakarta.enterprise.webservices.metroglue] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  WS-TX Services successfully started.]]
+
+[2024-11-20T23:45:13.050057-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@4a6c0f38[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL//
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=59, pathTimestamps.size=31, resourceEntryCache.size=26]]]
+
+[2024-11-20T23:45:14.411051-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-20T23:45:14.419055-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00022] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Loading application CreditoMovilWSBL done in 13,532 ms]]
+
+[2024-11-20T23:45:14.449055-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry]]
+
+[2024-11-20T23:45:14.498055-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 13 ms - bound to [/0.0.0.0:3700]]]
+
+[2024-11-20T23:45:14.501059-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00017] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Eclipse GlassFish 7.0.18 (commit: 9c7fd856064b9cb74226a825d6ef6c75d7ea5e6e) startup time: Embedded (6,132 ms), startup services (15,694 ms), total (21,826 ms)]]
+
+[2024-11-20T23:45:14.987055-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 27 ms - bound to [/0.0.0.0:7676]]]
+
+[2024-11-20T23:45:15.107056-05:00] [GF 7.0.18] [INFO] [NCLS-JMX-00005] [jakarta.enterprise.system.jmx] [tid: _ThreadID=109 _ThreadName=Thread-12] [levelValue: 800] [[
+  JMXStartupService has started JMXConnector on JMXService URL service:jmx:rmi://DESKTOP-O1B729N:8686/jndi/rmi://DESKTOP-O1B729N:8686/jmxrmi]]
+
+[2024-11-20T23:45:16.754723-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@3664c596[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL//
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=120, pathTimestamps.size=31, resourceEntryCache.size=27]]]
+
+[2024-11-20T23:45:17.382787-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=141 _ThreadName=pool-18-thread-1] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2024-11-20T23:45:17.489791-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=141 _ThreadName=pool-18-thread-1] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 92 ms - bound to [/0.0.0.0:8181]]]
+
+[2024-11-20T23:45:17.828790-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00198] [jakarta.enterprise.web] [tid: _ThreadID=141 _ThreadName=pool-18-thread-1] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2024-11-20T23:45:17.927850-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00087] [jakarta.enterprise.system.core] [tid: _ThreadID=141 _ThreadName=pool-18-thread-1] [levelValue: 800] [[
+  Grizzly Framework 4.0.2 started in: 93 ms - bound to [/0.0.0.0:8080]]]
+
+[2024-11-20T23:45:17.964856-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@4c32d479[name=__admingui], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/lib/console-commandrecorder-plugin-7.0.18.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/lib/console-core-7.0.18.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/__admingui//
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/woodstock-webui-jsf-suntheme-6.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/dojo-ajax-nodemo-1.12.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/woodstock-webui-jsf-6.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/json-2.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/prototype-1.7.3.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/commons-io-2.16.1.jar
+][delegate=true, context=__admingui, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=0, pathTimestamps.size=2, resourceEntryCache.size=0]]]
+
+[2024-11-20T23:45:18.035848-05:00] [GF 7.0.18] [INFO] [] [org.jboss.weld.Version] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  WELD-000900: 5.1.2 (Final)]]
+
+[2024-11-20T23:45:18.406851-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.inject.spi] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  Enabling Weld for ApplicationInfo[name=__admingui]]]
+
+[2024-11-20T23:45:21.745410-05:00] [GF 7.0.18] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jersey.ext.cdi1x.internal.ProcessAllAnnotatedTypes.processAnnotatedType(@Observes ProcessAnnotatedType<?>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2024-11-20T23:45:21.751414-05:00] [GF 7.0.18] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jersey.ext.cdi1x.internal.ProcessAllAnnotatedTypes.processAnnotatedType(@Observes ProcessAnnotatedType<?>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2024-11-20T23:45:21.752415-05:00] [GF 7.0.18] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jersey.ext.cdi1x.internal.ProcessAllAnnotatedTypes.processAnnotatedType(@Observes ProcessAnnotatedType<?>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2024-11-20T23:45:22.070414-05:00] [GF 7.0.18] [INFO] [NCLS-REST-00001] [jakarta.enterprise.admin.rest] [tid: _ThreadID=59 _ThreadName=admin-listener(5)] [levelValue: 800] [[
+  Listening to REST requests at context: /management/domain.]]
+
+[2024-11-20T23:45:25.165594-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  Initializing Soteria 3.0.3 for context '']]
+
+[2024-11-20T23:45:25.330600-05:00] [GF 7.0.18] [INFO] [faces.config.listener.version] [jakarta.enterprise.resource.webcontainer.faces.config] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  Inicializando Mojarra 4.0.7 para el contexto '']]
+
+[2024-11-20T23:45:25.788600-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-20T23:45:25.791605-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-20T23:45:25.793600-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-20T23:45:25.795602-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-20T23:45:25.797599-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-20T23:45:25.798600-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-20T23:45:25.799600-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-20T23:45:25.800599-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-20T23:45:25.805604-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@3c3c994e[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=31, resourceEntryCache.size=26]]]
+
+[2024-11-20T23:45:27.310599-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  Loading application [__admingui] at [/]]]
+
+[2024-11-20T23:45:27.316596-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00022] [jakarta.enterprise.system.core] [tid: _ThreadID=108 _ThreadName=Thread-11] [levelValue: 800] [[
+  Loading application __admingui done in 12,735 ms]]
+
+[2024-11-20T23:45:27.326597-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-20T23:45:27.483602-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 8,578 milliseconds.]]
+
+[2024-11-20T23:45:27.516600-05:00] [GF 7.0.18] [WARNING] [] [com.sun.web.security.RealmAdapter] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 900] [[
+  Context path from ServletContext:  differs from path from bundle: /]]
+
+[2024-11-21T00:08:17.933744-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@72a0eb1d[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=120, pathTimestamps.size=31, resourceEntryCache.size=27]]]
+
+[2024-11-21T00:08:27.359109-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-21T00:08:27.360111-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-21T00:08:27.360111-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-21T00:08:27.361112-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-21T00:08:27.362113-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-21T00:08:27.365113-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-21T00:08:27.367114-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-21T00:08:27.368113-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-21T00:08:27.372116-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@5a5a7c39[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=31, resourceEntryCache.size=26]]]
+
+[2024-11-21T00:08:28.841636-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-21T00:08:29.612687-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 11,814 milliseconds.]]
+
+[2024-11-21T00:08:30.565268-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@346d63b5[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=120, pathTimestamps.size=31, resourceEntryCache.size=27]]]
+
+[2024-11-21T00:08:35.381264-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-21T00:08:35.382266-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-21T00:08:35.383267-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-21T00:08:35.387265-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-21T00:08:35.392265-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-21T00:08:35.393270-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-21T00:08:35.395270-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-21T00:08:35.398290-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-21T00:08:35.404266-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@b887e6c[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=31, resourceEntryCache.size=26]]]
+
+[2024-11-21T00:08:36.655265-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-21T00:08:36.750267-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 6,229 milliseconds.]]
+
+[2024-11-21T00:08:37.470054-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@57fc764b[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=120, pathTimestamps.size=31, resourceEntryCache.size=27]]]
+
+[2024-11-21T00:08:41.722052-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-21T00:08:41.722052-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-21T00:08:41.723053-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-21T00:08:41.724055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-21T00:08:41.725055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-21T00:08:41.731055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-21T00:08:41.733055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-21T00:08:41.734055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-21T00:08:41.737055-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@321cb28e[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=31, resourceEntryCache.size=26]]]
+
+[2024-11-21T00:08:43.194054-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-21T00:08:43.312057-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=56 _ThreadName=admin-listener(2)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 5,861 milliseconds.]]
+
+[2024-11-21T00:08:45.098056-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@5ff2819d[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=120, pathTimestamps.size=31, resourceEntryCache.size=27]]]
+
+[2024-11-21T00:08:53.408055-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-21T00:08:53.426573-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-21T00:08:53.433575-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-21T00:08:53.450572-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-21T00:08:53.454575-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-21T00:08:53.456575-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-21T00:08:53.457573-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-21T00:08:53.458575-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-21T00:08:53.522577-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@67e19531[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=31, resourceEntryCache.size=26]]]
+
+[2024-11-21T00:08:55.134575-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-21T00:08:55.203575-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=58 _ThreadName=admin-listener(4)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 10,156 milliseconds.]]
+
+[2024-11-21T00:09:15.619955-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@623e12bd[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=120, pathTimestamps.size=31, resourceEntryCache.size=27]]]
+
+[2024-11-21T00:09:18.898954-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-21T00:09:18.900955-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-21T00:09:18.903955-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-21T00:09:18.907953-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-21T00:09:18.908955-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-21T00:09:18.909954-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-21T00:09:18.913955-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-21T00:09:18.916955-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-21T00:09:18.921953-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@6c55d3af[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=31, resourceEntryCache.size=26]]]
+
+[2024-11-21T00:09:19.921952-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-21T00:09:20.015954-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 4,427 milliseconds.]]
+
+[2024-11-21T00:09:20.278953-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@5e3bebd3[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=120, pathTimestamps.size=31, resourceEntryCache.size=27]]]
+
+[2024-11-21T00:09:24.479955-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-21T00:09:24.484958-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-21T00:09:24.485954-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-21T00:09:24.486955-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-21T00:09:24.487956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-21T00:09:24.487956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-21T00:09:24.487956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-21T00:09:24.488953-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-21T00:09:24.521012-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@49303b62[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=31, resourceEntryCache.size=26]]]
+
+[2024-11-21T00:09:25.719953-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-21T00:09:25.781953-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=55 _ThreadName=admin-listener(1)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 5,218 milliseconds.]]
+
+[2024-11-21T00:09:26.110950-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@fb53064[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=120, pathTimestamps.size=31, resourceEntryCache.size=27]]]
+
+[2024-11-21T00:09:29.889953-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed EvaluacionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/EvaluacionWS.]]
+
+[2024-11-21T00:09:29.890954-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed CreditoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/CreditoWS.]]
+
+[2024-11-21T00:09:29.891956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed ClienteWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/ClienteWS.]]
+
+[2024-11-21T00:09:29.892957-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed SupervisorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/SupervisorWS.]]
+
+[2024-11-21T00:09:29.892957-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed AdministradorWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/AdministradorWS.]]
+
+[2024-11-21T00:09:29.893956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed BilleteraWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BilleteraWS.]]
+
+[2024-11-21T00:09:29.893956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed TransaccionWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/TransaccionWS.]]
+
+[2024-11-21T00:09:29.893956-05:00] [GF 7.0.18] [INFO] [AS-WSJSR109IMPL-00018] [jakarta.enterprise.webservices] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Webservice Endpoint deployed BancoWS
+ listening at address at http://DESKTOP-O1B729N:8080/CreditoMovilWSBL/BancoWS.]]
+
+[2024-11-21T00:09:29.896954-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@50457d2a[name=web], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+][delegate=true, context=web, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=1, pathTimestamps.size=31, resourceEntryCache.size=26]]]
+
+[2024-11-21T00:09:31.085953-05:00] [GF 7.0.18] [INFO] [AS-WEB-GLUE-00172] [jakarta.enterprise.web] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  Loading application [CreditoMovilWSBL] at [/CreditoMovilWSBL]]]
+
+[2024-11-21T00:09:31.195955-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.system.core] [tid: _ThreadID=57 _ThreadName=admin-listener(3)] [levelValue: 800] [[
+  CreditoMovilWSBL was successfully deployed in 5,107 milliseconds.]]
+
+[2024-11-21T00:45:51.955392-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00092] [jakarta.enterprise.system.core] [tid: _ThreadID=253 _ThreadName=Thread-36] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2024-11-21T00:45:51.991395-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=253 _ThreadName=Thread-36] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2024-11-21T00:45:52.042396-05:00] [GF 7.0.18] [INFO] [NCLS-JMX-00002] [jakarta.enterprise.system.jmx] [tid: _ThreadID=253 _ThreadName=Thread-36] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2024-11-21T00:45:52.043395-05:00] [GF 7.0.18] [INFO] [NCLS-JMX-00001] [jakarta.enterprise.system.jmx] [tid: _ThreadID=253 _ThreadName=Thread-36] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2024-11-21T00:45:52.287392-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00092] [jakarta.enterprise.system.core] [tid: _ThreadID=254 _ThreadName=Thread-37] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2024-11-21T00:45:52.364392-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=255 _ThreadName=RunLevelControllerThread-1732167952061] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@3957b60f[name=/CreditoMovilWSBL], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-collections4-4.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/commons-logging-1.3.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCliente.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerGetCredito.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilControllerRRHH.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilDBManager.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/CreditoMovilModel.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/ecj-3.21.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-annotations-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-core-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-databind-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jackson-dataformat-xml-2.17.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jakarta.xml.ws-api-4.0.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-charts-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-jdt-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jasperreports-pdf-7.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/jfreechart-1.5.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-8.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/mysql-connector-j-9.1.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/openpdf-1.3.32.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/WEB-INF/lib/stax2-api-4.2.2.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/CreditoMovilWSBL/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/CreditoMovilWSBL/
+][delegate=true, context=/CreditoMovilWSBL, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=125, pathTimestamps.size=32, resourceEntryCache.size=347]]]
+
+[2024-11-21T00:45:52.525394-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.inject.spi] [tid: _ThreadID=255 _ThreadName=RunLevelControllerThread-1732167952061] [levelValue: 800] [[
+  Disabling Weld for ApplicationInfo[name=__admingui]]]
+
+[2024-11-21T00:45:52.559396-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=255 _ThreadName=RunLevelControllerThread-1732167952061] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@13dd7c2a[name=], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/lib/console-commandrecorder-plugin-7.0.18.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/lib/console-core-7.0.18.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/__admingui//
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/woodstock-webui-jsf-suntheme-6.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/dojo-ajax-nodemo-1.12.4.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/woodstock-webui-jsf-6.0.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/json-2.0.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/prototype-1.7.3.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/lib/install/applications/__admingui/WEB-INF/extra/commons-io-2.16.1.jar
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/__admingui/
+][delegate=true, context=, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=631, pathTimestamps.size=5, resourceEntryCache.size=11]]]
+
+[2024-11-21T00:45:52.568392-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=255 _ThreadName=RunLevelControllerThread-1732167952061] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@45b0c80d)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@64bab7d5)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-21T00:45:52.569393-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=255 _ThreadName=RunLevelControllerThread-1732167952061] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@45b0c80d)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@64bab7d5)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-21T00:45:52.571393-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=255 _ThreadName=RunLevelControllerThread-1732167952061] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@45b0c80d)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@64bab7d5)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-21T00:45:52.585392-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=255 _ThreadName=RunLevelControllerThread-1732167952061] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@45b0c80d)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@64bab7d5)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-21T00:45:52.657391-05:00] [GF 7.0.18] [SEVERE] [AS-WEB-UTIL-00016] [org.glassfish.web.loader.ReferenceCleaner] [tid: _ThreadID=255 _ThreadName=RunLevelControllerThread-1732167952061] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of [class java.lang.ThreadLocal (toString: java.lang.ThreadLocal@45b0c80d)] and a value of [class org.glassfish.admingui.theme.AdminguiThemeContext (toString: org.glassfish.admingui.theme.AdminguiThemeContext@64bab7d5)] but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2024-11-21T00:45:52.679394-05:00] [GF 7.0.18] [INFO] [] [org.glassfish.web.loader.WebappClassLoader] [tid: _ThreadID=255 _ThreadName=RunLevelControllerThread-1732167952061] [levelValue: 800] [[
+  close(), this:
+org.glassfish.web.loader.WebappClassLoader@9cb927e[name=/__wstx-services], urls=[
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/applications/wstx-services/WEB-INF/classes/
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/ejb/wstx-services//
+file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/glassfish7/glassfish/domains/domain1/generated/wstx-services/
+][delegate=true, context=/__wstx-services, status=RUNNING, antiJARLocking=false, securityManager=false, packageDefinitionSecurityEnabled=false, repositories=RepositoryManager[WEB-INF/classes/], notFound.size=25, pathTimestamps.size=0, resourceEntryCache.size=0]]]
+
+[2024-11-21T00:45:52.932392-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=263 _ThreadName=RunLevelControllerThread-1732167952726] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource(pool-name=SamplePool,jndi-name=jdbc/sample), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource(pool-name=__TimerPool,object-type=system-all,jndi-name=jdbc/__TimerPool), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource(pool-name=DerbyPool,object-type=system-all-req,jndi-name=jdbc/__default), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool(datasource-classname=org.apache.derby.jdbc.EmbeddedXADataSource,name=__TimerPool,res-type=javax.sql.XADataSource), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool(is-isolation-level-guaranteed=false,datasource-classname=org.apache.derby.jdbc.ClientDataSource,name=DerbyPool,res-type=javax.sql.DataSource), GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool(is-isolation-level-guaranteed=false,datasource-classname=org.apache.derby.jdbc.ClientDataSource,name=SamplePool,res-type=javax.sql.DataSource)]]]
+
+[2024-11-21T00:45:52.958395-05:00] [GF 7.0.18] [INFO] [NCLS-CORE-00013] [jakarta.enterprise.system.core] [tid: _ThreadID=253 _ThreadName=Thread-36] [levelValue: 800] [[
+  Shutdown procedure finished]]
+
+[2024-11-21T00:45:52.994393-05:00] [GF 7.0.18] [INFO] [] [jakarta.enterprise.logging.stdout] [tid: _ThreadID=22 _ThreadName=GlassFish Shutdown Hook] [levelValue: 800] [[
+  Completed shutdown of GlassFish runtime]]
+

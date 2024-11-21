@@ -46,7 +46,7 @@ namespace CreditoMovilWA
         protected void btnBuscarCli_Click(object sender, EventArgs e)
         {
             cliente[] listCli = null;
-            gvClientes.DataSource = listCli = clienteDAO.listarClientesPorNombre(texBuscar.Text);
+            gvClientes.DataSource = listCli = clienteDAO.listarClientesActivosPorNombre(texBuscar.Text);
             gvClientes.DataBind();
         }
 

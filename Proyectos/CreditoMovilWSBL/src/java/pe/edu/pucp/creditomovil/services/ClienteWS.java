@@ -113,11 +113,11 @@ public class ClienteWS {
         return clientes;
     }
     
-    @WebMethod(operationName = "listarClientesPorNombre")
+    @WebMethod(operationName = "listarClientesActivosPorNombre")
     public List<Cliente> listarClientesPorNombre(@WebParam(name = "nombre") String nombre) {
         List<Cliente> clientes = null;
         try{
-            clientes = daoCliente.listarClientesPorNombre(nombre );
+            clientes = daoCliente.listarClientesActivosPorNombre(nombre);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

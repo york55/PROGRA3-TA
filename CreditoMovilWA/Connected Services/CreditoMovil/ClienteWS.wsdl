@@ -5,45 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/ClienteWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="reportePDF">
-    <part name="parameters" element="tns:reportePDF" />
-  </message>
-  <message name="reportePDFResponse">
-    <part name="parameters" element="tns:reportePDFResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
-  <message name="obtenerPorDocIdenCliente">
-    <part name="parameters" element="tns:obtenerPorDocIdenCliente" />
-  </message>
-  <message name="obtenerPorDocIdenClienteResponse">
-    <part name="parameters" element="tns:obtenerPorDocIdenClienteResponse" />
-  </message>
-  <message name="listarClientesPorNombre">
-    <part name="parameters" element="tns:listarClientesPorNombre" />
-  </message>
-  <message name="listarClientesPorNombreResponse">
-    <part name="parameters" element="tns:listarClientesPorNombreResponse" />
-  </message>
-  <message name="eliminarClienteLogico">
-    <part name="parameters" element="tns:eliminarClienteLogico" />
-  </message>
-  <message name="eliminarClienteLogicoResponse">
-    <part name="parameters" element="tns:eliminarClienteLogicoResponse" />
-  </message>
-  <message name="listarTodosClientes">
-    <part name="parameters" element="tns:listarTodosClientes" />
-  </message>
-  <message name="listarTodosClientesResponse">
-    <part name="parameters" element="tns:listarTodosClientesResponse" />
-  </message>
-  <message name="obtenerPorCodCliente">
-    <part name="parameters" element="tns:obtenerPorCodCliente" />
-  </message>
-  <message name="obtenerPorCodClienteResponse">
-    <part name="parameters" element="tns:obtenerPorCodClienteResponse" />
-  </message>
   <message name="eliminarCompletoCliente">
     <part name="parameters" element="tns:eliminarCompletoCliente" />
   </message>
@@ -56,44 +17,58 @@
   <message name="modificarClienteResponse">
     <part name="parameters" element="tns:modificarClienteResponse" />
   </message>
-  <message name="insertarCliente">
-    <part name="parameters" element="tns:insertarCliente" />
-  </message>
-  <message name="insertarClienteResponse">
-    <part name="parameters" element="tns:insertarClienteResponse" />
-  </message>
   <message name="generarBuffer">
     <part name="parameters" element="tns:generarBuffer" />
   </message>
   <message name="generarBufferResponse">
     <part name="parameters" element="tns:generarBufferResponse" />
   </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="insertarCliente">
+    <part name="parameters" element="tns:insertarCliente" />
+  </message>
+  <message name="insertarClienteResponse">
+    <part name="parameters" element="tns:insertarClienteResponse" />
+  </message>
+  <message name="obtenerPorDocIdenCliente">
+    <part name="parameters" element="tns:obtenerPorDocIdenCliente" />
+  </message>
+  <message name="obtenerPorDocIdenClienteResponse">
+    <part name="parameters" element="tns:obtenerPorDocIdenClienteResponse" />
+  </message>
+  <message name="listarClientesActivosPorNombre">
+    <part name="parameters" element="tns:listarClientesActivosPorNombre" />
+  </message>
+  <message name="listarClientesActivosPorNombreResponse">
+    <part name="parameters" element="tns:listarClientesActivosPorNombreResponse" />
+  </message>
+  <message name="obtenerPorCodCliente">
+    <part name="parameters" element="tns:obtenerPorCodCliente" />
+  </message>
+  <message name="obtenerPorCodClienteResponse">
+    <part name="parameters" element="tns:obtenerPorCodClienteResponse" />
+  </message>
+  <message name="listarTodosClientes">
+    <part name="parameters" element="tns:listarTodosClientes" />
+  </message>
+  <message name="listarTodosClientesResponse">
+    <part name="parameters" element="tns:listarTodosClientesResponse" />
+  </message>
+  <message name="eliminarClienteLogico">
+    <part name="parameters" element="tns:eliminarClienteLogico" />
+  </message>
+  <message name="eliminarClienteLogicoResponse">
+    <part name="parameters" element="tns:eliminarClienteLogicoResponse" />
+  </message>
+  <message name="reportePDF">
+    <part name="parameters" element="tns:reportePDF" />
+  </message>
+  <message name="reportePDFResponse">
+    <part name="parameters" element="tns:reportePDFResponse" />
+  </message>
   <portType name="ClienteWS">
-    <operation name="reportePDF">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest" message="tns:reportePDF" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse" message="tns:reportePDFResponse" />
-      <fault wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDF/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="obtenerPorDocIdenCliente">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteRequest" message="tns:obtenerPorDocIdenCliente" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteResponse" message="tns:obtenerPorDocIdenClienteResponse" />
-    </operation>
-    <operation name="listarClientesPorNombre">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesPorNombreRequest" message="tns:listarClientesPorNombre" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesPorNombreResponse" message="tns:listarClientesPorNombreResponse" />
-    </operation>
-    <operation name="eliminarClienteLogico">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoRequest" message="tns:eliminarClienteLogico" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoResponse" message="tns:eliminarClienteLogicoResponse" />
-    </operation>
-    <operation name="listarTodosClientes">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest" message="tns:listarTodosClientes" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse" message="tns:listarTodosClientesResponse" />
-    </operation>
-    <operation name="obtenerPorCodCliente">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteRequest" message="tns:obtenerPorCodCliente" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteResponse" message="tns:obtenerPorCodClienteResponse" />
-    </operation>
     <operation name="eliminarCompletoCliente">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarCompletoClienteRequest" message="tns:eliminarCompletoCliente" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarCompletoClienteResponse" message="tns:eliminarCompletoClienteResponse" />
@@ -102,19 +77,62 @@
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/modificarClienteRequest" message="tns:modificarCliente" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/modificarClienteResponse" message="tns:modificarClienteResponse" />
     </operation>
-    <operation name="insertarCliente">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteRequest" message="tns:insertarCliente" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteResponse" message="tns:insertarClienteResponse" />
-    </operation>
     <operation name="generarBuffer">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferRequest" message="tns:generarBuffer" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferResponse" message="tns:generarBufferResponse" />
       <fault wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBuffer/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+    <operation name="insertarCliente">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteRequest" message="tns:insertarCliente" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteResponse" message="tns:insertarClienteResponse" />
+    </operation>
+    <operation name="obtenerPorDocIdenCliente">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteRequest" message="tns:obtenerPorDocIdenCliente" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteResponse" message="tns:obtenerPorDocIdenClienteResponse" />
+    </operation>
+    <operation name="listarClientesActivosPorNombre">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesActivosPorNombreRequest" message="tns:listarClientesActivosPorNombre" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesActivosPorNombreResponse" message="tns:listarClientesActivosPorNombreResponse" />
+    </operation>
+    <operation name="obtenerPorCodCliente">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteRequest" message="tns:obtenerPorCodCliente" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteResponse" message="tns:obtenerPorCodClienteResponse" />
+    </operation>
+    <operation name="listarTodosClientes">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest" message="tns:listarTodosClientes" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse" message="tns:listarTodosClientesResponse" />
+    </operation>
+    <operation name="eliminarClienteLogico">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoRequest" message="tns:eliminarClienteLogico" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoResponse" message="tns:eliminarClienteLogicoResponse" />
+    </operation>
+    <operation name="reportePDF">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest" message="tns:reportePDF" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse" message="tns:reportePDFResponse" />
+      <fault wsam:Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDF/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
   </portType>
   <binding name="ClienteWSPortBinding" type="tns:ClienteWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="reportePDF">
+    <operation name="eliminarCompletoCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarBuffer">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -126,6 +144,15 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+    <operation name="insertarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="obtenerPorDocIdenCliente">
       <soap:operation soapAction="" />
       <input>
@@ -135,25 +162,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarClientesPorNombre">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarClienteLogico">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTodosClientes">
+    <operation name="listarClientesActivosPorNombre">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -171,7 +180,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCompletoCliente">
+    <operation name="listarTodosClientes">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -180,7 +189,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCliente">
+    <operation name="eliminarClienteLogico">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -189,16 +198,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="generarBuffer">
+    <operation name="reportePDF">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

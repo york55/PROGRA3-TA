@@ -131,7 +131,6 @@
                         <asp:BoundField DataField="apPaterno" HeaderText="Apellido Paterno" />
                         <asp:BoundField DataField="tipoDocumento" HeaderText="Tipo documento" />
                         <asp:BoundField DataField="documento" HeaderText="Nro. Documento" />
-                        <asp:BoundField DataField="activo" HeaderText="Activo" />
                         <asp:TemplateField>
                             <itemtemplate>
                                 <asp:Button ID="btnDetalles" runat="server" 

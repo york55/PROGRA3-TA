@@ -254,8 +254,8 @@
         <asp:Label ID="lblErrorMotivo" runat="server" ForeColor="Red" Visible="false" Text="Por favor, ingrese un motivo para su solicitud." />
 
         <div style="display: flex; gap: 10px;">
-            <asp:Button ID="saveBtn" runat="server" Text="Solicitar" CssClass="submit-btn" OnClick="btnSubmit_Click" />
             <asp:Button ID="backBtn" runat="server" Text="Regresar" CssClass="back-btn" OnClick="btnBack_Click" />
+            <asp:Button ID="saveBtn" runat="server" Text="Solicitar" CssClass="submit-btn" OnClick="btnSubmit_Click" />
         </div>
     </div>
 </asp:Content>
