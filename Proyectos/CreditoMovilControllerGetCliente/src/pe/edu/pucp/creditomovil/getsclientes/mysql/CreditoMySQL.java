@@ -88,7 +88,7 @@ public class CreditoMySQL implements CreditoDAO {
     }
 
     @Override
-    public void modificar(Credito credito) {
+    public boolean modificar(Credito credito) {
         Connection conn = null;
         CallableStatement cs = null;
 
@@ -107,8 +107,10 @@ public class CreditoMySQL implements CreditoDAO {
             cs.setString(8, credito.getMotivo());
 
             cs.execute();
+            return true;
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         } finally {
             try {
                 if (cs != null) {

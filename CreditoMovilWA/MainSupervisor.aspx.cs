@@ -25,7 +25,10 @@ namespace CreditoMovilWA
 
             if (!IsPostBack)
             {
-
+                // Aquí carga los datos de las evaluaciones
+                if (CargarClientesCredPend()) txtCliPendAsig.Visible = true;
+                else txtNotClientPend.Visible = true;
+                CargarEvaluaciones();
             }
             else if (ViewState["ModalAbierto"] != null && (bool)ViewState["ModalAbierto"])
             {
@@ -35,28 +38,28 @@ namespace CreditoMovilWA
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                // Aquí carga los datos de las evaluaciones
-                CargarClientesCredPend();
-                CargarEvaluaciones();
-            }
+            
         }
 
-        private void CargarEvaluaciones()
+        private Boolean CargarEvaluaciones()
         {
             supervisor sup = (supervisor)Session["Supervisor"];
 
-
             // Ejemplo de carga de datos, reemplaza con tu lógica real
-            gvEvaluaciones.DataSource = daoEvaluacion.listarEvaluacionesSupervisor(sup.codigoEv);
+            evaluacion[] lisEv = null;
+            gvEvaluaciones.DataSource = lisEv = daoEvaluacion.listarEvaluacionesSupervisor(sup.codigoEv);
             gvEvaluaciones.DataBind();
+
+            return (lisEv != null);
         }
 
-        private void CargarClientesCredPend()
+        private Boolean CargarClientesCredPend()
         {
-            gvClientesCredPend.DataSource = daoCliente.listarClientesConCredPendientes();
+            cliente[] listCli = null;
+            gvClientesCredPend.DataSource = listCli = daoCliente.listarClientesConCredPendientes();
             gvClientesCredPend.DataBind();
+
+            return (listCli != null);
         }
         protected void btnVerDetalle_Click(object sender, EventArgs e)
         {
@@ -94,6 +97,30 @@ namespace CreditoMovilWA
             ClientScript.RegisterStartupScript(this.GetType(), "OpenModal", "openModal();", true);
             gvCredPendXCli.DataSource = daoCredito.listarCreditosPendXCliente(codigoCliente);
             gvCredPendXCli.DataBind();
+        }
+
+        protected void btnCerrarModal_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "closeModal", "closeModal();", true);
+        }
+
+        protected void btnAprobar_Click(object sender, EventArgs e)
+        {
+            Button btnAprobar = (Button)sender;
+            int numCredito = Int32.Parse(btnAprobar.CommandArgument);
+            credito cred = daoCredito.obtenerPorIDCredito(numCredito);
+            cred.estado = "Activo";
+            if (daoCredito.modificarCredito(cred))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "closeModal", "closeModal();", true);
+            }
+            if (CargarClientesCredPend()) {
+                txtCliPendAsig.Visible = true;
+            }
+            else {
+                txtCliPendAsig.Visible = false;
+                txtNotClientPend.Visible = true;
+            }
         }
     }
 }

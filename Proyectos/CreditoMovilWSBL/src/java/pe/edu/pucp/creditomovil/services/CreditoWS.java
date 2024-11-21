@@ -35,12 +35,14 @@ public class CreditoWS {
     }
     
     @WebMethod(operationName = "modificarCredito")
-    public void modificarCredito(@WebParam(name = "credito") Credito credito) {
+    public boolean modificarCredito(@WebParam(name = "credito") Credito credito) {
+        boolean res = false;
         try{
-            daoCredito.modificar(credito);
+            res = daoCredito.modificar(credito);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
+        return res;
     }
     
     @WebMethod(operationName = "eliminarCredito")

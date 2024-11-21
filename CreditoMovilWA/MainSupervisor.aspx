@@ -6,6 +6,12 @@
             font-size: 28px;
             color: #2f7a44;
         }
+
+        .lab-not-cli {
+            color: red;
+            font-weight: bold;
+        }
+
         .table-container {
             margin-top: 20px;
             overflow-x: auto;
@@ -32,8 +38,99 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        /* Estilo del modal */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Fijo en la pantalla */
+            z-index: 10; /* Aparece sobre otros elementos */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Evita el scroll */
+            background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+        }
+
+        /* Contenido del modal */
+        .modal-content {
+            background-color: #faf8fc;
+            margin: auto; /* Centrado horizontal */
+            top: 50%; /* Centrado vertical */
+            transform: translateY(-50%); /* Ajusta el centrado vertical */
+            padding: 20px;
+            position: relative; /* Relativo para posicionar el botón de cerrar */
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 27px;
+        }
+
+        .btn-table{
+            padding: 5px 10px;
+            background-color: #2f7a44;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-table-aprobar{
+            padding: 5px 10px;
+            background-color: #002e6e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Botón de cerrar estilo X */
+        .btn-cerrar {
+            background: none; /* Sin fondo al inicio */
+            color: #333; /* Gris oscuro/negro inicial */
+            border: none; /* Sin bordes */
+            font-size: 20px; /* Tamaño fijo de la letra */
+            font-weight: bold; /* Negrita para la X */
+            cursor: pointer; /* Cambia el cursor al pasar el ratón */
+            position: absolute; /* Posición fija en la parte superior derecha */
+            top: 10px; /* Separación desde el borde superior */
+            right: 10px; /* Separación desde el borde derecho */
+            z-index: 1001; /* Asegura que esté sobre el contenido */
+            padding: 0; /* Sin relleno extra */
+            line-height: 1; /* Altura fija para evitar crecimiento */
+            width: 25px; /* Fija el ancho */
+            height: 25px; /* Fija la altura */
+            text-align: center; /* Centrado de la X */
+            border-radius: 0; /* Sin bordes redondeados por defecto */
+            transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; /* Transición solo de color y fondo */
+        }
+
+        /* Hover: Fondo rojo, X blanca, bordes redondeados */
+        .btn-cerrar:hover {
+            background-color: red; /* Fondo rojo */
+            color: white; /* X blanca */
+        }
+
+        /* Aseguramos que no haya cambios de tamaño ni movimiento */
+        .btn-cerrar:focus, 
+        .btn-cerrar:hover {
+            font-size: 20px; /* Tamaño fijo */
+            line-height: 1; /* Altura constante */
+            padding: 0; /* Sin cambios de espacio interior */
+            outline: none; /* Sin borde de enfoque */
+        }
+
+
     </style>
-    <script>
+    <script type="text/javascript">
         // Abre el modal
         function openModal() {
             document.getElementById("CredPendModal").style.display = "block";
@@ -42,14 +139,26 @@
         function closeModal() {
             document.getElementById("CredPendModal").style.display = "none";
         }
-</script>
+        function confirmAprobar() {
+            // Mostrar la alerta de confirmación
+            var respuesta = confirm("¿Estás seguro de aprobar este crédito?");
+
+            // Si el usuario hace clic en "Aceptar", continuar con la acción
+            return respuesta; // Si el usuario confirma, return true; si cancela, return false
+        }
+    </script>
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!-- Contenedor principal -->
     <div class="container">
-        <h2>¡Hola!</h2>
-        <p>Estos son los clientes con créditos pendientes por asignar:</p>
+        <div class="text-sup">
+            <h2>¡Hola!</h2>
+            <asp:Label ID="txtCliPendAsig" CssClass="lab-cli" runat="server" 
+                Text="Estos son los clientes con créditos pendientes por asignar:" Visible="false"></asp:Label>
+            <asp:Label ID="txtNotClientPend" CssClass="lab-not-cli" runat="server" 
+                Text="No se encontraron clientes con créditos pendientes" Visible="false"></asp:Label>
+        </div>
         <div class="table-container">
             <asp:GridView ID="gvClientesCredPend" runat="server" AutoGenerateColumns="false">
                 <Columns>
@@ -64,7 +173,7 @@
                                 Text="Detalles" CssClass="btn-table" OnClick="btnDetalles_Click"
                                 CommandArgument='<%# Eval("codigoCliente") %>' />
                             <asp:Button ID="btnVerCreditos" runat="server" 
-                                Text="Ver Creditos" CssClass="btn-table" OnClick="btnVerCreditos_Click"
+                                Text="Ver Creditos" CssClass="btn-table-aprobar" OnClick="btnVerCreditos_Click"
                                 CommandArgument='<%# Eval("codigoCliente") %>' />
                         </itemtemplate>
                     </asp:TemplateField>
@@ -73,17 +182,32 @@
         </div>
     </div>
 
-    <div id="CredPendModal">
-        <asp:GridView ID="gvCredPendXCli" runat="server" AutoGenerateColumns="false">
-            <Columns>
-                <asp:BoundField DataField="numCredito" HeaderText="NUM.CRED" />
-                <asp:BoundField DataField="monto" HeaderText="MONTO" />
-                <asp:BoundField DataField="tasaInteres" HeaderText="TASA INTERES" />
-                <asp:BoundField DataField="estado" HeaderText="ESTADO" />
-                <asp:BoundField DataField="numCuotas" HeaderText="NUM. CUOTAS" />
-                <asp:BoundField DataField="motivo" HeaderText="MOTIVO" />
-            </Columns>
-        </asp:GridView>
+    <div id="CredPendModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <asp:Button ID="btnCerrarModal" CssClass="btn-cerrar" runat="server" Text="X" OnClick="btnCerrarModal_Click"/>
+            </div>
+            <p>Apruebe de ser necesario los creditos del cliente</p>
+            <div class="modal-mid">
+                <asp:GridView ID="gvCredPendXCli" runat="server" AutoGenerateColumns="false">
+                    <Columns>
+                        <asp:BoundField DataField="numCredito" HeaderText="NUM.CRED" />
+                        <asp:BoundField DataField="monto" HeaderText="MONTO" />
+                        <asp:BoundField DataField="tasaInteres" HeaderText="TASA INTERES" />
+                        <asp:BoundField DataField="estado" HeaderText="ESTADO" />
+                        <asp:BoundField DataField="numCuotas" HeaderText="NUM. CUOTAS" />
+                        <asp:BoundField DataField="motivo" HeaderText="MOTIVO" />
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:Button ID="btnAprobar" CssClass="btn-table" 
+                                    runat="server" Text="Aprobar" OnClick="btnAprobar_Click"
+                                    CommandArgument='<%# Eval("numCredito") %>' OnClientClick="return confirmAprobar();"/>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+            </div>
+        </div>
     </div>
 
     <div class="container">

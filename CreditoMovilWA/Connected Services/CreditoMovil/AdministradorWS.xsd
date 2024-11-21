@@ -46,6 +46,15 @@
       <xs:element minOccurs="0" name="ultimoLogueo" type="xs:dateTime" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="modificarAdministrador">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAdministradorResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="obtenerPorDocIdenAdmin">
     <xs:sequence>
       <xs:element minOccurs="0" name="docIdentidad" type="xs:string" />
@@ -56,15 +65,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:administrador" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarAdministrador">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarAdministradorResponse">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="insertarAdministrador">
     <xs:sequence>

@@ -970,17 +970,17 @@ namespace CreditoMovilWA.CreditoMovil {
     public interface CreditoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosClientePorFecha" +
-            "Request", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosClientePorFecha" +
-            "Response")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosPendXClienteReq" +
+            "uest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosPendXClienteRes" +
+            "ponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse listarCreditosClientePorFecha(CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest request);
+        CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse listarCreditosPendXCliente(CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosClientePorFecha" +
-            "Request", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosClientePorFecha" +
-            "Response")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse> listarCreditosClientePorFechaAsync(CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosPendXClienteReq" +
+            "uest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosPendXClienteRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse> listarCreditosPendXClienteAsync(CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarTodosCreditosRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarTodosCreditosResponse")]
@@ -1001,6 +1001,28 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDCreditoResponse> obtenerPorIDCreditoAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDCreditoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosClientePorFecha" +
+            "Request", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosClientePorFecha" +
+            "Response")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse listarCreditosClientePorFecha(CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosClientePorFecha" +
+            "Request", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosClientePorFecha" +
+            "Response")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse> listarCreditosClientePorFechaAsync(CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.modificarCreditoResponse modificarCredito(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse> modificarCreditoAsync(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/insertarCreditoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -1010,82 +1032,46 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarCreditoResponse> insertarCreditoAsync(CreditoMovilWA.CreditoMovil.insertarCreditoRequest request);
         
         // CODEGEN: El parámetro 'credito' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        CreditoMovilWA.CreditoMovil.modificarCreditoResponse modificarCredito(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/modificarCreditoResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse> modificarCreditoAsync(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request);
-        
-        // CODEGEN: El parámetro 'credito' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         CreditoMovilWA.CreditoMovil.eliminarCreditoResponse eliminarCredito(CreditoMovilWA.CreditoMovil.eliminarCreditoRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/eliminarCreditoResponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCreditoResponse> eliminarCreditoAsync(CreditoMovilWA.CreditoMovil.eliminarCreditoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosPendXClienteReq" +
-            "uest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosPendXClienteRes" +
-            "ponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse listarCreditosPendXCliente(CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosPendXClienteReq" +
-            "uest", ReplyAction="https://services.creditomovil.pucp.edu.pe/CreditoWS/listarCreditosPendXClienteRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse> listarCreditosPendXClienteAsync(CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreditosClientePorFecha", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarCreditosClientePorFechaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreditosPendXCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarCreditosPendXClienteRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idcli;
+        public int codCliente;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaini;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechafin;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string estado;
-        
-        public listarCreditosClientePorFechaRequest() {
+        public listarCreditosPendXClienteRequest() {
         }
         
-        public listarCreditosClientePorFechaRequest(int idcli, System.DateTime fechaini, System.DateTime fechafin, string estado) {
-            this.idcli = idcli;
-            this.fechaini = fechaini;
-            this.fechafin = fechafin;
-            this.estado = estado;
+        public listarCreditosPendXClienteRequest(int codCliente) {
+            this.codCliente = codCliente;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreditosClientePorFechaResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarCreditosClientePorFechaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreditosPendXClienteResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarCreditosPendXClienteResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public CreditoMovilWA.CreditoMovil.credito[] @return;
         
-        public listarCreditosClientePorFechaResponse() {
+        public listarCreditosPendXClienteResponse() {
         }
         
-        public listarCreditosClientePorFechaResponse(CreditoMovilWA.CreditoMovil.credito[] @return) {
+        public listarCreditosPendXClienteResponse(CreditoMovilWA.CreditoMovil.credito[] @return) {
             this.@return = @return;
         }
     }
@@ -1157,6 +1143,93 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreditosClientePorFecha", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarCreditosClientePorFechaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idcli;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaini;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechafin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string estado;
+        
+        public listarCreditosClientePorFechaRequest() {
+        }
+        
+        public listarCreditosClientePorFechaRequest(int idcli, System.DateTime fechaini, System.DateTime fechafin, string estado) {
+            this.idcli = idcli;
+            this.fechaini = fechaini;
+            this.fechafin = fechafin;
+            this.estado = estado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreditosClientePorFechaResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarCreditosClientePorFechaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.credito[] @return;
+        
+        public listarCreditosClientePorFechaResponse() {
+        }
+        
+        public listarCreditosClientePorFechaResponse(CreditoMovilWA.CreditoMovil.credito[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarCreditoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.credito credito;
+        
+        public modificarCreditoRequest() {
+        }
+        
+        public modificarCreditoRequest(CreditoMovilWA.CreditoMovil.credito credito) {
+            this.credito = credito;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCreditoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarCreditoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public modificarCreditoResponse() {
+        }
+        
+        public modificarCreditoResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class insertarCreditoRequest {
         
@@ -1198,34 +1271,6 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarCreditoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.credito credito;
-        
-        public modificarCreditoRequest() {
-        }
-        
-        public modificarCreditoRequest(CreditoMovilWA.CreditoMovil.credito credito) {
-            this.credito = credito;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCreditoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarCreditoResponse {
-        
-        public modificarCreditoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class eliminarCreditoRequest {
         
@@ -1248,42 +1293,6 @@ namespace CreditoMovilWA.CreditoMovil {
     public partial class eliminarCreditoResponse {
         
         public eliminarCreditoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreditosPendXCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarCreditosPendXClienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int codCliente;
-        
-        public listarCreditosPendXClienteRequest() {
-        }
-        
-        public listarCreditosPendXClienteRequest(int codCliente) {
-            this.codCliente = codCliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreditosPendXClienteResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarCreditosPendXClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.credito[] @return;
-        
-        public listarCreditosPendXClienteResponse() {
-        }
-        
-        public listarCreditosPendXClienteResponse(CreditoMovilWA.CreditoMovil.credito[] @return) {
-            this.@return = @return;
         }
     }
     
@@ -1315,32 +1324,26 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse CreditoMovilWA.CreditoMovil.CreditoWS.listarCreditosClientePorFecha(CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest request) {
-            return base.Channel.listarCreditosClientePorFecha(request);
+        CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse CreditoMovilWA.CreditoMovil.CreditoWS.listarCreditosPendXCliente(CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest request) {
+            return base.Channel.listarCreditosPendXCliente(request);
         }
         
-        public CreditoMovilWA.CreditoMovil.credito[] listarCreditosClientePorFecha(int idcli, System.DateTime fechaini, System.DateTime fechafin, string estado) {
-            CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest inValue = new CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest();
-            inValue.idcli = idcli;
-            inValue.fechaini = fechaini;
-            inValue.fechafin = fechafin;
-            inValue.estado = estado;
-            CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse retVal = ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).listarCreditosClientePorFecha(inValue);
+        public CreditoMovilWA.CreditoMovil.credito[] listarCreditosPendXCliente(int codCliente) {
+            CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest inValue = new CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest();
+            inValue.codCliente = codCliente;
+            CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse retVal = ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).listarCreditosPendXCliente(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse> CreditoMovilWA.CreditoMovil.CreditoWS.listarCreditosClientePorFechaAsync(CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest request) {
-            return base.Channel.listarCreditosClientePorFechaAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse> CreditoMovilWA.CreditoMovil.CreditoWS.listarCreditosPendXClienteAsync(CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest request) {
+            return base.Channel.listarCreditosPendXClienteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse> listarCreditosClientePorFechaAsync(int idcli, System.DateTime fechaini, System.DateTime fechafin, string estado) {
-            CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest inValue = new CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest();
-            inValue.idcli = idcli;
-            inValue.fechaini = fechaini;
-            inValue.fechafin = fechafin;
-            inValue.estado = estado;
-            return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).listarCreditosClientePorFechaAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse> listarCreditosPendXClienteAsync(int codCliente) {
+            CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest inValue = new CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest();
+            inValue.codCliente = codCliente;
+            return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).listarCreditosPendXClienteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1388,6 +1391,58 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse CreditoMovilWA.CreditoMovil.CreditoWS.listarCreditosClientePorFecha(CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest request) {
+            return base.Channel.listarCreditosClientePorFecha(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.credito[] listarCreditosClientePorFecha(int idcli, System.DateTime fechaini, System.DateTime fechafin, string estado) {
+            CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest inValue = new CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest();
+            inValue.idcli = idcli;
+            inValue.fechaini = fechaini;
+            inValue.fechafin = fechafin;
+            inValue.estado = estado;
+            CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse retVal = ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).listarCreditosClientePorFecha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse> CreditoMovilWA.CreditoMovil.CreditoWS.listarCreditosClientePorFechaAsync(CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest request) {
+            return base.Channel.listarCreditosClientePorFechaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse> listarCreditosClientePorFechaAsync(int idcli, System.DateTime fechaini, System.DateTime fechafin, string estado) {
+            CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest inValue = new CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaRequest();
+            inValue.idcli = idcli;
+            inValue.fechaini = fechaini;
+            inValue.fechafin = fechafin;
+            inValue.estado = estado;
+            return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).listarCreditosClientePorFechaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.modificarCreditoResponse CreditoMovilWA.CreditoMovil.CreditoWS.modificarCredito(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request) {
+            return base.Channel.modificarCredito(request);
+        }
+        
+        public bool modificarCredito(CreditoMovilWA.CreditoMovil.credito credito) {
+            CreditoMovilWA.CreditoMovil.modificarCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarCreditoRequest();
+            inValue.credito = credito;
+            CreditoMovilWA.CreditoMovil.modificarCreditoResponse retVal = ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).modificarCredito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse> CreditoMovilWA.CreditoMovil.CreditoWS.modificarCreditoAsync(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request) {
+            return base.Channel.modificarCreditoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse> modificarCreditoAsync(CreditoMovilWA.CreditoMovil.credito credito) {
+            CreditoMovilWA.CreditoMovil.modificarCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarCreditoRequest();
+            inValue.credito = credito;
+            return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).modificarCreditoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.insertarCreditoResponse CreditoMovilWA.CreditoMovil.CreditoWS.insertarCredito(CreditoMovilWA.CreditoMovil.insertarCreditoRequest request) {
             return base.Channel.insertarCredito(request);
         }
@@ -1413,28 +1468,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.modificarCreditoResponse CreditoMovilWA.CreditoMovil.CreditoWS.modificarCredito(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request) {
-            return base.Channel.modificarCredito(request);
-        }
-        
-        public void modificarCredito(CreditoMovilWA.CreditoMovil.credito credito) {
-            CreditoMovilWA.CreditoMovil.modificarCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarCreditoRequest();
-            inValue.credito = credito;
-            CreditoMovilWA.CreditoMovil.modificarCreditoResponse retVal = ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).modificarCredito(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse> CreditoMovilWA.CreditoMovil.CreditoWS.modificarCreditoAsync(CreditoMovilWA.CreditoMovil.modificarCreditoRequest request) {
-            return base.Channel.modificarCreditoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarCreditoResponse> modificarCreditoAsync(CreditoMovilWA.CreditoMovil.credito credito) {
-            CreditoMovilWA.CreditoMovil.modificarCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarCreditoRequest();
-            inValue.credito = credito;
-            return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).modificarCreditoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.eliminarCreditoResponse CreditoMovilWA.CreditoMovil.CreditoWS.eliminarCredito(CreditoMovilWA.CreditoMovil.eliminarCreditoRequest request) {
             return base.Channel.eliminarCredito(request);
         }
@@ -1454,29 +1487,6 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.eliminarCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarCreditoRequest();
             inValue.credito = credito;
             return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).eliminarCreditoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse CreditoMovilWA.CreditoMovil.CreditoWS.listarCreditosPendXCliente(CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest request) {
-            return base.Channel.listarCreditosPendXCliente(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.credito[] listarCreditosPendXCliente(int codCliente) {
-            CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest inValue = new CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest();
-            inValue.codCliente = codCliente;
-            CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse retVal = ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).listarCreditosPendXCliente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse> CreditoMovilWA.CreditoMovil.CreditoWS.listarCreditosPendXClienteAsync(CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest request) {
-            return base.Channel.listarCreditosPendXClienteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse> listarCreditosPendXClienteAsync(int codCliente) {
-            CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest inValue = new CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteRequest();
-            inValue.codCliente = codCliente;
-            return ((CreditoMovilWA.CreditoMovil.CreditoWS)(this)).listarCreditosPendXClienteAsync(inValue);
         }
     }
     
@@ -1927,6 +1937,19 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.ServiceModel.ServiceContractAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", ConfigurationName="CreditoMovil.AdministradorWS")]
     public interface AdministradorWS {
         
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
+            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
+            "orResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse obtenerPorIDAdministrador(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
+            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
+            "orResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse> obtenerPorIDAdministradorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request);
+        
         // CODEGEN: El parámetro 'administrador' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
             "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
@@ -1952,6 +1975,18 @@ namespace CreditoMovilWA.CreditoMovil {
             "resResponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync(CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest request);
         
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
+            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
+            "esponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        CreditoMovilWA.CreditoMovil.modificarAdministradorResponse modificarAdministrador(CreditoMovilWA.CreditoMovil.modificarAdministradorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
+            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
+            "esponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarAdministradorResponse> modificarAdministradorAsync(CreditoMovilWA.CreditoMovil.modificarAdministradorRequest request);
+        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorDocIdenAdminR" +
             "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorDocIdenAdminR" +
@@ -1976,31 +2011,42 @@ namespace CreditoMovilWA.CreditoMovil {
             "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/eliminarAdministradorRe" +
             "sponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarAdministradorResponse> eliminarAdministradorAsync(CreditoMovilWA.CreditoMovil.eliminarAdministradorRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDAdministrador", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDAdministradorRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
-            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
-            "orResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse obtenerPorIDAdministrador(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idadministrador;
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
-            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/obtenerPorIDAdministrad" +
-            "orResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse> obtenerPorIDAdministradorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request);
+        public obtenerPorIDAdministradorRequest() {
+        }
         
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
-            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
-            "esponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        CreditoMovilWA.CreditoMovil.modificarAdministradorResponse modificarAdministrador(CreditoMovilWA.CreditoMovil.modificarAdministradorRequest request);
+        public obtenerPorIDAdministradorRequest(int idadministrador) {
+            this.idadministrador = idadministrador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDAdministradorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerPorIDAdministradorResponse {
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
-            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
-            "esponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarAdministradorResponse> modificarAdministradorAsync(CreditoMovilWA.CreditoMovil.modificarAdministradorRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.administrador @return;
+        
+        public obtenerPorIDAdministradorResponse() {
+        }
+        
+        public obtenerPorIDAdministradorResponse(CreditoMovilWA.CreditoMovil.administrador @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2056,6 +2102,39 @@ namespace CreditoMovilWA.CreditoMovil {
         
         public listarTodosAdministradoresResponse(CreditoMovilWA.CreditoMovil.administrador[] @return) {
             this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAdministrador", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarAdministradorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.administrador administrador;
+        
+        public modificarAdministradorRequest() {
+        }
+        
+        public modificarAdministradorRequest(int id, CreditoMovilWA.CreditoMovil.administrador administrador) {
+            this.id = id;
+            this.administrador = administrador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAdministradorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarAdministradorResponse {
+        
+        public modificarAdministradorResponse() {
         }
     }
     
@@ -2128,75 +2207,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDAdministrador", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDAdministradorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idadministrador;
-        
-        public obtenerPorIDAdministradorRequest() {
-        }
-        
-        public obtenerPorIDAdministradorRequest(int idadministrador) {
-            this.idadministrador = idadministrador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIDAdministradorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerPorIDAdministradorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.administrador @return;
-        
-        public obtenerPorIDAdministradorResponse() {
-        }
-        
-        public obtenerPorIDAdministradorResponse(CreditoMovilWA.CreditoMovil.administrador @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAdministrador", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarAdministradorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.administrador administrador;
-        
-        public modificarAdministradorRequest() {
-        }
-        
-        public modificarAdministradorRequest(int id, CreditoMovilWA.CreditoMovil.administrador administrador) {
-            this.id = id;
-            this.administrador = administrador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAdministradorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarAdministradorResponse {
-        
-        public modificarAdministradorResponse() {
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface AdministradorWSChannel : CreditoMovilWA.CreditoMovil.AdministradorWS, System.ServiceModel.IClientChannel {
     }
@@ -2222,6 +2232,29 @@ namespace CreditoMovilWA.CreditoMovil {
         
         public AdministradorWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse CreditoMovilWA.CreditoMovil.AdministradorWS.obtenerPorIDAdministrador(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request) {
+            return base.Channel.obtenerPorIDAdministrador(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.administrador obtenerPorIDAdministrador(int idadministrador) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest();
+            inValue.idadministrador = idadministrador;
+            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).obtenerPorIDAdministrador(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse> CreditoMovilWA.CreditoMovil.AdministradorWS.obtenerPorIDAdministradorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request) {
+            return base.Channel.obtenerPorIDAdministradorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse> obtenerPorIDAdministradorAsync(int idadministrador) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest();
+            inValue.idadministrador = idadministrador;
+            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).obtenerPorIDAdministradorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2265,6 +2298,30 @@ namespace CreditoMovilWA.CreditoMovil {
         public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync() {
             CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosAdministradoresRequest();
             return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).listarTodosAdministradoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.modificarAdministradorResponse CreditoMovilWA.CreditoMovil.AdministradorWS.modificarAdministrador(CreditoMovilWA.CreditoMovil.modificarAdministradorRequest request) {
+            return base.Channel.modificarAdministrador(request);
+        }
+        
+        public void modificarAdministrador(int id, CreditoMovilWA.CreditoMovil.administrador administrador) {
+            CreditoMovilWA.CreditoMovil.modificarAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.modificarAdministradorRequest();
+            inValue.id = id;
+            inValue.administrador = administrador;
+            CreditoMovilWA.CreditoMovil.modificarAdministradorResponse retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).modificarAdministrador(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarAdministradorResponse> CreditoMovilWA.CreditoMovil.AdministradorWS.modificarAdministradorAsync(CreditoMovilWA.CreditoMovil.modificarAdministradorRequest request) {
+            return base.Channel.modificarAdministradorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarAdministradorResponse> modificarAdministradorAsync(int id, CreditoMovilWA.CreditoMovil.administrador administrador) {
+            CreditoMovilWA.CreditoMovil.modificarAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.modificarAdministradorRequest();
+            inValue.id = id;
+            inValue.administrador = administrador;
+            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).modificarAdministradorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2313,53 +2370,6 @@ namespace CreditoMovilWA.CreditoMovil {
             inValue.idadministrador = idadministrador;
             return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).eliminarAdministradorAsync(inValue);
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse CreditoMovilWA.CreditoMovil.AdministradorWS.obtenerPorIDAdministrador(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request) {
-            return base.Channel.obtenerPorIDAdministrador(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.administrador obtenerPorIDAdministrador(int idadministrador) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest();
-            inValue.idadministrador = idadministrador;
-            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).obtenerPorIDAdministrador(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse> CreditoMovilWA.CreditoMovil.AdministradorWS.obtenerPorIDAdministradorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest request) {
-            return base.Channel.obtenerPorIDAdministradorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse> obtenerPorIDAdministradorAsync(int idadministrador) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorRequest();
-            inValue.idadministrador = idadministrador;
-            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).obtenerPorIDAdministradorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.modificarAdministradorResponse CreditoMovilWA.CreditoMovil.AdministradorWS.modificarAdministrador(CreditoMovilWA.CreditoMovil.modificarAdministradorRequest request) {
-            return base.Channel.modificarAdministrador(request);
-        }
-        
-        public void modificarAdministrador(int id, CreditoMovilWA.CreditoMovil.administrador administrador) {
-            CreditoMovilWA.CreditoMovil.modificarAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.modificarAdministradorRequest();
-            inValue.id = id;
-            inValue.administrador = administrador;
-            CreditoMovilWA.CreditoMovil.modificarAdministradorResponse retVal = ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).modificarAdministrador(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarAdministradorResponse> CreditoMovilWA.CreditoMovil.AdministradorWS.modificarAdministradorAsync(CreditoMovilWA.CreditoMovil.modificarAdministradorRequest request) {
-            return base.Channel.modificarAdministradorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarAdministradorResponse> modificarAdministradorAsync(int id, CreditoMovilWA.CreditoMovil.administrador administrador) {
-            CreditoMovilWA.CreditoMovil.modificarAdministradorRequest inValue = new CreditoMovilWA.CreditoMovil.modificarAdministradorRequest();
-            inValue.id = id;
-            inValue.administrador = administrador;
-            return ((CreditoMovilWA.CreditoMovil.AdministradorWS)(this)).modificarAdministradorAsync(inValue);
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2378,32 +2388,6 @@ namespace CreditoMovilWA.CreditoMovil {
             "st", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/modificarTransaccionRespo" +
             "nse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarTransaccionResponse> modificarTransaccionAsync(CreditoMovilWA.CreditoMovil.modificarTransaccionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionReques" +
-            "t", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse eliminarTransaccion(CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionReques" +
-            "t", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionRespon" +
-            "se")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse> eliminarTransaccionAsync(CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
-            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
-            "esponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse listarTransaccionCredito(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
-            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
-            "esponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> listarTransaccionCreditoAsync(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/insertarTransaccionReques" +
@@ -2430,6 +2414,32 @@ namespace CreditoMovilWA.CreditoMovil {
             "quest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/obtenerPorIDTransaccionRe" +
             "sponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionResponse> obtenerPorIDTransaccionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDTransaccionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
+            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
+            "esponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse listarTransaccionCredito(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
+            "equest", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTransaccionCreditoR" +
+            "esponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> listarTransaccionCreditoAsync(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionReques" +
+            "t", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse eliminarTransaccion(CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionReques" +
+            "t", ReplyAction="https://services.creditomovil.pucp.edu.pe/TransaccionWS/eliminarTransaccionRespon" +
+            "se")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse> eliminarTransaccionAsync(CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/TransaccionWS/listarTodosTransaccionsRe" +
@@ -2477,78 +2487,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         public modificarTransaccionResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTransaccion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarTransaccionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idtransaccion;
-        
-        public eliminarTransaccionRequest() {
-        }
-        
-        public eliminarTransaccionRequest(int idtransaccion) {
-            this.idtransaccion = idtransaccion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTransaccionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarTransaccionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarTransaccionResponse() {
-        }
-        
-        public eliminarTransaccionResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransaccionCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTransaccionCreditoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCred;
-        
-        public listarTransaccionCreditoRequest() {
-        }
-        
-        public listarTransaccionCreditoRequest(int idCred) {
-            this.idCred = idCred;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransaccionCreditoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTransaccionCreditoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.transaccion[] @return;
-        
-        public listarTransaccionCreditoResponse() {
-        }
-        
-        public listarTransaccionCreditoResponse(CreditoMovilWA.CreditoMovil.transaccion[] @return) {
             this.@return = @return;
         }
     }
@@ -2621,6 +2559,78 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         public obtenerPorIDTransaccionResponse(CreditoMovilWA.CreditoMovil.transaccion @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransaccionCredito", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTransaccionCreditoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCred;
+        
+        public listarTransaccionCreditoRequest() {
+        }
+        
+        public listarTransaccionCreditoRequest(int idCred) {
+            this.idCred = idCred;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTransaccionCreditoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTransaccionCreditoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.transaccion[] @return;
+        
+        public listarTransaccionCreditoResponse() {
+        }
+        
+        public listarTransaccionCreditoResponse(CreditoMovilWA.CreditoMovil.transaccion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTransaccion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarTransaccionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idtransaccion;
+        
+        public eliminarTransaccionRequest() {
+        }
+        
+        public eliminarTransaccionRequest(int idtransaccion) {
+            this.idtransaccion = idtransaccion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTransaccionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarTransaccionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarTransaccionResponse() {
+        }
+        
+        public eliminarTransaccionResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -2704,52 +2714,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse CreditoMovilWA.CreditoMovil.TransaccionWS.eliminarTransaccion(CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest request) {
-            return base.Channel.eliminarTransaccion(request);
-        }
-        
-        public bool eliminarTransaccion(int idtransaccion) {
-            CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest();
-            inValue.idtransaccion = idtransaccion;
-            CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).eliminarTransaccion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse> CreditoMovilWA.CreditoMovil.TransaccionWS.eliminarTransaccionAsync(CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest request) {
-            return base.Channel.eliminarTransaccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse> eliminarTransaccionAsync(int idtransaccion) {
-            CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest();
-            inValue.idtransaccion = idtransaccion;
-            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).eliminarTransaccionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse CreditoMovilWA.CreditoMovil.TransaccionWS.listarTransaccionCredito(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request) {
-            return base.Channel.listarTransaccionCredito(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.transaccion[] listarTransaccionCredito(int idCred) {
-            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest();
-            inValue.idCred = idCred;
-            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).listarTransaccionCredito(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> CreditoMovilWA.CreditoMovil.TransaccionWS.listarTransaccionCreditoAsync(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request) {
-            return base.Channel.listarTransaccionCreditoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> listarTransaccionCreditoAsync(int idCred) {
-            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest();
-            inValue.idCred = idCred;
-            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).listarTransaccionCreditoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.insertarTransaccionResponse CreditoMovilWA.CreditoMovil.TransaccionWS.insertarTransaccion(CreditoMovilWA.CreditoMovil.insertarTransaccionRequest request) {
             return base.Channel.insertarTransaccion(request);
         }
@@ -2796,6 +2760,52 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse CreditoMovilWA.CreditoMovil.TransaccionWS.listarTransaccionCredito(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request) {
+            return base.Channel.listarTransaccionCredito(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.transaccion[] listarTransaccionCredito(int idCred) {
+            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest();
+            inValue.idCred = idCred;
+            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).listarTransaccionCredito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> CreditoMovilWA.CreditoMovil.TransaccionWS.listarTransaccionCreditoAsync(CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest request) {
+            return base.Channel.listarTransaccionCreditoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTransaccionCreditoResponse> listarTransaccionCreditoAsync(int idCred) {
+            CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest inValue = new CreditoMovilWA.CreditoMovil.listarTransaccionCreditoRequest();
+            inValue.idCred = idCred;
+            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).listarTransaccionCreditoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse CreditoMovilWA.CreditoMovil.TransaccionWS.eliminarTransaccion(CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest request) {
+            return base.Channel.eliminarTransaccion(request);
+        }
+        
+        public bool eliminarTransaccion(int idtransaccion) {
+            CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest();
+            inValue.idtransaccion = idtransaccion;
+            CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse retVal = ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).eliminarTransaccion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse> CreditoMovilWA.CreditoMovil.TransaccionWS.eliminarTransaccionAsync(CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest request) {
+            return base.Channel.eliminarTransaccionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarTransaccionResponse> eliminarTransaccionAsync(int idtransaccion) {
+            CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarTransaccionRequest();
+            inValue.idtransaccion = idtransaccion;
+            return ((CreditoMovilWA.CreditoMovil.TransaccionWS)(this)).eliminarTransaccionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.listarTodosTransaccionsResponse CreditoMovilWA.CreditoMovil.TransaccionWS.listarTodosTransaccions(CreditoMovilWA.CreditoMovil.listarTodosTransaccionsRequest request) {
             return base.Channel.listarTodosTransaccions(request);
         }
@@ -2822,29 +2832,6 @@ namespace CreditoMovilWA.CreditoMovil {
     public interface ClienteWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesConCredPendient" +
-            "esRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesConCredPendient" +
-            "esResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse listarClientesConCredPendientes(CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesConCredPendient" +
-            "esRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesConCredPendient" +
-            "esResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse> listarClientesConCredPendientesAsync(CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(CreditoMovilWA.CreditoMovil.Exception), Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDF/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.reportePDFResponse reportePDF(CreditoMovilWA.CreditoMovil.reportePDFRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse> reportePDFAsync(CreditoMovilWA.CreditoMovil.reportePDFRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesActivosPorNombr" +
             "eRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesActivosPorNombr" +
             "eResponse")]
@@ -2858,15 +2845,13 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarClientesActivosPorNombreResponse> listarClientesActivosPorNombreAsync(CreditoMovilWA.CreditoMovil.listarClientesActivosPorNombreRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoResponse" +
-            "")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse eliminarClienteLogico(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request);
+        CreditoMovilWA.CreditoMovil.listarTodosClientesResponse listarTodosClientes(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoResponse" +
-            "")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse> eliminarClienteLogicoAsync(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> listarTodosClientesAsync(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteResponse")]
@@ -2876,6 +2861,17 @@ namespace CreditoMovilWA.CreditoMovil {
         
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorCodClienteResponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorCodClienteResponse> obtenerPorCodClienteAsync(CreditoMovilWA.CreditoMovil.obtenerPorCodClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse eliminarClienteLogico(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarClienteLogicoResponse" +
+            "")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse> eliminarClienteLogicoAsync(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/obtenerPorDocIdenClienteReque" +
@@ -2891,22 +2887,38 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorDocIdenClienteResponse> obtenerPorDocIdenClienteAsync(CreditoMovilWA.CreditoMovil.obtenerPorDocIdenClienteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CreditoMovilWA.CreditoMovil.Exception), Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDF/Fault/Exception", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarTodosClientesResponse listarTodosClientes(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request);
+        CreditoMovilWA.CreditoMovil.reportePDFResponse reportePDF(CreditoMovilWA.CreditoMovil.reportePDFRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarTodosClientesResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> listarTodosClientesAsync(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/reportePDFResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse> reportePDFAsync(CreditoMovilWA.CreditoMovil.reportePDFRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesConCredPendient" +
+            "esRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesConCredPendient" +
+            "esResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.insertarClienteResponse insertarCliente(CreditoMovilWA.CreditoMovil.insertarClienteRequest request);
+        CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse listarClientesConCredPendientes(CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarClienteResponse> insertarClienteAsync(CreditoMovilWA.CreditoMovil.insertarClienteRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesConCredPendient" +
+            "esRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/listarClientesConCredPendient" +
+            "esResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse> listarClientesConCredPendientesAsync(CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CreditoMovilWA.CreditoMovil.Exception), Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBuffer/Fault/Exception" +
+            "", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.generarBufferResponse generarBuffer(CreditoMovilWA.CreditoMovil.generarBufferRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.generarBufferResponse> generarBufferAsync(CreditoMovilWA.CreditoMovil.generarBufferRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/eliminarCompletoClienteReques" +
@@ -2922,17 +2934,6 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse> eliminarCompletoClienteAsync(CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(CreditoMovilWA.CreditoMovil.Exception), Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBuffer/Fault/Exception" +
-            "", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.generarBufferResponse generarBuffer(CreditoMovilWA.CreditoMovil.generarBufferRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/generarBufferResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.generarBufferResponse> generarBufferAsync(CreditoMovilWA.CreditoMovil.generarBufferRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/modificarClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/modificarClienteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -2940,62 +2941,15 @@ namespace CreditoMovilWA.CreditoMovil {
         
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/modificarClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/modificarClienteResponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarClienteResponse> modificarClienteAsync(CreditoMovilWA.CreditoMovil.modificarClienteRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesConCredPendientes", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarClientesConCredPendientesRequest {
         
-        public listarClientesConCredPendientesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesConCredPendientesResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarClientesConCredPendientesResponse {
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.insertarClienteResponse insertarCliente(CreditoMovilWA.CreditoMovil.insertarClienteRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.cliente[] @return;
-        
-        public listarClientesConCredPendientesResponse() {
-        }
-        
-        public listarClientesConCredPendientesResponse(CreditoMovilWA.CreditoMovil.cliente[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePDF", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class reportePDFRequest {
-        
-        public reportePDFRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePDFResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class reportePDFResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
-        public byte[] @return;
-        
-        public reportePDFResponse() {
-        }
-        
-        public reportePDFResponse(byte[] @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/ClienteWS/insertarClienteResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarClienteResponse> insertarClienteAsync(CreditoMovilWA.CreditoMovil.insertarClienteRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3037,35 +2991,27 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteLogico", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarClienteLogicoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosClientes", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosClientesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int codCliente;
-        
-        public eliminarClienteLogicoRequest() {
-        }
-        
-        public eliminarClienteLogicoRequest(int codCliente) {
-            this.codCliente = codCliente;
+        public listarTodosClientesRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteLogicoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarClienteLogicoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosClientesResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosClientesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.cliente[] @return;
         
-        public eliminarClienteLogicoResponse() {
+        public listarTodosClientesResponse() {
         }
         
-        public eliminarClienteLogicoResponse(bool @return) {
+        public listarTodosClientesResponse(CreditoMovilWA.CreditoMovil.cliente[] @return) {
             this.@return = @return;
         }
     }
@@ -3102,6 +3048,42 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         public obtenerPorCodClienteResponse(CreditoMovilWA.CreditoMovil.cliente @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteLogico", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarClienteLogicoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int codCliente;
+        
+        public eliminarClienteLogicoRequest() {
+        }
+        
+        public eliminarClienteLogicoRequest(int codCliente) {
+            this.codCliente = codCliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteLogicoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarClienteLogicoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarClienteLogicoResponse() {
+        }
+        
+        public eliminarClienteLogicoResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -3150,99 +3132,55 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosClientes", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosClientesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePDF", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class reportePDFRequest {
         
-        public listarTodosClientesRequest() {
+        public reportePDFRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosClientesResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosClientesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reportePDFResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class reportePDFResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public reportePDFResponse() {
+        }
+        
+        public reportePDFResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesConCredPendientes", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarClientesConCredPendientesRequest {
+        
+        public listarClientesConCredPendientesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesConCredPendientesResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarClientesConCredPendientesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public CreditoMovilWA.CreditoMovil.cliente[] @return;
         
-        public listarTodosClientesResponse() {
+        public listarClientesConCredPendientesResponse() {
         }
         
-        public listarTodosClientesResponse(CreditoMovilWA.CreditoMovil.cliente[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarClienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.cliente cliente;
-        
-        public insertarClienteRequest() {
-        }
-        
-        public insertarClienteRequest(CreditoMovilWA.CreditoMovil.cliente cliente) {
-            this.cliente = cliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarClienteResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public insertarClienteResponse() {
-        }
-        
-        public insertarClienteResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCompletoCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarCompletoClienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int codCliente;
-        
-        public eliminarCompletoClienteRequest() {
-        }
-        
-        public eliminarCompletoClienteRequest(int codCliente) {
-            this.codCliente = codCliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCompletoClienteResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarCompletoClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public eliminarCompletoClienteResponse() {
-        }
-        
-        public eliminarCompletoClienteResponse(bool @return) {
+        public listarClientesConCredPendientesResponse(CreditoMovilWA.CreditoMovil.cliente[] @return) {
             this.@return = @return;
         }
     }
@@ -3338,6 +3276,42 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCompletoCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarCompletoClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int codCliente;
+        
+        public eliminarCompletoClienteRequest() {
+        }
+        
+        public eliminarCompletoClienteRequest(int codCliente) {
+            this.codCliente = codCliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCompletoClienteResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarCompletoClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public eliminarCompletoClienteResponse() {
+        }
+        
+        public eliminarCompletoClienteResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class modificarClienteRequest {
         
@@ -3371,6 +3345,42 @@ namespace CreditoMovilWA.CreditoMovil {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCliente", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.cliente cliente;
+        
+        public insertarClienteRequest() {
+        }
+        
+        public insertarClienteRequest(CreditoMovilWA.CreditoMovil.cliente cliente) {
+            this.cliente = cliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarClienteResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public insertarClienteResponse() {
+        }
+        
+        public insertarClienteResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ClienteWSChannel : CreditoMovilWA.CreditoMovil.ClienteWS, System.ServiceModel.IClientChannel {
     }
@@ -3399,48 +3409,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse CreditoMovilWA.CreditoMovil.ClienteWS.listarClientesConCredPendientes(CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest request) {
-            return base.Channel.listarClientesConCredPendientes(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.cliente[] listarClientesConCredPendientes() {
-            CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest();
-            CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarClientesConCredPendientes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse> CreditoMovilWA.CreditoMovil.ClienteWS.listarClientesConCredPendientesAsync(CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest request) {
-            return base.Channel.listarClientesConCredPendientesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse> listarClientesConCredPendientesAsync() {
-            CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest();
-            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarClientesConCredPendientesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.reportePDFResponse CreditoMovilWA.CreditoMovil.ClienteWS.reportePDF(CreditoMovilWA.CreditoMovil.reportePDFRequest request) {
-            return base.Channel.reportePDF(request);
-        }
-        
-        public byte[] reportePDF() {
-            CreditoMovilWA.CreditoMovil.reportePDFRequest inValue = new CreditoMovilWA.CreditoMovil.reportePDFRequest();
-            CreditoMovilWA.CreditoMovil.reportePDFResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).reportePDF(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse> CreditoMovilWA.CreditoMovil.ClienteWS.reportePDFAsync(CreditoMovilWA.CreditoMovil.reportePDFRequest request) {
-            return base.Channel.reportePDFAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse> reportePDFAsync() {
-            CreditoMovilWA.CreditoMovil.reportePDFRequest inValue = new CreditoMovilWA.CreditoMovil.reportePDFRequest();
-            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).reportePDFAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.listarClientesActivosPorNombreResponse CreditoMovilWA.CreditoMovil.ClienteWS.listarClientesActivosPorNombre(CreditoMovilWA.CreditoMovil.listarClientesActivosPorNombreRequest request) {
             return base.Channel.listarClientesActivosPorNombre(request);
         }
@@ -3464,26 +3432,24 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse CreditoMovilWA.CreditoMovil.ClienteWS.eliminarClienteLogico(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request) {
-            return base.Channel.eliminarClienteLogico(request);
+        CreditoMovilWA.CreditoMovil.listarTodosClientesResponse CreditoMovilWA.CreditoMovil.ClienteWS.listarTodosClientes(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request) {
+            return base.Channel.listarTodosClientes(request);
         }
         
-        public bool eliminarClienteLogico(int codCliente) {
-            CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest();
-            inValue.codCliente = codCliente;
-            CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarClienteLogico(inValue);
+        public CreditoMovilWA.CreditoMovil.cliente[] listarTodosClientes() {
+            CreditoMovilWA.CreditoMovil.listarTodosClientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosClientesRequest();
+            CreditoMovilWA.CreditoMovil.listarTodosClientesResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarTodosClientes(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse> CreditoMovilWA.CreditoMovil.ClienteWS.eliminarClienteLogicoAsync(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request) {
-            return base.Channel.eliminarClienteLogicoAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> CreditoMovilWA.CreditoMovil.ClienteWS.listarTodosClientesAsync(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request) {
+            return base.Channel.listarTodosClientesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse> eliminarClienteLogicoAsync(int codCliente) {
-            CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest();
-            inValue.codCliente = codCliente;
-            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarClienteLogicoAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> listarTodosClientesAsync() {
+            CreditoMovilWA.CreditoMovil.listarTodosClientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosClientesRequest();
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarTodosClientesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3507,6 +3473,29 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.obtenerPorCodClienteRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorCodClienteRequest();
             inValue.codCliente = codCliente;
             return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).obtenerPorCodClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse CreditoMovilWA.CreditoMovil.ClienteWS.eliminarClienteLogico(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request) {
+            return base.Channel.eliminarClienteLogico(request);
+        }
+        
+        public bool eliminarClienteLogico(int codCliente) {
+            CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest();
+            inValue.codCliente = codCliente;
+            CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarClienteLogico(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse> CreditoMovilWA.CreditoMovil.ClienteWS.eliminarClienteLogicoAsync(CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest request) {
+            return base.Channel.eliminarClienteLogicoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarClienteLogicoResponse> eliminarClienteLogicoAsync(int codCliente) {
+            CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarClienteLogicoRequest();
+            inValue.codCliente = codCliente;
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarClienteLogicoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3535,70 +3524,45 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarTodosClientesResponse CreditoMovilWA.CreditoMovil.ClienteWS.listarTodosClientes(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request) {
-            return base.Channel.listarTodosClientes(request);
+        CreditoMovilWA.CreditoMovil.reportePDFResponse CreditoMovilWA.CreditoMovil.ClienteWS.reportePDF(CreditoMovilWA.CreditoMovil.reportePDFRequest request) {
+            return base.Channel.reportePDF(request);
         }
         
-        public CreditoMovilWA.CreditoMovil.cliente[] listarTodosClientes() {
-            CreditoMovilWA.CreditoMovil.listarTodosClientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosClientesRequest();
-            CreditoMovilWA.CreditoMovil.listarTodosClientesResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarTodosClientes(inValue);
+        public byte[] reportePDF() {
+            CreditoMovilWA.CreditoMovil.reportePDFRequest inValue = new CreditoMovilWA.CreditoMovil.reportePDFRequest();
+            CreditoMovilWA.CreditoMovil.reportePDFResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).reportePDF(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> CreditoMovilWA.CreditoMovil.ClienteWS.listarTodosClientesAsync(CreditoMovilWA.CreditoMovil.listarTodosClientesRequest request) {
-            return base.Channel.listarTodosClientesAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse> CreditoMovilWA.CreditoMovil.ClienteWS.reportePDFAsync(CreditoMovilWA.CreditoMovil.reportePDFRequest request) {
+            return base.Channel.reportePDFAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosClientesResponse> listarTodosClientesAsync() {
-            CreditoMovilWA.CreditoMovil.listarTodosClientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosClientesRequest();
-            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarTodosClientesAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.reportePDFResponse> reportePDFAsync() {
+            CreditoMovilWA.CreditoMovil.reportePDFRequest inValue = new CreditoMovilWA.CreditoMovil.reportePDFRequest();
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).reportePDFAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.insertarClienteResponse CreditoMovilWA.CreditoMovil.ClienteWS.insertarCliente(CreditoMovilWA.CreditoMovil.insertarClienteRequest request) {
-            return base.Channel.insertarCliente(request);
+        CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse CreditoMovilWA.CreditoMovil.ClienteWS.listarClientesConCredPendientes(CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest request) {
+            return base.Channel.listarClientesConCredPendientes(request);
         }
         
-        public bool insertarCliente(CreditoMovilWA.CreditoMovil.cliente cliente) {
-            CreditoMovilWA.CreditoMovil.insertarClienteRequest inValue = new CreditoMovilWA.CreditoMovil.insertarClienteRequest();
-            inValue.cliente = cliente;
-            CreditoMovilWA.CreditoMovil.insertarClienteResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).insertarCliente(inValue);
+        public CreditoMovilWA.CreditoMovil.cliente[] listarClientesConCredPendientes() {
+            CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest();
+            CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarClientesConCredPendientes(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarClienteResponse> CreditoMovilWA.CreditoMovil.ClienteWS.insertarClienteAsync(CreditoMovilWA.CreditoMovil.insertarClienteRequest request) {
-            return base.Channel.insertarClienteAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse> CreditoMovilWA.CreditoMovil.ClienteWS.listarClientesConCredPendientesAsync(CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest request) {
+            return base.Channel.listarClientesConCredPendientesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarClienteResponse> insertarClienteAsync(CreditoMovilWA.CreditoMovil.cliente cliente) {
-            CreditoMovilWA.CreditoMovil.insertarClienteRequest inValue = new CreditoMovilWA.CreditoMovil.insertarClienteRequest();
-            inValue.cliente = cliente;
-            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).insertarClienteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse CreditoMovilWA.CreditoMovil.ClienteWS.eliminarCompletoCliente(CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest request) {
-            return base.Channel.eliminarCompletoCliente(request);
-        }
-        
-        public bool eliminarCompletoCliente(int codCliente) {
-            CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest();
-            inValue.codCliente = codCliente;
-            CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarCompletoCliente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse> CreditoMovilWA.CreditoMovil.ClienteWS.eliminarCompletoClienteAsync(CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest request) {
-            return base.Channel.eliminarCompletoClienteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse> eliminarCompletoClienteAsync(int codCliente) {
-            CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest();
-            inValue.codCliente = codCliente;
-            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarCompletoClienteAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesResponse> listarClientesConCredPendientesAsync() {
+            CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest inValue = new CreditoMovilWA.CreditoMovil.listarClientesConCredPendientesRequest();
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).listarClientesConCredPendientesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3627,6 +3591,29 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse CreditoMovilWA.CreditoMovil.ClienteWS.eliminarCompletoCliente(CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest request) {
+            return base.Channel.eliminarCompletoCliente(request);
+        }
+        
+        public bool eliminarCompletoCliente(int codCliente) {
+            CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest();
+            inValue.codCliente = codCliente;
+            CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarCompletoCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse> CreditoMovilWA.CreditoMovil.ClienteWS.eliminarCompletoClienteAsync(CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest request) {
+            return base.Channel.eliminarCompletoClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarCompletoClienteResponse> eliminarCompletoClienteAsync(int codCliente) {
+            CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarCompletoClienteRequest();
+            inValue.codCliente = codCliente;
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).eliminarCompletoClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.modificarClienteResponse CreditoMovilWA.CreditoMovil.ClienteWS.modificarCliente(CreditoMovilWA.CreditoMovil.modificarClienteRequest request) {
             return base.Channel.modificarCliente(request);
         }
@@ -3647,6 +3634,29 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.modificarClienteRequest inValue = new CreditoMovilWA.CreditoMovil.modificarClienteRequest();
             inValue.cliente = cliente;
             return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).modificarClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.insertarClienteResponse CreditoMovilWA.CreditoMovil.ClienteWS.insertarCliente(CreditoMovilWA.CreditoMovil.insertarClienteRequest request) {
+            return base.Channel.insertarCliente(request);
+        }
+        
+        public bool insertarCliente(CreditoMovilWA.CreditoMovil.cliente cliente) {
+            CreditoMovilWA.CreditoMovil.insertarClienteRequest inValue = new CreditoMovilWA.CreditoMovil.insertarClienteRequest();
+            inValue.cliente = cliente;
+            CreditoMovilWA.CreditoMovil.insertarClienteResponse retVal = ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).insertarCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarClienteResponse> CreditoMovilWA.CreditoMovil.ClienteWS.insertarClienteAsync(CreditoMovilWA.CreditoMovil.insertarClienteRequest request) {
+            return base.Channel.insertarClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarClienteResponse> insertarClienteAsync(CreditoMovilWA.CreditoMovil.cliente cliente) {
+            CreditoMovilWA.CreditoMovil.insertarClienteRequest inValue = new CreditoMovilWA.CreditoMovil.insertarClienteRequest();
+            inValue.cliente = cliente;
+            return ((CreditoMovilWA.CreditoMovil.ClienteWS)(this)).insertarClienteAsync(inValue);
         }
     }
     
@@ -3673,15 +3683,6 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDBancoResponse> obtenerPorIDBancoAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDBancoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.insertarBancoResponse insertarBanco(CreditoMovilWA.CreditoMovil.insertarBancoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse> insertarBancoAsync(CreditoMovilWA.CreditoMovil.insertarBancoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -3689,6 +3690,15 @@ namespace CreditoMovilWA.CreditoMovil {
         
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/modificarBancoResponse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarBancoResponse> modificarBancoAsync(CreditoMovilWA.CreditoMovil.modificarBancoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.insertarBancoResponse insertarBanco(CreditoMovilWA.CreditoMovil.insertarBancoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse> insertarBancoAsync(CreditoMovilWA.CreditoMovil.insertarBancoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoResponse")]
@@ -3784,42 +3794,6 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBanco", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarBancoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.banco banco;
-        
-        public insertarBancoRequest() {
-        }
-        
-        public insertarBancoRequest(CreditoMovilWA.CreditoMovil.banco banco) {
-            this.banco = banco;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBancoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarBancoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public insertarBancoResponse() {
-        }
-        
-        public insertarBancoResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarBanco", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class modificarBancoRequest {
         
@@ -3849,6 +3823,42 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         public modificarBancoResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBanco", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarBancoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.banco banco;
+        
+        public insertarBancoRequest() {
+        }
+        
+        public insertarBancoRequest(CreditoMovilWA.CreditoMovil.banco banco) {
+            this.banco = banco;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBancoResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarBancoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public insertarBancoResponse() {
+        }
+        
+        public insertarBancoResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -3991,29 +4001,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.insertarBancoResponse CreditoMovilWA.CreditoMovil.BancoWS.insertarBanco(CreditoMovilWA.CreditoMovil.insertarBancoRequest request) {
-            return base.Channel.insertarBanco(request);
-        }
-        
-        public bool insertarBanco(CreditoMovilWA.CreditoMovil.banco banco) {
-            CreditoMovilWA.CreditoMovil.insertarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.insertarBancoRequest();
-            inValue.banco = banco;
-            CreditoMovilWA.CreditoMovil.insertarBancoResponse retVal = ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).insertarBanco(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse> CreditoMovilWA.CreditoMovil.BancoWS.insertarBancoAsync(CreditoMovilWA.CreditoMovil.insertarBancoRequest request) {
-            return base.Channel.insertarBancoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse> insertarBancoAsync(CreditoMovilWA.CreditoMovil.banco banco) {
-            CreditoMovilWA.CreditoMovil.insertarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.insertarBancoRequest();
-            inValue.banco = banco;
-            return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).insertarBancoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.modificarBancoResponse CreditoMovilWA.CreditoMovil.BancoWS.modificarBanco(CreditoMovilWA.CreditoMovil.modificarBancoRequest request) {
             return base.Channel.modificarBanco(request);
         }
@@ -4034,6 +4021,29 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.modificarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.modificarBancoRequest();
             inValue.banco = banco;
             return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).modificarBancoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.insertarBancoResponse CreditoMovilWA.CreditoMovil.BancoWS.insertarBanco(CreditoMovilWA.CreditoMovil.insertarBancoRequest request) {
+            return base.Channel.insertarBanco(request);
+        }
+        
+        public bool insertarBanco(CreditoMovilWA.CreditoMovil.banco banco) {
+            CreditoMovilWA.CreditoMovil.insertarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.insertarBancoRequest();
+            inValue.banco = banco;
+            CreditoMovilWA.CreditoMovil.insertarBancoResponse retVal = ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).insertarBanco(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse> CreditoMovilWA.CreditoMovil.BancoWS.insertarBancoAsync(CreditoMovilWA.CreditoMovil.insertarBancoRequest request) {
+            return base.Channel.insertarBancoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.insertarBancoResponse> insertarBancoAsync(CreditoMovilWA.CreditoMovil.banco banco) {
+            CreditoMovilWA.CreditoMovil.insertarBancoRequest inValue = new CreditoMovilWA.CreditoMovil.insertarBancoRequest();
+            inValue.banco = banco;
+            return ((CreditoMovilWA.CreditoMovil.BancoWS)(this)).insertarBancoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4085,28 +4095,18 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.ServiceModel.ServiceContractAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", ConfigurationName="CreditoMovil.SupervisorWS")]
     public interface SupervisorWS {
         
-        // CODEGEN: El parámetro 'idsupervisor' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse eliminarSupervisor(CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorResponse" +
-            "")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse> eliminarSupervisorAsync(CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest request);
-        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResp" +
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsResp" +
             "onse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse obtenerPorIDSupervisor(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request);
+        CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse listarTodosSupervisors(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResp" +
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsResp" +
             "onse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse> obtenerPorIDSupervisorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse> listarTodosSupervisorsAsync(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request);
         
         // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRequest" +
@@ -4121,17 +4121,17 @@ namespace CreditoMovilWA.CreditoMovil {
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarSupervisorResponse> modificarSupervisorAsync(CreditoMovilWA.CreditoMovil.modificarSupervisorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsResp" +
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResp" +
             "onse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse listarTodosSupervisors(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request);
+        CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse obtenerPorIDSupervisor(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsRequ" +
-            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsResp" +
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequ" +
+            "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResp" +
             "onse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse> listarTodosSupervisorsAsync(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse> obtenerPorIDSupervisorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorDocIdenSupReques" +
@@ -4145,6 +4145,16 @@ namespace CreditoMovilWA.CreditoMovil {
             "t", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorDocIdenSupRespon" +
             "se")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorDocIdenSupResponse> obtenerPorDocIdenSupAsync(CreditoMovilWA.CreditoMovil.obtenerPorDocIdenSupRequest request);
+        
+        // CODEGEN: El parámetro 'idsupervisor' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse eliminarSupervisor(CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorResponse" +
+            "")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse> eliminarSupervisorAsync(CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/insertarSupervisorRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/SupervisorWS/insertarSupervisorResponse" +
@@ -4161,28 +4171,61 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarSupervisorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosSupervisors", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosSupervisorsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idsupervisor;
-        
-        public eliminarSupervisorRequest() {
-        }
-        
-        public eliminarSupervisorRequest(int idsupervisor) {
-            this.idsupervisor = idsupervisor;
+        public listarTodosSupervisorsRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarSupervisorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosSupervisorsResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosSupervisorsResponse {
         
-        public eliminarSupervisorResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.supervisor[] @return;
+        
+        public listarTodosSupervisorsResponse() {
+        }
+        
+        public listarTodosSupervisorsResponse(CreditoMovilWA.CreditoMovil.supervisor[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarSupervisorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.supervisor supervisor;
+        
+        public modificarSupervisorRequest() {
+        }
+        
+        public modificarSupervisorRequest(int id, CreditoMovilWA.CreditoMovil.supervisor supervisor) {
+            this.id = id;
+            this.supervisor = supervisor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarSupervisorResponse {
+        
+        public modificarSupervisorResponse() {
         }
     }
     
@@ -4225,67 +4268,6 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarSupervisorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.supervisor supervisor;
-        
-        public modificarSupervisorRequest() {
-        }
-        
-        public modificarSupervisorRequest(int id, CreditoMovilWA.CreditoMovil.supervisor supervisor) {
-            this.id = id;
-            this.supervisor = supervisor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarSupervisorResponse {
-        
-        public modificarSupervisorResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosSupervisors", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosSupervisorsRequest {
-        
-        public listarTodosSupervisorsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosSupervisorsResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosSupervisorsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.supervisor[] @return;
-        
-        public listarTodosSupervisorsResponse() {
-        }
-        
-        public listarTodosSupervisorsResponse(CreditoMovilWA.CreditoMovil.supervisor[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorDocIdenSup", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
     public partial class obtenerPorDocIdenSupRequest {
         
@@ -4321,6 +4303,34 @@ namespace CreditoMovilWA.CreditoMovil {
         
         public obtenerPorDocIdenSupResponse(CreditoMovilWA.CreditoMovil.supervisor @return) {
             this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarSupervisorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idsupervisor;
+        
+        public eliminarSupervisorRequest() {
+        }
+        
+        public eliminarSupervisorRequest(int idsupervisor) {
+            this.idsupervisor = idsupervisor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarSupervisorResponse {
+        
+        public eliminarSupervisorResponse() {
         }
     }
     
@@ -4388,48 +4398,24 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse CreditoMovilWA.CreditoMovil.SupervisorWS.eliminarSupervisor(CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest request) {
-            return base.Channel.eliminarSupervisor(request);
+        CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse CreditoMovilWA.CreditoMovil.SupervisorWS.listarTodosSupervisors(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request) {
+            return base.Channel.listarTodosSupervisors(request);
         }
         
-        public void eliminarSupervisor(int idsupervisor) {
-            CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest();
-            inValue.idsupervisor = idsupervisor;
-            CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).eliminarSupervisor(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse> CreditoMovilWA.CreditoMovil.SupervisorWS.eliminarSupervisorAsync(CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest request) {
-            return base.Channel.eliminarSupervisorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse> eliminarSupervisorAsync(int idsupervisor) {
-            CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest();
-            inValue.idsupervisor = idsupervisor;
-            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).eliminarSupervisorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse CreditoMovilWA.CreditoMovil.SupervisorWS.obtenerPorIDSupervisor(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request) {
-            return base.Channel.obtenerPorIDSupervisor(request);
-        }
-        
-        public CreditoMovilWA.CreditoMovil.supervisor obtenerPorIDSupervisor(int idsupervisor) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest();
-            inValue.idsupervisor = idsupervisor;
-            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).obtenerPorIDSupervisor(inValue);
+        public CreditoMovilWA.CreditoMovil.supervisor[] listarTodosSupervisors() {
+            CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest();
+            CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).listarTodosSupervisors(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse> CreditoMovilWA.CreditoMovil.SupervisorWS.obtenerPorIDSupervisorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request) {
-            return base.Channel.obtenerPorIDSupervisorAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse> CreditoMovilWA.CreditoMovil.SupervisorWS.listarTodosSupervisorsAsync(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request) {
+            return base.Channel.listarTodosSupervisorsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse> obtenerPorIDSupervisorAsync(int idsupervisor) {
-            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest();
-            inValue.idsupervisor = idsupervisor;
-            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).obtenerPorIDSupervisorAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse> listarTodosSupervisorsAsync() {
+            CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest();
+            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).listarTodosSupervisorsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4457,24 +4443,26 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse CreditoMovilWA.CreditoMovil.SupervisorWS.listarTodosSupervisors(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request) {
-            return base.Channel.listarTodosSupervisors(request);
+        CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse CreditoMovilWA.CreditoMovil.SupervisorWS.obtenerPorIDSupervisor(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request) {
+            return base.Channel.obtenerPorIDSupervisor(request);
         }
         
-        public CreditoMovilWA.CreditoMovil.supervisor[] listarTodosSupervisors() {
-            CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest();
-            CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).listarTodosSupervisors(inValue);
+        public CreditoMovilWA.CreditoMovil.supervisor obtenerPorIDSupervisor(int idsupervisor) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest();
+            inValue.idsupervisor = idsupervisor;
+            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).obtenerPorIDSupervisor(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse> CreditoMovilWA.CreditoMovil.SupervisorWS.listarTodosSupervisorsAsync(CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest request) {
-            return base.Channel.listarTodosSupervisorsAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse> CreditoMovilWA.CreditoMovil.SupervisorWS.obtenerPorIDSupervisorAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest request) {
+            return base.Channel.obtenerPorIDSupervisorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse> listarTodosSupervisorsAsync() {
-            CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest inValue = new CreditoMovilWA.CreditoMovil.listarTodosSupervisorsRequest();
-            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).listarTodosSupervisorsAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse> obtenerPorIDSupervisorAsync(int idsupervisor) {
+            CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorRequest();
+            inValue.idsupervisor = idsupervisor;
+            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).obtenerPorIDSupervisorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4500,6 +4488,28 @@ namespace CreditoMovilWA.CreditoMovil {
             inValue.docIdentidad = docIdentidad;
             inValue.tipoDocumento = tipoDocumento;
             return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).obtenerPorDocIdenSupAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse CreditoMovilWA.CreditoMovil.SupervisorWS.eliminarSupervisor(CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest request) {
+            return base.Channel.eliminarSupervisor(request);
+        }
+        
+        public void eliminarSupervisor(int idsupervisor) {
+            CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest();
+            inValue.idsupervisor = idsupervisor;
+            CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse retVal = ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).eliminarSupervisor(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse> CreditoMovilWA.CreditoMovil.SupervisorWS.eliminarSupervisorAsync(CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest request) {
+            return base.Channel.eliminarSupervisorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse> eliminarSupervisorAsync(int idsupervisor) {
+            CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.eliminarSupervisorRequest();
+            inValue.idsupervisor = idsupervisor;
+            return ((CreditoMovilWA.CreditoMovil.SupervisorWS)(this)).eliminarSupervisorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4530,18 +4540,17 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.ServiceModel.ServiceContractAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", ConfigurationName="CreditoMovil.EvaluacionWS")]
     public interface EvaluacionWS {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarEvaluacionesSupervis" +
-            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarEvaluacionesSupervis" +
-            "orResponse")]
+        // CODEGEN: El parámetro 'evaluacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRequest" +
+            "", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRespons" +
+            "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse listarEvaluacionesSupervisor(CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest request);
+        CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse modificarEvaluacion(CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarEvaluacionesSupervis" +
-            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarEvaluacionesSupervis" +
-            "orResponse")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse> listarEvaluacionesSupervisorAsync(CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRequest" +
+            "", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRespons" +
+            "e")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse> modificarEvaluacionAsync(CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosEvaluacionsRequ" +
@@ -4556,18 +4565,6 @@ namespace CreditoMovilWA.CreditoMovil {
             "onse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsResponse> listarTodosEvaluacionsAsync(CreditoMovilWA.CreditoMovil.listarTodosEvaluacionsRequest request);
         
-        // CODEGEN: El parámetro 'evaluacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRequest" +
-            "", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse modificarEvaluacion(CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRequest" +
-            "", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRespons" +
-            "e")]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse> modificarEvaluacionAsync(CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest request);
-        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionRequ" +
             "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionResp" +
@@ -4580,6 +4577,19 @@ namespace CreditoMovilWA.CreditoMovil {
             "est", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorIDEvaluacionResp" +
             "onse")]
         System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse> obtenerPorIDEvaluacionAsync(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarEvaluacionesSupervis" +
+            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarEvaluacionesSupervis" +
+            "orResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse listarEvaluacionesSupervisor(CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarEvaluacionesSupervis" +
+            "orRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarEvaluacionesSupervis" +
+            "orResponse")]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse> listarEvaluacionesSupervisorAsync(CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionRequest", ReplyAction="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionResponse" +
@@ -4834,36 +4844,28 @@ namespace CreditoMovilWA.CreditoMovil {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarEvaluacionesSupervisorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEvaluacion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarEvaluacionRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSup;
+        public CreditoMovilWA.CreditoMovil.evaluacion evaluacion;
         
-        public listarEvaluacionesSupervisorRequest() {
+        public modificarEvaluacionRequest() {
         }
         
-        public listarEvaluacionesSupervisorRequest(int idSup) {
-            this.idSup = idSup;
+        public modificarEvaluacionRequest(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
+            this.evaluacion = evaluacion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarEvaluacionesSupervisorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEvaluacionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarEvaluacionResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.evaluacion[] @return;
-        
-        public listarEvaluacionesSupervisorResponse() {
-        }
-        
-        public listarEvaluacionesSupervisorResponse(CreditoMovilWA.CreditoMovil.evaluacion[] @return) {
-            this.@return = @return;
+        public modificarEvaluacionResponse() {
         }
     }
     
@@ -4892,34 +4894,6 @@ namespace CreditoMovilWA.CreditoMovil {
         
         public listarTodosEvaluacionsResponse(CreditoMovilWA.CreditoMovil.evaluacion[] @return) {
             this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEvaluacion", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarEvaluacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CreditoMovilWA.CreditoMovil.evaluacion evaluacion;
-        
-        public modificarEvaluacionRequest() {
-        }
-        
-        public modificarEvaluacionRequest(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
-            this.evaluacion = evaluacion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEvaluacionResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarEvaluacionResponse {
-        
-        public modificarEvaluacionResponse() {
         }
     }
     
@@ -4955,6 +4929,42 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         public obtenerPorIDEvaluacionResponse(CreditoMovilWA.CreditoMovil.evaluacion @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesSupervisor", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarEvaluacionesSupervisorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSup;
+        
+        public listarEvaluacionesSupervisorRequest() {
+        }
+        
+        public listarEvaluacionesSupervisorRequest(int idSup) {
+            this.idSup = idSup;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvaluacionesSupervisorResponse", WrapperNamespace="https://services.creditomovil.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarEvaluacionesSupervisorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://services.creditomovil.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CreditoMovilWA.CreditoMovil.evaluacion[] @return;
+        
+        public listarEvaluacionesSupervisorResponse() {
+        }
+        
+        public listarEvaluacionesSupervisorResponse(CreditoMovilWA.CreditoMovil.evaluacion[] @return) {
             this.@return = @return;
         }
     }
@@ -5051,26 +5061,25 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse CreditoMovilWA.CreditoMovil.EvaluacionWS.listarEvaluacionesSupervisor(CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest request) {
-            return base.Channel.listarEvaluacionesSupervisor(request);
+        CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse CreditoMovilWA.CreditoMovil.EvaluacionWS.modificarEvaluacion(CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest request) {
+            return base.Channel.modificarEvaluacion(request);
         }
         
-        public CreditoMovilWA.CreditoMovil.evaluacion[] listarEvaluacionesSupervisor(int idSup) {
-            CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest();
-            inValue.idSup = idSup;
-            CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).listarEvaluacionesSupervisor(inValue);
-            return retVal.@return;
+        public void modificarEvaluacion(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
+            CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest();
+            inValue.evaluacion = evaluacion;
+            CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).modificarEvaluacion(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse> CreditoMovilWA.CreditoMovil.EvaluacionWS.listarEvaluacionesSupervisorAsync(CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest request) {
-            return base.Channel.listarEvaluacionesSupervisorAsync(request);
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse> CreditoMovilWA.CreditoMovil.EvaluacionWS.modificarEvaluacionAsync(CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest request) {
+            return base.Channel.modificarEvaluacionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse> listarEvaluacionesSupervisorAsync(int idSup) {
-            CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest();
-            inValue.idSup = idSup;
-            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).listarEvaluacionesSupervisorAsync(inValue);
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse> modificarEvaluacionAsync(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
+            CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest();
+            inValue.evaluacion = evaluacion;
+            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).modificarEvaluacionAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5095,28 +5104,6 @@ namespace CreditoMovilWA.CreditoMovil {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse CreditoMovilWA.CreditoMovil.EvaluacionWS.modificarEvaluacion(CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest request) {
-            return base.Channel.modificarEvaluacion(request);
-        }
-        
-        public void modificarEvaluacion(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
-            CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest();
-            inValue.evaluacion = evaluacion;
-            CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).modificarEvaluacion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse> CreditoMovilWA.CreditoMovil.EvaluacionWS.modificarEvaluacionAsync(CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest request) {
-            return base.Channel.modificarEvaluacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse> modificarEvaluacionAsync(CreditoMovilWA.CreditoMovil.evaluacion evaluacion) {
-            CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.modificarEvaluacionRequest();
-            inValue.evaluacion = evaluacion;
-            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).modificarEvaluacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionResponse CreditoMovilWA.CreditoMovil.EvaluacionWS.obtenerPorIDEvaluacion(CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest request) {
             return base.Channel.obtenerPorIDEvaluacion(request);
         }
@@ -5137,6 +5124,29 @@ namespace CreditoMovilWA.CreditoMovil {
             CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest inValue = new CreditoMovilWA.CreditoMovil.obtenerPorIDEvaluacionRequest();
             inValue.idevaluacion = idevaluacion;
             return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).obtenerPorIDEvaluacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse CreditoMovilWA.CreditoMovil.EvaluacionWS.listarEvaluacionesSupervisor(CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest request) {
+            return base.Channel.listarEvaluacionesSupervisor(request);
+        }
+        
+        public CreditoMovilWA.CreditoMovil.evaluacion[] listarEvaluacionesSupervisor(int idSup) {
+            CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest();
+            inValue.idSup = idSup;
+            CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse retVal = ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).listarEvaluacionesSupervisor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse> CreditoMovilWA.CreditoMovil.EvaluacionWS.listarEvaluacionesSupervisorAsync(CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest request) {
+            return base.Channel.listarEvaluacionesSupervisorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorResponse> listarEvaluacionesSupervisorAsync(int idSup) {
+            CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest inValue = new CreditoMovilWA.CreditoMovil.listarEvaluacionesSupervisorRequest();
+            inValue.idSup = idSup;
+            return ((CreditoMovilWA.CreditoMovil.EvaluacionWS)(this)).listarEvaluacionesSupervisorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

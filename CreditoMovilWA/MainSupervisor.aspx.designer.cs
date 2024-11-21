@@ -27,6 +27,9 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.GridView gvCredPendXCli;
         protected global::System.Web.UI.WebControls.Button btnVerDetalle;
         protected global::System.Web.UI.WebControls.Button btnLogout;
+        protected global::System.Web.UI.WebControls.Button cliPendAsig;
+        protected global::System.Web.UI.WebControls.Button txtCliPendAsig;
+        protected global::System.Web.UI.WebControls.Button txtNotClientPend;
 
     }
 }

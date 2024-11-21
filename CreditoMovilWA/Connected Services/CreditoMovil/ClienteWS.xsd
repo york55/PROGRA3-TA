@@ -151,20 +151,20 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarClientesConCredPendientes">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarClientesConCredPendientesResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="reportePDF">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="reportePDFResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClientesConCredPendientes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarClientesConCredPendientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCliente">

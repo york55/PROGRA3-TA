@@ -14,7 +14,7 @@ import pe.edu.pucp.creditomovil.model.Credito;
  */
 public interface CreditoDAO {
     boolean insertar(Credito credito, int codigoCliente);
-    void modificar(Credito credito);
+    boolean modificar(Credito credito);
     void eliminar(int numCredito);
     Credito obtenerPorId(int numCredito);
     public List<Credito> listarTodosFiltros(int cliId, Date fechaini, Date fechafin, String estado);
