@@ -45,14 +45,15 @@ namespace CreditoMovilWA
 
         protected void btnBuscarCli_Click(object sender, EventArgs e)
         {
-            gvClientes.DataSource = clienteDAO.listarClientesPorNombre(texBuscar.Text);
+            cliente[] listCli = null;
+            gvClientes.DataSource = listCli = clienteDAO.listarClientesPorNombre(texBuscar.Text);
             gvClientes.DataBind();
         }
 
-        protected void btnAddMetodoPago_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/AdminAddMetodoPago.aspx");
-        }
+        //protected void btnAddMetodoPago_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("~/AdminAddMetodoPago.aspx");
+        //}
 
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
@@ -75,9 +76,15 @@ namespace CreditoMovilWA
             }
         }
 
+        //protected void btnActivar_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
         protected void btnAddSupervisor_Click(object sender, EventArgs e)
         {
             Response.Redirect($"Registro.aspx?op=add_supervisor&cod_person=0");
         }
+
     }
 }

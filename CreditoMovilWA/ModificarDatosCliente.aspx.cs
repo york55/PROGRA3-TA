@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -32,10 +34,11 @@ namespace CreditoMovilWA
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            /*Datos Cliente*/
             cliente cli = (cliente)Session["Cliente"];
-            cli.nombre = txtNombre.Text;
-            cli.apPaterno = txtApPaterno.Text;
-            cli.apMaterno = txtApMaterno.Text;
+            if(!string.IsNullOrEmpty(txtNombre.Text)) cli.nombre = txtNombre.Text;
+            if (!string.IsNullOrEmpty(txtApPaterno.Text)) cli.apPaterno = txtApPaterno.Text;
+            if (!string.IsNullOrEmpty(txtApMaterno.Text)) cli.apMaterno = txtApMaterno.Text;
             switch (ddlTipoDocumento.SelectedValue)
             {
                 case "DNI":
@@ -48,16 +51,50 @@ namespace CreditoMovilWA
                     cli.tipoDocumento = tipoDocumento.CARNET_EXTRANJERIA;
                     break;
             }
-            cli.documento = txtNroDoc.Text;
-            cli.email = txtEmail.Text;
-            cli.telefono = txtTelefono.Text;
-            cli.direccion = txtDireccion.Text;
-            string contrasena = txtContrasena.Text;
-            string hashedPassword = HashPassword(contrasena);
-            cli.contrasenha = contrasena;
+            if (!string.IsNullOrEmpty(txtNroDoc.Text)) cli.documento = txtNroDoc.Text;
+            if (!string.IsNullOrEmpty(txtEmail.Text)) cli.email = txtEmail.Text;
+            if (!string.IsNullOrEmpty(txtTelefono.Text)) cli.telefono = txtTelefono.Text;
+            if (!string.IsNullOrEmpty(txtDireccion.Text)) cli.direccion = txtDireccion.Text;
+            cli.activo = true;
+            cli.fecha = DateTime.Now;
+            cli.fechaSpecified = true;
+            cli.fechaVencimiento = DateTime.Now; // falta ver
+            cli.fechaVencimientoSpecified = true;
+            cli.ultimoLogueo = DateTime.Now; // falta ver, no lo utiliza para la creacion de cliente
+            cli.ultimoLogueoSpecified = true;
+            string contraNueva = txtContrasenaNueva.Text;
+            string contraConfNueva = txtConfirmarContrasena.Text;
+            string contraAntigua = txtContrasenhaActual.Text;
 
-            bool res = daoCliente.modificarCliente(cli);
-            if (res) Response.Redirect("MainCliente.aspx");
+            /*Validacion*/
+            if (!string.IsNullOrEmpty(contraAntigua))
+            {
+                if (VerificarContraseña(contraAntigua, cli.salt, cli.contrasenha))
+                {
+                    /*Si agrega nueva contraseña*/
+                    if (!string.IsNullOrEmpty(contraNueva) &&
+                        !string.IsNullOrEmpty(contraConfNueva) && contraNueva.Equals(contraConfNueva))
+                    {
+                        string salt = GenerarSalt();
+                        string hashedPassword = HashPassword(contraNueva, salt);
+                        cli.contrasenha = hashedPassword;
+                        cli.salt = salt;
+                    }
+                    else
+                    {
+                        lblError.Text = "Las contraseñas no coinciden";
+                    }
+
+                    bool res = daoCliente.modificarCliente(cli);
+                    if (res)
+                    {
+                        Response.Redirect("MainCliente.aspx");
+                    }
+                    else lblError.Text = "No se pudo modificar los datos.";
+                }
+                else lblError.Text = "Ingrese correctamente su contraseña";
+            }
+            else lblError.Text = "Por favor ingrese su contraseña actual";
         }
 
         protected void btnRegresar_Click(object sender, EventArgs e)
@@ -76,15 +113,38 @@ namespace CreditoMovilWA
             txtTelefono.Text = cli.telefono;
             txtDireccion.Text = cli.direccion;
         }
-        private string HashPassword(string password)
+        private string HashPassword(string password, string salt)
         {
-            // Implementa un método seguro para hashear la contraseña
-            // Por ejemplo, utilizando SHA256 (aunque se recomienda usar algoritmos más seguros como BCrypt)
-            using (System.Security.Cryptography.SHA256 sha256 = System.Security.Cryptography.SHA256.Create())
+            string saltedPassword = password + salt;
+
+            using (var sha256 = SHA256.Create())
             {
-                byte[] bytes = System.Text.Encoding.UTF8.GetBytes(password);
-                byte[] hash = sha256.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(saltedPassword));
+                return Convert.ToBase64String(hashBytes);
+            }
+        }
+        private string GenerarSalt()
+        {
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                byte[] saltBytes = new byte[16];
+                rng.GetBytes(saltBytes);
+                return Convert.ToBase64String(saltBytes);
+            }
+        }
+        private bool VerificarContraseña(string contraseñaIngresada, string salAlmacenada, string contraseñaHashAlmacenada)
+        {
+            // Combinar la contraseña ingresada con el salt almacenado
+            string saltedPassword = contraseñaIngresada + salAlmacenada;
+
+            // Recalcular el hash usando SHA256
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(saltedPassword));
+                string computedHash = Convert.ToBase64String(hashBytes);
+
+                // Comparar el hash calculado con el hash almacenado
+                return computedHash == contraseñaHashAlmacenada;
             }
         }
     }

@@ -48,27 +48,33 @@ public class Principal {
 //        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 //        String fe1 = "2024-11-19";
 //        String fe2 = "2024-11-20";
-//        Supervisor sup = new Supervisor(
-//                0,
-//                sdf.parse(fe2),
-//                "PRUEBA",
-//                "PRUEBA",
-//                "PRUEBA",
-//                "PRUEBA",
-//                sdf.parse(fe2),
-//                true,
-//                TipoDocumento.DNI,
-//                "PRUEBA",
-//                "PRUEBA",
-//                101,
-//                10,
-//                "PRUEBA"
+////        Supervisor sup = new Supervisor(
+////                0,
+////                sdf.parse(fe2),
+////                "PRUEBA",
+////                "PRUEBA",
+////                "PRUEBA",
+////                "PRUEBA",
+////                sdf.parse(fe2),
+////                true,
+////                TipoDocumento.DNI,
+////                "PRUEBA",
+////                "PRUEBA",
+////                101,
+////                10,
+////                "PRUEBA"
+////        );
+////        SupervisorDAO supDAO = new SupervisorMySQL();
+////        supDAO.insertar(sup);
+//
+//        ClienteDAO cliDAO = new ClienteMySQL();
+//        Cliente cli = new Cliente(
+//                14, sdf.parse(fe2), "Naomi", "Naomi", 
+//            "da", "da", sdf.parse(fe2),
+//            true, TipoDocumento.DNI, "Naomi","Naomi", 10, "Naomi",
+//            "Naomi", "Naomi", "Naomi",123
 //        );
-//        SupervisorDAO supDAO = new SupervisorMySQL();
-//        supDAO.insertar(sup);
-
-        ClienteDAO cliDAO = new ClienteMySQL();
-        Cliente cli = cliDAO.obtenerPorCodigo(1);
-        System.out.println(cli.getNombre());
+//        cliDAO.modificar(cli);
+//        System.out.println(cli.getNombre());
     }
 }

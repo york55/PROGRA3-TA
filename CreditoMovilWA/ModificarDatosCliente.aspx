@@ -165,7 +165,7 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="contraseña">Nueva Contraseña</label>
-                <asp:TextBox ID="txtContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtContrasenaNueva" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="confirmar-contraseña">Confirmar Nueva Contraseña</label>

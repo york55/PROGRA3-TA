@@ -158,8 +158,8 @@
                     Text="Añadir Supervisor" CssClass="view-btn" OnClick="btnAddSupervisor_Click"/>
                 <asp:Button ID="btnVisualizarSupervisores" runat="server" 
                     Text="Administrar supervisores" CssClass="view-btn" OnClick="btnVisualizarSupervisores_Click" />
-                <asp:Button ID="btnAddMetodoPago" runat="server" 
-                    Text="Añadir metodo de pago" CssClass="view-btn" OnClick="btnAddMetodoPago_Click"/>
+                <%--<asp:Button ID="btnAddMetodoPago" runat="server" 
+                    Text="Añadir metodo de pago" CssClass="view-btn" OnClick="btnAddMetodoPago_Click"/>--%>
                 <asp:Button ID="btnGenerarReportes" runat="server" 
                     Text="Generar reportes" CssClass="view-btn" OnClick="btnGenerarReportes_Click"/>
             </div>

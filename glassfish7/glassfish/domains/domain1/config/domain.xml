@@ -491,6 +491,7 @@
       <property name="archiveType" value="war"></property>
       <property name="defaultAppName" value="web"></property>
       <property name="appLocation" value="file:/E:/PROYECTO_PRO3_NEW/PROGRA3-TA/Proyectos/CreditoMovilWSBL/build/web/"></property>
+      <property name="keepSessions" value="true"></property>
       <module name="CreditoMovilWSBL">
         <engine sniffer="webservices"></engine>
         <engine sniffer="security"></engine>

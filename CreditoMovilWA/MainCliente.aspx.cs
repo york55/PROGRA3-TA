@@ -55,7 +55,6 @@ namespace CreditoMovilWA
 
         protected void btnSolicitarCredito_Click(object sender, EventArgs e)
         {
-         
             Response.Redirect("SolicitudCredito.aspx");
         }
 

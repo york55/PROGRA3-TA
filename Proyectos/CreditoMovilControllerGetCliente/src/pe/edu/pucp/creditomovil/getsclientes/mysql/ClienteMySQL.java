@@ -109,7 +109,9 @@ public class ClienteMySQL implements ClienteDAO {
 
         try {
             conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL ModificarCliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
+            String sql = "{ CALL ModificarCliente(?, ?, ?, ?, ?, ?"
+                    + ", ?, ?, ?, ?, ?, ?"
+                    + ", ?, ?, ?, ?, ?, ?) }";
             cs = conn.prepareCall(sql);
 
             // Parámetros para la tabla usuario

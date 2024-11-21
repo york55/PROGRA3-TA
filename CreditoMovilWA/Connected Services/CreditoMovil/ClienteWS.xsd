@@ -82,22 +82,22 @@
       <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarCompletoCliente">
-    <xs:sequence>
-      <xs:element name="codCliente" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarCompletoClienteResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarClienteLogico">
     <xs:sequence>
       <xs:element name="codCliente" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarClienteLogicoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCompletoCliente">
+    <xs:sequence>
+      <xs:element name="codCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCompletoClienteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
@@ -149,6 +149,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="reportePDF">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reportePDFResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarCliente">
     <xs:sequence>
       <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
@@ -157,14 +165,6 @@
   <xs:complexType name="insertarClienteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="reportePDF">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="reportePDFResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="tipoDocumento">
