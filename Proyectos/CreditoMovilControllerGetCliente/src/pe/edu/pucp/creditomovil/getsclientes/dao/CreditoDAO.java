@@ -18,5 +18,6 @@ public interface CreditoDAO {
     void eliminar(int numCredito);
     Credito obtenerPorId(int numCredito);
     public List<Credito> listarTodosFiltros(int cliId, Date fechaini, Date fechafin, String estado);
-    public List<Credito> listarTodos(); 
+    public List<Credito> listarTodos();
+    public List<Credito> listarCredPendPorCliente(int codCliente);
 }

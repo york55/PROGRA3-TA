@@ -124,6 +124,17 @@ public class ClienteWS {
         return clientes;
     }
     
+    @WebMethod(operationName = "listarClientesConCredPendientes")
+    public List<Cliente> listarClientesConCredPendientes() {
+        List<Cliente> clientes = null;
+        try{
+            clientes = daoCliente.lsActClientesCredPen();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return clientes;
+    }
+    
     private String getFileResource(String fileName){ 
         String filePath = ClienteWS.class.getResource("/pe/edu/pucp/creditomovil/resources/"+fileName).getPath();
         filePath = filePath.replace("%20", " ");

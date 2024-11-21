@@ -68,13 +68,15 @@ public class Principal {
 ////        supDAO.insertar(sup);
 //
 //        ClienteDAO cliDAO = new ClienteMySQL();
-//        Cliente cli = new Cliente(
-//                14, sdf.parse(fe2), "Naomi", "Naomi", 
-//            "da", "da", sdf.parse(fe2),
-//            true, TipoDocumento.DNI, "Naomi","Naomi", 10, "Naomi",
-//            "Naomi", "Naomi", "Naomi",123
-//        );
-//        cliDAO.modificar(cli);
-//        System.out.println(cli.getNombre());
+//        List<Cliente> listCli = cliDAO.lsActClientesCredPen();
+//        for(Cliente cli:listCli){
+//            System.out.println(cli.getNombre());
+//        }
+//
+//        CreditoDAO credDAO = new CreditoMySQL();
+//        List<Credito> listCred = credDAO.listarCredPendPorCliente(15);
+//        for(Credito cred:listCred){
+//            System.out.println(cred.getEstado());
+//        }
     }
 }

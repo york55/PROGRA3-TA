@@ -20,4 +20,5 @@ public interface ClienteDAO {
     Cliente obtenerPorDocIdentidad(String docIden, String tipoDocIden);
     List<Cliente> listarTodos();
     List<Cliente> listarClientesActivosPorNombre(String nombre);
+    List<Cliente> lsActClientesCredPen();
 }

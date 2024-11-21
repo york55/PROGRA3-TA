@@ -4,22 +4,27 @@
   <xs:element name="eliminarCreditoResponse" type="tns:eliminarCreditoResponse" />
   <xs:element name="insertarCredito" type="tns:insertarCredito" />
   <xs:element name="insertarCreditoResponse" type="tns:insertarCreditoResponse" />
-  <xs:element name="listarCreditosFiltro" type="tns:listarCreditosFiltro" />
-  <xs:element name="listarCreditosFiltroResponse" type="tns:listarCreditosFiltroResponse" />
+  <xs:element name="listarCreditosClientePorFecha" type="tns:listarCreditosClientePorFecha" />
+  <xs:element name="listarCreditosClientePorFechaResponse" type="tns:listarCreditosClientePorFechaResponse" />
+  <xs:element name="listarCreditosPendXCliente" type="tns:listarCreditosPendXCliente" />
+  <xs:element name="listarCreditosPendXClienteResponse" type="tns:listarCreditosPendXClienteResponse" />
   <xs:element name="listarTodosCreditos" type="tns:listarTodosCreditos" />
   <xs:element name="listarTodosCreditosResponse" type="tns:listarTodosCreditosResponse" />
   <xs:element name="modificarCredito" type="tns:modificarCredito" />
   <xs:element name="modificarCreditoResponse" type="tns:modificarCreditoResponse" />
   <xs:element name="obtenerPorIDCredito" type="tns:obtenerPorIDCredito" />
   <xs:element name="obtenerPorIDCreditoResponse" type="tns:obtenerPorIDCreditoResponse" />
-  <xs:complexType name="obtenerPorIDCredito">
+  <xs:complexType name="listarCreditosClientePorFecha">
     <xs:sequence>
-      <xs:element name="credito" type="xs:int" />
+      <xs:element name="idcli" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaini" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechafin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerPorIDCreditoResponse">
+  <xs:complexType name="listarCreditosClientePorFechaResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:credito" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:credito" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="credito">
@@ -51,6 +56,16 @@
       <xs:element minOccurs="0" name="ultimoLogueo" type="xs:dateTime" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="obtenerPorIDCredito">
+    <xs:sequence>
+      <xs:element name="credito" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorIDCreditoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:credito" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarCredito">
     <xs:sequence>
       <xs:element minOccurs="0" name="credito" type="tns:credito" />
@@ -62,19 +77,6 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCreditosFiltro">
-    <xs:sequence>
-      <xs:element name="idcli" type="xs:int" />
-      <xs:element minOccurs="0" name="fechaini" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fechafin" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="estado" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCreditosFiltroResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:credito" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarCredito">
     <xs:sequence>
       <xs:element minOccurs="0" name="credito" type="tns:credito" />
@@ -82,6 +84,16 @@
   </xs:complexType>
   <xs:complexType name="modificarCreditoResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCreditosPendXCliente">
+    <xs:sequence>
+      <xs:element name="codCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreditosPendXClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:credito" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTodosCreditos">
     <xs:sequence />

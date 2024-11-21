@@ -63,13 +63,24 @@ public class CreditoWS {
         return credito;
     }
     
-    @WebMethod(operationName = "listarCreditosFiltro")
-    public List<Credito> listarCreditosFiltro(@WebParam(name = "idcli") int idcli,
+    @WebMethod(operationName = "listarCreditosClientePorFecha")
+    public List<Credito> listarCreditosClientePorFecha(@WebParam(name = "idcli") int idcli,
             @WebParam(name = "fechaini") Date fechaini, @WebParam(name = "fechafin") Date fechafin,
             @WebParam(name = "estado") String estado) {
         List<Credito> creditos = null;
         try{
             creditos = daoCredito.listarTodosFiltros(idcli, fechaini, fechafin, estado);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return creditos;
+    }
+    
+    @WebMethod(operationName = "listarCreditosPendXCliente")
+    public List<Credito> listarCreditosPendXCliente(@WebParam(name = "codCliente") int codCliente) {
+        List<Credito> creditos = null;
+        try{
+            creditos = daoCredito.listarCredPendPorCliente(codCliente);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

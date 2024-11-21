@@ -12,6 +12,8 @@ namespace CreditoMovilWA
     {
 
         private EvaluacionWSClient daoEvaluacion = new EvaluacionWSClient();
+        private CreditoWSClient daoCredito = new CreditoWSClient();
+        private ClienteWSClient daoCliente = new ClienteWSClient();
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -20,6 +22,15 @@ namespace CreditoMovilWA
             {
                 Response.Redirect("Login.aspx");
             }
+
+            if (!IsPostBack)
+            {
+
+            }
+            else if (ViewState["ModalAbierto"] != null && (bool)ViewState["ModalAbierto"])
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal", "openModal();", true);
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -27,6 +38,7 @@ namespace CreditoMovilWA
             if (!IsPostBack)
             {
                 // Aquí carga los datos de las evaluaciones
+                CargarClientesCredPend();
                 CargarEvaluaciones();
             }
         }
@@ -41,6 +53,11 @@ namespace CreditoMovilWA
             gvEvaluaciones.DataBind();
         }
 
+        private void CargarClientesCredPend()
+        {
+            gvClientesCredPend.DataSource = daoCliente.listarClientesConCredPendientes();
+            gvClientesCredPend.DataBind();
+        }
         protected void btnVerDetalle_Click(object sender, EventArgs e)
         {
             var btn = (Button)sender;
@@ -62,6 +79,21 @@ namespace CreditoMovilWA
                 new { IdEvaluacion = 2, Negocio = "Negocio 2", Ventas = 800, MargenGanancia = 25, Puntaje = 75, Estado = "Pendiente" },
                 // Agrega más evaluaciones según tu lógica de datos
             };
+        }
+
+        protected void btnDetalles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnVerCreditos_Click(object sender, EventArgs e)
+        {
+            Button btnVerCreditos_Click = (Button)sender;
+            int codigoCliente = Int32.Parse(btnVerCreditos_Click.CommandArgument);
+            ViewState["ModalAbierto"] = true; // Almacena el estado del modal en ViewState
+            ClientScript.RegisterStartupScript(this.GetType(), "OpenModal", "openModal();", true);
+            gvCredPendXCli.DataSource = daoCredito.listarCreditosPendXCliente(codigoCliente);
+            gvCredPendXCli.DataBind();
         }
     }
 }

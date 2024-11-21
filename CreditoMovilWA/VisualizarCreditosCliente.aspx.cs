@@ -52,7 +52,7 @@ namespace CreditoMovilWA
             if (isFechaInicio && isFechaFin)
             {
                 //var resultados = ObtenerCreditosPorFecha(fechaInicio, fechaFin);
-                var resultados = daoCredito.listarCreditosFiltro(cli.codigoCliente, fechaInicio, fechaFin, estado);
+                var resultados = daoCredito.listarCreditosClientePorFecha(cli.codigoCliente, fechaInicio, fechaFin, estado);
 
                 if (resultados != null)
                 {

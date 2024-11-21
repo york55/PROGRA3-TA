@@ -187,7 +187,7 @@ public class CreditoMySQL implements CreditoDAO {
         CallableStatement cs = null;
         ResultSet rs = null;            
         conn = DBManager.getInstance().getConnection();
-        String sql = "{ CALL ObtenerCreditosPorCliente(?, ?, ?, ?) }";
+        String sql = "{ CALL ObtenerCreditosPorClienteFecha(?, ?, ?, ?) }";
         
         java.sql.Date fechainiSQL = new java.sql.Date(fechaini.getTime());
         java.sql.Date fechafinSQL = new java.sql.Date(fechafin.getTime());
@@ -247,6 +247,53 @@ public class CreditoMySQL implements CreditoDAO {
             conn = DBManager.getInstance().getConnection();
             String sql = "{ CALL ListarCreditos() }";
             cs = conn.prepareCall(sql);
+            rs = cs.executeQuery();
+
+            while (rs.next()) {
+                int numCredito = rs.getInt("num_credito");
+                double monto = rs.getDouble("monto");
+                double tasaInteres = rs.getDouble("tasa_interes");
+                Date fechaOtorgamiento = rs.getDate("fecha_otorgamiento");
+                String estado = rs.getString("estado");
+                int numCuotas = rs.getInt("num_cuotas");
+                boolean cancelado = rs.getBoolean("cancelado");
+                String motivo = rs.getString("motivo");
+                // Crear el objeto Credito. Nota que el cliente es null por simplicidad
+                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, null, estado, numCuotas,cancelado, motivo);
+                listaCreditos.add(credito);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        return listaCreditos;
+    }
+    
+    public List<Credito> listarCredPendPorCliente(int codCliente){
+        List<Credito> listaCreditos = new ArrayList<>();
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ObtenerCreditosPendientesPorCliente(?) }";
+            cs = conn.prepareCall(sql);
+            cs.setInt(1, codCliente);
             rs = cs.executeQuery();
 
             while (rs.next()) {
