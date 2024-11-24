@@ -26,11 +26,18 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.WebControls.GridView gvEvaluacionesPendientes;
         protected global::System.Web.UI.WebControls.GridView gvClientesCredPend;
         protected global::System.Web.UI.WebControls.GridView gvCredPendXCli;
-        protected global::System.Web.UI.WebControls.Button btnVerDetalle;
+        protected global::System.Web.UI.WebControls.Button btnDetallesCliente;
+        protected global::System.Web.UI.WebControls.Button btnVerCreditos;
+        protected global::System.Web.UI.WebControls.Button btnAprobarCredito;
+        protected global::System.Web.UI.WebControls.Button btnVerDetalleEv;
+        protected global::System.Web.UI.WebControls.Button btnAprobarEv;
         protected global::System.Web.UI.WebControls.Button btnLogout;
-        protected global::System.Web.UI.WebControls.Button cliPendAsig;
-        protected global::System.Web.UI.WebControls.Button txtCliPendAsig;
-        protected global::System.Web.UI.WebControls.Button txtNotClientPend;
+        protected global::System.Web.UI.WebControls.Label txtCliPendAsig;
+        protected global::System.Web.UI.WebControls.Label txtNotClientPend;
+        protected global::System.Web.UI.WebControls.Label txtHayPendiente;
+        protected global::System.Web.UI.WebControls.Label txtNoHayPendiente;
+        protected global::System.Web.UI.WebControls.Label txtHayRealizado;
+        protected global::System.Web.UI.WebControls.Label txtNoHayEvRealizada;
 
     }
 }

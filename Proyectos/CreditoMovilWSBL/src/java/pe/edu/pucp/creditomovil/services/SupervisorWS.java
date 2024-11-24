@@ -88,4 +88,14 @@ public class SupervisorWS {
         return supervisors;
     }
     
+    @WebMethod(operationName = "obtenerPorCliente")
+    public Supervisor obtenerPorCliente(int codCliente) {
+        Supervisor sup = null;
+        try{
+            sup = daoSupervisor.obtenerPorCliente(codCliente);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return sup;
+    }
 }

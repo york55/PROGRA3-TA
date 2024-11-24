@@ -40,9 +40,15 @@ namespace CreditoMovilWA
                     contCotidiano.Visible = false;
                     apexGauge.Visible = false; /*Velocimetro*/
                     btnVerCreditos.Visible = false; /*BtnVerCred*/
-                    dtsSupervisor.Text = "Nombre: " + "..." + "Codigo:" + "...";
+
+                    supervisor superv = supervisorDAO.obtenerPorCliente(cli.codigoCliente);
+                    if (superv != null)
+                    {
+                        dtsSupervisor.Text = "Nombre: " + superv.nombre + " " + superv.apPaterno + " "
+                            + "Codigo:" + superv.codigoEv.ToString();
+                    }
                 }
-                else if (cli.tipoCliente.ToUpper().Equals("EVALUADO"))
+                else if (cli.tipoCliente.ToUpper().Equals("ACTIVO"))
                 {
                     /*Configuracion de visualizacion de contenido*/
                     contInicial.Visible = false;

@@ -64,19 +64,31 @@ public class Principal {
 ////                10,
 ////                "PRUEBA"
 ////        );
-////        SupervisorDAO supDAO = new SupervisorMySQL();
-////        supDAO.insertar(sup);
+//        SupervisorDAO supDAO = new SupervisorMySQL();
+//        Supervisor sup = supDAO.obtenerPorCliente(22);
+//        System.out.println(sup.getNombre());
 
-        ClienteDAO cliDAO = new ClienteMySQL();
-        List<Cliente> listCli = cliDAO.lsActClientesCredPen();
-        for(Cliente cli:listCli){
-            System.out.println(cli.getNombre());
-        }
+//        ClienteDAO cliDAO = new ClienteMySQL();
+//        List<Cliente> listCli = cliDAO.listarTodos();
+//        for(Cliente cli:listCli){
+//            System.out.println(cli.getNombre());
+//        }
 //
 //        CreditoDAO credDAO = new CreditoMySQL();
 //        List<Credito> listCred = credDAO.listarCredPendPorCliente(15);
 //        for(Credito cred:listCred){
 //            System.out.println(cred.getEstado());
+//        }
+        EvaluacionDAO evDAO = new EvaluacionMySQL();
+        Evaluacion ev = evDAO.obtenerPorId(8);
+        System.out.println(ev.getNumeroEvaluacion());
+//        List<Evaluacion> listEv = evDAO.listarPendientesPorSupervisor(4);
+//        for(Evaluacion ev:listEv){
+//            System.out.println(ev.getNombreNegocio());
+//        }
+//        List<Evaluacion> listEv2 = evDAO.listarRealizadosPorSupervisor(4);
+//        for(Evaluacion ev2:listEv2){
+//            System.out.println(ev2.getNombreNegocio());
 //        }
     }
 }

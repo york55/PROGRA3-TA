@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/SupervisorWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="eliminarSupervisor">
-    <part name="parameters" element="tns:eliminarSupervisor" />
+  <message name="obtenerPorCliente">
+    <part name="parameters" element="tns:obtenerPorCliente" />
   </message>
-  <message name="eliminarSupervisorResponse">
-    <part name="parameters" element="tns:eliminarSupervisorResponse" />
+  <message name="obtenerPorClienteResponse">
+    <part name="parameters" element="tns:obtenerPorClienteResponse" />
   </message>
   <message name="insertarSupervisor">
     <part name="parameters" element="tns:insertarSupervisor" />
@@ -17,23 +17,11 @@
   <message name="insertarSupervisorResponse">
     <part name="parameters" element="tns:insertarSupervisorResponse" />
   </message>
-  <message name="modificarSupervisor">
-    <part name="parameters" element="tns:modificarSupervisor" />
+  <message name="eliminarSupervisor">
+    <part name="parameters" element="tns:eliminarSupervisor" />
   </message>
-  <message name="modificarSupervisorResponse">
-    <part name="parameters" element="tns:modificarSupervisorResponse" />
-  </message>
-  <message name="listarTodosSupervisors">
-    <part name="parameters" element="tns:listarTodosSupervisors" />
-  </message>
-  <message name="listarTodosSupervisorsResponse">
-    <part name="parameters" element="tns:listarTodosSupervisorsResponse" />
-  </message>
-  <message name="obtenerPorIDSupervisor">
-    <part name="parameters" element="tns:obtenerPorIDSupervisor" />
-  </message>
-  <message name="obtenerPorIDSupervisorResponse">
-    <part name="parameters" element="tns:obtenerPorIDSupervisorResponse" />
+  <message name="eliminarSupervisorResponse">
+    <part name="parameters" element="tns:eliminarSupervisorResponse" />
   </message>
   <message name="obtenerPorDocIdenSup">
     <part name="parameters" element="tns:obtenerPorDocIdenSup" />
@@ -41,35 +29,57 @@
   <message name="obtenerPorDocIdenSupResponse">
     <part name="parameters" element="tns:obtenerPorDocIdenSupResponse" />
   </message>
+  <message name="listarTodosSupervisors">
+    <part name="parameters" element="tns:listarTodosSupervisors" />
+  </message>
+  <message name="listarTodosSupervisorsResponse">
+    <part name="parameters" element="tns:listarTodosSupervisorsResponse" />
+  </message>
+  <message name="modificarSupervisor">
+    <part name="parameters" element="tns:modificarSupervisor" />
+  </message>
+  <message name="modificarSupervisorResponse">
+    <part name="parameters" element="tns:modificarSupervisorResponse" />
+  </message>
+  <message name="obtenerPorIDSupervisor">
+    <part name="parameters" element="tns:obtenerPorIDSupervisor" />
+  </message>
+  <message name="obtenerPorIDSupervisorResponse">
+    <part name="parameters" element="tns:obtenerPorIDSupervisorResponse" />
+  </message>
   <portType name="SupervisorWS">
-    <operation name="eliminarSupervisor">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorRequest" message="tns:eliminarSupervisor" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorResponse" message="tns:eliminarSupervisorResponse" />
+    <operation name="obtenerPorCliente">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorClienteRequest" message="tns:obtenerPorCliente" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorClienteResponse" message="tns:obtenerPorClienteResponse" />
     </operation>
     <operation name="insertarSupervisor">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/insertarSupervisorRequest" message="tns:insertarSupervisor" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/insertarSupervisorResponse" message="tns:insertarSupervisorResponse" />
     </operation>
-    <operation name="modificarSupervisor">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRequest" message="tns:modificarSupervisor" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorResponse" message="tns:modificarSupervisorResponse" />
-    </operation>
-    <operation name="listarTodosSupervisors">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsRequest" message="tns:listarTodosSupervisors" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsResponse" message="tns:listarTodosSupervisorsResponse" />
-    </operation>
-    <operation name="obtenerPorIDSupervisor">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequest" message="tns:obtenerPorIDSupervisor" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResponse" message="tns:obtenerPorIDSupervisorResponse" />
+    <operation name="eliminarSupervisor">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorRequest" message="tns:eliminarSupervisor" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/eliminarSupervisorResponse" message="tns:eliminarSupervisorResponse" />
     </operation>
     <operation name="obtenerPorDocIdenSup">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorDocIdenSupRequest" message="tns:obtenerPorDocIdenSup" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorDocIdenSupResponse" message="tns:obtenerPorDocIdenSupResponse" />
     </operation>
+    <operation name="listarTodosSupervisors">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsRequest" message="tns:listarTodosSupervisors" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/listarTodosSupervisorsResponse" message="tns:listarTodosSupervisorsResponse" />
+    </operation>
+    <operation name="modificarSupervisor">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorRequest" message="tns:modificarSupervisor" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/modificarSupervisorResponse" message="tns:modificarSupervisorResponse" />
+    </operation>
+    <operation name="obtenerPorIDSupervisor">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorRequest" message="tns:obtenerPorIDSupervisor" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/SupervisorWS/obtenerPorIDSupervisorResponse" message="tns:obtenerPorIDSupervisorResponse" />
+    </operation>
   </portType>
   <binding name="SupervisorWSPortBinding" type="tns:SupervisorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarSupervisor">
+    <operation name="obtenerPorCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -87,7 +97,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarSupervisor">
+    <operation name="eliminarSupervisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorDocIdenSup">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,7 +124,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerPorIDSupervisor">
+    <operation name="modificarSupervisor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -114,7 +133,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerPorDocIdenSup">
+    <operation name="obtenerPorIDSupervisor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

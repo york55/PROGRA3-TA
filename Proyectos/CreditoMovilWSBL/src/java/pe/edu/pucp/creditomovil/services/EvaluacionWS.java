@@ -49,17 +49,50 @@ public class EvaluacionWS {
             System.out.println(ex.getMessage());
         }
     }
-//    
-//    @WebMethod(operationName = "obtenerPorIDEvaluacion")
-//    public Evaluacion obtenerPorIDEvaluacion(@WebParam(name = "idevaluacion") int id) {
-//        Evaluacion evaluacion = null;
-//        try{
-//            evaluacion = daoEvaluacion.obtenerPorId(id);
-//        }catch(Exception ex){
-//            System.out.println(ex.getMessage());
-//        }
-//        return evaluacion;
-//    }
+    
+    @WebMethod(operationName = "listarTodosPorSupervisor")
+    public List<Evaluacion> listarPorSupervisor(@WebParam(name = "codSup") int codSup) {
+        List<Evaluacion> ev = null;
+        try{
+            ev = daoEvaluacion.listarTodosPorSupervisor(codSup);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ev;
+    }
+    
+    @WebMethod(operationName = "listarPendientesPorSupervisor")
+    public List<Evaluacion> listarPendientesPorSupervisor(@WebParam(name = "codSup") int codSup) {
+        List<Evaluacion> ev = null;
+        try{
+            ev = daoEvaluacion.listarPendientesPorSupervisor(codSup);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ev;
+    }
+    
+    @WebMethod(operationName = "listarRealizadosPorSupervisor")
+    public List<Evaluacion> listarRealizadosPorSupervisor(@WebParam(name = "codSup") int codSup) {
+        List<Evaluacion> ev = null;
+        try{
+            ev = daoEvaluacion.listarRealizadosPorSupervisor(codSup);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ev;
+    }
+    
+    @WebMethod(operationName = "obtenerPorNumEvaluacion")
+    public Evaluacion obtenerPorIDEvaluacion(@WebParam(name = "numEvaluacion") int numEvaluacion) {
+        Evaluacion evaluacion = null;
+        try{
+            evaluacion = daoEvaluacion.obtenerPorId(numEvaluacion);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return evaluacion;
+    }
 //    
 //    @WebMethod(operationName = "listarEvaluacionesSupervisor")
 //    public List<Evaluacion> listarEvaluacionesSupervisor(@WebParam(name = "idSup") int idSup) {

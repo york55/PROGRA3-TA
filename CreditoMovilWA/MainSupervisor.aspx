@@ -7,8 +7,15 @@
             color: #2f7a44;
         }
 
-        .lab-not-cli {
+        .lab-not {
             color: red;
+            font-size : 18px;
+            font-weight: bold;
+        }
+
+        .lab-yes {
+            color: #2f7a44;
+            font-size : 18px;
             font-weight: bold;
         }
 
@@ -139,9 +146,16 @@
         function closeModal() {
             document.getElementById("CredPendModal").style.display = "none";
         }
-        function confirmAprobar() {
+        function confirmAprobarCredito() {
             // Mostrar la alerta de confirmación
             var respuesta = confirm("¿Estás seguro de aprobar este crédito?");
+
+            // Si el usuario hace clic en "Aceptar", continuar con la acción
+            return respuesta; // Si el usuario confirma, return true; si cancela, return false
+        }
+        function confirmAprobarEvaluacion() {
+            // Mostrar la alerta de confirmación
+            var respuesta = confirm("¿Estás seguro de aprobar este evaluacion?");
 
             // Si el usuario hace clic en "Aceptar", continuar con la acción
             return respuesta; // Si el usuario confirma, return true; si cancela, return false
@@ -156,9 +170,9 @@
     <div class="container">
         <h2>Clientes con créditos pendientes</h2>
         <div class="text-sup">
-            <asp:Label ID="txtCliPendAsig" CssClass="lab-cli" runat="server" 
+            <asp:Label ID="txtCliPendAsig" CssClass="lab-yes" runat="server" 
                 Text="Estos son los clientes con créditos pendientes por asignar:" Visible="false"></asp:Label>
-            <asp:Label ID="txtNotClientPend" CssClass="lab-not-cli" runat="server" 
+            <asp:Label ID="txtNotClientPend" CssClass="lab-not" runat="server" 
                 Text="No se encontraron clientes con créditos pendientes" Visible="false"></asp:Label>
         </div>
         <div class="table-container">
@@ -171,8 +185,8 @@
                     <asp:BoundField DataField="documento" HeaderText="Nro. Documento" />
                     <asp:TemplateField>
                         <itemtemplate>
-                            <asp:Button ID="btnDetalles" runat="server" 
-                                Text="Detalles" CssClass="btn-table" OnClick="btnDetalles_Click"
+                            <asp:Button ID="btnDetallesCliente" runat="server" 
+                                Text="Detalles" CssClass="btn-table" OnClick="btnDetallesCliente_Click"
                                 CommandArgument='<%# Eval("codigoCliente") %>' />
                             <asp:Button ID="btnVerCreditos" runat="server" 
                                 Text="Ver Creditos" CssClass="btn-table-aprobar" OnClick="btnVerCreditos_Click"
@@ -201,9 +215,9 @@
                         <asp:BoundField DataField="motivo" HeaderText="MOTIVO" />
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:Button ID="btnAprobar" CssClass="btn-table" 
-                                    runat="server" Text="Aprobar" OnClick="btnAprobar_Click"
-                                    CommandArgument='<%# Eval("numCredito") %>' OnClientClick="return confirmAprobar();"/>
+                                <asp:Button ID="btnAprobarCredito" CssClass="btn-table" 
+                                    runat="server" Text="Aprobar" OnClick="btnAprobarCredito_Click"
+                                    CommandArgument='<%# Eval("numCredito") %>' OnClientClick="return confirmAprobarCredito();"/>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
@@ -214,19 +228,14 @@
 
     <div class="container">
         <h2>Evaluaciones por revisar:</h2>
+        <div class="text-sup">
+            <asp:Label ID="txtHayPendiente" CssClass="lab-yes" runat="server" 
+                Text="Estas son las evaluaciones pendientes a revisar" Visible="false"></asp:Label>
+            <asp:Label ID="txtNoHayPendiente" CssClass="lab-not" runat="server" 
+                Text="No se encontraron evaluaciones pendientes" Visible="false"></asp:Label>
+        </div>
         <div class="table-container">
             <asp:GridView ID="gvEvaluacionesPendientes" runat="server" AutoGenerateColumns="false">
-                <Columns>
-                    <asp:BoundField DataField="" HeaderText="" />
-                    <asp:BoundField DataField="" HeaderText="" />
-                    <asp:BoundField DataField="" HeaderText="" />
-                </Columns>
-            </asp:GridView>
-        </div>
-        <h2>Estas son las evaluaciones que posees:</h2>
-        <!-- Tabla de evaluaciones -->
-        <div class="table-container">
-            <asp:GridView ID="gvEvaluacionesRealizadas" runat="server" AutoGenerateColumns="false">
                 <Columns>
                     <asp:BoundField DataField="numeroEvaluacion" HeaderText="ID_EVALUACION" />
                     <asp:BoundField DataField="nombreNegocio" HeaderText="NEGOCIO" />
@@ -236,9 +245,33 @@
                     <asp:BoundField DataField="activo" HeaderText="ESTADO" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button ID="btnVerDetalle" runat="server" Text="👁️" CssClass="view-btn" CommandArgument='<%# Eval("numeroEvaluacion") %>' OnClick="btnVerDetalle_Click" />
+                            <asp:Button ID="btnVerDetalleEv" runat="server" Text="👁️" 
+                                CssClass="view-btn" CommandArgument='<%# Eval("numeroEvaluacion") %>' 
+                                OnClick="btnVerDetalleEv_Click"/>
+                            <asp:Button ID="btnAprobarEv" runat="server" Text="Aprobar" 
+                                CssClass="view-btn" CommandArgument='<%# Eval("numeroEvaluacion") %>' 
+                                OnClick="btnAprobarEv_Click" OnClientClick="return confirmAprobarEvaluacion();"/>
                         </ItemTemplate>
                     </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+        </div>
+        <h2>Estas son las evaluaciones que posees:</h2>
+        <!-- Tabla de evaluaciones -->
+        <div class="table-container">
+            <div class="text-sup">
+                <asp:Label ID="txtHayRealizado" CssClass="lab-yes" runat="server" 
+                    Text="Estas son las evaluaciones que realizaste" Visible="false"></asp:Label>
+                <asp:Label ID="txtNoHayEvRealizada" CssClass="lab-not" runat="server" 
+                    Text="Aún no has realizado ninguna evaluación" Visible="false"></asp:Label>
+            </div>
+            <asp:GridView ID="gvEvaluacionesRealizadas" runat="server" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="numeroEvaluacion" HeaderText="ID_EVALUACION" />
+                    <asp:BoundField DataField="nombreNegocio" HeaderText="NEGOCIO" />
+                    <asp:BoundField DataField="ventasDiarias" HeaderText="VENTAS" />
+                    <asp:BoundField DataField="margenGanancia" HeaderText="MARGEN. GANANCIA" />
+                    <asp:BoundField DataField="puntaje" HeaderText="PUNTAJE" />
                 </Columns>
             </asp:GridView>
         </div>

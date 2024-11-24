@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Usuario.master" CodeFile="VisualizarCreditosCliente.aspx.cs" Inherits="CreditoMovilWA.VisualizarCreditos" %>
-
+﻿<%@  Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Usuario.master" CodeFile="VisualizarCreditosCliente.aspx.cs" Inherits="CreditoMovilWA.VisualizarCreditos" %>
 <asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
     <style>
         label {
@@ -261,7 +260,7 @@
 
         <!-- Tabla de créditos -->
         <div class="table-container">
-            <asp:GridView ID="gvCreditos" runat="server" AutoGenerateColumns="false">
+            <asp:GridView ID="gvCreditos" runat="server" AutoGenerateColumns="false" OnRowDataBound="gvCreditos_RowDataBound">
                 <Columns>
                     <asp:BoundField DataField="numCredito" HeaderText="ID_CRÉDITO" />
                     <asp:BoundField DataField="Monto" HeaderText="MONTO" />

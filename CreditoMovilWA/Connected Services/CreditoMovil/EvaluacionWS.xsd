@@ -4,8 +4,16 @@
   <xs:element name="eliminarEvaluacionResponse" type="tns:eliminarEvaluacionResponse" />
   <xs:element name="insertarEvaluacion" type="tns:insertarEvaluacion" />
   <xs:element name="insertarEvaluacionResponse" type="tns:insertarEvaluacionResponse" />
+  <xs:element name="listarPendientesPorSupervisor" type="tns:listarPendientesPorSupervisor" />
+  <xs:element name="listarPendientesPorSupervisorResponse" type="tns:listarPendientesPorSupervisorResponse" />
+  <xs:element name="listarRealizadosPorSupervisor" type="tns:listarRealizadosPorSupervisor" />
+  <xs:element name="listarRealizadosPorSupervisorResponse" type="tns:listarRealizadosPorSupervisorResponse" />
+  <xs:element name="listarTodosPorSupervisor" type="tns:listarTodosPorSupervisor" />
+  <xs:element name="listarTodosPorSupervisorResponse" type="tns:listarTodosPorSupervisorResponse" />
   <xs:element name="modificarEvaluacion" type="tns:modificarEvaluacion" />
   <xs:element name="modificarEvaluacionResponse" type="tns:modificarEvaluacionResponse" />
+  <xs:element name="obtenerPorNumEvaluacion" type="tns:obtenerPorNumEvaluacion" />
+  <xs:element name="obtenerPorNumEvaluacionResponse" type="tns:obtenerPorNumEvaluacionResponse" />
   <xs:complexType name="modificarEvaluacion">
     <xs:sequence>
       <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
@@ -72,6 +80,36 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarPendientesPorSupervisor">
+    <xs:sequence>
+      <xs:element name="codSup" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPendientesPorSupervisorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarRealizadosPorSupervisor">
+    <xs:sequence>
+      <xs:element name="codSup" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarRealizadosPorSupervisorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorNumEvaluacion">
+    <xs:sequence>
+      <xs:element name="numEvaluacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorNumEvaluacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:evaluacion" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarEvaluacion">
     <xs:sequence>
       <xs:element name="idevaluacion" type="xs:int" />
@@ -79,6 +117,16 @@
   </xs:complexType>
   <xs:complexType name="eliminarEvaluacionResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosPorSupervisor">
+    <xs:sequence>
+      <xs:element name="codSup" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosPorSupervisorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evaluacion" />
+    </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="tipoDocumento">
     <xs:restriction base="xs:string">

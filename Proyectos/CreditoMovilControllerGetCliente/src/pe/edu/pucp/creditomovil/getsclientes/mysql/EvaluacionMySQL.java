@@ -177,7 +177,7 @@ public class EvaluacionMySQL implements EvaluacionDAO {
     }
     
     @Override
-    public List<Evaluacion> listarPorSupervisor(int codSup){
+    public List<Evaluacion> listarTodosPorSupervisor(int codSup){
         List<Evaluacion> evaluaciones = new ArrayList<>();
         CallableStatement cs = null;
         String query = "{CALL ListarEvaluacionesPorSupervisor(?)}";
@@ -231,7 +231,118 @@ public class EvaluacionMySQL implements EvaluacionDAO {
         }
         return evaluaciones;
     }
-
+    @Override
+    public List<Evaluacion> listarPendientesPorSupervisor(int codSup){
+        List<Evaluacion> evaluaciones = new ArrayList<>();
+        CallableStatement cs = null;
+        String query = "{CALL ListarEvaluacionesPendientePorSupervisor(?)}";
+        CallableStatement stmtCliente = null;
+        
+        ClienteDAO clienteDAO = new ClienteMySQL();
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1, codSup);
+            
+            rs = cs.executeQuery();
+            while (rs.next()) {
+                int numEva = rs.getInt("num_evaluacion");
+                int codClien = rs.getInt("cliente_codigo_cliente");
+                Cliente cliente = clienteDAO.obtenerPorCodigo(codClien);
+                
+                Date fechaReg = rs.getDate("fecha_registro");
+                String nombreNeg = rs.getString("nombre_negocio");
+                String dirNeg = rs.getString("direccion_negocio");
+                String telNeg = rs.getString("telefono_negocio");
+                double ventasDia = rs.getDouble("ventas_diarias");
+                double inventario = rs.getDouble("inventario");
+                double costoVentas = rs.getDouble("costo_ventas");
+                double margenGan = rs.getDouble("margen_ganancia");
+                boolean activo = rs.getBoolean("activo");
+                double puntaje = rs.getDouble("puntaje");
+                String obser = rs.getString("observaciones");
+                        
+                Evaluacion eva = new Evaluacion(fechaReg, nombreNeg, dirNeg, telNeg,
+                        cliente, ventasDia, inventario, costoVentas, 
+                        margenGan, numEva, activo, puntaje, obser);
+                evaluaciones.add(eva);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conexion != null) {
+                    conexion.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return evaluaciones;
+    }
+    
+    @Override
+    public List<Evaluacion> listarRealizadosPorSupervisor(int codSup){
+        List<Evaluacion> evaluaciones = new ArrayList<>();
+        CallableStatement cs = null;
+        String query = "{CALL ListarEvaluacionesActivosPorSupervisor(?)}";
+        CallableStatement stmtCliente = null;
+        
+        ClienteDAO clienteDAO = new ClienteMySQL();
+        try {
+            conexion = DBManager.getInstance().getConnection();
+            cs = conexion.prepareCall(query);
+            cs.setInt(1, codSup);
+            
+            rs = cs.executeQuery();
+            while (rs.next()) {
+                int numEva = rs.getInt("num_evaluacion");
+                int codClien = rs.getInt("cliente_codigo_cliente");
+                Cliente cliente = clienteDAO.obtenerPorCodigo(codClien);
+                
+                Date fechaReg = rs.getDate("fecha_registro");
+                String nombreNeg = rs.getString("nombre_negocio");
+                String dirNeg = rs.getString("direccion_negocio");
+                String telNeg = rs.getString("telefono_negocio");
+                double ventasDia = rs.getDouble("ventas_diarias");
+                double inventario = rs.getDouble("inventario");
+                double costoVentas = rs.getDouble("costo_ventas");
+                double margenGan = rs.getDouble("margen_ganancia");
+                boolean activo = rs.getBoolean("activo");
+                double puntaje = rs.getDouble("puntaje");
+                String obser = rs.getString("observaciones");
+                        
+                Evaluacion eva = new Evaluacion(fechaReg, nombreNeg, dirNeg, telNeg,
+                        cliente, ventasDia, inventario, costoVentas, 
+                        margenGan, numEva, activo, puntaje, obser);
+                evaluaciones.add(eva);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conexion != null) {
+                    conexion.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return evaluaciones;
+    }
+    
     @Override
     public List<Evaluacion> listarTodos() {
         List<Evaluacion> evaluaciones = new ArrayList<>();

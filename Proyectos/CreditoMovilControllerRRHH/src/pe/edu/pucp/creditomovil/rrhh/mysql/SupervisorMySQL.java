@@ -254,4 +254,65 @@ public class SupervisorMySQL implements SupervisorDAO {
         return supervisores;
     }
 
+    @Override
+    public Supervisor obtenerPorCliente(int cliente_id) {
+        Supervisor sup = null;
+        Connection conn = null;
+        CallableStatement cs = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ObtenerSupervisorPorCliente(?) }";
+            cs = conn.prepareCall(sql);
+            cs.setInt(1, cliente_id);
+            rs = cs.executeQuery();
+            
+            
+            if(rs.next()){
+                String tipoDocStr = rs.getString("tipo_doc");
+                if(tipoDocStr ==null) tipoDocStr = "DNI"; //Por defecto es peruano
+                TipoDocumento tipoDoc = null;
+                try {
+                    tipoDoc = TipoDocumento.valueOf(tipoDocStr);
+                } catch (IllegalArgumentException e) { 
+                    System.out.println("Error: " + e);
+                }
+                sup = new Supervisor(
+                    rs.getInt("usuario_id"),
+                    rs.getDate("fecha"),
+                    rs.getString("nombre"),
+                    rs.getString("ap_paterno"),
+                    rs.getString("ap_materno"),
+                    rs.getString("contrasena"),
+                    rs.getDate("fecha_venc"),
+                    rs.getBoolean("activo"),
+                    tipoDoc,
+                    rs.getString("documento"),
+                    rs.getString("salt"),
+                    rs.getInt("codigo_sup"),
+                    rs.getInt("codigo_cargo"),
+                    rs.getString("agencia_asignacion")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (cs != null) {
+                    cs.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return sup; 
+    }
+
 }

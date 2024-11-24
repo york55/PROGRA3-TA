@@ -18,4 +18,5 @@ public interface SupervisorDAO {
     Supervisor obtenerPorId(int id);
     Supervisor obtenerPorDocIdentidad(String docIden, String tipoDocIden);
     List<Supervisor> listarTodos();
+    Supervisor obtenerPorCliente(int cliente_id);
 }

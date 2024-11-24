@@ -37,7 +37,24 @@ namespace CreditoMovilWA
                 ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal", "openModal();", true);
             }
         }
-
+        protected void gvCreditos_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow) // Asegúrate de que sea una fila de datos
+            {
+                var dataItem = e.Row.DataItem as credito; // Reemplaza 'Credito' con tu tipo de datos
+                if (dataItem != null) // Valida que dataItem no sea null
+                {
+                    var btnPagar = (Button)e.Row.FindControl("btnPagar");
+                    if (btnPagar != null) // Valida que btnPagar no sea null
+                    {
+                        if (dataItem.estado?.ToLower() == "pendiente" || dataItem.numCuotas == 0)
+                        {
+                            btnPagar.Visible = false; // Oculta el botón
+                        }
+                    }
+                }
+            }
+        }
         protected void btnFiltrar_Click(object sender, EventArgs e)
         {
             cliente cli = (cliente) Session["Cliente"];
