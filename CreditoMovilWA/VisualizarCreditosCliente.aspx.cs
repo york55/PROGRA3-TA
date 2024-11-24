@@ -92,13 +92,16 @@ namespace CreditoMovilWA
 
         protected void btnPagar_Click(object sender, EventArgs e)
         {
+            credito cred = null;
             string idCredito = (sender as Button).CommandArgument;
             ViewState["ModalAbierto"] = true; // Almacena el estado del modal en ViewState
-            ClientScript.RegisterStartupScript(this.GetType(), "OpenModal", "openModal();", true);
+            Session["CreditoSeleccionado"] = cred = daoCredito.obtenerPorIDCredito(int.Parse(idCredito));
+            if(cred != null) ClientScript.RegisterStartupScript(this.GetType(), "OpenModal", "openModal();", true);
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            credito cred = null;
             transaccion trans = new transaccion();
             if (fileUpload.HasFile)
             {
@@ -117,9 +120,18 @@ namespace CreditoMovilWA
                     trans.agencia = metodoP;
                     if (daoBanco.insertarBanco(bank))
                     {
-                        // Cierra el modal después de grabar
-                        ViewState["ModalAbierto"] = false;
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+                        cred = (credito)Session["CreditoSeleccionado"];
+                        cred.numCuotas--;
+                        if(cred.numCuotas == 0)
+                        {
+                            cred.estado = "Finalizado";
+                        }
+                        if (daoCredito.modificarCredito(cred))
+                        {
+                            // Cierra el modal después de grabar
+                            ViewState["ModalAbierto"] = false;
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+                        }
                     }
                 }
                 else if(metodoP == "billetera")
@@ -134,9 +146,18 @@ namespace CreditoMovilWA
 
                     if (daoBilletera.insertarBilletera(bill))
                     {
-                        // Cierra el modal después de grabar
-                        ViewState["ModalAbierto"] = false;
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+                        cred = (credito)Session["CreditoSeleccionado"];
+                        cred.numCuotas--;
+                        if (cred.numCuotas == 0)
+                        {
+                            cred.estado = "Finalizado";
+                        }
+                        if (daoCredito.modificarCredito(cred))
+                        {
+                            // Cierra el modal después de grabar
+                            ViewState["ModalAbierto"] = false;
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+                        }
                     }
                     trans.agencia = metodoP;
                 }

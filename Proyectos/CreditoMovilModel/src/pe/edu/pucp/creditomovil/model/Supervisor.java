@@ -12,7 +12,6 @@ public class Supervisor extends Usuario {
     private int codigoEv;
     private String agenciaAsignacion;
     private int codigoCargo;
-    private ArrayList<Evaluacion> evaluaciones;
 
     public Supervisor(){}
     public Supervisor(int idUsuario, Date fecha, String nombre, String apPaterno,
@@ -25,7 +24,6 @@ public class Supervisor extends Usuario {
         this.codigoEv = codigoEv;
         this.codigoCargo = codigoCargo;
         this.agenciaAsignacion = agenciaAsignacion;
-        this.evaluaciones = new ArrayList<Evaluacion>();
     }
 
     @Override
@@ -67,7 +65,4 @@ public class Supervisor extends Usuario {
         this.agenciaAsignacion = agenciaAsignacion;
     }
 
-    public void agregarEvaluacion(Evaluacion eval) {
-        evaluaciones.add(eval);
-    }
 }

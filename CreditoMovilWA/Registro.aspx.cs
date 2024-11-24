@@ -180,10 +180,17 @@ namespace CreditoMovilWA
             Cliente.salt = salt;
             Cliente.ranking = 30;
 
-            bool resultado = daoCliente.insertarCliente(Cliente);
-            if (resultado)
+            if (daoCliente.obtenerPorDocIdenCliente(Cliente.documento, Cliente.tipoDocumento.ToString()) != null)
             {
-                Response.Redirect("Home.aspx");
+                lblError.Text = "El documento de identidad ya ha sido registrado";
+            }
+            else
+            {
+                bool resultado = daoCliente.insertarCliente(Cliente);
+                if (resultado)
+                {
+                    Response.Redirect("Home.aspx");
+                }
             }
         }
 
@@ -230,6 +237,12 @@ namespace CreditoMovilWA
             sup.ultimoLogueoSpecified = true;
             sup.salt = saltSup;
             sup.codigoEv = 11;
+
+            if (daoSupervisor.obtenerPorDocIdenSup(sup.documento, sup.tipoDocumento.ToString()) != null)
+            {
+                lblError.Text = "El documento de identidad ya ha sido registrado";
+                return;
+            }
 
             bool res = daoSupervisor.insertarSupervisor(sup);
             if (res) Response.Redirect("Home.aspx");

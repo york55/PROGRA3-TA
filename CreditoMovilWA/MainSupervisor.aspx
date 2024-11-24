@@ -185,9 +185,6 @@
                     <asp:BoundField DataField="documento" HeaderText="Nro. Documento" />
                     <asp:TemplateField>
                         <itemtemplate>
-                            <asp:Button ID="btnDetallesCliente" runat="server" 
-                                Text="Detalles" CssClass="btn-table" OnClick="btnDetallesCliente_Click"
-                                CommandArgument='<%# Eval("codigoCliente") %>' />
                             <asp:Button ID="btnVerCreditos" runat="server" 
                                 Text="Ver Creditos" CssClass="btn-table-aprobar" OnClick="btnVerCreditos_Click"
                                 CommandArgument='<%# Eval("codigoCliente") %>' />
@@ -245,9 +242,6 @@
                     <asp:BoundField DataField="activo" HeaderText="ESTADO" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button ID="btnVerDetalleEv" runat="server" Text="👁️" 
-                                CssClass="view-btn" CommandArgument='<%# Eval("numeroEvaluacion") %>' 
-                                OnClick="btnVerDetalleEv_Click"/>
                             <asp:Button ID="btnAprobarEv" runat="server" Text="Aprobar" 
                                 CssClass="view-btn" CommandArgument='<%# Eval("numeroEvaluacion") %>' 
                                 OnClick="btnAprobarEv_Click" OnClientClick="return confirmAprobarEvaluacion();"/>

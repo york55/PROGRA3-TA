@@ -12,26 +12,22 @@ public class Transaccion {
     private String concepto;
     private double monto;
     private boolean anulado;
-    private Usuario usuarioRegistrado;
     private String agencia;
     private Credito credito;
     private int numOperacion;
-    private byte[] foto;
     private MetodoPago metodoPago;
 
     public Transaccion(){}
     public Transaccion(Date fecha, String concepto, double monto,
-            boolean anulado, Usuario usuarioRegistrado, String agencia,
-            int numOperacion, Credito credito, byte[] foto) {
+            boolean anulado, String agencia,
+            int numOperacion, Credito credito) {
         this.fecha = fecha;
         this.concepto = concepto;
         this.monto = monto;
         this.anulado = anulado;
-        this.usuarioRegistrado = usuarioRegistrado;
         this.agencia = agencia;
         this.numOperacion = numOperacion;
         this.credito = credito;
-        this.foto = foto;
     }
 
     public void registrarTransaccion() {
@@ -81,14 +77,6 @@ public class Transaccion {
         this.anulado = anulado;
     }
 
-    public Usuario getUsuarioRegistrado() {
-        return usuarioRegistrado;
-    }
-
-    public void setUsuarioRegistrado(Usuario usuarioRegistrado) {
-        this.usuarioRegistrado = usuarioRegistrado;
-    }
-
     public String getAgencia() {
         return agencia;
     }
@@ -111,14 +99,6 @@ public class Transaccion {
 
     public void setCredito(Credito credito) {
         this.credito = credito;
-    }
-
-    public byte[] getFoto() {
-        return foto;
-    }
-
-    public void setFoto(byte[] foto) {
-        this.foto = foto;
     }
 
     public MetodoPago getMetodoPago() {

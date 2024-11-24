@@ -61,11 +61,6 @@ namespace CreditoMovilWA
 
             return (listEv != null);
         }
-        /*Detalle Cliente*/
-        protected void btnDetallesCliente_Click(object sender, EventArgs e)
-        {
-
-        }
         protected void btnVerCreditos_Click(object sender, EventArgs e)
         {
             Button btnVerCreditos_Click = (Button)sender;
@@ -124,20 +119,16 @@ namespace CreditoMovilWA
 
                     if (CargarEvaluacionesPendientes(numEvaluacion))
                     {
-                        txtHayRealizado.Visible = true;
-                        txtNoHayEvRealizada.Visible = false;
+                        txtHayPendiente.Visible = true;
+                        txtNoHayPendiente.Visible = false;
                     }
                     else
                     {
-                        txtHayRealizado.Visible = false;
-                        txtNoHayEvRealizada.Visible = true;
+                        txtHayPendiente.Visible = false;
+                        txtNoHayPendiente.Visible = true;
                     }
                 }
             }
-        }
-
-        protected void btnVerDetalleEv_Click(object sender, EventArgs e)
-        {
         }
     }
 }

@@ -33,7 +33,7 @@ public class TransaccionMySQL implements TransaccionDAO {
         
         try {
             conn = DBManager.getInstance().getConnection();
-            String sql = "{ CALL InsertarTransaccion(?, ?, ?, ?, ?, ?, ?, ?, ?) }";
+            String sql = "{ CALL InsertarTransaccion(?, ?, ?, ?, ?, ?, ?, ?) }";
             cs = conn.prepareCall(sql);
 
             // Configura los parámetros
@@ -44,12 +44,11 @@ public class TransaccionMySQL implements TransaccionDAO {
             cs.setBoolean(4, transaccion.isAnulado());
             cs.setString(5, transaccion.getAgencia());
             cs.setInt(6, transaccion.getCredito().getNumCredito()); // Supone que credito no es null
-            cs.setBytes(7, transaccion.getFoto());
-            cs.setInt(8, transaccion.getMetodoPago().getIdMetodoPago());
-            cs.registerOutParameter(9, Types.INTEGER);
+            cs.setInt(7, transaccion.getMetodoPago().getIdMetodoPago());
+            cs.registerOutParameter(8, Types.INTEGER);
             // Ejecuta la consulta
             resultado = cs.executeUpdate() > 0;
-            int transaccionId = cs.getInt(9);
+            int transaccionId = cs.getInt(8);
             transaccion.setNumOperacion(transaccionId);
             
         } catch (SQLException ex) {
@@ -81,18 +80,16 @@ public class TransaccionMySQL implements TransaccionDAO {
             con = DBManager.getInstance().getConnection();
 
             // Preparar la llamada al procedimiento almacenado
-            cs = con.prepareCall("{CALL ModificarTransaccion(?, ?, ?, ?, ?, ?, ?, ?)}");
+            cs = con.prepareCall("{CALL ModificarTransaccion(?, ?, ?, ?, ?, ?, ?)}");
 
             // Establecer los parámetros de entrada
             cs.setInt(1, transaccion.getNumOperacion());
-            cs.setInt(2, transaccion.getUsuarioRegistrado().getIdUsuario());
-            cs.setTimestamp(3, new java.sql.Timestamp(transaccion.getFecha().getTime()));
-            cs.setString(4, transaccion.getConcepto());
-            cs.setDouble(5, transaccion.getMonto());
-            cs.setBoolean(6, transaccion.isAnulado());
-            cs.setString(7, transaccion.getAgencia());
-            cs.setBytes(8, transaccion.getFoto());
-            cs.setInt(9, transaccion.getMetodoPago().getIdMetodoPago());
+            cs.setTimestamp(2, new java.sql.Timestamp(transaccion.getFecha().getTime()));
+            cs.setString(3, transaccion.getConcepto());
+            cs.setDouble(4, transaccion.getMonto());
+            cs.setBoolean(5, transaccion.isAnulado());
+            cs.setString(6, transaccion.getAgencia());
+            cs.setInt(7, transaccion.getMetodoPago().getIdMetodoPago());
 
             // Ejecutar el procedimiento y verificar si se modificó correctamente
             modificado = (cs.executeUpdate() > 0);
@@ -171,11 +168,9 @@ public class TransaccionMySQL implements TransaccionDAO {
                 trans.setConcepto(rs.getString("concepto"));
                 trans.setCredito(null);
                 trans.setFecha(rs.getDate("fecha_y_hora"));
-                trans.setFoto(rs.getBytes("foto"));
                 trans.setMetodoPago(null);
                 trans.setMonto(rs.getDouble("monto"));
                 trans.setNumOperacion(rs.getInt("num_transaccion"));
-                trans.setUsuarioRegistrado(null);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -218,11 +213,9 @@ public class TransaccionMySQL implements TransaccionDAO {
                         concepto,
                         monto,
                         anulado,
-                        null,
                         agencia,
                         numOperacion,
-                        null, // Credito se puede cargar por separado si es necesario
-                        foto
+                        null
                 );
 
                 // Agregar a la lista
@@ -284,11 +277,9 @@ public class TransaccionMySQL implements TransaccionDAO {
                         concepto,
                         monto,
                         anulado,
-                        null,
                         agencia,
                         numOperacion,
-                        null, // Credito se puede cargar por separado si es necesario
-                        foto
+                        null
                 );
 
                 // Agregar a la lista

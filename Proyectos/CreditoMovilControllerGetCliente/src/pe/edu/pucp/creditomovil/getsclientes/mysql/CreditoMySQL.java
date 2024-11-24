@@ -172,7 +172,6 @@ public class CreditoMySQL implements CreditoDAO {
                 cred.setNumCredito(rs.getInt("num_credito"));
                 cred.setNumCuotas(rs.getInt("num_cuotas"));
                 cred.setTasaInteres(rs.getDouble("tasa_interes"));
-                cred.setCliente(null);
                 cred.setCancelado(rs.getBoolean("cancelado"));
                 cred.setMotivo(rs.getString("motivo"));
             }
@@ -216,7 +215,7 @@ public class CreditoMySQL implements CreditoDAO {
                 boolean cancelado = rs.getBoolean("cancelado");
                 String motivo = rs.getString("motivo");
                 // Crear el objeto Credito. Nota que el cliente es null por simplicidad
-                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, null, est, numCuotas,cancelado, motivo);
+                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, est, numCuotas,cancelado, motivo);
                 listaCreditos.add(credito);
             }
             
@@ -263,7 +262,7 @@ public class CreditoMySQL implements CreditoDAO {
                 boolean cancelado = rs.getBoolean("cancelado");
                 String motivo = rs.getString("motivo");
                 // Crear el objeto Credito. Nota que el cliente es null por simplicidad
-                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, null, estado, numCuotas,cancelado, motivo);
+                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, estado, numCuotas,cancelado, motivo);
                 listaCreditos.add(credito);
             }
         } catch (SQLException ex) {
@@ -310,7 +309,7 @@ public class CreditoMySQL implements CreditoDAO {
                 boolean cancelado = rs.getBoolean("cancelado");
                 String motivo = rs.getString("motivo");
                 // Crear el objeto Credito. Nota que el cliente es null por simplicidad
-                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, null, estado, numCuotas,cancelado, motivo);
+                Credito credito = new Credito(numCredito, monto, tasaInteres, fechaOtorgamiento, estado, numCuotas,cancelado, motivo);
                 listaCreditos.add(credito);
             }
         } catch (SQLException ex) {

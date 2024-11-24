@@ -14,7 +14,6 @@ public class Cliente extends Usuario{
     private String telefono;
     private String email;
     private String tipoCliente;
-    private ArrayList<Credito> creditos;
     private double ranking;
 
     public Cliente(){}
@@ -30,8 +29,6 @@ public class Cliente extends Usuario{
                 this.email = email;
                 this.tipoCliente = tipoCliente;
                 this.ranking = ranking;
-        
-                creditos = new ArrayList<Credito>();
     }
 
     @Override
@@ -51,9 +48,6 @@ public class Cliente extends Usuario{
         
     }
 
-    public void agregarCredito(Credito nuevo){
-        creditos.add(nuevo);
-    }
 
     public int getCodigoCliente() {
         return codigoCliente;
