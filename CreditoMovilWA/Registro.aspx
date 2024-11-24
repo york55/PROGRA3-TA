@@ -208,8 +208,8 @@
         <asp:Label ID="lblError" runat="server" CssClass="error-message" EnableViewState="false"></asp:Label>
         <!-- Botón Guardar -->
         <div id="containerBtn" runat="server" style="display: flex; gap: 10px;">
-            <asp:Button ID="btnGuardar" runat="server" Text="Ingresar" CssClass="btn-login" OnClick="btnGuardar_Click" />
             <asp:Button ID="btnRegresar" runat="server" Text="Regresar" CssClass="btn-back" OnClick="btnRegresar_Click" />
+            <asp:Button ID="btnGuardar" runat="server" Text="Ingresar" CssClass="btn-login" OnClick="btnGuardar_Click" />
         </div>
     </div>
 </asp:Content>

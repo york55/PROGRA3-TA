@@ -66,12 +66,12 @@ public class Principal {
 ////        );
 ////        SupervisorDAO supDAO = new SupervisorMySQL();
 ////        supDAO.insertar(sup);
-//
-//        ClienteDAO cliDAO = new ClienteMySQL();
-//        List<Cliente> listCli = cliDAO.lsActClientesCredPen();
-//        for(Cliente cli:listCli){
-//            System.out.println(cli.getNombre());
-//        }
+
+        ClienteDAO cliDAO = new ClienteMySQL();
+        List<Cliente> listCli = cliDAO.lsActClientesCredPen();
+        for(Cliente cli:listCli){
+            System.out.println(cli.getNombre());
+        }
 //
 //        CreditoDAO credDAO = new CreditoMySQL();
 //        List<Credito> listCred = credDAO.listarCredPendPorCliente(15);

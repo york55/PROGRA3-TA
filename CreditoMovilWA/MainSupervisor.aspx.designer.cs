@@ -22,7 +22,8 @@ namespace CreditoMovilWA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        protected global::System.Web.UI.WebControls.GridView gvEvaluaciones;
+        protected global::System.Web.UI.WebControls.GridView gvEvaluacionesRealizadas;
+        protected global::System.Web.UI.WebControls.GridView gvEvaluacionesPendientes;
         protected global::System.Web.UI.WebControls.GridView gvClientesCredPend;
         protected global::System.Web.UI.WebControls.GridView gvCredPendXCli;
         protected global::System.Web.UI.WebControls.Button btnVerDetalle;

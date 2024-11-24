@@ -28,7 +28,7 @@ namespace CreditoMovilWA
                 // Aquí carga los datos de las evaluaciones
                 if (CargarClientesCredPend()) txtCliPendAsig.Visible = true;
                 else txtNotClientPend.Visible = true;
-                CargarEvaluaciones();
+                //CargarEvaluaciones();
             }
             else if (ViewState["ModalAbierto"] != null && (bool)ViewState["ModalAbierto"])
             {
@@ -41,17 +41,17 @@ namespace CreditoMovilWA
             
         }
 
-        private Boolean CargarEvaluaciones()
-        {
-            supervisor sup = (supervisor)Session["Supervisor"];
+        //private Boolean CargarEvaluaciones()
+        //{
+        //    //supervisor sup = (supervisor)Session["Supervisor"];
 
-            // Ejemplo de carga de datos, reemplaza con tu lógica real
-            evaluacion[] lisEv = null;
-            gvEvaluaciones.DataSource = lisEv = daoEvaluacion.listarEvaluacionesSupervisor(sup.codigoEv);
-            gvEvaluaciones.DataBind();
+        //    //// Ejemplo de carga de datos, reemplaza con tu lógica real
+        //    //evaluacion[] lisEv = null;
+        //    //gvEvaluacionesRealizadas.DataSource = lisEv = daoEvaluacion.listarEvaluacionesSupervisor(sup.codigoEv);
+        //    //gvEvaluacionesRealizadas.DataBind();
 
-            return (lisEv != null);
-        }
+        //    //return (lisEv != null);
+        //}
 
         private Boolean CargarClientesCredPend()
         {

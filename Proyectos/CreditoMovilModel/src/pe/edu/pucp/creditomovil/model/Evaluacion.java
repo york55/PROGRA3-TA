@@ -12,7 +12,7 @@ public class Evaluacion {
     private String nombreNegocio;
     private String direccionNegocio;
     private String telefonoNegocio;
-    private Usuario evaluador;
+    //private Usuario evaluador;
     private Cliente clienteAsignado;
     private double ventasDiarias;
     private double inventario; //monto de lo que poseen (electrodomesticos etc)
@@ -25,15 +25,13 @@ public class Evaluacion {
 
     public Evaluacion(){}
     public Evaluacion(Date fechaRegistro, String nombreNegocio,
-            String direccionNegocio, String telefonoNegocio,
-            Usuario evaluador, Cliente clienteAsignado, double ventasDiarias,
+            String direccionNegocio, String telefonoNegocio, Cliente clienteAsignado, double ventasDiarias,
             double inventario, double costoVentas, double margenGanancia,
             int numeroEvaluacion, boolean activo, double puntaje, String observaciones) {
         this.fechaRegistro = fechaRegistro;
         this.nombreNegocio = nombreNegocio;
         this.direccionNegocio = direccionNegocio;
         this.telefonoNegocio = telefonoNegocio;
-        this.evaluador = evaluador;
         this.clienteAsignado = clienteAsignado;
         this.ventasDiarias = ventasDiarias;
         this.inventario = inventario;
@@ -91,14 +89,6 @@ public class Evaluacion {
 
     public void setTelefonoNegocio(String telefonoNegocio) {
         this.telefonoNegocio = telefonoNegocio;
-    }
-
-    public Usuario getevaluador() {
-        return evaluador;
-    }
-
-    public void setevaluador(Usuario evaluador) {
-        this.evaluador = evaluador;
     }
 
     public Cliente getClienteAsignado() {

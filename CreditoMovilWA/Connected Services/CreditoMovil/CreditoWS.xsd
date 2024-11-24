@@ -77,16 +77,6 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCreditosPendXCliente">
-    <xs:sequence>
-      <xs:element name="codCliente" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCreditosPendXClienteResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:credito" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarCredito">
     <xs:sequence>
       <xs:element minOccurs="0" name="credito" type="tns:credito" />
@@ -95,6 +85,16 @@
   <xs:complexType name="modificarCreditoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreditosPendXCliente">
+    <xs:sequence>
+      <xs:element name="codCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreditosPendXClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:credito" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTodosCreditos">

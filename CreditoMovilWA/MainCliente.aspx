@@ -173,16 +173,27 @@
         </div>
     </div>
     <div>
-        <h1 id="hola" runat="server">¡Hola, </h1>
-        <p>Actualmente tu ranking crediticio es:</p>
+        <div id="contCotidiano" runat="server">
+            <h1 id="hola" runat="server">¡Hola, </h1>
+            <p id="credAct">Actualmente tu ranking crediticio es:</p>
+        </div>
+        <div id="contInicial" runat="server">
+            <h1 id="primeraVez" runat="server">¡Bienvenido a la familia Credito Movil!</h1>
+            <p>Actualmente está sujeto a evaluación por parte de nuestros supervisores...</p>
+            <p>Se habilitará automáticamente el contenido una vez aprobada su evaluación</p>
+            <h1>Su supervisor asignado es: </h1>
+            <asp:Label ID="dtsSupervisor" runat="server" Text="Label"></asp:Label>
+        </div>
         <asp:Label ID="lblRanking" runat="server" CssClass="ranking-label" Font-Size="0px"></asp:Label>
 
         <!-- Contenedor del medidor con ApexCharts -->
-        <div id="apexGauge"></div>
+        <div id="apexGauge" runat="server"></div>
 
-        <!-- Botones de acción -->
-        <asp:Button ID="btnSolicitarCredito" runat="server" Text="Solicitar un crédito" CssClass="btn" OnClick="btnSolicitarCredito_Click" />
-        <asp:Button ID="btnVerCreditos" runat="server" Text="Visualizar mis créditos" CssClass="btn" OnClick="btnVerCreditos_Click" />
+        <div class="container-btn">
+            <!-- Botones de acción -->
+            <asp:Button ID="btnSolicitarCredito" runat="server" Text="Solicitar un crédito" CssClass="btn" OnClick="btnSolicitarCredito_Click" />
+            <asp:Button ID="btnVerCreditos" runat="server" Text="Visualizar mis créditos" CssClass="btn" OnClick="btnVerCreditos_Click" />
+        </div>
     </div>
 </asp:Content>
 

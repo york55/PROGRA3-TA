@@ -150,10 +150,12 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <h2>¡Hola!</h2>
+    <h2>Qué bueno volver a verte...</h2>
     <!-- Contenedor principal -->
     <div class="container">
+        <h2>Clientes con créditos pendientes</h2>
         <div class="text-sup">
-            <h2>¡Hola!</h2>
             <asp:Label ID="txtCliPendAsig" CssClass="lab-cli" runat="server" 
                 Text="Estos son los clientes con créditos pendientes por asignar:" Visible="false"></asp:Label>
             <asp:Label ID="txtNotClientPend" CssClass="lab-not-cli" runat="server" 
@@ -211,10 +213,20 @@
     </div>
 
     <div class="container">
+        <h2>Evaluaciones por revisar:</h2>
+        <div class="table-container">
+            <asp:GridView ID="gvEvaluacionesPendientes" runat="server" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="" HeaderText="" />
+                    <asp:BoundField DataField="" HeaderText="" />
+                    <asp:BoundField DataField="" HeaderText="" />
+                </Columns>
+            </asp:GridView>
+        </div>
         <h2>Estas son las evaluaciones que posees:</h2>
         <!-- Tabla de evaluaciones -->
         <div class="table-container">
-            <asp:GridView ID="gvEvaluaciones" runat="server" AutoGenerateColumns="false">
+            <asp:GridView ID="gvEvaluacionesRealizadas" runat="server" AutoGenerateColumns="false">
                 <Columns>
                     <asp:BoundField DataField="numeroEvaluacion" HeaderText="ID_EVALUACION" />
                     <asp:BoundField DataField="nombreNegocio" HeaderText="NEGOCIO" />

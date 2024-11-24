@@ -28,43 +28,60 @@ public class EvaluacionMySQL implements EvaluacionDAO {
     private ResultSet rs = null;
 
     @Override
-    public boolean insertar(Evaluacion evaluacion) {
+    public boolean insertar(Evaluacion evaluacion, int codSup) {
         Connection conn = null;
-        CallableStatement cs = null;
-        int resultado;
-        boolean res = false;
+        CallableStatement csEvaluacion = null;
+        CallableStatement csAsociar = null;
         try {
             conn = DBManager.getInstance().getConnection();
+            conn.setAutoCommit(false); // Deshabilitar autocommit manualmente
             String sql = "{ CALL InsertarEvaluacion(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
-            cs = conn.prepareCall(sql);
-
+            csEvaluacion = conn.prepareCall(sql);
             Cliente cli = (Cliente) evaluacion.getClienteAsignado();
-            cs.setInt(1, cli.getCodigoCliente()); // Asegúrate de que clienteAsignado no sea null
-            cs.setDate(2, new java.sql.Date(evaluacion.getFechaRegistro().getTime()));
-            cs.setString(3, evaluacion.getNombreNegocio());
-            cs.setString(4, evaluacion.getDireccionNegocio());
-            cs.setString(5, evaluacion.getTelefonoNegocio());
-            cs.setDouble(6, evaluacion.getVentasDiarias());
-            cs.setDouble(7, evaluacion.getInventario());
-            cs.setDouble(8, evaluacion.getCostoVentas());
-            cs.setDouble(9, evaluacion.getMargenGanancia());
-            cs.setBoolean(10, evaluacion.isActivo());
-            cs.setDouble(11, evaluacion.getPuntaje());
-            cs.setString(12, evaluacion.getObservaciones());
-            cs.registerOutParameter(13, Types.INTEGER);
-            // Ejecuta la consulta
-            resultado = cs.executeUpdate();
-            res = resultado>0;
-            int evaluacionID = cs.getInt(13);
-            evaluacion.setNumeroEvaluacion(evaluacionID);
+            csEvaluacion.setInt(1, cli.getCodigoCliente()); // Asegúrate de que clienteAsignado no sea null
+            csEvaluacion.setDate(2, new java.sql.Date(evaluacion.getFechaRegistro().getTime()));
+            csEvaluacion.setString(3, evaluacion.getNombreNegocio());
+            csEvaluacion.setString(4, evaluacion.getDireccionNegocio());
+            csEvaluacion.setString(5, evaluacion.getTelefonoNegocio());
+            csEvaluacion.setDouble(6, evaluacion.getVentasDiarias());
+            csEvaluacion.setDouble(7, evaluacion.getInventario());
+            csEvaluacion.setDouble(8, evaluacion.getCostoVentas());
+            csEvaluacion.setDouble(9, evaluacion.getMargenGanancia());
+            csEvaluacion.setBoolean(10, evaluacion.isActivo());
+            csEvaluacion.setDouble(11, evaluacion.getPuntaje());
+            csEvaluacion.setString(12, evaluacion.getObservaciones());
+            csEvaluacion.registerOutParameter(13, Types.INTEGER);
+            csEvaluacion.executeUpdate();
+            int numEvaluacion = csEvaluacion.getInt(13);
+            evaluacion.setNumeroEvaluacion(numEvaluacion);
             
+            // Asociar el evaluacion al supervisor
+            String sqlAsociar = "{ CALL AsociarEvaluacionASupervisor(?, ?) }";
+            csAsociar = conn.prepareCall(sqlAsociar);
+            csAsociar.setInt(1, codSup);
+            csAsociar.setInt(2, numEvaluacion);
+            csAsociar.execute();
+
+            conn.commit(); // Confirma la transacción
             
+            return true;
         } catch (SQLException ex) {
+            if (conn != null) {
+                try {
+                    conn.rollback(); // Revierte la transacción en caso de error
+                } catch (SQLException rollbackEx) {
+                    rollbackEx.printStackTrace();
+                }
+            }
             ex.printStackTrace();
+            return false;
         } finally {
             try {
-                if (cs != null) {
-                    cs.close();
+                if (csEvaluacion != null) {
+                    csEvaluacion.close();
+                }
+                if (csAsociar != null) {
+                    csAsociar.close();
                 }
                 if (conn != null) {
                     conn.close();
@@ -73,9 +90,6 @@ public class EvaluacionMySQL implements EvaluacionDAO {
                 ex.printStackTrace();
             }
         }
-        
-        
-        return res;
     }
 
     @Override
@@ -155,12 +169,11 @@ public class EvaluacionMySQL implements EvaluacionDAO {
                 ev.setPuntaje(rs.getDouble("puntaje"));
                 ev.setTelefonoNegocio(rs.getString("telefono_negocio"));
                 ev.setVentasDiarias(rs.getDouble("ventas_diarias"));
-                ev.setevaluador(null);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return ev; //por ahora es null, necesito ver qué añadirle
+        return ev;
     }
     
     @Override
@@ -195,7 +208,7 @@ public class EvaluacionMySQL implements EvaluacionDAO {
                 String obser = rs.getString("observaciones");
                         
                 Evaluacion eva = new Evaluacion(fechaReg, nombreNeg, dirNeg, telNeg,
-                        null, cliente, ventasDia, inventario, costoVentas, 
+                        cliente, ventasDia, inventario, costoVentas, 
                         margenGan, numEva, activo, puntaje, obser);
                 evaluaciones.add(eva);
             }
@@ -249,7 +262,7 @@ public class EvaluacionMySQL implements EvaluacionDAO {
                 String obser = rs.getString("observaciones");
                         
                 Evaluacion eva = new Evaluacion(fechaReg, nombreNeg, dirNeg, telNeg,
-                        null, cliente, ventasDia, inventario, costoVentas, 
+                        cliente, ventasDia, inventario, costoVentas, 
                         margenGan, numEva, activo, puntaje, obser);
                 evaluaciones.add(eva);
             }

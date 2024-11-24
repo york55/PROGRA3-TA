@@ -11,6 +11,9 @@ namespace CreditoMovilWA
 {
     public partial class MainCliente : System.Web.UI.Page
     {
+        private ClienteWSClient clienteDAO = new ClienteWSClient();
+        private EvaluacionWSClient evaluacionDAO= new EvaluacionWSClient();
+        private SupervisorWSClient supervisorDAO = new SupervisorWSClient();
         protected void Page_Init(object sender, EventArgs e)
         {
             if (Master is Usuario masterPage)
@@ -30,23 +33,40 @@ namespace CreditoMovilWA
             if (!IsPostBack)
             {
                 cliente cli = (cliente)Session["Cliente"];
-                double ranking = cli.ranking;
+                if (cli.tipoCliente.ToUpper().Equals("PENDIENTE"))
+                {
+                    /*Configuracion de visualizacion de contenido*/
+                    contInicial.Visible = true;
+                    contCotidiano.Visible = false;
+                    apexGauge.Visible = false; /*Velocimetro*/
+                    btnVerCreditos.Visible = false; /*BtnVerCred*/
+                    dtsSupervisor.Text = "Nombre: " + "..." + "Codigo:" + "...";
+                }
+                else if (cli.tipoCliente.ToUpper().Equals("EVALUADO"))
+                {
+                    /*Configuracion de visualizacion de contenido*/
+                    contInicial.Visible = false;
+                    contCotidiano.Visible = true;
+                    apexGauge.Visible = true; /*Velocimetro*/
+                    btnVerCreditos.Visible = true; /*BtnVerCred*/
 
-                // Asigna el puntaje al Label de ranking
-                lblRanking.Text = ranking + "%";
+                    double ranking = cli.ranking;
 
-                //Cambia el color del medidor basado en el puntaje (esto se puede personalizar)
-                if (ranking < 25) 
-                    lblRanking.ForeColor = System.Drawing.Color.Red;
-                else if (ranking < 50) 
-                    lblRanking.ForeColor = System.Drawing.Color.Orange;
-                else if (ranking<75)
-                    lblRanking.ForeColor = System.Drawing.Color.Yellow;
-                else
-                    lblRanking.ForeColor = System.Drawing.Color.Green;
+                    // Asigna el puntaje al Label de ranking
+                    lblRanking.Text = ranking + "%";
+
+                    //Cambia el color del medidor basado en el puntaje (esto se puede personalizar)
+                    if (ranking < 25)
+                        lblRanking.ForeColor = System.Drawing.Color.Red;
+                    else if (ranking < 50)
+                        lblRanking.ForeColor = System.Drawing.Color.Orange;
+                    else if (ranking < 75)
+                        lblRanking.ForeColor = System.Drawing.Color.Yellow;
+                    else
+                        lblRanking.ForeColor = System.Drawing.Color.Green;
+                }
             }
         }
-
         // Método para obtener el ranking sin el símbolo de porcentaje
         public string ObtenerRankingSinPorcentaje()
         {

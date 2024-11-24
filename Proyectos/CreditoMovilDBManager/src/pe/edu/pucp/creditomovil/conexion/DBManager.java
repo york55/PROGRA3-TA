@@ -8,35 +8,78 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.net.URL;
-import java.net.URLDecoder;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- *
- * @author diego
- */
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.CallableStatement;
+import java.sql.Types;
+import java.sql.Date;
+import java.sql.Time;
+
+import java.net.URL;
+import java.net.URLDecoder;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+
 public class DBManager {
-    private static DBManager dbManager;
+    
+    private static DBManager dbManager = null;
+    
+    private BasicDataSource dataSource;
+    
     private String url;
-    private String usuario;
+    private String user;
     private String password;
+    
     private Connection con;
     private ResultSet rs;
+    
     private final String nombreArchivo = "datosConexion.txt";
     
+    
     private DBManager(){
+        connectToDatabase();
+    }
+    
+    
+    private void connectToDatabase(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             leerArchivoYCrearCadena();
-        }catch(ClassNotFoundException ex){
-            System.out.println("Error registrando el driver: " + ex.getMessage());
+            
+            dataSource=new BasicDataSource();
+            
+            dataSource.setUrl(url);
+            dataSource.setUsername(user);
+            dataSource.setPassword(password);
+            dataSource.setMinIdle(5);
+            dataSource.setMaxIdle(10);
+            dataSource.setMaxTotal(20);
+            dataSource.setMaxOpenPreparedStatements(100);
+            System.out.println("....conexion realizada...");
         }
+        catch(ClassNotFoundException ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+    
+    public static DBManager getInstance(){
+        if(dbManager == null) createInstance();
+        return dbManager;
+    }
+    
+    private static void createInstance(){
+        dbManager = new DBManager();
+    }
+    
+    public Connection getConnection() throws SQLException{
+        if(dataSource==null || dataSource.isClosed()) 
+            connectToDatabase();
+        return dataSource.getConnection();
     }
     
     public void leerArchivoYCrearCadena() {
@@ -61,31 +104,10 @@ public class DBManager {
             System.out.println("Error leyendo archivo de conexion: " + e.getMessage());
         }
 
-        usuario = config.get("user");
+        user = config.get("user");
         password = config.get("password");
         url = "jdbc:mysql://" + config.get("hostname") + ":" + config.get("port") + "/" + config.get("database") + "?useSSL=false";
 
-    }
-    
-    public Connection getConnection(){
-        try{
-            con = DriverManager.getConnection(url, usuario, password);
-        }catch(SQLException ex){
-            System.out.println(ex.getMessage());
-        }
-        return con;
-    }
-    
-    public static DBManager getInstance(){
-        if(dbManager == null)
-            createInstance();
-        return dbManager;
-    }
-    
-    private synchronized static void createInstance(){
-        if(dbManager == null){
-            dbManager = new DBManager();
-        }
     }
     
     public void cerrarConexion() {
@@ -93,14 +115,16 @@ public class DBManager {
             try{
                 rs.close();
             }catch(SQLException ex){
-                System.out.println("Error al cerrar el lector:" + ex.getMessage());
+                System.out.println("Error al cerrar el lector:" + 
+                        ex.getMessage());
             }
         }
         if (con != null) {
             try {
                 con.close();  
             } catch (SQLException ex) {
-                System.out.println("Error al cerrar la conexión:" + ex.getMessage());
+                System.out.println("Error al cerrar la conexión:" + 
+                        ex.getMessage());
             }
         }
     }

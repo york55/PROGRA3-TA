@@ -187,15 +187,17 @@ public class CreditoMySQL implements CreditoDAO {
         List<Credito> listaCreditos = new ArrayList<>();
         Connection conn = null;
         CallableStatement cs = null;
-        ResultSet rs = null;            
-        conn = DBManager.getInstance().getConnection();
-        String sql = "{ CALL ObtenerCreditosPorClienteFecha(?, ?, ?, ?) }";
-        
-        java.sql.Date fechainiSQL = new java.sql.Date(fechaini.getTime());
-        java.sql.Date fechafinSQL = new java.sql.Date(fechafin.getTime());
-
+        ResultSet rs = null;          
         
         try{
+            conn = DBManager.getInstance().getConnection();
+            String sql = "{ CALL ObtenerCreditosPorClienteFecha(?, ?, ?, ?) }";
+
+            java.sql.Date fechainiSQL = new java.sql.Date(fechaini.getTime());
+            java.sql.Date fechafinSQL = new java.sql.Date(fechafin.getTime());
+
+        
+        
             cs = conn.prepareCall(sql);
             cs.setInt(1, cliId);
             cs.setDate(2, fechainiSQL);

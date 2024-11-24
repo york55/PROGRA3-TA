@@ -21,10 +21,11 @@ public class EvaluacionWS {
     private EvaluacionDAO daoEvaluacion = new EvaluacionMySQL();
     
     @WebMethod(operationName = "insertarEvaluacion")
-    public boolean insertarEvaluacion(@WebParam(name = "evaluacion") Evaluacion evaluacion) {
+    public boolean insertarEvaluacion(@WebParam(name = "evaluacion") Evaluacion evaluacion,
+                                        @WebParam(name = "codSup") int codSup) {
         boolean resultado = false;
         try{
-            resultado = daoEvaluacion.insertar(evaluacion);
+            resultado = daoEvaluacion.insertar(evaluacion, codSup);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -48,39 +49,39 @@ public class EvaluacionWS {
             System.out.println(ex.getMessage());
         }
     }
-    
-    @WebMethod(operationName = "obtenerPorIDEvaluacion")
-    public Evaluacion obtenerPorIDEvaluacion(@WebParam(name = "idevaluacion") int id) {
-        Evaluacion evaluacion = null;
-        try{
-            evaluacion = daoEvaluacion.obtenerPorId(id);
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-        return evaluacion;
-    }
-    
-    @WebMethod(operationName = "listarEvaluacionesSupervisor")
-    public List<Evaluacion> listarEvaluacionesSupervisor(@WebParam(name = "idSup") int idSup) {
-        List<Evaluacion> evaluacions = null;
-        try{
-            evaluacions = daoEvaluacion.listarPorSupervisor(idSup);
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-        return evaluacions;
-    }
-    
-    @WebMethod(operationName = "listarTodosEvaluacions")
-    public List<Evaluacion> listarTodosEvaluacions() {
-        List<Evaluacion> evaluacions = null;
-        try{
-            evaluacions = daoEvaluacion.listarTodos();
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-        return evaluacions;
-    }
+//    
+//    @WebMethod(operationName = "obtenerPorIDEvaluacion")
+//    public Evaluacion obtenerPorIDEvaluacion(@WebParam(name = "idevaluacion") int id) {
+//        Evaluacion evaluacion = null;
+//        try{
+//            evaluacion = daoEvaluacion.obtenerPorId(id);
+//        }catch(Exception ex){
+//            System.out.println(ex.getMessage());
+//        }
+//        return evaluacion;
+//    }
+//    
+//    @WebMethod(operationName = "listarEvaluacionesSupervisor")
+//    public List<Evaluacion> listarEvaluacionesSupervisor(@WebParam(name = "idSup") int idSup) {
+//        List<Evaluacion> evaluacions = null;
+//        try{
+//            evaluacions = daoEvaluacion.listarPorSupervisor(idSup);
+//        }catch(Exception ex){
+//            System.out.println(ex.getMessage());
+//        }
+//        return evaluacions;
+//    }
+//    
+//    @WebMethod(operationName = "listarTodosEvaluacions")
+//    public List<Evaluacion> listarTodosEvaluacions() {
+//        List<Evaluacion> evaluacions = null;
+//        try{
+//            evaluacions = daoEvaluacion.listarTodos();
+//        }catch(Exception ex){
+//            System.out.println(ex.getMessage());
+//        }
+//        return evaluacions;
+//    }
     
     
 }

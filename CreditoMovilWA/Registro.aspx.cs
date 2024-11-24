@@ -232,7 +232,7 @@ namespace CreditoMovilWA
             sup.codigoEv = 11;
 
             bool res = daoSupervisor.insertarSupervisor(sup);
-            if (res) Response.Redirect("MainAdmin.aspx");
+            if (res) Response.Redirect("Home.aspx");
         }
         private string HashPassword(string password, string salt)
         {

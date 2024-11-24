@@ -66,11 +66,14 @@ namespace CreditoMovilWA
                         ck.Path = FormsAuthentication.FormsCookiePath;
                         Response.Cookies.Add(ck);
 
-                        string strRedirect;
-                        strRedirect = Request["ReturnUrl"];
-                        if (strRedirect == null)
-                            strRedirect = "MainCliente.aspx";
-                        Response.Redirect(strRedirect, true);
+                        if (cli.tipoCliente.ToUpper().Equals("NUEVO"))
+                        {
+                            Response.Redirect("DatosEvaluacionCliente.aspx");
+                        }
+                        else
+                        {
+                            Response.Redirect("MainCliente.aspx");
+                        }
                     }
                     else
                     {

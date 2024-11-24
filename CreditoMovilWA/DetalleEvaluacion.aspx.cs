@@ -30,25 +30,25 @@ namespace CreditoMovilWA
         private void CargarDatosEvaluacion()
         {
 
-            string idEvaluacion = (string)Session["idEvaluacion"];
-            lblNumeroEvaluacion.Text = idEvaluacion;
-            evaluacion ev = daoEvaluacion.obtenerPorIDEvaluacion(Int32.Parse(idEvaluacion));
+            //string idEvaluacion = (string)Session["idEvaluacion"];
+            //lblNumeroEvaluacion.Text = idEvaluacion;
+            ////evaluacion ev = daoEvaluacion.obtenerPorIDEvaluacion(Int32.Parse(idEvaluacion));
 
-            // ejemplo pa probart
-            txtNombreNegocio.Text = ev.nombreNegocio;
-            txtFechaRegistro.Text = ev.fechaRegistro.ToString();
-            txtDireccionNegocio.Text = ev.direccionNegocio;
-            txtTelefonoNegocio.Text = ev.telefonoNegocio;
-            txtClienteAsignado.Text = ev.clienteAsignado.nombre + " " + ev.clienteAsignado.apPaterno + " " + ev.clienteAsignado.apMaterno;
-            txtMargenGanancia.Text = ev.margenGanancia.ToString();
-            txtVentasDiarias.Text = ev.ventasDiarias.ToString();
-            txtInventario.Text = ev.inventario.ToString();
-            txtCostoVentas.Text = ev.costoVentas.ToString();
-            txtEstado.Text = ev.activo ? "Activo" : "Inactivo";
-            txtObservaciones.Text = ev.observaciones.ToString();
-            lblPuntaje.Text = ev.puntaje.ToString();
+            //// ejemplo pa probart
+            //txtNombreNegocio.Text = ev.nombreNegocio;
+            //txtFechaRegistro.Text = ev.fechaRegistro.ToString();
+            //txtDireccionNegocio.Text = ev.direccionNegocio;
+            //txtTelefonoNegocio.Text = ev.telefonoNegocio;
+            //txtClienteAsignado.Text = ev.clienteAsignado.nombre + " " + ev.clienteAsignado.apPaterno + " " + ev.clienteAsignado.apMaterno;
+            //txtMargenGanancia.Text = ev.margenGanancia.ToString();
+            //txtVentasDiarias.Text = ev.ventasDiarias.ToString();
+            //txtInventario.Text = ev.inventario.ToString();
+            //txtCostoVentas.Text = ev.costoVentas.ToString();
+            //txtEstado.Text = ev.activo ? "Activo" : "Inactivo";
+            //txtObservaciones.Text = ev.observaciones.ToString();
+            //lblPuntaje.Text = ev.puntaje.ToString();
 
-            Session["evaluacion"] = ev;
+            //Session["evaluacion"] = ev;
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)

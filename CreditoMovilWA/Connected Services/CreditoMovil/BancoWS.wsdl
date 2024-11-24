@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/BancoWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="obtenerPorNombreBanco">
-    <part name="parameters" element="tns:obtenerPorNombreBanco" />
+  <message name="eliminarBanco">
+    <part name="parameters" element="tns:eliminarBanco" />
   </message>
-  <message name="obtenerPorNombreBancoResponse">
-    <part name="parameters" element="tns:obtenerPorNombreBancoResponse" />
+  <message name="eliminarBancoResponse">
+    <part name="parameters" element="tns:eliminarBancoResponse" />
   </message>
   <message name="obtenerPorIDBanco">
     <part name="parameters" element="tns:obtenerPorIDBanco" />
@@ -29,22 +29,22 @@
   <message name="insertarBancoResponse">
     <part name="parameters" element="tns:insertarBancoResponse" />
   </message>
-  <message name="eliminarBanco">
-    <part name="parameters" element="tns:eliminarBanco" />
-  </message>
-  <message name="eliminarBancoResponse">
-    <part name="parameters" element="tns:eliminarBancoResponse" />
-  </message>
   <message name="listarTodosBancos">
     <part name="parameters" element="tns:listarTodosBancos" />
   </message>
   <message name="listarTodosBancosResponse">
     <part name="parameters" element="tns:listarTodosBancosResponse" />
   </message>
+  <message name="obtenerPorNombreBanco">
+    <part name="parameters" element="tns:obtenerPorNombreBanco" />
+  </message>
+  <message name="obtenerPorNombreBancoResponse">
+    <part name="parameters" element="tns:obtenerPorNombreBancoResponse" />
+  </message>
   <portType name="BancoWS">
-    <operation name="obtenerPorNombreBanco">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorNombreBancoRequest" message="tns:obtenerPorNombreBanco" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorNombreBancoResponse" message="tns:obtenerPorNombreBancoResponse" />
+    <operation name="eliminarBanco">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoRequest" message="tns:eliminarBanco" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoResponse" message="tns:eliminarBancoResponse" />
     </operation>
     <operation name="obtenerPorIDBanco">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorIDBancoRequest" message="tns:obtenerPorIDBanco" />
@@ -58,18 +58,18 @@
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoRequest" message="tns:insertarBanco" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/insertarBancoResponse" message="tns:insertarBancoResponse" />
     </operation>
-    <operation name="eliminarBanco">
-      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoRequest" message="tns:eliminarBanco" />
-      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/eliminarBancoResponse" message="tns:eliminarBancoResponse" />
-    </operation>
     <operation name="listarTodosBancos">
       <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosRequest" message="tns:listarTodosBancos" />
       <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/listarTodosBancosResponse" message="tns:listarTodosBancosResponse" />
     </operation>
+    <operation name="obtenerPorNombreBanco">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorNombreBancoRequest" message="tns:obtenerPorNombreBanco" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/BancoWS/obtenerPorNombreBancoResponse" message="tns:obtenerPorNombreBancoResponse" />
+    </operation>
   </portType>
   <binding name="BancoWSPortBinding" type="tns:BancoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="obtenerPorNombreBanco">
+    <operation name="eliminarBanco">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,7 +105,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarBanco">
+    <operation name="listarTodosBancos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -114,7 +114,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosBancos">
+    <operation name="obtenerPorNombreBanco">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
