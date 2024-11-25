@@ -31,6 +31,6 @@ namespace CreditoMovilWA
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl contInicial;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl contCotidiano;
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl apexGauge;
-
+       
     }
 }

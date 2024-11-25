@@ -150,6 +150,7 @@ namespace CreditoMovilWA
             Cliente.telefono = txtTelefono.Text.Trim();
             Cliente.direccion = txtDireccion.Text.Trim();
             string contrasena = txtContrasena.Text;
+            string contrasenaVerifica = txtConfirmarContrasena.Text;
 
             // Validaciones básicas
             if (string.IsNullOrEmpty(Cliente.nombre) || string.IsNullOrEmpty(Cliente.apPaterno) ||
@@ -160,7 +161,11 @@ namespace CreditoMovilWA
                 return;
             }
 
-
+            if (contrasena != contrasenaVerifica)
+            {
+                lblError.Text = "La contraseña y la confirmación no coinciden.";
+                return;
+            }
             string salt = GenerarSalt();
             // Aquí puedes agregar lógica para guardar los datos en la base de datos
             // Asegúrate de hashear la contraseña antes de almacenarla
@@ -179,6 +184,19 @@ namespace CreditoMovilWA
             Cliente.codigoCliente = 0;
             Cliente.salt = salt;
             Cliente.ranking = 30;
+
+            if (!long.TryParse(Cliente.documento, out _) || Cliente.documento.Length < 6)
+            {
+                lblError.Text = "El número de documento debe ser un número con al menos 6 dígitos.";
+                return;
+            }
+
+            // Validación de teléfono: debe ser un número
+            if (!long.TryParse(Cliente.telefono, out _))
+            {
+                lblError.Text = "El número de teléfono debe contener solo números.";
+                return;
+            }
 
             if (daoCliente.obtenerPorDocIdenCliente(Cliente.documento, Cliente.tipoDocumento.ToString()) != null)
             {
@@ -217,11 +235,17 @@ namespace CreditoMovilWA
             sup.documento = txtNroDoc.Text.Trim();
             // Validaciones básicas
             string contrasena = txtContrasena.Text;
+            string contrasenaVerifica = txtConfirmarContrasena.Text;
             if (string.IsNullOrEmpty(sup.nombre) || string.IsNullOrEmpty(sup.apPaterno) ||
                             string.IsNullOrEmpty(ddlTipoDocumento.SelectedValue) || string.IsNullOrEmpty(sup.documento)
                             || string.IsNullOrEmpty(contrasena))
             {
                 lblError.Text = "Por favor, complete todos los campos.";
+                return;
+            }
+            if (contrasena != contrasenaVerifica)
+            {
+                lblError.Text = "La contraseña y la confirmación no coinciden.";
                 return;
             }
             string saltSup = GenerarSalt();
@@ -237,6 +261,14 @@ namespace CreditoMovilWA
             sup.ultimoLogueoSpecified = true;
             sup.salt = saltSup;
             sup.codigoEv = 11;
+
+            if (!long.TryParse(sup.documento, out _) || sup.documento.Length < 6)
+            {
+                lblError.Text = "El número de documento debe ser un número con al menos 6 dígitos.";
+                return;
+            }
+
+            // Validación de teléfono: debe ser un número
 
             if (daoSupervisor.obtenerPorDocIdenSup(sup.documento, sup.tipoDocumento.ToString()) != null)
             {

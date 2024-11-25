@@ -12,7 +12,7 @@ namespace CreditoMovilWA
     public partial class MainCliente : System.Web.UI.Page
     {
         private ClienteWSClient clienteDAO = new ClienteWSClient();
-        private EvaluacionWSClient evaluacionDAO= new EvaluacionWSClient();
+        private EvaluacionWSClient evaluacionDAO = new EvaluacionWSClient();
         private SupervisorWSClient supervisorDAO = new SupervisorWSClient();
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -55,7 +55,6 @@ namespace CreditoMovilWA
                     contCotidiano.Visible = true;
                     apexGauge.Visible = true; /*Velocimetro*/
                     btnVerCreditos.Visible = true; /*BtnVerCred*/
-
                     double ranking = cli.ranking;
 
                     // Asigna el puntaje al Label de ranking

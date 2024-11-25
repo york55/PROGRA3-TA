@@ -143,15 +143,6 @@
                 <div class="form-group">
                     <label for="numero-documento">Nro. Documento</label>
                     <asp:TextBox ID="txtNroDoc" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:RegularExpressionValidator 
-                        ID="revNroDoc" 
-                        runat="server" 
-                        ControlToValidate="txtNroDoc" 
-                        ErrorMessage="El número de documento debe tener al menos 6 dígitos y solo números." 
-                        ValidationExpression="^\d{6,}$" 
-                        CssClass="error-message" 
-                        Display="Dynamic" 
-                        ForeColor="Red" />
                 </div>
             </div>
 
@@ -164,15 +155,6 @@
             <div class="form-group">
                 <label for="telefono">Teléfono</label>
                 <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:RegularExpressionValidator 
-                    ID="revTelefono" 
-                    runat="server" 
-                    ControlToValidate="txtTelefono" 
-                    ErrorMessage="El teléfono debe contener solo números." 
-                    ValidationExpression="^\d+$" 
-                    CssClass="error-message" 
-                    Display="Dynamic" 
-                    ForeColor="Red" />
             </div>
 
             <div class="form-group">

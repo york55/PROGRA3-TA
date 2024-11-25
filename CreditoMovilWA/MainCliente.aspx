@@ -164,10 +164,16 @@
             chart.render();
         }
 
-        // Llama a la función con el puntaje desde el servidor
+
+        // Llama al renderizado con el puntaje desde el servidor
         document.addEventListener("DOMContentLoaded", function () {
             renderApexGauge(<%= ObtenerRankingSinPorcentaje() %>);
         });
+
+        // Llama a la función con el puntaje desde el servidor
+
+
+
     </script>
 </asp:Content>
 
@@ -178,6 +184,9 @@
             <asp:Button ID="btnModificarDatos" runat="server" Text="Modificar Datos" CssClass="btn-modificar" OnClick="btnModificarDatos_Click" />
             <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesión" CssClass="btn-logout" OnClick="btnLogout_Click" />
         </div>
+    </div>
+    <div>
+        <div id="apexGauge" runat="server"></div>
     </div>
     <div>
         <div id="contCotidiano" runat="server">
@@ -194,7 +203,6 @@
         <asp:Label ID="lblRanking" runat="server" CssClass="ranking-label" Font-Size="0px"></asp:Label>
 
         <!-- Contenedor del medidor con ApexCharts -->
-        <div id="apexGauge" runat="server"></div>
 
         <div class="container-btn">
             <!-- Botones de acción -->

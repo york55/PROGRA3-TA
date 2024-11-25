@@ -111,7 +111,9 @@ namespace CreditoMovilWA
         /// Campo generado automáticamente.
         /// Para modificarlo, muévalo desde el archivo de diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContrasena;        
+        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
+
+        protected global::System.Web.UI.WebControls.TextBox txtConfirmarContrasena;
 
         /// <summary>
         /// Control txtContrasena.
