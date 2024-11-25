@@ -138,6 +138,9 @@ namespace CreditoMovilWA
                         return;
                     }
                 }
+                lblError.Text = "Usuario o contraseña incorrectos.";
+                lblError.Visible = true;
+                return;
             }
             else
             {

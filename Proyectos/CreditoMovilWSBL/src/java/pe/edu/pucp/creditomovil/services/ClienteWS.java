@@ -141,12 +141,10 @@ public class ClienteWS {
         return filePath;
     }
     
-    @WebMethod(operationName = "reportePDF")
+    @WebMethod(operationName = "reporteClienteCreditoPDF")
     public byte[] reportePDF() throws Exception {
         try {            
-            Map<String, Object> params = new HashMap<>();
-            params.put("docIden","7233415");
-            params.put("tipoDocIden","DNI");            
+            Map<String, Object> params = new HashMap<>();        
             return generarBuffer(getFileResource("Cliente.jrxml"), params);                    
          } catch (Exception ex) {
             Logger.getLogger(ClienteWS.class.getName()).log(Level.SEVERE, null, ex);

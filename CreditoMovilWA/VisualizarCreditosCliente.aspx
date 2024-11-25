@@ -321,6 +321,8 @@
             <div id="infoBilletera" style="display: none; margin-top: 20px;">
                 <h3>Billeteras Digitales Aceptadas:</h3>
                 <img src="images/billeteras.png" alt="Billeteras Aceptadas" style="width:100%; max-width:180px;">
+                <br>
+                <img src="images/QR.png" alt="Billeteras Aceptadas" style="width:100%; max-width:400px;">
                 <p>Número de Billetera:</p>
                 <asp:TextBox ID="txtNumeroBilletera" runat="server" CssClass="input-text" Text="" ReadOnly="False" Enabled="True" />
                 <p>Nombre del Titular:</p>
@@ -332,8 +334,8 @@
             <br /><br />
         
             <!-- Botones de acción -->
-            <asp:Button ID="btnSave" runat="server" Text="Grabar" CssClass="save-btn" OnClick="btnSave_Click"/>
             <asp:Button ID="btnCancel" runat="server" Text="Cancelar" CssClass="cancel-btn" OnClientClick="closeModal(); return false;" />
+            <asp:Button ID="btnSave" runat="server" Text="Grabar" CssClass="save-btn" OnClick="btnSave_Click"/>
         </div>
     </div>
 </asp:Content>

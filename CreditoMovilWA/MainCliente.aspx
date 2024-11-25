@@ -45,9 +45,16 @@
         }
         .header {
             display: flex;
-            justify-content: flex-start;  /* Los elementos se alinean a la izquierda */
-            align-items: center;
+            justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+            align-items: center; 
             width: 100%;
+            padding: 10px; /* Ajusta el padding según sea necesario */
+            box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px; /* Espaciado entre los botones */
         }
 
         .header img {

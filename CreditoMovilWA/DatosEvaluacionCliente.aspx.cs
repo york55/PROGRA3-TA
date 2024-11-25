@@ -38,7 +38,7 @@ namespace CreditoMovilWA
 
             ev.nombreNegocio = txtNombreNeg.Text;
             ev.numeroEvaluacion = 0;
-            ev.direccionNegocio = cli.direccion;
+            ev.direccionNegocio = txtDireccionNeg.Text;
             ev.margenGanancia = double.Parse(txtUtilidadPromedio.Text);
             ev.ventasDiarias = double.Parse(txtVentasDiarias.Text);
             ev.costoVentas = double.Parse(txtCostosVentas.Text);
@@ -63,7 +63,7 @@ namespace CreditoMovilWA
             if (VerificarContraseña(txtContrasena.Text, cli.salt, cli.contrasenha) 
                 && txtContrasena.Text.Equals(txtConfirmarContrasena.Text))
             {
-                if (evaluacionDAO.insertarEvaluacion(ev, 4/*sup.codigoEv*/))
+                if (evaluacionDAO.insertarEvaluacion(ev, sup.codigoEv /*sup.codigoEv*/))
                 {
                     cli.tipoCliente = "Pendiente";
                     if (clienteDAO.modificarCliente(cli)) Response.Redirect("MainCliente.aspx");

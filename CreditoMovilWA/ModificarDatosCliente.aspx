@@ -48,41 +48,51 @@
         }
 
         .btn-save {
-            width: 150px;
-            padding: 12px;
-            font-size: 16px;
+            width: 275px;
+            padding: 10px;
+            font-size: 18px;
             font-weight: 700;
             color: #fff;
             background-color: #2f7a44;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .btn-save:hover {
             background-color: #265f21;
+            transform: translateY(-2px);
         }        
 
+        .btn-save:active {
+            background-color: #1d4b1a;
+        }
+
         .btn-regresar {
-            width: 150px;
-            padding: 12px;
-            font-size: 16px;
+            width: 275px;
+            padding: 10px;
+            font-size: 18px;
             font-weight: 700;
             color: #fff;
-            background-color: #e5be01;
+            background-color: #273fab;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .btn-regresar:hover {
-            background-color: #ceaf18;
+            background-color: #1a2b75;
+            transform: translateY(-2px);  
+        }
+
+        .btn-regresar:active {
+            background-color: #1d4b1a;
         }
 
         .watermark {

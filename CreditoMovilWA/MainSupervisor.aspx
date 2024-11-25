@@ -239,7 +239,6 @@
                     <asp:BoundField DataField="ventasDiarias" HeaderText="VENTAS" />
                     <asp:BoundField DataField="margenGanancia" HeaderText="MARGEN. GANANCIA" />
                     <asp:BoundField DataField="puntaje" HeaderText="PUNTAJE" />
-                    <asp:BoundField DataField="activo" HeaderText="ESTADO" />
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Button ID="btnAprobarEv" runat="server" Text="Aprobar" 

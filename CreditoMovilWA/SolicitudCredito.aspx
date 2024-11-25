@@ -204,7 +204,7 @@
         function updateCharCount() {
             var textArea = document.getElementById("<%= motivoSolicitud.ClientID %>");
             var charCount = textArea.value.length;
-            document.getElementById("charCounter").innerText = charCount + "/1000";
+            document.getElementById("charCounter").innerText = charCount + "/200";
         }
     </script>
 </asp:Content>
@@ -247,8 +247,8 @@
         <div class="interest-display" id="interestDisplay">Interés aproximado: S/. 350.00 - S/. 525.00   (10% - 15%)</div>
 
         <div class="text-area-container">
-            <textarea id="motivoSolicitud" runat="server" class="text-area" maxlength="1000" oninput="updateCharCount()" placeholder="Escriba aquí el motivo de su solicitud..."></textarea>
-            <div id="charCounter" class="char-counter">0/1000</div>
+            <textarea id="motivoSolicitud" runat="server" class="text-area" maxlength="200" oninput="updateCharCount()" placeholder="Escriba aquí el motivo de su solicitud..."></textarea>
+            <div id="charCounter" class="char-counter">0/200</div>
         </div>
 
         <asp:Label ID="lblErrorMotivo" runat="server" ForeColor="Red" Visible="false" Text="Por favor, ingrese un motivo para su solicitud." />

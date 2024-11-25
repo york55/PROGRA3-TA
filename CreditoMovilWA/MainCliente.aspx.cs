@@ -70,13 +70,16 @@ namespace CreditoMovilWA
                         lblRanking.ForeColor = System.Drawing.Color.Yellow;
                     else
                         lblRanking.ForeColor = System.Drawing.Color.Green;
+
+                    ClientScript.RegisterStartupScript(this.GetType(), "RenderGauge", $"renderApexGauge({ranking});", true);
                 }
             }
         }
         // Método para obtener el ranking sin el símbolo de porcentaje
         public string ObtenerRankingSinPorcentaje()
         {
-            return lblRanking.Text.Replace("%", "");
+            cliente cli = (cliente)Session["Cliente"];
+            return cli != null ? cli.ranking.ToString() : "0";
         }
 
         protected void btnSolicitarCredito_Click(object sender, EventArgs e)

@@ -280,6 +280,7 @@
     <Content Include="Home.aspx" />
     <Content Include="images\bancos.png" />
     <Content Include="images\billeteras.png" />
+    <Content Include="images\QR.png" />
     <Content Include="ListaSupervisoresAsignar.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MainAdmin.aspx" />
